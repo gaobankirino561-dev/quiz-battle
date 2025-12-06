@@ -190,10 +190,22 @@ button:disabled {
 .countdown.hidden {
   display: none;
 }
+.countdown-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
 #countdown-number {
   font-size: 4rem;
   font-weight: bold;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+#countdown-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 .countdown.easy #countdown-number {
   color: #00ff66;
@@ -407,6 +419,30 @@ button:disabled {
     font-size: 0.95rem;
     line-height: 1.2;
     white-space: normal;
+  }
+
+  .ready-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 30;
+  }
+
+  .ready-bar button {
+    flex: 1;
+    max-width: 240px;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .game-main {
+    padding-bottom: 60px;
   }
 }
 

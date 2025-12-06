@@ -67,12 +67,14 @@ const questionRules = document.getElementById("questionRules");
 const skipAnswerBtn = document.getElementById("skipAnswerBtn");
 const countdownOverlay = document.getElementById("countdown-overlay");
 const countdownNumber = document.getElementById("countdown-number");
+const countdownLabel = document.getElementById("countdown-label");
 
 const roundResultText = document.getElementById("roundResultText");
 const correctAnswerText = document.getElementById("correctAnswerText");
 const nextRoundBtn = document.getElementById("nextRoundBtn");
 const nextReadyBtn = document.getElementById("nextReadyBtn");
 const nextWaitText = document.getElementById("nextWaitText");
+const readyBar = document.querySelector(".ready-bar");
 
 const finalResultTitle = document.getElementById("finalResultTitle");
 const finalResultDetail = document.getElementById("finalResultDetail");
@@ -260,6 +262,9 @@ socket.on("gameStart", (data) => {
 });
 
 socket.on("question", (data) => {
+  if (readyBar) {
+    readyBar.classList.add("hidden");
+  }
   gameState.round = data.round;
   currentQuestionId = data.question.id;
   answering = true;
@@ -353,6 +358,20 @@ socket.on("countdownStart", ({ seconds, difficulty }) => {
   else if (diff === "NORMAL") countdownOverlay.classList.add("normal");
   else if (diff === "HARD") countdownOverlay.classList.add("hard");
 
+  if (countdownLabel) {
+    let labelText = "次の問題：";
+    if (diff === "EASY") {
+      labelText += "EASY";
+    } else if (diff === "NORMAL") {
+      labelText += "NORMAL";
+    } else if (diff === "HARD") {
+      labelText += "HARD";
+    } else {
+      labelText += "???";
+    }
+    countdownLabel.textContent = labelText;
+  }
+
   let remaining = seconds || 3;
   countdownNumber.textContent = remaining;
   countdownOverlay.classList.remove("hidden");
@@ -392,6 +411,10 @@ socket.on("roundResult", (data) => {
 
   if (data.canContinue) {
     nextReadyBtn.classList.remove("hidden");
+    if (readyBar) {
+      readyBar.classList.remove("hidden");
+      readyBar.style.display = "flex";
+    }
     nextReadyBtn.disabled = false;
     nextReadyBtn.textContent = "次の問題へ（準備完了）";
     nextWaitText.textContent = "";
@@ -403,6 +426,9 @@ socket.on("roundResult", (data) => {
   } else {
     nextReadyBtn.classList.add("hidden");
     nextWaitText.textContent = "";
+    if (readyBar) {
+      readyBar.classList.add("hidden");
+    }
   }
 
   if (!data.canContinue && data.gameOverInfo) {
@@ -424,6 +450,9 @@ socket.on("gameOver", (data) => {
   hpSection.classList.remove("hidden");
   nextReadyBtn.classList.add("hidden");
   nextWaitText.textContent = "";
+  if (readyBar) {
+    readyBar.classList.add("hidden");
+  }
   setChoiceButtonsDisabled(true);
   showFinalResult(data);
 });

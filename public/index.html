@@ -97,7 +97,10 @@
       <p id="timerText"></p>
       <div class="game-main">
         <div id="countdown-overlay" class="countdown hidden">
-          <div id="countdown-number">3</div>
+          <div class="countdown-inner">
+            <div id="countdown-number">3</div>
+            <div id="countdown-label"></div>
+          </div>
         </div>
         <div id="questionContainer" class="question-box question-area">
           <h2 id="questionText"></h2>
@@ -115,8 +118,10 @@
       <p id="roundResultText"></p>
       <p id="correctAnswerText"></p>
       <button id="nextRoundBtn" class="hidden">次の問題へ</button>
-      <button id="nextReadyBtn" class="hidden">次の問題へ（準備完了）</button>
-      <p id="nextWaitText"></p>
+      <div class="ready-bar hidden">
+        <button id="nextReadyBtn" class="hidden">次の問題へ（準備完了）</button>
+        <p id="nextWaitText"></p>
+      </div>
     </section>
 
     <section id="final-section" class="hidden">
