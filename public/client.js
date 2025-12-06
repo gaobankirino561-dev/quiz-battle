@@ -8,6 +8,7 @@ let gameState = {
   maxRounds: 10,
 };
 let playersState = [];
+let currentChoiceOrder = [];
 
 let isRoomOwner = false;
 let roomSettings = {
@@ -28,6 +29,15 @@ let answering = false;
 let questionStartTime = null;
 let timeLimitSeconds = 30;
 let timerIntervalId = null;
+let isEliminatedSelf = false;
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 // DOM elements
 const playerNameInput = document.getElementById("playerNameInput");
@@ -77,6 +87,8 @@ const hpConfigInfo = document.getElementById("hpConfigInfo");
 const hpInputsContainer = document.getElementById("hpInputsContainer");
 const startGameWithHpBtn = document.getElementById("startGameWithHpBtn");
 const hpConfigStatus = document.getElementById("hpConfigStatus");
+const replayReadyBtn = document.getElementById("replay-ready-button");
+const replayStartBtn = document.getElementById("replay-start-button");
 
 // Connection
 socket.on("connect", () => {
@@ -166,6 +178,21 @@ socket.on("roomError", (msg) => {
   alert(msg);
 });
 
+socket.on("roomState", (room) => {
+  if (!room) return;
+  if (Array.isArray(room.players)) {
+    playersState = room.players;
+    isEliminatedSelf = isPlayerEliminated(myPlayerId);
+    renderHpStatus(playersState, myPlayerId);
+    setChoiceButtonsDisabled(isEliminatedSelf);
+  }
+  if (replayStartBtn) {
+    const isHost = room.hostId === myPlayerId;
+    const allReady = (room.players || []).filter(Boolean).every((p) => p.id === room.hostId || p.replayReady);
+    replayStartBtn.disabled = !(isHost && allReady);
+  }
+});
+
 socket.on("roomReadyForHpConfig", (data) => {
   roomSettings = data.settings || roomSettings;
   timeLimitSeconds = roomSettings.timeLimitSeconds;
@@ -211,6 +238,7 @@ socket.on("gameStart", (data) => {
     ...p,
     initialHp: data.initialHpMap?.[p.id] ?? data.initialHp ?? p.hp,
   }));
+  isEliminatedSelf = isPlayerEliminated(myPlayerId);
   gameState.round = 0;
   gameState.maxRounds = data.settings?.infiniteMode ? null : data.maxRounds;
   timeLimitSeconds = data.settings?.timeLimitSeconds ?? 30;
@@ -218,6 +246,14 @@ socket.on("gameStart", (data) => {
   renderHpStatus(playersState, myPlayerId);
 
   gameStatus.textContent = "ゲーム開始！";
+  if (replayReadyBtn) {
+    replayReadyBtn.classList.add("hidden");
+    replayReadyBtn.disabled = false;
+  }
+  if (replayStartBtn) {
+    replayStartBtn.classList.add("hidden");
+    replayStartBtn.disabled = true;
+  }
 });
 
 socket.on("question", (data) => {
@@ -226,6 +262,10 @@ socket.on("question", (data) => {
   answering = true;
   questionStartTime = Date.now();
   timeLimitSeconds = data.timeLimitSeconds ?? timeLimitSeconds;
+  isEliminatedSelf = isPlayerEliminated(myPlayerId);
+  if (isEliminatedSelf) {
+    answering = false;
+  }
   nextReadyBtn.classList.add("hidden");
   nextWaitText.textContent = "";
 
@@ -276,30 +316,26 @@ socket.on("question", (data) => {
 
   // 選択肢表示
   choicesList.innerHTML = "";
-  data.question.choices.forEach((choice, index) => {
+  const indexedChoices = (data.question.choices || []).map((text, idx) => ({
+    originalIndex: idx,
+    text,
+  }));
+  shuffleArray(indexedChoices);
+  currentChoiceOrder = indexedChoices.map((c) => c.originalIndex);
+
+  indexedChoices.forEach((choice, displayIndex) => {
     const li = document.createElement("li");
     const btn = document.createElement("button");
-    btn.textContent = choice;
+    btn.textContent = choice.text;
     btn.className = "choice-btn";
+    btn.disabled = isEliminatedSelf;
     btn.addEventListener("click", () => {
-      if (!answering) return;
-      answering = false;
-      if (timerIntervalId) {
-        clearInterval(timerIntervalId);
-        timerIntervalId = null;
-      }
-      const elapsedSec = (Date.now() - questionStartTime) / 1000;
-      socket.emit("submitAnswer", {
-        roomId,
-        questionId: currentQuestionId,
-        choiceIndex: index,
-        elapsedSeconds: elapsedSec,
-      });
-      timerText.textContent = `回答送信済み（${elapsedSec.toFixed(1)} 秒）`;
+      handleChoiceSelected(displayIndex);
     });
     li.appendChild(btn);
     choicesList.appendChild(li);
   });
+  setChoiceButtonsDisabled(isEliminatedSelf);
 });
 
 socket.on("roundResult", (data) => {
@@ -316,7 +352,9 @@ socket.on("roundResult", (data) => {
   } else {
     playersState = mergeHpUpdate(playersState, data);
   }
+  isEliminatedSelf = isPlayerEliminated(myPlayerId);
   renderHpStatus(playersState, myPlayerId);
+  setChoiceButtonsDisabled(isEliminatedSelf);
 
   roundResultText.textContent = data.message;
   correctAnswerText.textContent = `正解: ${data.correctAnswer}`;
@@ -353,6 +391,7 @@ socket.on("gameOver", (data) => {
   hpSection.classList.remove("hidden");
   nextReadyBtn.classList.add("hidden");
   nextWaitText.textContent = "";
+  setChoiceButtonsDisabled(true);
   showFinalResult(data);
 });
 
@@ -394,6 +433,20 @@ reloadBtn.addEventListener("click", () => {
   window.location.reload();
 });
 
+if (replayReadyBtn) {
+  replayReadyBtn.addEventListener("click", () => {
+    replayReadyBtn.disabled = true;
+    socket.emit("replayReady", { roomId });
+  });
+}
+
+if (replayStartBtn) {
+  replayStartBtn.addEventListener("click", () => {
+    replayStartBtn.disabled = true;
+    socket.emit("startReplay", { roomId });
+  });
+}
+
 function updateHpBars() {
   // deprecated
 }
@@ -403,6 +456,15 @@ function showFinalResult(info) {
   const { winner, reason, yourHp, opponentHp } = info;
   finalResultTitle.textContent = winner === "you" ? "あなたの勝ち！" : winner === "draw" ? "引き分け" : "あなたの負け...";
   finalResultDetail.textContent = `理由: ${reason} / あなたHP=${yourHp}, 相手HP=${opponentHp}`;
+  if (replayReadyBtn) replayReadyBtn.classList.remove("hidden");
+  if (replayReadyBtn) replayReadyBtn.disabled = false;
+  if (replayStartBtn) {
+    replayStartBtn.classList.remove("hidden");
+    replayStartBtn.disabled = true;
+    if (!isRoomOwner) {
+      replayStartBtn.classList.add("hidden");
+    }
+  }
 }
 
 function renderHpInputs(players) {
@@ -457,6 +519,9 @@ function renderHpStatus(players, myId) {
     row.appendChild(nameSpan);
     row.appendChild(hpBarWrapper);
     row.appendChild(hpText);
+    if (p.isEliminated || p.hp <= 0) {
+      row.classList.add("eliminated");
+    }
     hpStatus.appendChild(row);
   });
 }
@@ -472,11 +537,46 @@ function mergeHpUpdate(current, data) {
       if (!u.id) return;
       const idx = list.findIndex((p) => p.id === u.id);
       if (idx >= 0) {
-        list[idx] = { ...list[idx], hp: u.hp };
+        list[idx] = { ...list[idx], hp: u.hp, isEliminated: u.isEliminated ?? list[idx].isEliminated };
       } else {
-        list.push({ id: u.id, name: "", hp: u.hp, initialHp: u.hp });
+        list.push({ id: u.id, name: "", hp: u.hp, initialHp: u.hp, isEliminated: u.isEliminated ?? false });
       }
     });
   }
   return list;
+}
+
+function isPlayerEliminated(playerId) {
+  const me = playersState.find((p) => p.id === playerId);
+  return !me ? false : me.hp <= 0 || me.isEliminated;
+}
+
+function setChoiceButtonsDisabled(disabled) {
+  const buttons = document.querySelectorAll(".choice-btn, .choice-button");
+  buttons.forEach((btn) => {
+    btn.disabled = disabled;
+  });
+}
+
+function handleChoiceSelected(displayIndex) {
+  if (!answering) return;
+  if (isEliminatedSelf) return;
+  if (!currentQuestionId) return;
+  answering = false;
+  if (timerIntervalId) {
+    clearInterval(timerIntervalId);
+    timerIntervalId = null;
+  }
+  const originalIndex =
+    currentChoiceOrder && currentChoiceOrder[displayIndex] != null
+      ? currentChoiceOrder[displayIndex]
+      : displayIndex;
+  const elapsedSec = (Date.now() - questionStartTime) / 1000;
+  socket.emit("submitAnswer", {
+    roomId,
+    questionId: currentQuestionId,
+    choiceIndex: originalIndex,
+    elapsedSeconds: elapsedSec,
+  });
+  timerText.textContent = `回答送信済み（${elapsedSec.toFixed(1)} 秒）`;
 }

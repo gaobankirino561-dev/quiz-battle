@@ -155,6 +155,9 @@ button:disabled {
 .hp-value {
   font-weight: 700;
 }
+.hp-row.eliminated {
+  opacity: 0.6;
+}
 
 .hp-bar {
   flex: 1;
@@ -297,4 +300,10 @@ button:disabled {
 #nextWaitText {
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+.replay-actions {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
 }
