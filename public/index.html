@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>オンラインクイズバトル</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +17,7 @@
       </label>
     </section>
 
-    <section id="room-section">
+    <section id="room-section" class="top-panel">
       <button id="createRoomBtn">ルーム作成</button>
       <input type="text" id="roomIdInput" placeholder="ルームID">
       <button id="joinRoomBtn">参加</button>
@@ -73,12 +74,12 @@
       </div>
     </section>
 
-    <section id="status-section">
+    <section id="status-section" class="top-panel">
       <p id="connectionStatus">サーバー接続中...</p>
       <p id="gameStatus"></p>
     </section>
 
-    <section id="hp-section" class="hidden">
+    <section id="hp-section" class="hidden top-panel">
       <h3>HP状況</h3>
       <div id="hp-status"></div>
     </section>
@@ -94,10 +95,16 @@
     <section id="question-section" class="hidden">
       <p id="roundInfo"></p>
       <p id="timerText"></p>
-      <h2 id="questionText"></h2>
-      <ul id="choicesList"></ul>
-      <div id="questionRules"></div>
-      <button id="skipAnswerBtn" class="hidden">回答スキップ</button>
+      <div class="game-main">
+        <div id="questionContainer" class="question-box question-area">
+          <h2 id="questionText"></h2>
+          <div id="questionRules"></div>
+        </div>
+        <div class="choices-area">
+          <ul id="choicesList"></ul>
+          <button id="skipAnswerBtn" class="hidden">回答スキップ</button>
+        </div>
+      </div>
     </section>
 
     <section id="result-section" class="hidden">
