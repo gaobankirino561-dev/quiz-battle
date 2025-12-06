@@ -527,6 +527,170 @@ function startNextQuestion(roomId) {
   }, 3000);
 }
 
+function applyDamageForThreePlayers(entries, baseDamage) {
+  const D = baseDamage;
+  const alive = entries.filter((e) => !e.player.isEliminated);
+
+  alive.forEach((e) => {
+    e.damage = 0;
+  });
+
+  const correct = alive.filter((e) => e.correct);
+  const wrong = alive.filter((e) => !e.correct);
+  const sortedCorrect = [...correct].sort((a, b) => a.answerTime - b.answerTime);
+
+  if (correct.length === 3) {
+    if (sortedCorrect[1]) {
+      sortedCorrect[1].damage = Math.ceil(D / 2);
+    }
+    if (sortedCorrect[2]) {
+      sortedCorrect[2].damage = Math.ceil(D);
+    }
+  } else if (correct.length === 2) {
+    if (sortedCorrect[1]) {
+      sortedCorrect[1].damage = Math.ceil(D / 2);
+    }
+    wrong.forEach((e) => {
+      e.damage = Math.ceil((3 * D) / 2);
+    });
+  } else if (correct.length === 1) {
+    wrong.forEach((e) => {
+      e.damage = Math.ceil((3 * D) / 2);
+    });
+  } else {
+    // 全員不正解 → damageは0のまま
+  }
+
+  return entries;
+}
+
+function resolveRoundThree(room, players, question, correctIndex, baseDamage) {
+  const entries = players.map((p) => {
+    const ans = room.answers[p.id];
+    const correct = ans ? ans.choiceIndex === correctIndex : false;
+    return {
+      player: p,
+      correct,
+      answered: !!ans,
+      answerTime: ans ? ans.elapsedSeconds : Infinity,
+      damage: 0,
+    };
+  });
+
+  applyDamageForThreePlayers(entries, baseDamage);
+
+  // ダメージ適用
+  entries.forEach((e) => {
+    e.player.hp = Math.max(0, e.player.hp - (e.damage || 0));
+  });
+
+  // 脱落判定
+  players.forEach((p) => {
+    if (p.hp <= 0) {
+      p.hp = 0;
+      p.isEliminated = true;
+    }
+  });
+
+  const correctEntries = entries.filter((e) => e.correct);
+  const settings = room.settings || {};
+  const correctAnswerText = question.choices[correctIndex];
+  let resultMessage = "";
+
+  if (correctEntries.length === 0) {
+    resultMessage = "全員不正解。このラウンドはダメージなし。";
+  } else {
+    const fastest = [...correctEntries].sort((a, b) => a.answerTime - b.answerTime)[0];
+    resultMessage = `${fastest.player.name} が最速正解！`;
+  }
+
+  let finished = false;
+  let winnerCode = null;
+  let reason = "";
+  const alive = players.filter((p) => p.hp > 0 && !p.isEliminated);
+  if (alive.length === 0) {
+    finished = true;
+    winnerCode = "draw";
+    reason = "全員のHPが0になった";
+  } else if (alive.length === 1) {
+    finished = true;
+    winnerCode = alive[0].id;
+    reason = `${alive[0].name} だけHPが残った`;
+  }
+
+  room.finished = finished;
+  if (!finished) {
+    room.waitingNext = true;
+    room.readyForNext = {};
+  }
+  if (finished) {
+    players.forEach((p) => {
+      p.replayReady = false;
+    });
+  }
+
+  const playersPayload = players.map((p) => ({
+    id: p.id,
+    name: p.name,
+    hp: p.hp,
+    initialHp: room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP,
+    isEliminated: !!p.isEliminated,
+    replayReady: !!p.replayReady,
+  }));
+
+  players.forEach((p) => {
+    const opponent = players.find((x) => x.id !== p.id) || p;
+    const payload = {
+      correctAnswer: correctAnswerText,
+      canContinue: !finished,
+      gameStatusText: finished ? "ゲーム終了" : `次の問題へ進みます`,
+      players: playersPayload,
+      gameOverInfo: finished
+        ? {
+            winner:
+              winnerCode === "draw"
+                ? "draw"
+                : winnerCode === p.id
+                ? "you"
+                : winnerCode
+                ? "opponent"
+                : null,
+            reason,
+            yourHp: p.hp,
+            opponentHp: opponent.hp,
+          }
+        : null,
+      you: { hp: p.hp },
+      opponent: { id: opponent.id, hp: opponent.hp },
+      message: resultMessage,
+      questionText: question.question,
+      choices: question.choices,
+      correctIndex: correctIndex,
+      myAnswerIndex: room.answers[p.id]?.choiceIndex ?? null,
+    };
+
+    io.to(p.id).emit("roundResult", payload);
+  });
+
+  if (finished) {
+    players.forEach((p) => {
+      const opponent = players.find((x) => x.id !== p.id) || p;
+      const payload = {
+        winner:
+          winnerCode === "draw"
+            ? "draw"
+            : winnerCode === p.id
+            ? "you"
+            : "opponent",
+        reason,
+        yourHp: p.hp,
+        opponentHp: opponent.hp,
+      };
+      io.to(p.id).emit("gameOver", payload);
+    });
+    broadcastRoomState(room);
+  }
+}
 function resolveRound(roomId) {
   const room = rooms[roomId];
   if (!room || room.finished) return;
@@ -541,146 +705,8 @@ function resolveRound(roomId) {
 
   const baseDamage = BASE_DAMAGE[difficulty] || 2;
 
-  // 3人モードロジック
   if (playerCount === 3) {
-    const entries = players.map((p) => {
-      const ans = room.answers[p.id];
-      const correct = ans ? ans.choiceIndex === correctIndex : false;
-      return {
-        player: p,
-        correct,
-        answered: !!ans,
-        answerTime: ans ? ans.elapsedSeconds : Infinity,
-      };
-    });
-
-    const correctEntries = entries.filter((e) => e.correct);
-    let resultMessage = "";
-
-    if (correctEntries.length === 0) {
-      resultMessage = "全員不正解。このラウンドはダメージなし。";
-    } else {
-      correctEntries.sort((a, b) => a.answerTime - b.answerTime);
-      const winner = correctEntries[0];
-      const losers = entries.filter((e) => e.player.id !== winner.player.id);
-
-      if (losers.length === 1) {
-        const dmg = baseDamage;
-        losers[0].player.hp = Math.max(0, losers[0].player.hp - dmg);
-        resultMessage = `${winner.player.name} が最速正解！${losers[0].player.name} に ${dmg} ダメージ。`;
-      } else if (losers.length === 2) {
-        const dmg = Math.ceil(baseDamage / 2);
-        losers.forEach((e) => {
-          e.player.hp = Math.max(0, e.player.hp - dmg);
-        });
-        resultMessage = `${winner.player.name} が最速正解！${losers[0].player.name} と ${losers[1].player.name} に ${dmg} ダメージ。`;
-      } else {
-        resultMessage = `${winner.player.name} が最速正解！`;
-      }
-    }
-
-    // 脱落判定
-    players.forEach((p) => {
-      if (p.hp <= 0) {
-        p.hp = 0;
-        p.isEliminated = true;
-      }
-    });
-
-    let finished = false;
-    let winnerCode = null;
-    let reason = "";
-    const alive = players.filter((p) => p.hp > 0 && !p.isEliminated);
-    if (alive.length === 0) {
-      finished = true;
-      winnerCode = "draw";
-      reason = "全員のHPが0になった";
-    } else if (alive.length === 1) {
-      finished = true;
-      winnerCode = alive[0].id;
-      reason = `${alive[0].name} だけHPが残った`;
-    }
-
-    room.finished = finished;
-    if (!finished) {
-      room.waitingNext = true;
-      room.readyForNext = {};
-    }
-    if (finished) {
-      players.forEach((p) => {
-        p.replayReady = false;
-      });
-    }
-
-    const correctAnswerText = question.choices[correctIndex];
-    const settings = room.settings || {};
-    const maxRounds =
-      settings && !settings.infiniteMode
-        ? settings.maxRounds || DEFAULT_MAX_ROUNDS
-        : null;
-    const playersPayload = players.map((p) => ({
-      id: p.id,
-      name: p.name,
-      hp: p.hp,
-      initialHp: room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP,
-      isEliminated: !!p.isEliminated,
-      replayReady: !!p.replayReady,
-    }));
-
-    players.forEach((p) => {
-      const opponent = players.find((x) => x.id !== p.id) || p;
-      const payload = {
-        correctAnswer: correctAnswerText,
-        canContinue: !finished,
-        gameStatusText: finished ? "ゲーム終了" : `次の問題へ進みます`,
-        players: playersPayload,
-        gameOverInfo: finished
-          ? {
-              winner:
-                winnerCode === "draw"
-                  ? "draw"
-                  : winnerCode === p.id
-                  ? "you"
-                  : winnerCode
-                  ? "opponent"
-                  : null,
-              reason,
-              yourHp: p.hp,
-              opponentHp: opponent.hp,
-            }
-          : null,
-        you: { hp: p.hp },
-        opponent: { id: opponent.id, hp: opponent.hp },
-        message: resultMessage,
-        questionText: question.question,
-        choices: question.choices,
-        correctIndex: correctIndex,
-        myAnswerIndex: room.answers[p.id]?.choiceIndex ?? null,
-      };
-
-      io.to(p.id).emit("roundResult", payload);
-    });
-
-    if (finished) {
-      players.forEach((p) => {
-        const opponent = players.find((x) => x.id !== p.id) || p;
-        const payload = {
-          winner:
-            winnerCode === "draw"
-              ? "draw"
-              : winnerCode === p.id
-              ? "you"
-              : "opponent",
-          reason,
-          yourHp: p.hp,
-          opponentHp: opponent.hp,
-        };
-        io.to(p.id).emit("gameOver", payload);
-      });
-      broadcastRoomState(room);
-    }
-
-    return;
+    return resolveRoundThree(room, players, question, correctIndex, baseDamage);
   }
 
   // === 2人モード（従来処理） ===
