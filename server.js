@@ -19,8 +19,9 @@ const questionsData = JSON.parse(
 );
 
 // ゲーム設定
-const INITIAL_HP = 20;
-const MAX_ROUNDS = 10;
+const DEFAULT_INITIAL_HP = 20;
+const DEFAULT_MAX_ROUNDS = 10;
+const DEFAULT_TIME_LIMIT_SECONDS = 30;
 
 const BASE_DAMAGE = {
   EASY: 2,
@@ -55,7 +56,19 @@ function calcSpeedBonus(elapsedSeconds) {
  *       correct: boolean
  *     }
  *   },
- *   finished: boolean
+ *   finished: boolean,
+ *   settings: {
+ *     category: string,
+ *     difficulties: string[],
+ *     maxRounds: number | null,
+ *     infiniteMode: boolean,
+ *     timeLimitSeconds: number,
+ *   },
+ *   initialHpMap: { [socketId]: number },
+ *   waitingForHpConfig: boolean,
+ *   usedQuestionIds: Set<number>,
+ *   readyForNext: { [socketId]: true },
+ *   waitingNext: boolean
  * }
  */
 const rooms = {};
@@ -69,9 +82,46 @@ function generateRoomId() {
   return id;
 }
 
-function pickRandomQuestion() {
-  const idx = Math.floor(Math.random() * questionsData.length);
-  return questionsData[idx];
+function pickRandomQuestion(room) {
+  let pool = questionsData;
+
+  if (room && room.settings) {
+    const { category, difficulties } = room.settings;
+    const used = room.usedQuestionIds || new Set();
+
+    pool = questionsData.filter((q) => {
+      const categoryOk =
+        category === "all" || !q.category || q.category === category;
+      const diffOk =
+        !difficulties || difficulties.length === 0
+          ? true
+          : difficulties.includes(q.difficulty || "EASY");
+      const unusedOk = !used.has(q.id);
+      return categoryOk && diffOk && unusedOk;
+    });
+
+    if (pool.length === 0) {
+      if (room.usedQuestionIds) {
+        room.usedQuestionIds.clear();
+      }
+      pool = questionsData.filter((q) => {
+        const categoryOk =
+          category === "all" || !q.category || q.category === category;
+        const diffOk =
+          !difficulties || difficulties.length === 0
+            ? true
+            : difficulties.includes(q.difficulty || "EASY");
+        return categoryOk && diffOk;
+      });
+    }
+  }
+
+  if (pool.length === 0) {
+    pool = questionsData;
+  }
+
+  const idx = Math.floor(Math.random() * pool.length);
+  return pool[idx];
 }
 
 io.on("connection", (socket) => {
@@ -92,11 +142,24 @@ io.on("connection", (socket) => {
     }
   });
 
-  socket.on("createRoom", ({ name }) => {
+  socket.on("createRoom", ({ name, settings }) => {
     let roomId;
     do {
       roomId = generateRoomId();
     } while (rooms[roomId]);
+
+    const defaultSettings = {
+      category: "all",
+      difficulties: ["EASY", "NORMAL", "HARD"],
+      maxRounds: DEFAULT_MAX_ROUNDS,
+      infiniteMode: false,
+      timeLimitSeconds: DEFAULT_TIME_LIMIT_SECONDS,
+    };
+
+    const mergedSettings = {
+      ...defaultSettings,
+      ...(settings || {}),
+    };
 
     rooms[roomId] = {
       id: roomId,
@@ -106,17 +169,27 @@ io.on("connection", (socket) => {
       currentQuestion: null,
       answers: {},
       finished: false,
+      settings: mergedSettings,
+      initialHpMap: {},
+      waitingForHpConfig: false,
+      usedQuestionIds: new Set(),
+      readyForNext: {},
+      waitingNext: false,
     };
 
     rooms[roomId].players[socket.id] = {
       id: socket.id,
       name: name || "Player",
-      hp: INITIAL_HP,
+      hp: DEFAULT_INITIAL_HP,
     };
     rooms[roomId].order.push(socket.id);
 
     socket.join(roomId);
-    socket.emit("roomCreated", { roomId, playerId: socket.id });
+    socket.emit("roomCreated", {
+      roomId,
+      playerId: socket.id,
+      settings: mergedSettings,
+    });
   });
 
   socket.on("joinRoom", ({ roomId, name }) => {
@@ -133,7 +206,7 @@ io.on("connection", (socket) => {
     room.players[socket.id] = {
       id: socket.id,
       name: name || "Player",
-      hp: INITIAL_HP,
+      hp: DEFAULT_INITIAL_HP,
     };
     room.order.push(socket.id);
 
@@ -141,8 +214,43 @@ io.on("connection", (socket) => {
     socket.emit("roomJoined", { roomId, playerId: socket.id });
 
     if (Object.keys(room.players).length === 2) {
-      startGame(roomId);
+      room.waitingForHpConfig = true;
+
+      const playersArray = room.order.map((id) => ({
+        id,
+        name: room.players[id].name,
+      }));
+
+      io.to(roomId).emit("roomReadyForHpConfig", {
+        players: playersArray,
+        settings: room.settings,
+      });
     }
+  });
+
+  socket.on("configureRoomAndStart", ({ roomId, initialHp }) => {
+    const room = rooms[roomId];
+    if (!room || room.finished) return;
+    if (!room.waitingForHpConfig) return;
+
+    if (room.order[0] !== socket.id) {
+      socket.emit("roomError", "ホストのみ初期HPを設定できます。");
+      return;
+    }
+
+    room.initialHpMap = {};
+    for (const playerId of room.order) {
+      const hp =
+        initialHp && typeof initialHp[playerId] === "number"
+          ? initialHp[playerId]
+          : DEFAULT_INITIAL_HP;
+      room.initialHpMap[playerId] = Math.max(1, hp);
+      room.players[playerId].hp = room.initialHpMap[playerId];
+    }
+
+    room.waitingForHpConfig = false;
+
+    startGame(roomId);
   });
 
   socket.on("submitAnswer", ({ roomId, questionId, choiceIndex, elapsedSeconds }) => {
@@ -165,11 +273,44 @@ io.on("connection", (socket) => {
   socket.on("nextQuestion", ({ roomId }) => {
     const room = rooms[roomId];
     if (!room || room.finished) return;
-    if (room.round >= MAX_ROUNDS) return;
+    const settings = room.settings || {};
+    const maxRounds =
+      settings && !settings.infiniteMode
+        ? settings.maxRounds || DEFAULT_MAX_ROUNDS
+        : null;
+    if (maxRounds && room.round >= maxRounds) return;
+    if (room.waitingNext) {
+      room.readyForNext[socket.id] = true;
+      const totalPlayers = Object.keys(room.players).length;
+      const readyCount = Object.keys(room.readyForNext).length;
+      if (readyCount >= totalPlayers) {
+        room.waitingNext = false;
+        room.readyForNext = {};
+        startNextQuestion(roomId);
+      }
+      return;
+    }
     if (!room.currentQuestion) return;
 
     // すでに次の問題が出ているかどうかのチェックは簡略化
     startNextQuestion(roomId);
+  });
+
+  socket.on("readyForNext", ({ roomId }) => {
+    const room = rooms[roomId];
+    if (!room || room.finished) return;
+    if (!room.waitingNext) return;
+
+    room.readyForNext[socket.id] = true;
+
+    const totalPlayers = Object.keys(room.players).length;
+    const readyCount = Object.keys(room.readyForNext).length;
+
+    if (readyCount >= totalPlayers) {
+      room.waitingNext = false;
+      room.readyForNext = {};
+      startNextQuestion(roomId);
+    }
   });
 });
 
@@ -179,28 +320,44 @@ function startGame(roomId) {
 
   room.round = 0;
   room.finished = false;
+  room.readyForNext = {};
+  room.waitingNext = false;
+  if (!room.usedQuestionIds) {
+    room.usedQuestionIds = new Set();
+  } else {
+    room.usedQuestionIds.clear();
+  }
 
   const [p1Id, p2Id] = room.order;
   const p1 = room.players[p1Id];
   const p2 = room.players[p2Id];
 
-  io.to(roomId).emit("gameStart", {
-    initialHp: INITIAL_HP,
-    maxRounds: MAX_ROUNDS,
-    you: {}, // クライアント側で自分/相手を判定するのでここはダミー
-    opponent: {},
-  });
+  const maxRounds =
+    room.settings && !room.settings.infiniteMode
+      ? room.settings.maxRounds || DEFAULT_MAX_ROUNDS
+      : null;
 
-  // ただし player 名は question 送信前に個別に送ってもよい
+  const settingsForClient = {
+    category: room.settings.category,
+    difficulties: room.settings.difficulties,
+    maxRounds,
+    infiniteMode: !!room.settings.infiniteMode,
+    timeLimitSeconds: room.settings.timeLimitSeconds || DEFAULT_TIME_LIMIT_SECONDS,
+  };
+
   io.to(p1Id).emit("gameStart", {
-    initialHp: INITIAL_HP,
-    maxRounds: MAX_ROUNDS,
+    initialHp: DEFAULT_INITIAL_HP,
+    initialHpMap: room.initialHpMap,
+    maxRounds: maxRounds || 0,
+    settings: settingsForClient,
     you: p1,
     opponent: p2,
   });
   io.to(p2Id).emit("gameStart", {
-    initialHp: INITIAL_HP,
-    maxRounds: MAX_ROUNDS,
+    initialHp: DEFAULT_INITIAL_HP,
+    initialHpMap: room.initialHpMap,
+    maxRounds: maxRounds || 0,
+    settings: settingsForClient,
     you: p2,
     opponent: p1,
   });
@@ -213,16 +370,28 @@ function startNextQuestion(roomId) {
   if (!room) return;
 
   if (room.finished) return;
+  if (!room.usedQuestionIds) {
+    room.usedQuestionIds = new Set();
+  }
+  room.waitingNext = false;
+  room.readyForNext = {};
 
   room.round += 1;
   room.answers = {};
 
-  const question = pickRandomQuestion();
+  const question = pickRandomQuestion(room);
   room.currentQuestion = question;
+  if (question && typeof question.id !== "undefined" && room.usedQuestionIds) {
+    room.usedQuestionIds.add(question.id);
+  }
+
+  const timeLimitSeconds =
+    room.settings.timeLimitSeconds || DEFAULT_TIME_LIMIT_SECONDS;
 
   io.to(roomId).emit("question", {
     round: room.round,
     question,
+    timeLimitSeconds,
   });
 }
 
@@ -306,27 +475,45 @@ function resolveRound(roomId) {
     finished = true;
     winner = "player1";
     reason = `${p2.name} のHPが0になった`;
-  } else if (room.round >= MAX_ROUNDS) {
-    finished = true;
-    if (p1.hp > p2.hp) {
-      winner = "player1";
-      reason = `最大ラウンド到達時に ${p1.name} のHPが高かった`;
-    } else if (p2.hp > p1.hp) {
-      winner = "player2";
-      reason = `最大ラウンド到達時に ${p2.name} のHPが高かった`;
-    } else {
-      winner = "draw";
-      reason = "最大ラウンド到達時にHPが同じだった";
+  } else {
+    const settings = room.settings || {};
+    const maxRounds =
+      settings && !settings.infiniteMode
+        ? settings.maxRounds || DEFAULT_MAX_ROUNDS
+        : null;
+
+    if (maxRounds && room.round >= maxRounds) {
+      finished = true;
+      if (p1.hp > p2.hp) {
+        winner = "player1";
+        reason = `最大ラウンド到達時に ${p1.name} のHPが高かった`;
+      } else if (p2.hp > p1.hp) {
+        winner = "player2";
+        reason = `最大ラウンド到達時に ${p2.name} のHPが高かった`;
+      } else {
+        winner = "draw";
+        reason = "最大ラウンド到達時にHPが同じだった";
+      }
     }
   }
 
   room.finished = finished;
+  if (!finished) {
+    room.waitingNext = true;
+    room.readyForNext = {};
+  }
 
   const correctAnswerText = question.choices[correctIndex];
 
+  const settings = room.settings || {};
+  const maxRounds =
+    settings && !settings.infiniteMode
+      ? settings.maxRounds || DEFAULT_MAX_ROUNDS
+      : null;
+
   const commonPayload = {
     correctAnswer: correctAnswerText,
-    canContinue: !finished && room.round < MAX_ROUNDS,
+    canContinue: !finished && (!maxRounds || room.round < maxRounds),
     gameStatusText: finished ? "ゲーム終了" : `次の問題へ進みます`,
     gameOverInfo: finished
       ? {

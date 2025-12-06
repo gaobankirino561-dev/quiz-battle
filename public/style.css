@@ -258,3 +258,37 @@ button:disabled {
     width: 100%;
   }
 }
+
+.field-row {
+  margin-bottom: 8px;
+}
+
+#roomSettingsPanel {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #111827;
+  border: 1px solid #374151;
+}
+
+#hp-config-section input[type="number"] {
+  width: 80px;
+}
+
+#hp-config-status,
+#hpConfigStatus {
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#nextReadyBtn {
+  margin-top: 8px;
+}
+
+#nextWaitText {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
