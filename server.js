@@ -64,6 +64,7 @@ function calcSpeedBonus(elapsedSeconds) {
  *     infiniteMode: boolean,
  *     timeLimitSeconds: number,
  *   },
+ *   maxPlayers: number,
  *   initialHpMap: { [socketId]: number },
  *   waitingForHpConfig: boolean,
  *   usedQuestionIds: Set<number>,
@@ -154,12 +155,18 @@ io.on("connection", (socket) => {
       maxRounds: DEFAULT_MAX_ROUNDS,
       infiniteMode: false,
       timeLimitSeconds: DEFAULT_TIME_LIMIT_SECONDS,
-      maxPlayers: 2,
     };
+
+    let reqMaxPlayers = settings?.maxPlayers;
+    let maxPlayers = Number(reqMaxPlayers) || 2;
+    if (maxPlayers !== 2 && maxPlayers !== 3) {
+      maxPlayers = 2;
+    }
 
     const mergedSettings = {
       ...defaultSettings,
       ...(settings || {}),
+      maxPlayers,
     };
 
     rooms[roomId] = {
@@ -172,6 +179,7 @@ io.on("connection", (socket) => {
       answers: {},
       finished: false,
       settings: mergedSettings,
+      maxPlayers,
       initialHpMap: {},
       waitingForHpConfig: false,
       usedQuestionIds: new Set(),
@@ -200,7 +208,7 @@ io.on("connection", (socket) => {
       socket.emit("roomError", "そのルームIDは存在しません。");
       return;
     }
-    const maxPlayers = room.settings?.maxPlayers || 2;
+    const maxPlayers = room.maxPlayers || room.settings?.maxPlayers || 2;
     if (Object.keys(room.players).length >= maxPlayers) {
       socket.emit("roomError", "このルームは満員です。");
       return;
@@ -359,7 +367,7 @@ function startGame(roomId) {
     maxRounds,
     infiniteMode: !!room.settings.infiniteMode,
     timeLimitSeconds: room.settings.timeLimitSeconds || DEFAULT_TIME_LIMIT_SECONDS,
-    maxPlayers: room.settings.maxPlayers || playerIds.length,
+    maxPlayers: room.maxPlayers || room.settings.maxPlayers || playerIds.length,
   };
 
   playerIds.forEach((pid) => {

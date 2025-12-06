@@ -19,6 +19,7 @@ let roomSettings = {
   maxRounds: 10,
   infiniteMode: false,
   timeLimitSeconds: 30,
+  maxPlayers: 2,
 };
 
 let hpConfig = {
@@ -78,6 +79,7 @@ const difficultyCheckboxes = document.querySelectorAll(".difficultyCheckbox");
 const maxRoundsInput = document.getElementById("maxRoundsInput");
 const infiniteModeCheckbox = document.getElementById("infiniteModeCheckbox");
 const timeLimitInput = document.getElementById("timeLimitInput");
+const playerCountSelect = document.getElementById("player-count");
 
 const hpConfigSection = document.getElementById("hp-config-section");
 const hpConfigInfo = document.getElementById("hpConfigInfo");
@@ -115,6 +117,8 @@ createRoomBtn.addEventListener("click", () => {
   const maxRoundsValue = parseInt(maxRoundsInput.value, 10) || 10;
   const infiniteMode = infiniteModeCheckbox.checked;
   const timeLimitValue = parseInt(timeLimitInput.value, 10) || 30;
+  let maxPlayers = parseInt(playerCountSelect?.value, 10);
+  maxPlayers = maxPlayers === 3 ? 3 : 2;
 
   roomSettings = {
     category,
@@ -122,6 +126,7 @@ createRoomBtn.addEventListener("click", () => {
     maxRounds: maxRoundsValue,
     infiniteMode,
     timeLimitSeconds: timeLimitValue,
+    maxPlayers,
   };
 
   socket.emit("createRoom", {
