@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "1 L は何 mL？",
+    "choices": ["1 mL", "10 mL", "100 mL", "1000 mL"],
+    "answerIndex": 3
+  },
+  {
+    "id": 2,
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "100 cm は何 m？",
+    "choices": ["0.1 m", "1 m", "10 m", "100 m"],
+    "answerIndex": 1
+  },
+  {
+    "id": 3,
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "100 μg/mL の溶液を 50 μg/mL にするには何倍に希釈する？",
+    "choices": ["2倍", "3倍", "4倍", "5倍"],
+    "answerIndex": 0
+  },
+  {
+    "id": 4,
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "0.5 L は何 mL？",
+    "choices": ["5 mL", "50 mL", "500 mL", "5000 mL"],
+    "answerIndex": 2
+  },
+  {
+    "id": 5,
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "15 ℃ の 3.0 L の水を 80 ℃ にするのに必要な温度差は？（近いもの）",
+    "choices": ["45 ℃", "55 ℃", "65 ℃", "75 ℃"],
+    "answerIndex": 2
+  }
+]

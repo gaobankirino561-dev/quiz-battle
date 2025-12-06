@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オンラインクイズバトル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>オンラインクイズバトル</h1>
+
+    <section id="name-section">
+      <label>
+        プレイヤー名:
+        <input type="text" id="playerNameInput" placeholder="なまえ">
+      </label>
+    </section>
+
+    <section id="room-section">
+      <button id="createRoomBtn">ルーム作成</button>
+      <input type="text" id="roomIdInput" placeholder="ルームID">
+      <button id="joinRoomBtn">参加</button>
+      <p id="roomInfo"></p>
+    </section>
+
+    <section id="status-section">
+      <p id="connectionStatus">サーバー接続中...</p>
+      <p id="gameStatus"></p>
+    </section>
+
+    <section id="hp-section" class="hidden">
+      <div class="hp-row">
+        <span id="myNameLabel">あなた</span>
+        <div class="hp-bar">
+          <div id="myHpBar" class="hp-fill"></div>
+        </div>
+        <span id="myHpText"></span>
+      </div>
+      <div class="hp-row">
+        <span id="opponentNameLabel">相手</span>
+        <div class="hp-bar">
+          <div id="opponentHpBar" class="hp-fill"></div>
+        </div>
+        <span id="opponentHpText"></span>
+      </div>
+      <p id="roundInfo"></p>
+    </section>
+
+    <section id="question-section" class="hidden">
+      <h2 id="questionText"></h2>
+      <ul id="choicesList"></ul>
+      <button id="skipAnswerBtn" class="hidden">回答スキップ</button>
+      <p id="timerText"></p>
+    </section>
+
+    <section id="result-section" class="hidden">
+      <h2>ラウンド結果</h2>
+      <p id="roundResultText"></p>
+      <p id="correctAnswerText"></p>
+      <button id="nextRoundBtn" class="hidden">次の問題へ</button>
+    </section>
+
+    <section id="final-section" class="hidden">
+      <h2 id="finalResultTitle"></h2>
+      <p id="finalResultDetail"></p>
+      <button id="reloadBtn">最初から</button>
+    </section>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
