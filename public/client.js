@@ -43,6 +43,7 @@ const gameStatus = document.getElementById("gameStatus");
 
 const nameSection = document.getElementById("name-section");
 const roomSection = document.getElementById("room-section");
+const roomSettingsPanel = document.getElementById("room-settings");
 const hpSection = document.getElementById("hp-section");
 const questionSection = document.getElementById("question-section");
 const resultSection = document.getElementById("result-section");
@@ -148,6 +149,9 @@ socket.on("roomCreated", (data) => {
   if (roomSection) {
     roomSection.classList.remove("hidden");
   }
+  if (roomSettingsPanel) {
+    roomSettingsPanel.classList.remove("hidden");
+  }
   roomInfo.textContent = `ルームID: ${roomId}（相手に伝えてください）`;
   gameStatus.textContent = "相手の参加を待っています...";
 });
@@ -157,6 +161,9 @@ socket.on("roomJoined", (data) => {
   myPlayerId = data.playerId;
   if (roomSection) {
     roomSection.classList.remove("hidden");
+  }
+  if (roomSettingsPanel) {
+    roomSettingsPanel.classList.remove("hidden");
   }
   roomInfo.textContent = `ルームID: ${roomId}`;
   gameStatus.textContent = "ルームに参加しました。相手の準備を待っています...";
@@ -197,6 +204,9 @@ socket.on("gameStart", (data) => {
   hpConfigSection.classList.add("hidden");
   if (roomSection) {
     roomSection.classList.add("hidden");
+  }
+  if (roomSettingsPanel) {
+    roomSettingsPanel.classList.add("hidden");
   }
   if (questionSection) {
     questionSection.classList.remove("hidden");
