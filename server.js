@@ -251,10 +251,11 @@ io.on("connection", (socket) => {
 
     room.initialHpMap = {};
     for (const playerId of room.order) {
-      const hp =
-        initialHp && typeof initialHp[playerId] === "number"
-          ? initialHp[playerId]
+      const rawHp =
+        initialHp && typeof initialHp[playerId] !== "undefined"
+          ? Number(initialHp[playerId])
           : DEFAULT_INITIAL_HP;
+      const hp = Number.isFinite(rawHp) ? rawHp : DEFAULT_INITIAL_HP;
       room.initialHpMap[playerId] = Math.max(1, hp);
       room.players[playerId].hp = room.initialHpMap[playerId];
     }

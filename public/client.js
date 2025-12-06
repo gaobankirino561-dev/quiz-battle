@@ -23,8 +23,7 @@ let roomSettings = {
 };
 
 let hpConfig = {
-  player1Id: null,
-  player2Id: null,
+  players: [],
 };
 
 let currentQuestionId = null;
@@ -83,10 +82,7 @@ const playerCountSelect = document.getElementById("player-count");
 
 const hpConfigSection = document.getElementById("hp-config-section");
 const hpConfigInfo = document.getElementById("hpConfigInfo");
-const hpPlayer1Label = document.getElementById("hpPlayer1Label");
-const hpPlayer2Label = document.getElementById("hpPlayer2Label");
-const hpPlayer1Input = document.getElementById("hpPlayer1Input");
-const hpPlayer2Input = document.getElementById("hpPlayer2Input");
+const hpInputsContainer = document.getElementById("hpInputsContainer");
 const startGameWithHpBtn = document.getElementById("startGameWithHpBtn");
 const hpConfigStatus = document.getElementById("hpConfigStatus");
 
@@ -182,19 +178,15 @@ socket.on("roomReadyForHpConfig", (data) => {
   roomSettings = data.settings || roomSettings;
   timeLimitSeconds = roomSettings.timeLimitSeconds;
 
-  hpConfig.player1Id = data.players[0].id;
-  hpConfig.player2Id = data.players[1].id;
+  hpConfig.players = data.players || [];
 
   hpSection.classList.remove("hidden");
   roundInfo.textContent = "初期HP設定を待機中";
 
   if (isRoomOwner) {
     hpConfigSection.classList.remove("hidden");
-    hpConfigInfo.textContent = "あなたがホストです。両プレイヤーの初期HPを設定してください。";
-    hpPlayer1Label.textContent = `${data.players[0].name} のHP:`;
-    hpPlayer2Label.textContent = `${data.players[1].name} のHP:`;
-    hpPlayer1Input.value = 20;
-    hpPlayer2Input.value = 20;
+    hpConfigInfo.textContent = "あなたがホストです。全プレイヤーの初期HPを設定してください。";
+    renderHpInputs(hpConfig.players);
     hpConfigStatus.textContent = "";
   } else {
     hpConfigSection.classList.add("hidden");
@@ -377,10 +369,21 @@ socket.on("gameOver", (data) => {
 startGameWithHpBtn.addEventListener("click", () => {
   if (!isRoomOwner) return;
 
-  const hp1 = parseInt(hpPlayer1Input.value, 10) || 20;
-  const hp2 = parseInt(hpPlayer2Input.value, 10) || 20;
+  const hpInputs = hpInputsContainer?.querySelectorAll("input[data-player-id]") || [];
+  const hpMap = {};
+  let invalid = false;
+  hpInputs.forEach((input) => {
+    const pid = input.dataset.playerId;
+    const val = parseInt(input.value, 10) || 20;
+    if (val <= 0) {
+      invalid = true;
+    }
+    if (pid) {
+      hpMap[pid] = val;
+    }
+  });
 
-  if (hp1 <= 0 || hp2 <= 0) {
+  if (invalid) {
     alert("HPは1以上の数値を指定してください。");
     return;
   }
@@ -389,10 +392,7 @@ startGameWithHpBtn.addEventListener("click", () => {
 
   socket.emit("configureRoomAndStart", {
     roomId,
-    initialHp: {
-      [hpConfig.player1Id]: hp1,
-      [hpConfig.player2Id]: hp2,
-    },
+    initialHp: hpMap,
   });
 });
 
@@ -420,4 +420,29 @@ function showFinalResult(info) {
   const { winner, reason, yourHp, opponentHp } = info;
   finalResultTitle.textContent = winner === "you" ? "あなたの勝ち！" : winner === "draw" ? "引き分け" : "あなたの負け...";
   finalResultDetail.textContent = `理由: ${reason} / あなたHP=${yourHp}, 相手HP=${opponentHp}`;
+}
+
+function renderHpInputs(players) {
+  if (!hpInputsContainer) return;
+  hpInputsContainer.innerHTML = "";
+  const list = players && Array.isArray(players) ? players : [];
+  list.forEach((player, idx) => {
+    const row = document.createElement("div");
+    row.className = "field-row";
+
+    const label = document.createElement("label");
+    const span = document.createElement("span");
+    span.textContent = `${player.name || `プレイヤー${idx + 1}`} のHP:`;
+    const input = document.createElement("input");
+    input.type = "number";
+    input.min = "1";
+    input.max = "200";
+    input.value = 20;
+    input.dataset.playerId = player.id;
+
+    label.appendChild(span);
+    label.appendChild(input);
+    row.appendChild(label);
+    hpInputsContainer.appendChild(row);
+  });
 }
