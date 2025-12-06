@@ -512,6 +512,12 @@ function resolveRound(roomId) {
       settings && !settings.infiniteMode
         ? settings.maxRounds || DEFAULT_MAX_ROUNDS
         : null;
+    const playersPayload = players.map((p) => ({
+      id: p.id,
+      name: p.name,
+      hp: p.hp,
+      initialHp: room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP,
+    }));
 
     players.forEach((p) => {
       const opponent = players.find((x) => x.id !== p.id) || p;
@@ -519,6 +525,7 @@ function resolveRound(roomId) {
         correctAnswer: correctAnswerText,
         canContinue: !finished && (!maxRounds || room.round < maxRounds),
         gameStatusText: finished ? "ゲーム終了" : `次の問題へ進みます`,
+        players: playersPayload,
         gameOverInfo: finished
           ? {
               winner:
@@ -535,7 +542,7 @@ function resolveRound(roomId) {
             }
           : null,
         you: { hp: p.hp },
-        opponent: { hp: opponent.hp },
+        opponent: { id: opponent.id, hp: opponent.hp },
         message: resultMessage,
       };
 
@@ -669,6 +676,12 @@ function resolveRound(roomId) {
     settings && !settings.infiniteMode
       ? settings.maxRounds || DEFAULT_MAX_ROUNDS
       : null;
+  const playersPayload = [p1, p2].map((p) => ({
+    id: p.id,
+    name: p.name,
+    hp: p.hp,
+    initialHp: room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP,
+  }));
 
   const commonPayload = {
     correctAnswer: correctAnswerText,
@@ -686,15 +699,17 @@ function resolveRound(roomId) {
 
   io.to(p1.id).emit("roundResult", {
     ...commonPayload,
-    you: { hp: p1.hp },
-    opponent: { hp: p2.hp },
+    players: playersPayload,
+    you: { id: p1.id, hp: p1.hp },
+    opponent: { id: p2.id, hp: p2.hp },
     message: resultMessage,
   });
 
   io.to(p2.id).emit("roundResult", {
     ...commonPayload,
-    you: { hp: p2.hp },
-    opponent: { hp: p1.hp },
+    players: playersPayload,
+    you: { id: p2.id, hp: p2.hp },
+    opponent: { id: p1.id, hp: p1.hp },
     message: resultMessage,
   });
 

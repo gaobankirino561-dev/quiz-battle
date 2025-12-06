@@ -149,6 +149,12 @@ button:disabled {
   gap: 10px;
   margin-bottom: 10px;
 }
+.hp-name {
+  min-width: 90px;
+}
+.hp-value {
+  font-weight: 700;
+}
 
 .hp-bar {
   flex: 1;

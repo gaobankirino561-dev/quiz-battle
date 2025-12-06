@@ -4,13 +4,10 @@ let playerName = "";
 let roomId = "";
 let myPlayerId = null;
 let gameState = {
-  myHp: 20,
-  opponentHp: 20,
   round: 0,
   maxRounds: 10,
-  initialMyHp: 20,
-  initialOpponentHp: 20,
 };
+let playersState = [];
 
 let isRoomOwner = false;
 let roomSettings = {
@@ -49,12 +46,7 @@ const questionSection = document.getElementById("question-section");
 const resultSection = document.getElementById("result-section");
 const finalSection = document.getElementById("final-section");
 
-const myNameLabel = document.getElementById("myNameLabel");
-const opponentNameLabel = document.getElementById("opponentNameLabel");
-const myHpBar = document.getElementById("myHpBar");
-const opponentHpBar = document.getElementById("opponentHpBar");
-const myHpText = document.getElementById("myHpText");
-const opponentHpText = document.getElementById("opponentHpText");
+const hpStatus = document.getElementById("hp-status");
 const roundInfo = document.getElementById("roundInfo");
 
 const questionText = document.getElementById("questionText");
@@ -215,20 +207,15 @@ socket.on("gameStart", (data) => {
   }
   roomSettings = data.settings || roomSettings;
 
-  const myInitial = data.initialHpMap[data.you.id] ?? data.initialHp;
-  const opponentInitial = data.initialHpMap[data.opponent.id] ?? data.initialHp;
-
-  gameState.myHp = myInitial;
-  gameState.opponentHp = opponentInitial;
-  gameState.initialMyHp = myInitial;
-  gameState.initialOpponentHp = opponentInitial;
+  playersState = (data.players || []).map((p) => ({
+    ...p,
+    initialHp: data.initialHpMap?.[p.id] ?? data.initialHp ?? p.hp,
+  }));
   gameState.round = 0;
   gameState.maxRounds = data.settings?.infiniteMode ? null : data.maxRounds;
   timeLimitSeconds = data.settings?.timeLimitSeconds ?? 30;
 
-  updateHpBars();
-  myNameLabel.textContent = data.you.name;
-  opponentNameLabel.textContent = data.opponent.name;
+  renderHpStatus(playersState, myPlayerId);
 
   gameStatus.textContent = "ゲーム開始！";
 });
@@ -324,9 +311,12 @@ socket.on("roundResult", (data) => {
   resultSection.classList.remove("hidden");
   nextRoundBtn.classList.add("hidden");
 
-  gameState.myHp = data.you.hp;
-  gameState.opponentHp = data.opponent.hp;
-  updateHpBars();
+  if (data.players && Array.isArray(data.players)) {
+    playersState = data.players;
+  } else {
+    playersState = mergeHpUpdate(playersState, data);
+  }
+  renderHpStatus(playersState, myPlayerId);
 
   roundResultText.textContent = data.message;
   correctAnswerText.textContent = `正解: ${data.correctAnswer}`;
@@ -405,14 +395,7 @@ reloadBtn.addEventListener("click", () => {
 });
 
 function updateHpBars() {
-  const myBase = gameState.initialMyHp || gameState.myHp || 1;
-  const oppBase = gameState.initialOpponentHp || gameState.opponentHp || 1;
-  const myPercent = Math.max(0, Math.min(100, (gameState.myHp / myBase) * 100));
-  const oppPercent = Math.max(0, Math.min(100, (gameState.opponentHp / oppBase) * 100));
-  myHpBar.style.width = myPercent + "%";
-  opponentHpBar.style.width = oppPercent + "%";
-  myHpText.textContent = `${gameState.myHp} / ${myBase}`;
-  opponentHpText.textContent = `${gameState.opponentHp} / ${oppBase}`;
+  // deprecated
 }
 
 function showFinalResult(info) {
@@ -445,4 +428,55 @@ function renderHpInputs(players) {
     row.appendChild(label);
     hpInputsContainer.appendChild(row);
   });
+}
+
+function renderHpStatus(players, myId) {
+  if (!hpStatus) return;
+  hpStatus.innerHTML = "";
+  const list = Array.isArray(players) ? players : [];
+  list.forEach((p, idx) => {
+    const row = document.createElement("div");
+    row.className = "hp-row";
+    const nameSpan = document.createElement("span");
+    nameSpan.className = "hp-name";
+    nameSpan.textContent = `${p.id === myId ? "★ " : ""}${p.name || `プレイヤー${idx + 1}`}`;
+
+    const hpBarWrapper = document.createElement("div");
+    hpBarWrapper.className = "hp-bar";
+    const hpFill = document.createElement("div");
+    hpFill.className = "hp-fill";
+    const base = p.initialHp || p.hp || 1;
+    const percent = Math.max(0, Math.min(100, (p.hp / base) * 100));
+    hpFill.style.width = `${percent}%`;
+    hpBarWrapper.appendChild(hpFill);
+
+    const hpText = document.createElement("span");
+    hpText.className = "hp-value";
+    hpText.textContent = `${p.hp} / ${base}`;
+
+    row.appendChild(nameSpan);
+    row.appendChild(hpBarWrapper);
+    row.appendChild(hpText);
+    hpStatus.appendChild(row);
+  });
+}
+
+function mergeHpUpdate(current, data) {
+  const list = Array.isArray(current) ? [...current] : [];
+  if (data.you && data.opponent) {
+    const updates = [
+      { id: data.you.id || myPlayerId, hp: data.you.hp },
+      { id: data.opponent.id, hp: data.opponent.hp },
+    ];
+    updates.forEach((u) => {
+      if (!u.id) return;
+      const idx = list.findIndex((p) => p.id === u.id);
+      if (idx >= 0) {
+        list[idx] = { ...list[idx], hp: u.hp };
+      } else {
+        list.push({ id: u.id, name: "", hp: u.hp, initialHp: u.hp });
+      }
+    });
+  }
+  return list;
 }
