@@ -509,12 +509,22 @@ function startNextQuestion(roomId) {
 
   const timeLimitSeconds =
     room.settings.timeLimitSeconds || DEFAULT_TIME_LIMIT_SECONDS;
-
-  io.to(roomId).emit("question", {
-    round: room.round,
-    question,
-    timeLimitSeconds,
+  const diff = (question?.difficulty || "EASY");
+  io.to(roomId).emit("countdownStart", {
+    seconds: 3,
+    difficulty: diff,
   });
+
+  setTimeout(() => {
+    // 途中で終了した場合は送信しない
+    const latestRoom = rooms[roomId];
+    if (!latestRoom || latestRoom.finished) return;
+    io.to(roomId).emit("question", {
+      round: room.round,
+      question,
+      timeLimitSeconds,
+    });
+  }, 3000);
 }
 
 function resolveRound(roomId) {
@@ -642,6 +652,10 @@ function resolveRound(roomId) {
         you: { hp: p.hp },
         opponent: { id: opponent.id, hp: opponent.hp },
         message: resultMessage,
+        questionText: question.question,
+        choices: question.choices,
+        correctIndex: correctIndex,
+        myAnswerIndex: room.answers[p.id]?.choiceIndex ?? null,
       };
 
       io.to(p.id).emit("roundResult", payload);
@@ -807,6 +821,9 @@ function resolveRound(roomId) {
           opponentHp: null,
         }
       : null,
+    questionText: question.question,
+    choices: question.choices,
+    correctIndex: correctIndex,
   };
 
   io.to(p1.id).emit("roundResult", {
@@ -814,6 +831,7 @@ function resolveRound(roomId) {
     players: playersPayload,
     you: { id: p1.id, hp: p1.hp },
     opponent: { id: p2.id, hp: p2.hp },
+    myAnswerIndex: room.answers[p1.id]?.choiceIndex ?? null,
     message: resultMessage,
   });
 
@@ -822,6 +840,7 @@ function resolveRound(roomId) {
     players: playersPayload,
     you: { id: p2.id, hp: p2.hp },
     opponent: { id: p1.id, hp: p1.hp },
+    myAnswerIndex: room.answers[p2.id]?.choiceIndex ?? null,
     message: resultMessage,
   });
 

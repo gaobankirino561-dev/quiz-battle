@@ -30,6 +30,7 @@ let questionStartTime = null;
 let timeLimitSeconds = 30;
 let timerIntervalId = null;
 let isEliminatedSelf = false;
+let countdownTimerId = null;
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -64,6 +65,8 @@ const choicesList = document.getElementById("choicesList");
 const timerText = document.getElementById("timerText");
 const questionRules = document.getElementById("questionRules");
 const skipAnswerBtn = document.getElementById("skipAnswerBtn");
+const countdownOverlay = document.getElementById("countdown-overlay");
+const countdownNumber = document.getElementById("countdown-number");
 
 const roundResultText = document.getElementById("roundResultText");
 const correctAnswerText = document.getElementById("correctAnswerText");
@@ -338,12 +341,39 @@ socket.on("question", (data) => {
   setChoiceButtonsDisabled(isEliminatedSelf);
 });
 
+socket.on("countdownStart", ({ seconds, difficulty }) => {
+  if (!countdownOverlay || !countdownNumber) return;
+  if (countdownTimerId !== null) {
+    clearInterval(countdownTimerId);
+    countdownTimerId = null;
+  }
+  countdownOverlay.classList.remove("easy", "normal", "hard");
+  const diff = (difficulty || "").toUpperCase();
+  if (diff === "EASY") countdownOverlay.classList.add("easy");
+  else if (diff === "NORMAL") countdownOverlay.classList.add("normal");
+  else if (diff === "HARD") countdownOverlay.classList.add("hard");
+
+  let remaining = seconds || 3;
+  countdownNumber.textContent = remaining;
+  countdownOverlay.classList.remove("hidden");
+
+  countdownTimerId = setInterval(() => {
+    remaining -= 1;
+    if (remaining <= 0) {
+      clearInterval(countdownTimerId);
+      countdownTimerId = null;
+      countdownOverlay.classList.add("hidden");
+    } else {
+      countdownNumber.textContent = remaining;
+    }
+  }, 1000);
+});
+
 socket.on("roundResult", (data) => {
   if (timerIntervalId) {
     clearInterval(timerIntervalId);
     timerIntervalId = null;
   }
-  questionSection.classList.add("hidden");
   resultSection.classList.remove("hidden");
   nextRoundBtn.classList.add("hidden");
 
@@ -378,6 +408,9 @@ socket.on("roundResult", (data) => {
   if (!data.canContinue && data.gameOverInfo) {
     showFinalResult(data.gameOverInfo);
   }
+
+  // 結果用に問題と選択肢を再描画（ハイライト付き）
+  renderResultQuestion(data);
 });
 
 socket.on("gameOver", (data) => {
@@ -579,4 +612,30 @@ function handleChoiceSelected(displayIndex) {
     elapsedSeconds: elapsedSec,
   });
   timerText.textContent = `回答送信済み（${elapsedSec.toFixed(1)} 秒）`;
+}
+
+function renderResultQuestion(data) {
+  if (!data || !questionText || !choicesList) return;
+  questionText.textContent = data.questionText || "";
+  questionRules.textContent = "";
+  choicesList.innerHTML = "";
+  const choices = data.choices || [];
+  const correctIdx = data.correctIndex;
+  const myIdx = data.myAnswerIndex;
+
+  choices.forEach((choice, idx) => {
+    const li = document.createElement("li");
+    const btn = document.createElement("button");
+    btn.textContent = choice;
+    btn.className = "choice-btn";
+    btn.disabled = true;
+    if (idx === correctIdx) {
+      btn.classList.add("choice-correct");
+    }
+    if (myIdx != null && idx === myIdx) {
+      btn.classList.add("choice-my-answer");
+    }
+    li.appendChild(btn);
+    choicesList.appendChild(li);
+  });
 }
