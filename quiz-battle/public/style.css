@@ -829,3 +829,9 @@ button:disabled {
   justify-content: flex-end;
   gap: 8px;
 }
+
+.speedrun-progress {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}

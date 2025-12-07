@@ -54,6 +54,25 @@ const timeAttackState = {
   history: [],
 };
 
+// Speedrun ゲーム状態
+const speedrunState = {
+  active: false,
+  targetCorrect: 10,
+  totalAnswered: 0,
+  totalCorrect: 0,
+  selectedGenres: [],
+  selectedDifficulties: [],
+  currentDifficulty: null,
+  currentQuestion: null,
+  phase: "idle", // idle | loading | countdown | question | result | finished
+  elapsedMs: 0,
+  timerIntervalId: null,
+  countdownId: null,
+  lastTick: 0,
+  roundStartTime: 0,
+  history: [],
+};
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -114,6 +133,36 @@ const btnTimeAttackResultRestart = document.getElementById("btn-time-attack-resu
 const btnTimeAttackGenreAll = document.getElementById("btn-time-attack-genre-all");
 const btnTimeAttackPause = document.getElementById("btn-time-attack-pause");
 const btnTimeAttackRestart = document.getElementById("btn-time-attack-restart");
+// === Solo: Speedrun ===
+const soloSpeedrunMenuSection = document.getElementById("solo-speedrun-menu");
+const soloSpeedrunRulesPanel = document.getElementById("solo-speedrun-rules-panel");
+const btnSpeedrunRules = document.getElementById("btn-speedrun-rules");
+const btnSpeedrunStart = document.getElementById("btn-speedrun-start");
+const soloSpeedrunConfigSection = document.getElementById("solo-speedrun-config");
+const btnSpeedrunConfigBack = document.getElementById("btn-speedrun-config-back");
+const inputSpeedrunTargetCorrect = document.getElementById("speedrun-target-correct");
+const btnSpeedrunGenreAll = document.getElementById("btn-speedrun-genre-all");
+const btnSpeedrunBegin = document.getElementById("btn-speedrun-begin");
+const soloSpeedrunPlaySection = document.getElementById("solo-speedrun-play");
+const speedrunElapsedDisplay = document.getElementById("speedrun-elapsed-display");
+const speedrunProgressDisplay = document.getElementById("speedrun-progress-display");
+const speedrunDifficultyLabel = document.getElementById("speedrun-difficulty-label");
+const speedrunCountdownEl = document.getElementById("speedrun-countdown");
+const speedrunQuestionArea = document.getElementById("speedrun-question-area");
+const speedrunQuestionText = document.getElementById("speedrun-question-text");
+const speedrunAnswerButtonsContainer = document.getElementById("speedrun-answer-buttons");
+const speedrunResult = document.getElementById("speedrun-result");
+const speedrunResultMessage = document.getElementById("speedrun-result-message");
+const btnSpeedrunPause = document.getElementById("btn-speedrun-pause");
+const btnSpeedrunRestart = document.getElementById("btn-speedrun-restart");
+const soloSpeedrunResultSection = document.getElementById("solo-speedrun-result");
+const speedrunFinalScore = document.getElementById("speedrun-final-score");
+const speedrunFinalTime = document.getElementById("speedrun-final-time");
+const speedrunCorrectCount = document.getElementById("speedrun-correct-count");
+const speedrunTotalCount = document.getElementById("speedrun-total-count");
+const speedrunHistoryList = document.getElementById("speedrun-history-list");
+const btnSpeedrunResultBackConfig = document.getElementById("btn-speedrun-result-back-config");
+const btnSpeedrunResultRestart = document.getElementById("btn-speedrun-result-restart");
 
 const hpStatus = document.getElementById("hp-status");
 const roundInfo = document.getElementById("roundInfo");
@@ -166,6 +215,9 @@ function showOnlineModeScreen() {
   stopTimeAttackLoop();
   timeAttackState.active = false;
   timeAttackState.phase = "idle";
+  stopSpeedrunLoop();
+  speedrunState.active = false;
+  speedrunState.phase = "idle";
   roomRoot.classList.remove("hidden");
   soloRoot.classList.add("hidden");
 }
@@ -181,6 +233,7 @@ function showSoloModeScreen() {
   roomRoot.classList.add("hidden");
   soloRoot.classList.remove("hidden");
   resetTimeAttackToMenu();
+  resetSpeedrunToMenu();
 }
 
 function resetTimeAttackToMenu() {
@@ -206,6 +259,30 @@ function resetTimeAttackToMenu() {
   if (timeAttackCountdownEl) timeAttackCountdownEl.classList.add("hidden");
   if (timeAttackResult) timeAttackResult.classList.add("hidden");
   if (timeAttackAnswerButtonsContainer) timeAttackAnswerButtonsContainer.innerHTML = "";
+}
+
+function resetSpeedrunToMenu() {
+  stopSpeedrunLoop();
+  speedrunState.active = false;
+  speedrunState.phase = "idle";
+  speedrunState.targetCorrect = getSpeedrunTargetCorrect();
+  speedrunState.totalCorrect = 0;
+  speedrunState.totalAnswered = 0;
+  speedrunState.elapsedMs = 0;
+  speedrunState.currentQuestion = null;
+  speedrunState.currentDifficulty = null;
+  speedrunState.history = [];
+  updateSpeedrunTimerDisplay();
+  updateSpeedrunProgressDisplay();
+  updateSpeedrunDifficultyLabel(null);
+  if (soloSpeedrunMenuSection) soloSpeedrunMenuSection.classList.remove("hidden");
+  if (soloSpeedrunConfigSection) soloSpeedrunConfigSection.classList.add("hidden");
+  if (soloSpeedrunPlaySection) soloSpeedrunPlaySection.classList.add("hidden");
+  if (soloSpeedrunResultSection) soloSpeedrunResultSection.classList.add("hidden");
+  if (soloSpeedrunRulesPanel) soloSpeedrunRulesPanel.classList.add("hidden");
+  if (speedrunCountdownEl) speedrunCountdownEl.classList.add("hidden");
+  if (speedrunResult) speedrunResult.classList.add("hidden");
+  if (speedrunAnswerButtonsContainer) speedrunAnswerButtonsContainer.innerHTML = "";
 }
 
 function getTimeAttackSelectedGenres() {
@@ -262,6 +339,52 @@ function applyDifficultyClassesToCountdown(difficulty) {
   }
 }
 
+// Speedrun helpers
+function getSpeedrunTargetCorrect() {
+  if (!inputSpeedrunTargetCorrect) return 10;
+  const v = Number(inputSpeedrunTargetCorrect.value) || 10;
+  return Math.min(Math.max(v, 1), 200);
+}
+
+function getSpeedrunSelectedGenres() {
+  const nodes = document.querySelectorAll('input[name="speedrun-genre"]:checked');
+  return Array.from(nodes).map((el) => el.value);
+}
+
+function getSpeedrunSelectedDifficulties() {
+  const nodes = document.querySelectorAll('input[name="speedrun-difficulty"]:checked');
+  return Array.from(nodes).map((el) => el.value);
+}
+
+function updateSpeedrunTimerDisplay() {
+  if (!speedrunElapsedDisplay) return;
+  const sec = speedrunState.elapsedMs / 1000;
+  speedrunElapsedDisplay.textContent = sec.toFixed(1);
+}
+
+function updateSpeedrunProgressDisplay() {
+  if (!speedrunProgressDisplay) return;
+  speedrunProgressDisplay.textContent = `正解数: ${speedrunState.totalCorrect} / ${speedrunState.targetCorrect}`;
+}
+
+function updateSpeedrunDifficultyLabel(difficulty) {
+  if (!speedrunDifficultyLabel) return;
+  speedrunDifficultyLabel.classList.remove("difficulty-easy", "difficulty-normal", "difficulty-hard");
+  let labelText = "難易度: -";
+  const normalized = typeof difficulty === "string" ? difficulty.toLowerCase() : "";
+  if (normalized === "easy") {
+    labelText = "難易度: EASY";
+    speedrunDifficultyLabel.classList.add("difficulty-easy");
+  } else if (normalized === "normal") {
+    labelText = "難易度: NORMAL";
+    speedrunDifficultyLabel.classList.add("difficulty-normal");
+  } else if (normalized === "hard") {
+    labelText = "難易度: HARD";
+    speedrunDifficultyLabel.classList.add("difficulty-hard");
+  }
+  speedrunDifficultyLabel.textContent = labelText;
+}
+
 function ensureTimeAttackTimerLoop() {
   if (timeAttackState.timerIntervalId != null) return;
   timeAttackState.lastTick = window.performance.now();
@@ -292,6 +415,32 @@ function stopTimeAttackLoop() {
   if (timeAttackState.countdownId != null) {
     clearInterval(timeAttackState.countdownId);
     timeAttackState.countdownId = null;
+  }
+}
+
+function ensureSpeedrunTimerLoop() {
+  if (speedrunState.timerIntervalId != null) return;
+  speedrunState.lastTick = window.performance.now();
+  speedrunState.timerIntervalId = window.setInterval(() => {
+    if (!speedrunState.active) return;
+    const now = window.performance.now();
+    const delta = now - (speedrunState.lastTick || now);
+    speedrunState.lastTick = now;
+    if (speedrunState.phase !== "finished") {
+      speedrunState.elapsedMs += delta;
+      updateSpeedrunTimerDisplay();
+    }
+  }, 100);
+}
+
+function stopSpeedrunLoop() {
+  if (speedrunState.timerIntervalId != null) {
+    clearInterval(speedrunState.timerIntervalId);
+    speedrunState.timerIntervalId = null;
+  }
+  if (speedrunState.countdownId != null) {
+    clearInterval(speedrunState.countdownId);
+    speedrunState.countdownId = null;
   }
 }
 
@@ -648,6 +797,330 @@ function handleTimeAttackAnswer(selectedIndex, questionData) {
   window.setTimeout(() => {
     if (!timeAttackState.active) return;
     startTimeAttackRound();
+  }, 1500);
+}
+
+// Speedrun
+function applyDifficultyClassesToSpeedrunCountdown(difficulty) {
+  if (!speedrunCountdownEl) return;
+  speedrunCountdownEl.classList.remove("difficulty-easy", "difficulty-normal", "difficulty-hard");
+  const normalized = typeof difficulty === "string" ? difficulty.toLowerCase() : "";
+  if (normalized === "easy") {
+    speedrunCountdownEl.classList.add("difficulty-easy");
+  } else if (normalized === "normal") {
+    speedrunCountdownEl.classList.add("difficulty-normal");
+  } else if (normalized === "hard") {
+    speedrunCountdownEl.classList.add("difficulty-hard");
+  }
+}
+
+function beginSpeedrunGame() {
+  stopSpeedrunLoop();
+  const genres = getSpeedrunSelectedGenres();
+  const difficulties = getSpeedrunSelectedDifficulties();
+  const target = getSpeedrunTargetCorrect();
+
+  if (genres.length === 0 || difficulties.length === 0) {
+    alert("ジャンルと難易度を少なくとも1つずつ選択してください。");
+    return;
+  }
+
+  speedrunState.active = true;
+  speedrunState.phase = "idle";
+  speedrunState.selectedGenres = genres;
+  speedrunState.selectedDifficulties = difficulties;
+  speedrunState.targetCorrect = target;
+  speedrunState.totalCorrect = 0;
+  speedrunState.totalAnswered = 0;
+  speedrunState.elapsedMs = 0;
+  speedrunState.currentDifficulty = null;
+  speedrunState.currentQuestion = null;
+  speedrunState.history = [];
+  speedrunState.lastTick = window.performance.now();
+  speedrunState.roundStartTime = 0;
+
+  updateSpeedrunTimerDisplay();
+  updateSpeedrunProgressDisplay();
+  updateSpeedrunDifficultyLabel(null);
+  if (speedrunResult) speedrunResult.classList.add("hidden");
+  if (speedrunQuestionArea) speedrunQuestionArea.classList.add("hidden");
+
+  if (soloSpeedrunConfigSection && soloSpeedrunPlaySection) {
+    soloSpeedrunConfigSection.classList.add("hidden");
+    soloSpeedrunPlaySection.classList.remove("hidden");
+  }
+  if (soloSpeedrunResultSection) {
+    soloSpeedrunResultSection.classList.add("hidden");
+  }
+
+  ensureSpeedrunTimerLoop();
+  startSpeedrunRound();
+}
+
+function finishSpeedrun() {
+  if (!speedrunState.active && speedrunState.phase === "finished") return;
+  speedrunState.active = false;
+  speedrunState.phase = "finished";
+  stopSpeedrunLoop();
+
+  if (speedrunCountdownEl) speedrunCountdownEl.classList.add("hidden");
+  if (speedrunQuestionArea) speedrunQuestionArea.classList.add("hidden");
+  if (speedrunResult) speedrunResult.classList.add("hidden");
+
+  if (soloSpeedrunPlaySection) soloSpeedrunPlaySection.classList.add("hidden");
+  if (soloSpeedrunResultSection) soloSpeedrunResultSection.classList.remove("hidden");
+
+  const timeSec = Math.max(speedrunState.elapsedMs, 0) / 1000;
+  const finalTime = timeSec.toFixed(1);
+  const finalScore = (speedrunState.targetCorrect * 12 - timeSec).toFixed(1);
+
+  if (speedrunFinalScore) speedrunFinalScore.textContent = String(finalScore);
+  if (speedrunFinalTime) speedrunFinalTime.textContent = finalTime;
+  if (speedrunCorrectCount) speedrunCorrectCount.textContent = String(speedrunState.totalCorrect);
+  if (speedrunTotalCount) speedrunTotalCount.textContent = String(speedrunState.totalAnswered);
+
+  if (speedrunHistoryList) {
+    speedrunHistoryList.innerHTML = "";
+    speedrunState.history.forEach((entry, index) => {
+      const li = document.createElement("li");
+      const qSpan = document.createElement("span");
+      qSpan.className = "history-question";
+      qSpan.textContent = `${index + 1}. [${(entry.difficulty || "-").toUpperCase()}] ${entry.questionText}`;
+
+      const sSpan = document.createElement("span");
+      sSpan.className = "history-status " + (entry.isCorrect ? "correct" : "wrong");
+      sSpan.textContent = entry.isCorrect ? "○ 正解" : "× 不正解";
+
+      li.appendChild(qSpan);
+      li.appendChild(sSpan);
+      speedrunHistoryList.appendChild(li);
+    });
+  }
+}
+
+function startSpeedrunRound() {
+  if (!speedrunState.active) return;
+  if (speedrunState.totalCorrect >= speedrunState.targetCorrect) {
+    finishSpeedrun();
+    return;
+  }
+
+  const ds = speedrunState.selectedDifficulties || [];
+  if (!ds.length) {
+    console.warn("Speedrun: selectedDifficulties is empty");
+    finishSpeedrun();
+    return;
+  }
+  const difficulty = ds[Math.floor(Math.random() * ds.length)];
+  speedrunState.currentDifficulty = difficulty;
+  speedrunState.currentQuestion = null;
+
+  updateSpeedrunDifficultyLabel(difficulty);
+  applyDifficultyClassesToSpeedrunCountdown(difficulty);
+
+  speedrunState.phase = "countdown";
+  if (speedrunCountdownEl) {
+    speedrunCountdownEl.classList.remove("hidden");
+  }
+  if (speedrunQuestionArea) speedrunQuestionArea.classList.add("hidden");
+  if (speedrunResult) speedrunResult.classList.add("hidden");
+
+  let count = 3;
+  if (speedrunState.countdownId != null) {
+    clearInterval(speedrunState.countdownId);
+  }
+
+  const updateCountdownText = () => {
+    const diffText =
+      typeof difficulty === "string"
+        ? (() => {
+            const d = difficulty.toLowerCase();
+            if (d === "easy") return "EASY";
+            if (d === "normal") return "NORMAL";
+            if (d === "hard") return "HARD";
+            return difficulty;
+          })()
+        : "-";
+    if (speedrunCountdownEl) {
+      speedrunCountdownEl.textContent = `${diffText} ${count}`;
+    }
+  };
+
+  updateCountdownText();
+
+  speedrunState.countdownId = window.setInterval(() => {
+    count -= 1;
+    if (count > 0) {
+      updateCountdownText();
+    } else {
+      if (speedrunState.countdownId != null) {
+        clearInterval(speedrunState.countdownId);
+        speedrunState.countdownId = null;
+      }
+      if (speedrunCountdownEl) {
+        speedrunCountdownEl.classList.add("hidden");
+      }
+      showNextSpeedrunQuestion();
+    }
+  }, 1000);
+}
+
+function fetchSpeedrunQuestion() {
+  return new Promise((resolve, reject) => {
+    if (!socket || !socket.connected) {
+      reject(new Error("ソケット未接続のため問題を取得できません"));
+      return;
+    }
+    const diff =
+      speedrunState.currentDifficulty != null
+        ? [String(speedrunState.currentDifficulty).toUpperCase()]
+        : (speedrunState.selectedDifficulties || []).map((d) => String(d).toUpperCase());
+    const payload = {
+      genres: speedrunState.selectedGenres,
+      difficulties: diff,
+    };
+    try {
+      socket.emit("timeAttackNextQuestion", payload, (res) => {
+        if (!res || res.error) {
+          reject(new Error(res?.error || "問題取得に失敗しました"));
+        } else {
+          resolve(res);
+        }
+      });
+    } catch (e) {
+      reject(e);
+    }
+  });
+}
+
+async function showNextSpeedrunQuestion() {
+  if (!speedrunState.active) return;
+  if (speedrunState.totalCorrect >= speedrunState.targetCorrect) {
+    finishSpeedrun();
+    return;
+  }
+
+  if (speedrunAnswerButtonsContainer) {
+    const prevButtons = Array.from(speedrunAnswerButtonsContainer.children);
+    prevButtons.forEach((btn) => btn.classList.remove("correct-answer"));
+  }
+
+  speedrunState.phase = "loading";
+  updateSpeedrunTimerDisplay();
+  updateSpeedrunProgressDisplay();
+  if (speedrunQuestionArea) {
+    speedrunQuestionArea.classList.add("hidden");
+  }
+
+  let questionData = null;
+  try {
+    questionData = await fetchSpeedrunQuestion();
+  } catch (err) {
+    console.error(err);
+    finishSpeedrun();
+    return;
+  }
+
+  if (!questionData || !questionData.question || !Array.isArray(questionData.choices)) {
+    console.warn("Speedrun questionData が取得できませんでした");
+    finishSpeedrun();
+    return;
+  }
+
+  speedrunState.currentQuestion = questionData;
+  const qDifficulty = questionData.difficulty || speedrunState.currentDifficulty;
+  speedrunState.currentDifficulty = qDifficulty;
+  updateSpeedrunDifficultyLabel(qDifficulty);
+
+  if (speedrunQuestionText) {
+    speedrunQuestionText.textContent = questionData.question;
+  }
+
+  if (speedrunAnswerButtonsContainer) {
+    speedrunAnswerButtonsContainer.innerHTML = "";
+    questionData.choices.forEach((choiceText, index) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "solo-answer-button";
+      btn.textContent = choiceText;
+      btn.addEventListener("click", () => {
+        handleSpeedrunAnswer(index, questionData);
+      });
+      speedrunAnswerButtonsContainer.appendChild(btn);
+    });
+  }
+
+  if (speedrunQuestionArea) {
+    speedrunQuestionArea.classList.remove("hidden");
+  }
+
+  speedrunState.phase = "question";
+  speedrunState.roundStartTime = window.performance.now();
+  speedrunState.lastTick = speedrunState.roundStartTime;
+}
+
+function handleSpeedrunAnswer(selectedIndex, questionData) {
+  if (!speedrunState.active) return;
+  if (speedrunState.phase !== "question") return;
+
+  const now = window.performance.now();
+  const delta = now - (speedrunState.lastTick || now);
+  speedrunState.lastTick = now;
+  speedrunState.elapsedMs += delta;
+  updateSpeedrunTimerDisplay();
+
+  speedrunState.phase = "result";
+
+  const q = questionData || speedrunState.currentQuestion;
+  const correctIndex = q && typeof q.correctIndex === "number" ? q.correctIndex : null;
+  const isCorrect = correctIndex != null && selectedIndex === correctIndex;
+
+  speedrunState.totalAnswered += 1;
+  if (isCorrect) {
+    speedrunState.totalCorrect += 1;
+  }
+
+  const qText = q && q.question ? q.question : q?.text ? q.text : "（問題文不明）";
+  const difficulty = (q && q.difficulty) || speedrunState.currentDifficulty || "normal";
+  speedrunState.history.push({
+    questionText: qText,
+    difficulty,
+    isCorrect,
+  });
+
+  if (correctIndex != null && speedrunAnswerButtonsContainer && speedrunAnswerButtonsContainer.children.length > 0) {
+    const buttons = Array.from(speedrunAnswerButtonsContainer.children);
+    buttons.forEach((btn, index) => {
+      btn.classList.remove("correct-answer");
+      if (index === correctIndex) {
+        btn.classList.add("correct-answer");
+      }
+      btn.disabled = true;
+    });
+  }
+
+  const correctText = correctIndex != null && q?.choices ? q.choices[correctIndex] : "（正解不明）";
+  let message = "";
+  if (isCorrect) {
+    message = "正解！";
+  } else {
+    message = `不正解… 正解は「${correctText}」でした。`;
+  }
+  if (speedrunResult && speedrunResultMessage) {
+    speedrunResultMessage.textContent = message;
+    speedrunResult.classList.remove("hidden");
+  }
+
+  updateSpeedrunProgressDisplay();
+
+  if (speedrunState.totalCorrect >= speedrunState.targetCorrect) {
+    finishSpeedrun();
+    return;
+  }
+
+  window.setTimeout(() => {
+    if (!speedrunState.active) return;
+    startSpeedrunRound();
   }, 1500);
 }
 
@@ -1404,6 +1877,109 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       console.log("Time Attack リザルトからリスタート");
       beginTimeAttackGame();
+    });
+  }
+
+  // --- スピードラン：詳細ルールボタン ---
+  if (btnSpeedrunRules && soloSpeedrunRulesPanel) {
+    btnSpeedrunRules.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isHidden = soloSpeedrunRulesPanel.classList.contains("hidden");
+      if (isHidden) {
+        console.log("スピードラン詳細ルールを表示");
+        soloSpeedrunRulesPanel.classList.remove("hidden");
+      } else {
+        console.log("スピードラン詳細ルールを非表示");
+        soloSpeedrunRulesPanel.classList.add("hidden");
+      }
+    });
+  }
+
+  // スピードラン開始（メニュー→設定）
+  if (btnSpeedrunStart && soloSpeedrunMenuSection && soloSpeedrunConfigSection) {
+    btnSpeedrunStart.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("スピードランのルール設定画面へ遷移");
+      soloSpeedrunMenuSection.classList.add("hidden");
+      soloSpeedrunConfigSection.classList.remove("hidden");
+    });
+  }
+
+  // スピードラン ジャンルALL
+  if (btnSpeedrunGenreAll) {
+    btnSpeedrunGenreAll.addEventListener("click", (e) => {
+      e.preventDefault();
+      const genreInputs = document.querySelectorAll('input[name="speedrun-genre"]');
+      if (!genreInputs.length) return;
+      const allChecked = Array.from(genreInputs).every((el) => el.checked);
+      const newChecked = !allChecked;
+      Array.from(genreInputs).forEach((el) => {
+        el.checked = newChecked;
+      });
+      console.log("Speedrun genre ALL toggled, newChecked =", newChecked);
+    });
+  }
+
+  // スピードラン中断 → 設定
+  if (btnSpeedrunPause && soloSpeedrunPlaySection && soloSpeedrunConfigSection) {
+    btnSpeedrunPause.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Speedrun 中断 → 設定画面に戻る");
+      speedrunState.active = false;
+      speedrunState.phase = "idle";
+      stopSpeedrunLoop();
+      soloSpeedrunPlaySection.classList.add("hidden");
+      soloSpeedrunConfigSection.classList.remove("hidden");
+      if (speedrunCountdownEl) speedrunCountdownEl.classList.add("hidden");
+      if (speedrunResult) speedrunResult.classList.add("hidden");
+    });
+  }
+
+  // スピードラン リスタート
+  if (btnSpeedrunRestart) {
+    btnSpeedrunRestart.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Speedrun リスタート");
+      beginSpeedrunGame();
+    });
+  }
+
+  // スピードラン設定へ戻る
+  if (btnSpeedrunConfigBack && soloSpeedrunConfigSection && soloSpeedrunMenuSection) {
+    btnSpeedrunConfigBack.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Speedrun config → ソロメニューに戻る");
+      resetSpeedrunToMenu();
+    });
+  }
+
+  // スピードラン開始
+  if (btnSpeedrunBegin) {
+    btnSpeedrunBegin.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Speedrun 開始");
+      beginSpeedrunGame();
+    });
+  }
+
+  // スピードラン リザルト → 設定
+  if (btnSpeedrunResultBackConfig && soloSpeedrunResultSection && soloSpeedrunConfigSection) {
+    btnSpeedrunResultBackConfig.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Speedrun リザルト → ルール設定に戻る");
+      speedrunState.active = false;
+      speedrunState.phase = "idle";
+      soloSpeedrunResultSection.classList.add("hidden");
+      soloSpeedrunConfigSection.classList.remove("hidden");
+    });
+  }
+
+  // スピードラン リザルト → リスタート
+  if (btnSpeedrunResultRestart) {
+    btnSpeedrunResultRestart.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Speedrun リザルトからリスタート");
+      beginSpeedrunGame();
     });
   }
 });
