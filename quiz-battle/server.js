@@ -19,8 +19,9 @@ const questionsData = JSON.parse(
 );
 
 // ゲーム設定
-const INITIAL_HP = 20;
-const MAX_ROUNDS = 10;
+const DEFAULT_INITIAL_HP = 20;
+const DEFAULT_MAX_ROUNDS = 10;
+const DEFAULT_TIME_LIMIT_SECONDS = 30;
 
 const BASE_DAMAGE = {
   EASY: 2,
@@ -32,6 +33,16 @@ function calcSpeedBonus(elapsedSeconds) {
   if (elapsedSeconds <= 10) return 2;
   if (elapsedSeconds <= 20) return 1;
   return 0;
+}
+
+function sortRoundStats(stats) {
+  return stats.sort((a, b) => {
+    const d = (a.damage || 0) - (b.damage || 0);
+    if (d !== 0) return d;
+    const ta = a.elapsedMs == null ? Infinity : a.elapsedMs;
+    const tb = b.elapsedMs == null ? Infinity : b.elapsedMs;
+    return ta - tb;
+  });
 }
 
 // ルーム管理
@@ -55,10 +66,48 @@ function calcSpeedBonus(elapsedSeconds) {
  *       correct: boolean
  *     }
  *   },
- *   finished: boolean
+ *   finished: boolean,
+ *   settings: {
+ *     categories: string[] | null,
+ *     difficulties: string[],
+ *     maxRounds: number | null,
+ *     infiniteMode: boolean,
+ *     timeLimitSeconds: number,
+ *   },
+ *   maxPlayers: number,
+ *   initialHpMap: { [socketId]: number },
+ *   waitingForHpConfig: boolean,
+ *   usedQuestionIds: Set<number>,
+ *   readyForNext: { [socketId]: true },
+ *   waitingNext: boolean
  * }
  */
 const rooms = {};
+const timeAttackSessions = {};
+
+function broadcastRoomState(room) {
+  io.to(room.id).emit("roomState", serializeRoom(room));
+}
+
+function getPlayers(room) {
+  return room.order.map((id) => room.players[id]).filter(Boolean);
+}
+
+function serializeRoom(room) {
+  return {
+    id: room.id,
+    hostId: room.hostId,
+    maxPlayers: room.maxPlayers || room.settings?.maxPlayers || 2,
+    players: getPlayers(room).map((p) => ({
+      id: p.id,
+      name: p.name,
+      hp: p.hp,
+      isEliminated: !!p.isEliminated,
+      replayReady: !!p.replayReady,
+      initialHp: room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP,
+    })),
+  };
+}
 
 function generateRoomId() {
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -69,9 +118,72 @@ function generateRoomId() {
   return id;
 }
 
-function pickRandomQuestion() {
-  const idx = Math.floor(Math.random() * questionsData.length);
-  return questionsData[idx];
+function findRoomBySocketId(socketId) {
+  return Object.values(rooms).find((r) => r.players[socketId]);
+}
+
+function pickRandomQuestion(room) {
+  let pool = questionsData;
+
+  if (room && room.settings) {
+    const { categories, category, difficulties } = room.settings;
+    const used = room.usedQuestionIds || new Set();
+    const categoryFilter =
+      Array.isArray(categories) && categories.length > 0
+        ? new Set(categories)
+        : category && category !== "all"
+        ? new Set([category])
+        : null;
+
+    pool = questionsData.filter((q) => {
+      const questionCategory = q.category || null;
+      const categoryOk = !categoryFilter
+        ? true
+        : questionCategory && categoryFilter.has(questionCategory);
+      const diffOk =
+        !difficulties || difficulties.length === 0
+          ? true
+          : difficulties.includes(q.difficulty || "EASY");
+      const unusedOk = !used.has(q.id);
+      return categoryOk && diffOk && unusedOk;
+    });
+
+    if (pool.length === 0) {
+      if (room.usedQuestionIds) {
+        room.usedQuestionIds.clear();
+      }
+      pool = questionsData.filter((q) => {
+        const questionCategory = q.category || null;
+        const categoryOk = !categoryFilter
+          ? true
+          : questionCategory && categoryFilter.has(questionCategory);
+        const diffOk =
+          !difficulties || difficulties.length === 0
+            ? true
+            : difficulties.includes(q.difficulty || "EASY");
+        return categoryOk && diffOk;
+      });
+    }
+  }
+
+  if (pool.length === 0) {
+    pool = questionsData;
+  }
+
+  const idx = Math.floor(Math.random() * pool.length);
+  return pool[idx];
+}
+
+function getTimeAttackQuestion(socketId, settings) {
+  const session = timeAttackSessions[socketId] || { usedQuestionIds: new Set() };
+  const pseudoRoom = {
+    settings,
+    usedQuestionIds: session.usedQuestionIds,
+  };
+  const question = pickRandomQuestion(pseudoRoom);
+  session.usedQuestionIds = pseudoRoom.usedQuestionIds;
+  timeAttackSessions[socketId] = session;
+  return question;
 }
 
 io.on("connection", (socket) => {
@@ -90,33 +202,100 @@ io.on("connection", (socket) => {
         break;
       }
     }
+    delete timeAttackSessions[socket.id];
   });
 
-  socket.on("createRoom", ({ name }) => {
+  socket.on("timeAttackNextQuestion", (payload, callback) => {
+    const categories = Array.isArray(payload?.genres) ? payload.genres : null;
+    const difficultiesRaw = Array.isArray(payload?.difficulties) ? payload.difficulties : null;
+    const difficulties = difficultiesRaw
+      ? difficultiesRaw.map((d) => String(d || "").toUpperCase())
+      : ["EASY", "NORMAL", "HARD"];
+
+    const settings = {
+      categories: categories && categories.length > 0 ? categories : null,
+      difficulties: difficulties && difficulties.length > 0 ? difficulties : ["EASY", "NORMAL", "HARD"],
+    };
+
+    const question = getTimeAttackQuestion(socket.id, settings);
+    if (!question) {
+      if (typeof callback === "function") {
+        callback({ error: "問題が見つかりませんでした" });
+      }
+      return;
+    }
+
+    if (typeof callback === "function") {
+      callback({
+        id: question.id,
+        question: question.question,
+        choices: question.choices || [],
+        correctIndex: typeof question.answer === "number" ? question.answer : 0,
+        difficulty: question.difficulty || "EASY",
+      });
+    }
+  });
+
+  socket.on("createRoom", ({ name, settings }) => {
     let roomId;
     do {
       roomId = generateRoomId();
     } while (rooms[roomId]);
 
+    const defaultSettings = {
+      categories: null,
+      difficulties: ["EASY", "NORMAL", "HARD"],
+      maxRounds: DEFAULT_MAX_ROUNDS,
+      infiniteMode: false,
+      timeLimitSeconds: DEFAULT_TIME_LIMIT_SECONDS,
+    };
+
+    let reqMaxPlayers = settings?.maxPlayers;
+    let maxPlayers = Number(reqMaxPlayers) || 2;
+    if (maxPlayers !== 2 && maxPlayers !== 3) {
+      maxPlayers = 2;
+    }
+
+    const mergedSettings = {
+      ...defaultSettings,
+      ...(settings || {}),
+      maxPlayers,
+    };
+
     rooms[roomId] = {
       id: roomId,
+      hostId: socket.id,
       players: {},
       order: [],
       round: 0,
       currentQuestion: null,
       answers: {},
       finished: false,
+      settings: mergedSettings,
+      maxPlayers,
+      initialHpMap: {},
+      waitingForHpConfig: false,
+      usedQuestionIds: new Set(),
+      readyForNext: {},
+      waitingNext: false,
     };
 
     rooms[roomId].players[socket.id] = {
       id: socket.id,
       name: name || "Player",
-      hp: INITIAL_HP,
+      hp: DEFAULT_INITIAL_HP,
+      initialHp: DEFAULT_INITIAL_HP,
+      isEliminated: false,
+      replayReady: false,
     };
     rooms[roomId].order.push(socket.id);
 
     socket.join(roomId);
-    socket.emit("roomCreated", { roomId, playerId: socket.id });
+    socket.emit("roomCreated", {
+      roomId,
+      playerId: socket.id,
+      settings: mergedSettings,
+    });
   });
 
   socket.on("joinRoom", ({ roomId, name }) => {
@@ -125,7 +304,8 @@ io.on("connection", (socket) => {
       socket.emit("roomError", "そのルームIDは存在しません。");
       return;
     }
-    if (Object.keys(room.players).length >= 2) {
+    const maxPlayers = room.maxPlayers || room.settings?.maxPlayers || 2;
+    if (Object.keys(room.players).length >= maxPlayers) {
       socket.emit("roomError", "このルームは満員です。");
       return;
     }
@@ -133,30 +313,74 @@ io.on("connection", (socket) => {
     room.players[socket.id] = {
       id: socket.id,
       name: name || "Player",
-      hp: INITIAL_HP,
+      hp: DEFAULT_INITIAL_HP,
+      initialHp: DEFAULT_INITIAL_HP,
+      isEliminated: false,
+      replayReady: false,
     };
     room.order.push(socket.id);
 
     socket.join(roomId);
     socket.emit("roomJoined", { roomId, playerId: socket.id });
 
-    if (Object.keys(room.players).length === 2) {
-      startGame(roomId);
+    if (Object.keys(room.players).length === maxPlayers) {
+      room.waitingForHpConfig = true;
+
+      const playersArray = room.order.map((id) => ({
+        id,
+        name: room.players[id].name,
+      }));
+
+      io.to(roomId).emit("roomReadyForHpConfig", {
+        players: playersArray,
+        settings: room.settings,
+      });
     }
+  });
+
+  socket.on("configureRoomAndStart", ({ roomId, initialHp }) => {
+    const room = rooms[roomId];
+    if (!room || room.finished) return;
+    if (!room.waitingForHpConfig) return;
+
+    if (room.order[0] !== socket.id) {
+      socket.emit("roomError", "ホストのみ初期HPを設定できます。");
+      return;
+    }
+
+    room.initialHpMap = {};
+    for (const playerId of room.order) {
+      const rawHp =
+        initialHp && typeof initialHp[playerId] !== "undefined"
+          ? Number(initialHp[playerId])
+          : DEFAULT_INITIAL_HP;
+      const hp = Number.isFinite(rawHp) ? rawHp : DEFAULT_INITIAL_HP;
+      room.initialHpMap[playerId] = Math.max(1, hp);
+      room.players[playerId].hp = room.initialHpMap[playerId];
+      room.players[playerId].isEliminated = false;
+      room.players[playerId].replayReady = false;
+      room.players[playerId].initialHp = room.initialHpMap[playerId];
+    }
+
+    room.waitingForHpConfig = false;
+
+    startGame(roomId);
   });
 
   socket.on("submitAnswer", ({ roomId, questionId, choiceIndex, elapsedSeconds }) => {
     const room = rooms[roomId];
     if (!room || room.finished) return;
     if (!room.currentQuestion || room.currentQuestion.id !== questionId) return;
+    const player = room.players[socket.id];
+    if (!player || player.isEliminated || player.hp <= 0) return;
 
     room.answers[socket.id] = {
       choiceIndex,
       elapsedSeconds: typeof elapsedSeconds === "number" ? elapsedSeconds : 9999,
     };
 
-    const playerCount = Object.keys(room.players).length;
-    if (Object.keys(room.answers).length === playerCount) {
+    const activeCount = getPlayers(room).filter((p) => !p.isEliminated && p.hp > 0).length;
+    if (Object.keys(room.answers).length >= activeCount) {
       // 2人分揃ったら採点
       resolveRound(roomId);
     }
@@ -165,11 +389,96 @@ io.on("connection", (socket) => {
   socket.on("nextQuestion", ({ roomId }) => {
     const room = rooms[roomId];
     if (!room || room.finished) return;
-    if (room.round >= MAX_ROUNDS) return;
+    const settings = room.settings || {};
+    const maxRounds =
+      settings && !settings.infiniteMode
+        ? settings.maxRounds || DEFAULT_MAX_ROUNDS
+        : null;
+    if (maxRounds && room.round >= maxRounds) return;
+    if (room.waitingNext) {
+      room.readyForNext[socket.id] = true;
+      const totalPlayers = getPlayers(room).filter((p) => !p.isEliminated && p.hp > 0).length;
+      const readyCount = Object.keys(room.readyForNext).length;
+      if (readyCount >= totalPlayers) {
+        room.waitingNext = false;
+        room.readyForNext = {};
+        startNextQuestion(roomId);
+      }
+      return;
+    }
     if (!room.currentQuestion) return;
 
     // すでに次の問題が出ているかどうかのチェックは簡略化
     startNextQuestion(roomId);
+  });
+
+  socket.on("readyForNext", ({ roomId }) => {
+    const room = rooms[roomId];
+    if (!room || room.finished) return;
+    if (!room.waitingNext) return;
+
+    room.readyForNext[socket.id] = true;
+
+    const totalPlayers = getPlayers(room).filter((p) => !p.isEliminated && p.hp > 0).length;
+    const readyCount = Object.keys(room.readyForNext).length;
+
+    if (readyCount >= totalPlayers) {
+      room.waitingNext = false;
+      room.readyForNext = {};
+      startNextQuestion(roomId);
+    }
+  });
+
+  socket.on("abortGame", ({ roomId }) => {
+    const room = rooms[roomId];
+    if (!room || room.finished) return;
+    if (room.hostId !== socket.id) return;
+
+    room.finished = true;
+    room.waitingNext = false;
+    room.readyForNext = {};
+    room.state = "aborted";
+
+    io.to(roomId).emit("gameAborted", {
+      roomId,
+      reason: "abortedByHost",
+    });
+    broadcastRoomState(room);
+  });
+
+  socket.on("replayReady", ({ roomId }) => {
+    const room = roomId ? rooms[roomId] : findRoomBySocketId(socket.id);
+    if (!room) return;
+    const player = room.players[socket.id];
+    if (!player) return;
+    player.replayReady = true;
+    broadcastRoomState(room);
+  });
+
+  socket.on("startReplay", ({ roomId }) => {
+    const room = roomId ? rooms[roomId] : findRoomBySocketId(socket.id);
+    if (!room || room.hostId !== socket.id || !room.finished) return;
+    const othersReady = getPlayers(room).every(
+      (p) => p.id === room.hostId || p.replayReady
+    );
+    if (!othersReady) return;
+
+    // reset state
+    room.finished = false;
+    room.round = 0;
+    room.answers = {};
+    room.waitingNext = false;
+    room.readyForNext = {};
+    room.currentQuestion = null;
+    room.usedQuestionIds?.clear();
+    getPlayers(room).forEach((p) => {
+      const initHp = room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP;
+      p.hp = initHp;
+      p.isEliminated = false;
+      p.replayReady = false;
+    });
+    broadcastRoomState(room);
+    startGame(room.id);
   });
 });
 
@@ -179,30 +488,65 @@ function startGame(roomId) {
 
   room.round = 0;
   room.finished = false;
+  room.readyForNext = {};
+  room.waitingNext = false;
+  if (!room.usedQuestionIds) {
+    room.usedQuestionIds = new Set();
+  } else {
+    room.usedQuestionIds.clear();
+  }
 
-  const [p1Id, p2Id] = room.order;
-  const p1 = room.players[p1Id];
-  const p2 = room.players[p2Id];
-
-  io.to(roomId).emit("gameStart", {
-    initialHp: INITIAL_HP,
-    maxRounds: MAX_ROUNDS,
-    you: {}, // クライアント側で自分/相手を判定するのでここはダミー
-    opponent: {},
+  const playerIds = room.order;
+  playerIds.forEach((pid) => {
+    const p = room.players[pid];
+    if (p) {
+      p.isEliminated = false;
+      p.replayReady = false;
+      const initHp = room.initialHpMap?.[pid] ?? DEFAULT_INITIAL_HP;
+      p.hp = initHp;
+      p.initialHp = initHp;
+    }
   });
 
-  // ただし player 名は question 送信前に個別に送ってもよい
-  io.to(p1Id).emit("gameStart", {
-    initialHp: INITIAL_HP,
-    maxRounds: MAX_ROUNDS,
-    you: p1,
-    opponent: p2,
+  const maxRounds =
+    room.settings && !room.settings.infiniteMode
+      ? room.settings.maxRounds || DEFAULT_MAX_ROUNDS
+      : null;
+
+  const settingsForClient = {
+    categories: room.settings.categories ?? null,
+    difficulties: room.settings.difficulties,
+    maxRounds,
+    infiniteMode: !!room.settings.infiniteMode,
+    timeLimitSeconds: room.settings.timeLimitSeconds || DEFAULT_TIME_LIMIT_SECONDS,
+    maxPlayers: room.maxPlayers || room.settings.maxPlayers || playerIds.length,
+  };
+
+  const playersPayload = playerIds.map((id) => {
+    const p = room.players[id];
+    return {
+      id: p.id,
+      name: p.name,
+      hp: p.hp,
+      initialHp: room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP,
+      isEliminated: !!p.isEliminated,
+      replayReady: !!p.replayReady,
+    };
   });
-  io.to(p2Id).emit("gameStart", {
-    initialHp: INITIAL_HP,
-    maxRounds: MAX_ROUNDS,
-    you: p2,
-    opponent: p1,
+
+  playerIds.forEach((pid) => {
+    const you = room.players[pid];
+    const opponentId = playerIds.find((id) => id !== pid) || pid;
+    const opponent = room.players[opponentId];
+    io.to(pid).emit("gameStart", {
+      initialHp: DEFAULT_INITIAL_HP,
+      initialHpMap: room.initialHpMap,
+      maxRounds: maxRounds || 0,
+      settings: settingsForClient,
+      you,
+      opponent,
+      players: playersPayload,
+    });
   });
 
   startNextQuestion(roomId);
@@ -213,19 +557,217 @@ function startNextQuestion(roomId) {
   if (!room) return;
 
   if (room.finished) return;
+  if (!room.usedQuestionIds) {
+    room.usedQuestionIds = new Set();
+  }
+  room.waitingNext = false;
+  room.readyForNext = {};
 
   room.round += 1;
   room.answers = {};
 
-  const question = pickRandomQuestion();
+  const question = pickRandomQuestion(room);
   room.currentQuestion = question;
+  if (question && typeof question.id !== "undefined" && room.usedQuestionIds) {
+    room.usedQuestionIds.add(question.id);
+  }
 
-  io.to(roomId).emit("question", {
-    round: room.round,
-    question,
+  const timeLimitSeconds =
+    room.settings.timeLimitSeconds || DEFAULT_TIME_LIMIT_SECONDS;
+  const diff = (question?.difficulty || "EASY");
+  io.to(roomId).emit("countdownStart", {
+    seconds: 3,
+    difficulty: diff,
   });
+
+  setTimeout(() => {
+    // 途中で終了した場合は送信しない
+    const latestRoom = rooms[roomId];
+    if (!latestRoom || latestRoom.finished) return;
+    io.to(roomId).emit("question", {
+      round: room.round,
+      question,
+      timeLimitSeconds,
+    });
+  }, 3000);
 }
 
+function applyDamageForThreePlayers(entries, baseDamage) {
+  const D = baseDamage;
+  const alive = entries.filter((e) => !e.player.isEliminated);
+
+  alive.forEach((e) => {
+    e.damage = 0;
+  });
+
+  const correct = alive.filter((e) => e.correct);
+  const wrong = alive.filter((e) => !e.correct);
+  const sortedCorrect = [...correct].sort((a, b) => a.answerTime - b.answerTime);
+
+  if (correct.length === 3) {
+    if (sortedCorrect[1]) {
+      sortedCorrect[1].damage = Math.ceil(D / 2);
+    }
+    if (sortedCorrect[2]) {
+      sortedCorrect[2].damage = Math.ceil(D);
+    }
+  } else if (correct.length === 2) {
+    if (sortedCorrect[1]) {
+      sortedCorrect[1].damage = Math.ceil(D / 2);
+    }
+    wrong.forEach((e) => {
+      e.damage = Math.ceil((3 * D) / 2);
+    });
+  } else if (correct.length === 1) {
+    wrong.forEach((e) => {
+      e.damage = Math.ceil((3 * D) / 2);
+    });
+  } else {
+    // 全員不正解 → damageは0のまま
+  }
+
+  return entries;
+}
+
+function resolveRoundThree(room, players, question, correctIndex, baseDamage) {
+  const entries = players.map((p) => {
+    const ans = room.answers[p.id];
+    const correct = ans ? ans.choiceIndex === correctIndex : false;
+    return {
+      player: p,
+      correct,
+      answered: !!ans,
+      answerTime: ans ? ans.elapsedSeconds : Infinity,
+      damage: 0,
+    };
+  });
+
+  applyDamageForThreePlayers(entries, baseDamage);
+
+  // ダメージ適用
+  entries.forEach((e) => {
+    e.player.hp = Math.max(0, e.player.hp - (e.damage || 0));
+  });
+
+  // 脱落判定
+  players.forEach((p) => {
+    if (p.hp <= 0) {
+      p.hp = 0;
+      p.isEliminated = true;
+    }
+  });
+
+  const correctEntries = entries.filter((e) => e.correct);
+  const settings = room.settings || {};
+  const correctAnswerText = question.choices[correctIndex];
+  let resultMessage = "";
+
+  if (correctEntries.length === 0) {
+    resultMessage = "全員不正解。このラウンドはダメージなし。";
+  } else {
+    const fastest = [...correctEntries].sort((a, b) => a.answerTime - b.answerTime)[0];
+    resultMessage = `${fastest.player.name} が最速正解！`;
+  }
+
+  let finished = false;
+  let winnerCode = null;
+  let reason = "";
+  const alive = players.filter((p) => p.hp > 0 && !p.isEliminated);
+  if (alive.length === 0) {
+    finished = true;
+    winnerCode = "draw";
+    reason = "全員のHPが0になった";
+  } else if (alive.length === 1) {
+    finished = true;
+    winnerCode = alive[0].id;
+    reason = `${alive[0].name} だけHPが残った`;
+  }
+
+  room.finished = finished;
+  if (!finished) {
+    room.waitingNext = true;
+    room.readyForNext = {};
+  }
+  if (finished) {
+    players.forEach((p) => {
+      p.replayReady = false;
+    });
+  }
+
+  const playersPayload = players.map((p) => ({
+    id: p.id,
+    name: p.name,
+    hp: p.hp,
+    initialHp: room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP,
+    isEliminated: !!p.isEliminated,
+    replayReady: !!p.replayReady,
+  }));
+
+  const roundStats = sortRoundStats(
+    entries.map((e) => ({
+      id: e.player.id,
+      name: e.player.name,
+      damage: e.damage || 0,
+      isCorrect: !!e.correct,
+      elapsedMs: Number.isFinite(e.answerTime) ? Math.round(e.answerTime * 1000) : null,
+    }))
+  );
+
+  players.forEach((p) => {
+    const opponent = players.find((x) => x.id !== p.id) || p;
+    const payload = {
+      round: room.round,
+      correctAnswer: correctAnswerText,
+      canContinue: !finished,
+      gameStatusText: finished ? "ゲーム終了" : `次の問題へ進みます`,
+      players: playersPayload,
+      roundStats,
+      gameOverInfo: finished
+        ? {
+            winner:
+              winnerCode === "draw"
+                ? "draw"
+                : winnerCode === p.id
+                ? "you"
+                : winnerCode
+                ? "opponent"
+                : null,
+            reason,
+            yourHp: p.hp,
+            opponentHp: opponent.hp,
+          }
+        : null,
+      you: { hp: p.hp },
+      opponent: { id: opponent.id, hp: opponent.hp },
+      message: resultMessage,
+      questionText: question.question,
+      choices: question.choices,
+      correctIndex: correctIndex,
+      myAnswerIndex: room.answers[p.id]?.choiceIndex ?? null,
+    };
+
+    io.to(p.id).emit("roundResult", payload);
+  });
+
+  if (finished) {
+    players.forEach((p) => {
+      const opponent = players.find((x) => x.id !== p.id) || p;
+      const payload = {
+        winner:
+          winnerCode === "draw"
+            ? "draw"
+            : winnerCode === p.id
+            ? "you"
+            : "opponent",
+        reason,
+        yourHp: p.hp,
+        opponentHp: opponent.hp,
+      };
+      io.to(p.id).emit("gameOver", payload);
+    });
+    broadcastRoomState(room);
+  }
+}
 function resolveRound(roomId) {
   const room = rooms[roomId];
   if (!room || room.finished) return;
@@ -233,14 +775,23 @@ function resolveRound(roomId) {
   const question = room.currentQuestion;
   if (!question) return;
 
+  const correctIndex = question.answerIndex;
+  const difficulty = (question.difficulty || "EASY").toUpperCase();
+  const players = room.order.map((id) => room.players[id]).filter(Boolean);
+  const playerCount = players.length;
+
+  const baseDamage = BASE_DAMAGE[difficulty] || 2;
+
+  if (playerCount === 3) {
+    return resolveRoundThree(room, players, question, correctIndex, baseDamage);
+  }
+
+  // === 2人モード（従来処理） ===
   const [p1Id, p2Id] = room.order;
   const p1 = room.players[p1Id];
   const p2 = room.players[p2Id];
   const a1 = room.answers[p1Id];
   const a2 = room.answers[p2Id];
-
-  const correctIndex = question.answerIndex;
-  const difficulty = question.difficulty || "EASY";
 
   function evaluate(player, answer) {
     if (!answer) {
@@ -265,6 +816,7 @@ function resolveRound(roomId) {
   let damageToP1 = 0;
   let damageToP2 = 0;
   let resultMessage = "";
+  const damageMap = {};
 
   if (r1.correct && r2.correct) {
     // 両方正解 → 速い方だけダメージ
@@ -288,8 +840,19 @@ function resolveRound(roomId) {
     resultMessage = "両者とも不正解。このラウンドはダメージなし。";
   }
 
+  damageMap[p1.id] = damageToP1;
+  damageMap[p2.id] = damageToP2;
+
   p1.hp = Math.max(0, p1.hp - damageToP1);
   p2.hp = Math.max(0, p2.hp - damageToP2);
+  if (p1.hp <= 0) {
+    p1.hp = 0;
+    p1.isEliminated = true;
+  }
+  if (p2.hp <= 0) {
+    p2.hp = 0;
+    p2.isEliminated = true;
+  }
 
   let finished = false;
   let winner = null;
@@ -306,28 +869,77 @@ function resolveRound(roomId) {
     finished = true;
     winner = "player1";
     reason = `${p2.name} のHPが0になった`;
-  } else if (room.round >= MAX_ROUNDS) {
-    finished = true;
-    if (p1.hp > p2.hp) {
-      winner = "player1";
-      reason = `最大ラウンド到達時に ${p1.name} のHPが高かった`;
-    } else if (p2.hp > p1.hp) {
-      winner = "player2";
-      reason = `最大ラウンド到達時に ${p2.name} のHPが高かった`;
-    } else {
-      winner = "draw";
-      reason = "最大ラウンド到達時にHPが同じだった";
+  } else {
+    const settings = room.settings || {};
+    const maxRounds =
+      settings && !settings.infiniteMode
+        ? settings.maxRounds || DEFAULT_MAX_ROUNDS
+        : null;
+
+    if (maxRounds && room.round >= maxRounds) {
+      finished = true;
+      if (p1.hp > p2.hp) {
+        winner = "player1";
+        reason = `最大ラウンド到達時に ${p1.name} のHPが高かった`;
+      } else if (p2.hp > p1.hp) {
+        winner = "player2";
+        reason = `最大ラウンド到達時に ${p2.name} のHPが高かった`;
+      } else {
+        winner = "draw";
+        reason = "最大ラウンド到達時にHPが同じだった";
+      }
     }
   }
 
   room.finished = finished;
+  if (!finished) {
+    room.waitingNext = true;
+    room.readyForNext = {};
+  }
+  if (finished) {
+    [p1, p2].forEach((p) => (p.replayReady = false));
+  }
 
   const correctAnswerText = question.choices[correctIndex];
 
+  const settings = room.settings || {};
+  const maxRounds =
+    settings && !settings.infiniteMode
+      ? settings.maxRounds || DEFAULT_MAX_ROUNDS
+      : null;
+  const playersPayload = [p1, p2].map((p) => ({
+    id: p.id,
+    name: p.name,
+    hp: p.hp,
+    initialHp: room.initialHpMap?.[p.id] ?? DEFAULT_INITIAL_HP,
+    isEliminated: !!p.isEliminated,
+    replayReady: !!p.replayReady,
+  }));
+
+  const roundStats = sortRoundStats(
+    [p1, p2].map((p) => {
+      const ans = room.answers[p.id];
+      const elapsedMs =
+        ans && Number.isFinite(ans.elapsedSeconds)
+          ? Math.round(ans.elapsedSeconds * 1000)
+          : null;
+      const isCorrect = ans ? ans.choiceIndex === correctIndex : false;
+      return {
+        id: p.id,
+        name: p.name,
+        damage: damageMap[p.id] || 0,
+        isCorrect,
+        elapsedMs,
+      };
+    })
+  );
+
   const commonPayload = {
+    round: room.round,
     correctAnswer: correctAnswerText,
-    canContinue: !finished && room.round < MAX_ROUNDS,
+    canContinue: !finished && (!maxRounds || room.round < maxRounds),
     gameStatusText: finished ? "ゲーム終了" : `次の問題へ進みます`,
+    roundStats,
     gameOverInfo: finished
       ? {
           winner: winner === "draw" ? "draw" : null, // 個別メッセージは下で送る
@@ -336,19 +948,26 @@ function resolveRound(roomId) {
           opponentHp: null,
         }
       : null,
+    questionText: question.question,
+    choices: question.choices,
+    correctIndex: correctIndex,
   };
 
   io.to(p1.id).emit("roundResult", {
     ...commonPayload,
-    you: { hp: p1.hp },
-    opponent: { hp: p2.hp },
+    players: playersPayload,
+    you: { id: p1.id, hp: p1.hp },
+    opponent: { id: p2.id, hp: p2.hp },
+    myAnswerIndex: room.answers[p1.id]?.choiceIndex ?? null,
     message: resultMessage,
   });
 
   io.to(p2.id).emit("roundResult", {
     ...commonPayload,
-    you: { hp: p2.hp },
-    opponent: { hp: p1.hp },
+    players: playersPayload,
+    you: { id: p2.id, hp: p2.hp },
+    opponent: { id: p1.id, hp: p1.hp },
+    myAnswerIndex: room.answers[p2.id]?.choiceIndex ?? null,
     message: resultMessage,
   });
 
@@ -368,6 +987,7 @@ function resolveRound(roomId) {
 
     io.to(p1.id).emit("gameOver", payload1);
     io.to(p2.id).emit("gameOver", payload2);
+    broadcastRoomState(room);
   }
 }
 

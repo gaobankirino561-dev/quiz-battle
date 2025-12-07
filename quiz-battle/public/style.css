@@ -80,6 +80,47 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+#room-root {
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.mode-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed var(--card-border);
+  flex-wrap: wrap;
+}
+
+.mode-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mode-title {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.mode-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+#soloModeBtn {
+  min-width: 140px;
+}
+
 #name-section label,
 #room-section {
   display: flex;
@@ -148,6 +189,84 @@ button:disabled {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+}
+.hp-name {
+  min-width: 90px;
+}
+.hp-value {
+  font-weight: 700;
+}
+.hp-row.eliminated {
+  opacity: 0.6;
+}
+
+/* ゲーム本体レイアウト */
+.game-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.question-area {
+  padding: 8px 12px;
+}
+
+.choices-area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* カウントダウン */
+.countdown {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 20;
+}
+.countdown.hidden {
+  display: none;
+}
+.countdown-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+#countdown-number {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+#countdown-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+.countdown.easy #countdown-number {
+  color: #00ff66;
+}
+.countdown.normal #countdown-number {
+  color: #00d4ff;
+}
+.countdown.hard #countdown-number {
+  color: #ff9900;
+}
+
+/* 結果ハイライト */
+.choice-btn.choice-correct,
+.choice-button.choice-correct {
+  border: 2px solid #00ff66;
+  background-color: rgba(0, 255, 102, 0.08);
+}
+.choice-btn.choice-my-answer,
+.choice-button.choice-my-answer {
+  box-shadow: 0 0 0 2px #ffffff inset;
 }
 
 .hp-bar {
@@ -225,6 +344,48 @@ button:disabled {
   font-size: 1.2rem;
 }
 
+#questionContainer,
+.question-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+#questionRules {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  #question-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: calc(100vh - 180px);
+  }
+
+  #questionContainer,
+  .question-box {
+    flex: 1;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+
+  #choicesList {
+    margin-top: 4px;
+  }
+
+  h1 {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+  }
+
+  section {
+    padding: 12px;
+  }
+}
 #timerText {
   color: #bfdbfe;
 }
@@ -240,11 +401,13 @@ button:disabled {
 
 @media (max-width: 640px) {
   body {
-    padding: 16px;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
   }
 
   #app {
-    padding: 18px;
+    padding: 12px;
   }
 
   #name-section label,
@@ -257,4 +420,412 @@ button:disabled {
   input[type="text"] {
     width: 100%;
   }
+
+  .top-panel {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+
+  #question-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: calc(100vh - 160px);
+  }
+
+  .game-main {
+    flex: 1 1 auto;
+  }
+
+  .question-area {
+    flex: 0 0 40vh;
+    max-height: 45vh;
+    overflow-y: auto;
+    font-size: 0.95rem;
+    padding: 6px 8px;
+  }
+
+  .choices-area {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .choices-area button,
+  .choices-area .choice-button,
+  #choicesList .choice-btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .ready-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 30;
+  }
+
+  .ready-bar button {
+    flex: 1;
+    max-width: 240px;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .game-main {
+    padding-bottom: 60px;
+  }
+}
+
+.field-row {
+  margin-bottom: 8px;
+}
+
+#roomSettingsPanel {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #111827;
+  border: 1px solid #374151;
+}
+
+#hp-config-section input[type="number"] {
+  width: 80px;
+}
+
+#hp-config-status,
+#hpConfigStatus {
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#nextReadyBtn {
+  margin-top: 8px;
+}
+
+#nextWaitText {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.replay-actions {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.rule-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+#genre-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#genre-options label {
+  white-space: nowrap;
+}
+
+#genre-all-toggle {
+  margin-left: 0.5rem;
+}
+
+#round-result-panel {
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#round-result-panel h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+#round-result-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 4px;
+  font-size: 0.95rem;
+}
+
+/* === Solo mode basic layout === */
+.solo-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 0 32px;
+}
+
+.solo-intro {
+  margin-bottom: 24px;
+}
+
+.solo-mode-section {
+  margin-bottom: 32px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.solo-mode-title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.solo-mode-summary {
+  margin-bottom: 12px;
+}
+
+.solo-mode-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.solo-primary-button,
+.solo-secondary-button {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.solo-primary-button {
+  background: #22aaff;
+  color: #ffffff;
+}
+
+.solo-secondary-button {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid rgba(229, 231, 235, 0.4);
+}
+
+.solo-rules-panel {
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 0.95rem;
+}
+
+.solo-rules-panel ul {
+  padding-left: 1.2em;
+  margin: 0 0 8px;
+}
+
+.solo-rules-note {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.solo-footer-actions {
+  margin-top: 16px;
+  text-align: right;
+}
+
+/* === Solo Time Attack Config === */
+.solo-config-row {
+  margin-bottom: 20px;
+}
+
+.solo-config-row--top {
+  text-align: right;
+}
+
+.solo-config-row--bottom {
+  text-align: right;
+}
+
+.solo-config-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.solo-config-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.solo-config-control--choices label {
+  margin-right: 12px;
+}
+
+.solo-config-hint {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* === Solo Time Attack Play === */
+.time-attack-timer {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+#time-attack-remaining-display {
+  font-weight: 700;
+}
+
+.difficulty-label {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.difficulty-easy {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+.difficulty-normal {
+  background: rgba(56, 189, 248, 0.2);
+  color: #7dd3fc;
+}
+
+.difficulty-hard {
+  background: rgba(249, 115, 22, 0.2);
+  color: #fdba74;
+}
+
+.time-attack-meta {
+  margin-bottom: 12px;
+}
+
+.time-attack-countdown {
+  font-size: 3rem;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.time-attack-question-area {
+  margin-top: 8px;
+}
+
+.time-attack-question-text {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.time-attack-answer-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.solo-answer-button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+/* タイムアタックなどで正解の選択肢ボタンを強調表示するためのクラス */
+.solo-answer-button.correct-answer {
+  background: rgba(34, 197, 94, 0.25);
+  border: 1px solid #4ade80;
+  color: #eafff3;
+  font-weight: 600;
+}
+
+.time-attack-result {
+  margin-top: 16px;
+}
+
+.time-attack-controls {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* === Solo Time Attack Result === */
+.time-attack-score-summary {
+  margin-bottom: 16px;
+}
+
+.time-attack-score-main {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.time-attack-score-main span {
+  font-size: 1.5rem;
+}
+
+.time-attack-score-detail {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.time-attack-history {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.time-attack-history-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.time-attack-history-list li {
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.time-attack-history-list li span.history-question {
+  flex: 1;
+}
+
+.time-attack-history-list li span.history-status {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.time-attack-history-list li span.history-status.correct {
+  color: #4ade80;
+}
+
+.time-attack-history-list li span.history-status.wrong {
+  color: #fb7185;
+}
+
+.time-attack-result-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
 }
