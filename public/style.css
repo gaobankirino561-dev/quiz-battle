@@ -646,6 +646,30 @@ button:disabled {
   text-align: right;
 }
 
+/* Endless footer layout */
+.solo-footer-row--endless {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.solo-footer-left,
+.solo-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.solo-footer-left {
+  justify-content: flex-start;
+}
+
+.solo-footer-right {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
 /* === Solo Time Attack Config === */
 .solo-config-row {
   margin-bottom: 20px;
