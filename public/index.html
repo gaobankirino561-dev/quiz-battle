@@ -27,16 +27,16 @@
         <h3>ルーム設定（ホストのみ有効）</h3>
 
         <div class="field-row">
-          <label>
-            ジャンル:
-            <select id="categorySelect">
-              <option value="all">すべて</option>
-              <option value="general">一般</option>
-              <option value="conan">名探偵コナン</option>
-              <option value="dragonball">ドラゴンボール</option>
-              <!-- 将来ジャンルを増やす場合はここに追加 -->
-            </select>
-          </label>
+          <!-- ジャンル選択 -->
+          <div class="rule-row">
+            <label>ジャンル</label>
+            <div id="genre-options">
+              <label><input type="checkbox" name="genre" value="general"> 一般</label>
+              <label><input type="checkbox" name="genre" value="conan"> 名探偵コナン</label>
+              <label><input type="checkbox" name="genre" value="dragonball"> ドラゴンボール</label>
+            </div>
+            <button type="button" id="genre-all-toggle">ALL</button>
+          </div>
         </div>
 
         <div class="field-row">
@@ -117,6 +117,10 @@
       <h2>ラウンド結果</h2>
       <p id="roundResultText"></p>
       <p id="correctAnswerText"></p>
+      <div id="round-result-panel">
+        <h3>ラウンド結果（ダメージの低い順）</h3>
+        <ul id="round-result-list"></ul>
+      </div>
       <button id="nextRoundBtn" class="hidden">次の問題へ</button>
       <div class="ready-bar hidden">
         <button id="nextReadyBtn" class="hidden">次の問題へ（準備完了）</button>

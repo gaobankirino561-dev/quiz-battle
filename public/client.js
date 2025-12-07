@@ -12,7 +12,7 @@ let currentChoiceOrder = [];
 
 let isRoomOwner = false;
 let roomSettings = {
-  category: "all",
+  categories: null,
   difficulties: ["EASY", "NORMAL", "HARD"],
   maxRounds: 10,
   infiniteMode: false,
@@ -71,6 +71,7 @@ const countdownLabel = document.getElementById("countdown-label");
 
 const roundResultText = document.getElementById("roundResultText");
 const correctAnswerText = document.getElementById("correctAnswerText");
+const roundResultList = document.getElementById("round-result-list");
 const nextRoundBtn = document.getElementById("nextRoundBtn");
 const nextReadyBtn = document.getElementById("nextReadyBtn");
 const nextWaitText = document.getElementById("nextWaitText");
@@ -80,7 +81,8 @@ const finalResultTitle = document.getElementById("finalResultTitle");
 const finalResultDetail = document.getElementById("finalResultDetail");
 const reloadBtn = document.getElementById("reloadBtn");
 
-const categorySelect = document.getElementById("categorySelect");
+const genreCheckboxes = document.querySelectorAll('input[name="genre"]');
+const genreAllToggle = document.getElementById("genre-all-toggle");
 const difficultyCheckboxes = document.querySelectorAll(".difficultyCheckbox");
 const maxRoundsInput = document.getElementById("maxRoundsInput");
 const infiniteModeCheckbox = document.getElementById("infiniteModeCheckbox");
@@ -94,6 +96,61 @@ const startGameWithHpBtn = document.getElementById("startGameWithHpBtn");
 const hpConfigStatus = document.getElementById("hpConfigStatus");
 const replayReadyBtn = document.getElementById("replay-ready-button");
 const replayStartBtn = document.getElementById("replay-start-button");
+
+function getSelectedGenres() {
+  const nodes = genreCheckboxes && genreCheckboxes.length ? genreCheckboxes : document.querySelectorAll('input[name="genre"]');
+  const checked = Array.from(nodes).filter((el) => el.checked);
+  return checked.map((el) => el.value);
+}
+
+function formatGenresForDisplay(categories) {
+  if (!categories || categories.length === 0) {
+    return "ALL";
+  }
+  return categories.join(" / ");
+}
+
+if (genreAllToggle) {
+  genreAllToggle.addEventListener("click", () => {
+    const boxes = genreCheckboxes && genreCheckboxes.length ? genreCheckboxes : document.querySelectorAll('input[name="genre"]');
+    const allChecked = Array.from(boxes).every((cb) => cb.checked);
+    boxes.forEach((cb) => {
+      cb.checked = !allChecked;
+    });
+  });
+}
+
+function renderRoundStats(stats) {
+  if (!roundResultList) return;
+  roundResultList.innerHTML = "";
+  const list = Array.isArray(stats) ? [...stats] : [];
+  list.sort((a, b) => {
+    const d = (a?.damage || 0) - (b?.damage || 0);
+    if (d !== 0) return d;
+    const ta = a && a.elapsedMs != null ? a.elapsedMs : Infinity;
+    const tb = b && b.elapsedMs != null ? b.elapsedMs : Infinity;
+    return ta - tb;
+  });
+
+  if (list.length === 0) {
+    const li = document.createElement("li");
+    li.textContent = "ラウンド結果のデータがありません";
+    roundResultList.appendChild(li);
+    return;
+  }
+
+  list.forEach((s, index) => {
+    const li = document.createElement("li");
+    const dmg = s?.damage ?? 0;
+    const correctText = s?.isCorrect ? "正解" : "不正解";
+    let timeText = "未回答";
+    if (s && s.elapsedMs != null) {
+      timeText = (s.elapsedMs / 1000).toFixed(2) + " 秒";
+    }
+    li.textContent = `${index + 1}. ${s?.name || "プレイヤー"} ： ${dmg} ダメージ ／ ${correctText} ／ 回答時間 ${timeText}`;
+    roundResultList.appendChild(li);
+  });
+}
 
 // Connection
 socket.on("connect", () => {
@@ -109,7 +166,7 @@ createRoomBtn.addEventListener("click", () => {
   playerName = playerNameInput.value.trim() || "Player";
 
   // ルーム設定をUIから取得
-  const category = categorySelect.value || "all";
+  const selectedGenres = getSelectedGenres();
   const selectedDifficulties = Array.from(difficultyCheckboxes)
     .filter((cb) => cb.checked)
     .map((cb) => cb.value);
@@ -126,7 +183,7 @@ createRoomBtn.addEventListener("click", () => {
   maxPlayers = maxPlayers === 3 ? 3 : 2;
 
   roomSettings = {
-    category,
+    categories: selectedGenres.length > 0 ? selectedGenres : null,
     difficulties: selectedDifficulties,
     maxRounds: maxRoundsValue,
     infiniteMode,
@@ -288,10 +345,9 @@ socket.on("question", (data) => {
 
   roundInfo.textContent = `ラウンド ${data.round} / ${gameState.maxRounds || "∞"}`;
   questionText.textContent = `[${data.question.difficulty}] ${data.question.question}`;
-  const ruleText = roomSettings
-    ? `ルール/設定: ジャンル=${roomSettings.category || "all"}, 難易度=${(roomSettings.difficulties || []).join(", ") || "全て"}, 制限時間=${timeLimitSeconds}秒, 出題数=${roomSettings.infiniteMode ? "∞" : roomSettings.maxRounds}`
-    : "";
-  questionRules.textContent = ruleText;
+  if (questionRules) {
+    questionRules.textContent = "";
+  }
 
   let remaining = timeLimitSeconds;
   timerText.textContent = `制限時間: ${remaining} 秒`;
@@ -408,6 +464,7 @@ socket.on("roundResult", (data) => {
   roundResultText.textContent = data.message;
   correctAnswerText.textContent = `正解: ${data.correctAnswer}`;
   gameStatus.textContent = data.gameStatusText || "";
+  renderRoundStats(data.roundStats);
 
   if (data.canContinue) {
     nextReadyBtn.classList.remove("hidden");

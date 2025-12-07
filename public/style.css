@@ -485,3 +485,45 @@ button:disabled {
   gap: 8px;
   margin: 8px 0;
 }
+
+.rule-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+#genre-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#genre-options label {
+  white-space: nowrap;
+}
+
+#genre-all-toggle {
+  margin-left: 0.5rem;
+}
+
+#round-result-panel {
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#round-result-panel h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+#round-result-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 4px;
+  font-size: 0.95rem;
+}

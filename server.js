@@ -35,6 +35,16 @@ function calcSpeedBonus(elapsedSeconds) {
   return 0;
 }
 
+function sortRoundStats(stats) {
+  return stats.sort((a, b) => {
+    const d = (a.damage || 0) - (b.damage || 0);
+    if (d !== 0) return d;
+    const ta = a.elapsedMs == null ? Infinity : a.elapsedMs;
+    const tb = b.elapsedMs == null ? Infinity : b.elapsedMs;
+    return ta - tb;
+  });
+}
+
 // ルーム管理
 /**
  * rooms[roomId] = {
@@ -58,7 +68,7 @@ function calcSpeedBonus(elapsedSeconds) {
  *   },
  *   finished: boolean,
  *   settings: {
- *     category: string,
+ *     categories: string[] | null,
  *     difficulties: string[],
  *     maxRounds: number | null,
  *     infiniteMode: boolean,
@@ -115,12 +125,20 @@ function pickRandomQuestion(room) {
   let pool = questionsData;
 
   if (room && room.settings) {
-    const { category, difficulties } = room.settings;
+    const { categories, category, difficulties } = room.settings;
     const used = room.usedQuestionIds || new Set();
+    const categoryFilter =
+      Array.isArray(categories) && categories.length > 0
+        ? new Set(categories)
+        : category && category !== "all"
+        ? new Set([category])
+        : null;
 
     pool = questionsData.filter((q) => {
-      const categoryOk =
-        category === "all" || !q.category || q.category === category;
+      const questionCategory = q.category || null;
+      const categoryOk = !categoryFilter
+        ? true
+        : questionCategory && categoryFilter.has(questionCategory);
       const diffOk =
         !difficulties || difficulties.length === 0
           ? true
@@ -134,8 +152,10 @@ function pickRandomQuestion(room) {
         room.usedQuestionIds.clear();
       }
       pool = questionsData.filter((q) => {
-        const categoryOk =
-          category === "all" || !q.category || q.category === category;
+        const questionCategory = q.category || null;
+        const categoryOk = !categoryFilter
+          ? true
+          : questionCategory && categoryFilter.has(questionCategory);
         const diffOk =
           !difficulties || difficulties.length === 0
             ? true
@@ -178,7 +198,7 @@ io.on("connection", (socket) => {
     } while (rooms[roomId]);
 
     const defaultSettings = {
-      category: "all",
+      categories: null,
       difficulties: ["EASY", "NORMAL", "HARD"],
       maxRounds: DEFAULT_MAX_ROUNDS,
       infiniteMode: false,
@@ -449,7 +469,7 @@ function startGame(roomId) {
       : null;
 
   const settingsForClient = {
-    category: room.settings.category,
+    categories: room.settings.categories ?? null,
     difficulties: room.settings.difficulties,
     maxRounds,
     infiniteMode: !!room.settings.infiniteMode,
@@ -638,13 +658,25 @@ function resolveRoundThree(room, players, question, correctIndex, baseDamage) {
     replayReady: !!p.replayReady,
   }));
 
+  const roundStats = sortRoundStats(
+    entries.map((e) => ({
+      id: e.player.id,
+      name: e.player.name,
+      damage: e.damage || 0,
+      isCorrect: !!e.correct,
+      elapsedMs: Number.isFinite(e.answerTime) ? Math.round(e.answerTime * 1000) : null,
+    }))
+  );
+
   players.forEach((p) => {
     const opponent = players.find((x) => x.id !== p.id) || p;
     const payload = {
+      round: room.round,
       correctAnswer: correctAnswerText,
       canContinue: !finished,
       gameStatusText: finished ? "ゲーム終了" : `次の問題へ進みます`,
       players: playersPayload,
+      roundStats,
       gameOverInfo: finished
         ? {
             winner:
@@ -739,6 +771,7 @@ function resolveRound(roomId) {
   let damageToP1 = 0;
   let damageToP2 = 0;
   let resultMessage = "";
+  const damageMap = {};
 
   if (r1.correct && r2.correct) {
     // 両方正解 → 速い方だけダメージ
@@ -761,6 +794,9 @@ function resolveRound(roomId) {
   } else {
     resultMessage = "両者とも不正解。このラウンドはダメージなし。";
   }
+
+  damageMap[p1.id] = damageToP1;
+  damageMap[p2.id] = damageToP2;
 
   p1.hp = Math.max(0, p1.hp - damageToP1);
   p2.hp = Math.max(0, p2.hp - damageToP2);
@@ -835,10 +871,30 @@ function resolveRound(roomId) {
     replayReady: !!p.replayReady,
   }));
 
+  const roundStats = sortRoundStats(
+    [p1, p2].map((p) => {
+      const ans = room.answers[p.id];
+      const elapsedMs =
+        ans && Number.isFinite(ans.elapsedSeconds)
+          ? Math.round(ans.elapsedSeconds * 1000)
+          : null;
+      const isCorrect = ans ? ans.choiceIndex === correctIndex : false;
+      return {
+        id: p.id,
+        name: p.name,
+        damage: damageMap[p.id] || 0,
+        isCorrect,
+        elapsedMs,
+      };
+    })
+  );
+
   const commonPayload = {
+    round: room.round,
     correctAnswer: correctAnswerText,
     canContinue: !finished && (!maxRounds || room.round < maxRounds),
     gameStatusText: finished ? "ゲーム終了" : `次の問題へ進みます`,
+    roundStats,
     gameOverInfo: finished
       ? {
           winner: winner === "draw" ? "draw" : null, // 個別メッセージは下で送る
