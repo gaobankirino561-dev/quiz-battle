@@ -18,6 +18,14 @@ const questionsData = JSON.parse(
   fs.readFileSync(path.join(__dirname, "questions.json"), "utf-8")
 );
 
+// Calculate genre counts
+const genreCounts = {};
+questionsData.forEach(q => {
+  const g = q.category;
+  genreCounts[g] = (genreCounts[g] || 0) + 1;
+});
+console.log("Genre counts calculated:", genreCounts);
+
 // ゲーム設定
 const DEFAULT_INITIAL_HP = 20;
 const DEFAULT_MAX_ROUNDS = 10;
@@ -124,6 +132,7 @@ function findRoomBySocketId(socketId) {
 
 function pickRandomQuestion(room) {
   let pool = questionsData;
+  const exhaustible = room?.settings?.exhaustible === true;
 
   if (room && room.settings) {
     const { categories, category, difficulties } = room.settings;
@@ -132,8 +141,8 @@ function pickRandomQuestion(room) {
       Array.isArray(categories) && categories.length > 0
         ? new Set(categories)
         : category && category !== "all"
-        ? new Set([category])
-        : null;
+          ? new Set([category])
+          : null;
 
     pool = questionsData.filter((q) => {
       const questionCategory = q.category || null;
@@ -148,7 +157,7 @@ function pickRandomQuestion(room) {
       return categoryOk && diffOk && unusedOk;
     });
 
-    if (pool.length === 0) {
+    if (pool.length === 0 && !exhaustible) {
       if (room.usedQuestionIds) {
         room.usedQuestionIds.clear();
       }
@@ -167,7 +176,7 @@ function pickRandomQuestion(room) {
   }
 
   if (pool.length === 0) {
-    pool = questionsData;
+    return null;
   }
 
   const idx = Math.floor(Math.random() * pool.length);
@@ -181,13 +190,17 @@ function getTimeAttackQuestion(socketId, settings) {
     usedQuestionIds: session.usedQuestionIds,
   };
   const question = pickRandomQuestion(pseudoRoom);
-  session.usedQuestionIds = pseudoRoom.usedQuestionIds;
+  if (question) {
+    session.usedQuestionIds.add(question.id);
+  }
   timeAttackSessions[socketId] = session;
   return question;
 }
 
 io.on("connection", (socket) => {
-  console.log("a user connected:", socket.id);
+  socket.on("request_genre_counts", () => {
+    socket.emit("genre_counts", genreCounts);
+  });
 
   socket.on("disconnect", () => {
     console.log("user disconnected:", socket.id);
@@ -215,6 +228,7 @@ io.on("connection", (socket) => {
     const settings = {
       categories: categories && categories.length > 0 ? categories : null,
       difficulties: difficulties && difficulties.length > 0 ? difficulties : ["EASY", "NORMAL", "HARD"],
+      exhaustible: !!payload?.exhaustible,
     };
 
     const question = getTimeAttackQuestion(socket.id, settings);
@@ -724,18 +738,18 @@ function resolveRoundThree(room, players, question, correctIndex, baseDamage) {
       roundStats,
       gameOverInfo: finished
         ? {
-            winner:
-              winnerCode === "draw"
-                ? "draw"
-                : winnerCode === p.id
+          winner:
+            winnerCode === "draw"
+              ? "draw"
+              : winnerCode === p.id
                 ? "you"
                 : winnerCode
-                ? "opponent"
-                : null,
-            reason,
-            yourHp: p.hp,
-            opponentHp: opponent.hp,
-          }
+                  ? "opponent"
+                  : null,
+          reason,
+          yourHp: p.hp,
+          opponentHp: opponent.hp,
+        }
         : null,
       you: { hp: p.hp },
       opponent: { id: opponent.id, hp: opponent.hp },
@@ -757,8 +771,8 @@ function resolveRoundThree(room, players, question, correctIndex, baseDamage) {
           winnerCode === "draw"
             ? "draw"
             : winnerCode === p.id
-            ? "you"
-            : "opponent",
+              ? "you"
+              : "opponent",
         reason,
         yourHp: p.hp,
         opponentHp: opponent.hp,
@@ -942,11 +956,11 @@ function resolveRound(roomId) {
     roundStats,
     gameOverInfo: finished
       ? {
-          winner: winner === "draw" ? "draw" : null, // 個別メッセージは下で送る
-          reason,
-          yourHp: null,
-          opponentHp: null,
-        }
+        winner: winner === "draw" ? "draw" : null, // 個別メッセージは下で送る
+        reason,
+        yourHp: null,
+        opponentHp: null,
+      }
       : null,
     questionText: question.question,
     choices: question.choices,

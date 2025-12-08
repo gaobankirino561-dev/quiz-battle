@@ -4747,7 +4747,7 @@
   },
   {
     "id": 2340,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "日本の首都はどこ？",
@@ -4761,7 +4761,7 @@
   },
   {
     "id": 2341,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "1週間は何日？",
@@ -4775,7 +4775,7 @@
   },
   {
     "id": 2342,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "春・夏・秋・冬、あわせて季節はいくつ？",
@@ -4789,7 +4789,7 @@
   },
   {
     "id": 2343,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "信号機の「赤」はどんな意味？",
@@ -4803,7 +4803,7 @@
   },
   {
     "id": 2344,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "1年は何か月？",
@@ -4817,7 +4817,7 @@
   },
   {
     "id": 2345,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "1キログラムは何グラム？",
@@ -4831,7 +4831,7 @@
   },
   {
     "id": 2346,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "水は摂氏何度で氷になる？（1気圧のとき）",
@@ -4845,7 +4845,7 @@
   },
   {
     "id": 2347,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "水は摂氏何度くらいで沸騰する？（1気圧のとき）",
@@ -4859,7 +4859,7 @@
   },
   {
     "id": 2348,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "正方形の辺の長さの特徴は？",
@@ -4873,7 +4873,7 @@
   },
   {
     "id": 2349,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "日本の祝日「こどもの日」は何月何日？",
@@ -4887,7 +4887,7 @@
   },
   {
     "id": 2350,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "次のうち、一般的に「果物」として売られているものはどれ？",
@@ -4901,7 +4901,7 @@
   },
   {
     "id": 2351,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "日本の紙幣（お札）のうち、最も額面が小さいものは？",
@@ -4915,7 +4915,7 @@
   },
   {
     "id": 2352,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "次のうち、曜日の名前でないものは？",
@@ -4929,7 +4929,7 @@
   },
   {
     "id": 2353,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "地球のまわりを回っている天体はどれ？",
@@ -4943,7 +4943,7 @@
   },
   {
     "id": 2354,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "1日は何時間？",
@@ -4957,7 +4957,7 @@
   },
   {
     "id": 2355,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "次のうち、楽器はどれ？",
@@ -4971,7 +4971,7 @@
   },
   {
     "id": 2356,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "日本の国旗の色の組み合わせは？",
@@ -4985,7 +4985,7 @@
   },
   {
     "id": 2357,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "次のうち、海にすむ生き物は？",
@@ -4999,7 +4999,7 @@
   },
   {
     "id": 2358,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "次のうち、電車に乗るときによく使うものは？",
@@ -5013,7 +5013,7 @@
   },
   {
     "id": 2359,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "EASY",
     "type": "choice",
     "question": "次のうち、冬に降ることが多いものは？",
@@ -5027,7 +5027,7 @@
   },
   {
     "id": 2360,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "日本の都道府県の数は？",
@@ -5041,7 +5041,7 @@
   },
   {
     "id": 2361,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "日本で一番北にある都道府県は？",
@@ -5055,7 +5055,7 @@
   },
   {
     "id": 2362,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "日本で一番高い山・富士山の高さに最も近いのは？",
@@ -5069,7 +5069,7 @@
   },
   {
     "id": 2363,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "世界で面積が最も大きい国は？",
@@ -5083,7 +5083,7 @@
   },
   {
     "id": 2364,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "現在、惑星ではなく「準惑星」とされている天体はどれ？",
@@ -5097,7 +5097,7 @@
   },
   {
     "id": 2365,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "絵画「モナ・リザ」を描いた画家は？",
@@ -5111,7 +5111,7 @@
   },
   {
     "id": 2366,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "戯曲「ロミオとジュリエット」を書いたのは？",
@@ -5125,7 +5125,7 @@
   },
   {
     "id": 2367,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "日本の元号で、「令和」の前は？",
@@ -5139,7 +5139,7 @@
   },
   {
     "id": 2368,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "次のうち、炭水化物に分類されるものは？",
@@ -5153,7 +5153,7 @@
   },
   {
     "id": 2369,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "次のうち、哺乳類でないのは？",
@@ -5167,7 +5167,7 @@
   },
   {
     "id": 2370,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "小学校の教科「算数」は、中学校では一般に何と呼ばれる？",
@@ -5181,7 +5181,7 @@
   },
   {
     "id": 2371,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "日本で一番長い川は？",
@@ -5195,7 +5195,7 @@
   },
   {
     "id": 2372,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "次のうち、フランスの首都は？",
@@ -5209,7 +5209,7 @@
   },
   {
     "id": 2373,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "電気の単位「V」は何と読む？",
@@ -5223,7 +5223,7 @@
   },
   {
     "id": 2374,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "日本で人口が最も多い都道府県は？",
@@ -5237,7 +5237,7 @@
   },
   {
     "id": 2375,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "「三大栄養素」として一般に挙げられるのは、炭水化物・脂質ともう一つは？",
@@ -5251,7 +5251,7 @@
   },
   {
     "id": 2376,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "次のうち、インターネットでウェブページを見るために使うソフトは？",
@@ -5265,7 +5265,7 @@
   },
   {
     "id": 2377,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "二酸化炭素の化学式として正しいのは？",
@@ -5279,7 +5279,7 @@
   },
   {
     "id": 2378,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "日本の通貨単位は？",
@@ -5293,7 +5293,7 @@
   },
   {
     "id": 2379,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "次のうち、日本の伝統芸能はどれ？",
@@ -5307,7 +5307,7 @@
   },
   {
     "id": 2380,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "日本の国会は衆議院ともう一つの何で構成されている？",
@@ -5321,7 +5321,7 @@
   },
   {
     "id": 2381,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "世界で最も高い山エベレストは、どの山脈に属する？",
@@ -5335,7 +5335,7 @@
   },
   {
     "id": 2382,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "元素記号「Fe」は何の元素？",
@@ -5349,7 +5349,7 @@
   },
   {
     "id": 2383,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "「銀河系」を英語で言ったときの一般的な表現は？",
@@ -5363,7 +5363,7 @@
   },
   {
     "id": 2384,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "円周率πの値として最も近いものは？",
@@ -5377,7 +5377,7 @@
   },
   {
     "id": 2385,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "「源氏物語」を書いた人物は？",
@@ -5391,7 +5391,7 @@
   },
   {
     "id": 2386,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "次のうち、ユネスコの世界遺産に登録されている日本の建造物は？",
@@ -5405,7 +5405,7 @@
   },
   {
     "id": 2387,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "次のうち、血液型として実在しないのは？",
@@ -5419,7 +5419,7 @@
   },
   {
     "id": 2388,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "「三権分立」で示される三つの権力の組み合わせとして正しいのは？",
@@ -5433,7 +5433,7 @@
   },
   {
     "id": 2389,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "1気圧は約何ヘクトパスカル(hPa)？",
@@ -5447,7 +5447,7 @@
   },
   {
     "id": 2390,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "北半球と南半球を分ける線として最も関係が深いのは？",
@@ -5461,7 +5461,7 @@
   },
   {
     "id": 2391,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "ドイツの首都は？",
@@ -5475,7 +5475,7 @@
   },
   {
     "id": 2392,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "次のうち、ノーベル賞の分野として実際に存在しないのは？",
@@ -5489,7 +5489,7 @@
   },
   {
     "id": 2393,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "日本国憲法で「国権の最高機関」とされているのは？",
@@ -5503,7 +5503,7 @@
   },
   {
     "id": 2394,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "「相対性理論」を提唱した物理学者は？",
@@ -5517,7 +5517,7 @@
   },
   {
     "id": 2395,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "次のうち、アフリカ大陸に位置する国は？",
@@ -5531,7 +5531,7 @@
   },
   {
     "id": 2396,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "日本の古都「平安京」が置かれていた現在の都市は？",
@@ -5545,7 +5545,7 @@
   },
   {
     "id": 2397,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "世界最大級の熱帯雨林アマゾンは、主にどの大陸に広がっている？",
@@ -5559,7 +5559,7 @@
   },
   {
     "id": 2398,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "pHが7の水溶液の性質として正しいのは？",
@@ -5573,7 +5573,7 @@
   },
   {
     "id": 2399,
-    "category": "common_knowledge",
+    "category": "general",
     "difficulty": "HARD",
     "type": "choice",
     "question": "日本で地震の揺れの大きさを表すときに、気象庁が主に用いる尺度は？",
@@ -5584,4205 +5584,5 @@
       "リヒタースケール"
     ],
     "answerIndex": 1
-  },
-  {
-    "id": 2400,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "朝ごはんを食べる主なメリットとして正しいのは？",
-    "choices": [
-      "眠くなる",
-      "体温が下がる",
-      "体や頭を活動モードにする助けになる",
-      "身長がすぐに伸びる"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2401,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "1日に「水分」をとるタイミングとして、より望ましいのはどれ？",
-    "choices": [
-      "のどが渇くまで一切飲まない",
-      "こまめに少しずつ飲む",
-      "夜寝る前だけ大量に飲む",
-      "食事のときだけ飲む"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2402,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "歯みがきは、一般的にどのタイミングで行うのがよいとされている？",
-    "choices": [
-      "1週間に1回",
-      "1か月に1回",
-      "毎日1〜3回程度",
-      "年に1回"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2403,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "手を洗うタイミングとして適切なのは？",
-    "choices": [
-      "トイレのあとや食事の前",
-      "寝る前だけ",
-      "年末の大掃除のときだけ",
-      "運動の前だけ"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2404,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "夜ふかしを続けると起こりやすいこととして、もっとも一般的なものは？",
-    "choices": [
-      "視力が必ず回復する",
-      "体調や集中力が落ちやすくなる",
-      "必ず身長が伸びる",
-      "髪の毛がすべて白くなる"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2405,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "スーパーで「半額シール」が貼られやすいタイミングとして多いのは？",
-    "choices": [
-      "開店直後",
-      "真昼の12時ぴったり",
-      "閉店が近い時間帯",
-      "元旦だけ"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2406,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "一般的な家庭のコンセントの電圧（日本）は？",
-    "choices": [
-      "約20V",
-      "約50V",
-      "約100V",
-      "約200V"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2407,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "電子レンジに入れてはいけないものとして代表的なのは？",
-    "choices": [
-      "耐熱ガラスの皿",
-      "陶器の皿",
-      "アルミホイルで包んだものや金属製の容器",
-      "電子レンジ対応マーク付きの容器"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2408,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "洗濯で「色物」と「白い服」を一緒に洗うときの注意として正しいのは？",
-    "choices": [
-      "まったく気にしなくてよい",
-      "新品の濃い色の服は色移りしやすいので分けた方がよい",
-      "洗剤を入れなければ色移りしない",
-      "どんな服でもお湯なら絶対に色移りしない"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2409,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "スマホを長時間見続けたときに起こりやすいことは？",
-    "choices": [
-      "視力や目の疲れ",
-      "血液が固まる",
-      "身長が急に伸びる",
-      "骨が透けて見える"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2410,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "夏場に熱中症を防ぐための行動として適切なのは？",
-    "choices": [
-      "水分と塩分をこまめにとる",
-      "全く水分をとらない",
-      "厚着をして汗をかく",
-      "ずっと直射日光の下にいる"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2411,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "料理で「弱火」「中火」「強火」とあるとき、もっとも温度が高いのは？",
-    "choices": [
-      "弱火",
-      "中火",
-      "強火",
-      "どれも同じ"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2412,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "コンビニで年齢確認が必要になることが多い商品は？",
-    "choices": [
-      "おにぎり",
-      "雑誌（週刊少年誌）",
-      "アルコール飲料",
-      "ペットボトルの水"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2413,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "公共の場で、イヤホンを使わずにスマホの音楽を大音量で流すのは？",
-    "choices": [
-      "マナーがよい",
-      "どちらとも言えない",
-      "迷惑行為になりやすい",
-      "法律で義務づけられている"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2414,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "外出時、雨が降りそうなときに持っておくと便利なものは？",
-    "choices": [
-      "扇風機",
-      "スリッパ",
-      "折りたたみ傘",
-      "ドライヤー"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2415,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "冷蔵庫のドアを長時間開けっぱなしにするとどうなる？",
-    "choices": [
-      "中の温度が上がりやすくなる",
-      "中の温度が下がり続ける",
-      "電気代が必ず0円になる",
-      "中身が凍る"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2416,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "ガスコンロを使うときに、特に注意すべきなのは？",
-    "choices": [
-      "火のそばに燃えやすいものを置かない",
-      "火を見ない",
-      "部屋を完全に密閉する",
-      "換気扇を絶対に回さない"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2417,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "外から帰ってきたときに、風邪や感染症予防のために大切な習慣は？",
-    "choices": [
-      "すぐに寝る",
-      "玄関でジャンプする",
-      "手洗い・うがいをする",
-      "すぐにお菓子を食べる"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2418,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "ゴミを捨てるときに守るべき基本的なマナーは？",
-    "choices": [
-      "道路に投げ捨てる",
-      "他人の家の前に置く",
-      "指定された場所・時間に出す",
-      "公園に埋める"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2419,
-    "category": "lifestyle",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "買い物をするとき、レジ袋を減らすために役立つのは？",
-    "choices": [
-      "商品を手で全部持つ",
-      "何度も往復する",
-      "マイバッグ・エコバッグを持参する",
-      "何も買わない"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2420,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本で一般的な「ご飯（白米）」を炊くときの、水加減の目安として最も近いのは？",
-    "choices": [
-      "米と同量の水（1：1）",
-      "米の約1.2〜1.5倍程度の水",
-      "水は入れない",
-      "米の3倍以上の水"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2421,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "食中毒予防の「三原則」としてよく挙げられるのは？",
-    "choices": [
-      "冷やす・焼く・煮る",
-      "つけない・増やさない・やっつける",
-      "乾かす・凍らせる・混ぜる",
-      "洗う・並べる・飾る"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2422,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "冷蔵庫に入れて保存するのが望ましい食べ物は？",
-    "choices": [
-      "常温保存の乾麺",
-      "生の肉や魚",
-      "未開封の缶詰",
-      "未使用の箸"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2423,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本で一般的な「消費期限」と「賞味期限」の違いとして正しいのは？",
-    "choices": [
-      "両方まったく同じ意味",
-      "消費期限は「安全に食べられる期限」、賞味期限は「おいしく食べられる期限」",
-      "消費期限は「おいしく食べられる期限」、賞味期限は「安全に食べられる期限」",
-      "どちらも作った人の気分で決まる"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2424,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "洗濯表示で「桶に水が描かれたマーク」が基本的に示すのは？",
-    "choices": [
-      "アイロンがけのしかた",
-      "漂白剤の使い方",
-      "水洗いのしかた（洗濯方法）",
-      "乾燥のしかた"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2425,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「室内干し」をするときに気をつけたいポイントとして最も適切なのは？",
-    "choices": [
-      "風の通りをよくする",
-      "全く換気をしない",
-      "濡れたまま重ねて山積みにする",
-      "洗濯物を部屋の隅に固めて置く"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2426,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "睡眠に関して、より望ましい習慣として適切なのは？",
-    "choices": [
-      "毎日寝る時間・起きる時間をだいたい揃える",
-      "日によって極端にバラバラにする",
-      "週末だけ徹夜する",
-      "寝たいときにだけ寝る"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2427,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "コンタクトレンズを使うときに守るべき基本として正しいのは？",
-    "choices": [
-      "使用時間や交換時期を守る",
-      "他人と使い回す",
-      "洗わずに何日もつけっぱなしにする",
-      "目薬の代わりに使う"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2428,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "電車の中でのマナーとして適切なのは？",
-    "choices": [
-      "ドア付近に立ち止まり、奥へ詰めない",
-      "優先席で大声で電話をする",
-      "リュックを前に抱える・足元におろす",
-      "座席に荷物を広げて置く"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2429,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "調味料の並びとして、「さしすせそ」と言われる基本調味料の組み合わせに含まれないのは？",
-    "choices": [
-      "砂糖",
-      "塩",
-      "酢",
-      "胡椒"
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": 2430,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "電子レンジで「ラップを少しだけ浮かせておく」主な理由として適切なのは？",
-    "choices": [
-      "見た目をよくするため",
-      "破裂や吹きこぼれを防ぎ、蒸気を逃がすため",
-      "味をまずくするため",
-      "電子レンジに負担をかけるため"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2431,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "インフルエンザなどの感染症が流行する時期に推奨される予防法として適切なのは？",
-    "choices": [
-      "こまめな手洗い・マスク着用・換気",
-      "人混みで大声で歌う",
-      "一切寝ない",
-      "他人とコップを共有する"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2432,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "財布やスマホなどをなくしたとき、まず行うべき行動として適切なのは？",
-    "choices": [
-      "カード会社や携帯会社への連絡・利用停止",
-      "何もせず様子を見る",
-      "SNSで相手を罵倒する",
-      "そのまま放置する"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2433,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本で「18歳」や「20歳」が区切りとして扱われることが多い理由として適切なのは？",
-    "choices": [
-      "体重が変わるから",
-      "法律上の成人や選挙権など、権利が変わる節目だから",
-      "学校の学年が変わるから",
-      "血液型が変わるから"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2434,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "部屋の片づけを効率よく行うコツとして適切なのは？",
-    "choices": [
-      "使っていないものを見直し、不要なものは処分・分別する",
-      "床に全部広げて歩けなくする",
-      "ゴミと必要なものを一緒の袋に入れる",
-      "何も考えず、ただ隠す"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2435,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "スマホやパソコンの「パスワード管理」として望ましい方法は？",
-    "choices": [
-      "誕生日など、簡単に推測されるものを使う",
-      "すべて同じパスワードにする",
-      "他人に教えてメモしてもらう",
-      "推測されにくいパスワードを使い、第三者に教えない"
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": 2436,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ゴミの分別で、一般的に「資源ごみ」として扱われることが多いのは？",
-    "choices": [
-      "ペットボトル",
-      "生ゴミ",
-      "汚れた紙おむつ",
-      "使い捨てマスク"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2437,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日焼け止めの使い方として、より効果的なのは？",
-    "choices": [
-      "朝1回だけ少し塗って、あとは塗り直さない",
-      "日差しの強い時間帯にだけ塗る",
-      "2〜3時間おきなど、適宜塗り直す",
-      "室内にいる間だけ塗る"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2438,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "在宅勤務や勉強中に「だらけてしまう」のを防ぎやすい工夫として適切なのは？",
-    "choices": [
-      "ずっとベッドの上で作業する",
-      "作業と休憩の時間をタイマーで区切る",
-      "テレビをつけっぱなしにする",
-      "スマホゲームを常に起動しておく"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2439,
-    "category": "lifestyle",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "公共料金（電気・ガス・水道など）の支払い方法として、一般的でないものは？",
-    "choices": [
-      "口座振替",
-      "クレジットカード払い",
-      "コンビニでの払込票支払い",
-      "現金をポストに直接入れておく"
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": 2440,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "電気料金の明細に記載される「kWh」は何を表す単位？",
-    "choices": [
-      "電力の瞬間的な大きさ",
-      "電力量（使った電気の量）",
-      "電圧の高さ",
-      "電流の速さ"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2441,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本の多くの自治体で、粗大ごみとして扱われることが多いものは？",
-    "choices": [
-      "コンビニ弁当の空き容器",
-      "ペットボトル",
-      "家庭用の古い自転車",
-      "レシート"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2442,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "クレジットカードの「リボ払い」を選ぶときの主な注意点として最も適切なのは？",
-    "choices": [
-      "利息や手数料がかかり、支払い総額が増えやすい",
-      "自動的に値引きされる",
-      "ポイントが100倍になる",
-      "期限なくいつまでも払わなくてよい"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2443,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "ネットショッピングで「フィッシング詐欺」に遭わないための対策として適切なのは？",
-    "choices": [
-      "怪しいURLやメールからはログインしない",
-      "パスワードを全員に配る",
-      "カード番号をSNSに載せる",
-      "アカウントを毎日作り直す"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2444,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "賃貸契約で「更新料」が発生することがあるのはなぜか、一般的な説明として近いのは？",
-    "choices": [
-      "物件の所有権をもらうため",
-      "契約期間を延長するための手数料として",
-      "家具をすべてプレゼントしてもらうため",
-      "税金を直接払うため"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2445,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "固定電話やスマホにかかってくる「オレオレ詐欺」「特殊詐欺」への基本的対策として適切なのは？",
-    "choices": [
-      "電話の内容をすぐに信じて送金する",
-      "一人で判断せず、家族や警察に相談する",
-      "相手に個人情報を詳しく教える",
-      "ATMから指示どおりに操作する"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2446,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本の水道水に関して、一般的な説明として最も適切なのは？",
-    "choices": [
-      "原則としてそのまま飲めるレベルの水質基準が定められている",
-      "どの地域でも絶対に飲めない",
-      "全て地下水をそのまま使っている",
-      "煮沸しないと法律違反になる"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2447,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "家庭の防災対策として望ましい備えはどれ？",
-    "choices": [
-      "3日分以上の飲料水や食料・懐中電灯・電池などを用意する",
-      "何も備えない",
-      "ガスボンベを大量に床に転がしておく",
-      "非常口を家具でふさぐ"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2448,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「フリマアプリ」で中古品を売買するとき、トラブルを防ぐために大切なのは？",
-    "choices": [
-      "商品の状態を正直かつ具体的に記載する",
-      "実物と違う写真を載せる",
-      "説明を書かない",
-      "質問には答えない"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2449,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "健康診断でよく測定される「BMI」とは何の略？（日本語の意味として）",
-    "choices": [
-      "体重と身長から計算した「体格指数」",
-      "血圧の単位",
-      "心拍数の単位",
-      "筋肉量そのもの"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2450,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "光熱費の節約として効果が大きいのはどれ？",
-    "choices": [
-      "冷蔵庫の中をパンパンに詰める",
-      "エアコンのフィルターを定期的に掃除する",
-      "テレビの明るさを最大にする",
-      "24時間すべての照明をつけっぱなしにする"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2451,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "ネット上で他人の写真を無断で転載・加工して公開する行為は、何の法律に触れる可能性が高い？",
-    "choices": [
-      "著作権法や肖像権の侵害",
-      "自動車関連法",
-      "魚業法",
-      "建築基準法"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2452,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本で、車を運転するときの「飲酒運転」に関して正しい説明はどれ？",
-    "choices": [
-      "少量なら違法ではない",
-      "アルコールが抜けていなくても、翌日なら問題ない",
-      "基準値を超えるアルコール濃度で運転することは違法",
-      "同乗者がいれば違法ではない"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 2453,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "賃貸住宅で「原状回復」として入居者が負担することが多いのは？",
-    "choices": [
-      "経年劣化による日焼けや軽い色あせ",
-      "壁に大きな穴をあけた・タバコのヤニ汚れをつけたなどの故意・過失による傷",
-      "建物全体の建て替え費用",
-      "退去後の家賃"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2454,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "個人情報の取り扱いとして、望ましくない行動はどれ？",
-    "choices": [
-      "SNSに自宅の住所や勤務先、通学ルートを詳細に公開する",
-      "宅配便の伝票をシュレッダーにかけて捨てる",
-      "不要になった書類を細かく裁断する",
-      "パスワード付きのファイルを使う"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2455,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "公共交通機関で「優先席」に座るときの基本的な考え方として適切なのは？",
-    "choices": [
-      "どんな場合でも絶対に譲らない",
-      "お年寄り・妊婦さん・身体の不自由な人などが来たら、状況に応じて席を譲る",
-      "体調が悪い人を立たせる",
-      "荷物を優先席に座らせる"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2456,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「キャッシュレス決済」のメリットとして一般的に挙げられるものは？",
-    "choices": [
-      "支払い履歴がまったく残らない",
-      "ポイント還元や支払いのスピードアップ",
-      "現金より必ず安くなる",
-      "税金を払わなくてよくなる"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2457,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "宅配便の受け取りで、不在票が入っていたときの正しい対応は？",
-    "choices": [
-      "不在票に書かれた連絡先や再配達の方法に従う",
-      "何もせず放置する",
-      "勝手に配送センターから荷物を持ち出す",
-      "不在票をSNSに載せる"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 2458,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "賃貸マンションで夜中に大きな音を出し続けると、主に問題になるのは？",
-    "choices": [
-      "住民税が上がる",
-      "近隣トラブルや騒音問題として苦情・トラブルの原因になる",
-      "家賃が安くなる",
-      "電気代が0円になる"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 2459,
-    "category": "lifestyle",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "SNSで誰かを繰り返し侮辱・中傷する行為は、何に該当する可能性がある？",
-    "choices": [
-      "一般的なコミュニケーション",
-      "名誉毀損や侮辱、いじめ・ハラスメント行為",
-      "宣伝として推奨される行為",
-      "税金の支払い免除"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "次のうち、日本の「四つの主な島」の一つではないものは？",
-    "choices": [
-      "本州",
-      "北海道",
-      "九州",
-      "台湾"
-    ],
-    "answerIndex": 3,
-    "id": 2460
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "日本の首都・東京がある島はどれ？",
-    "choices": [
-      "本州",
-      "北海道",
-      "四国",
-      "九州"
-    ],
-    "answerIndex": 0,
-    "id": 2461
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "日本の都道府県の数は？",
-    "choices": [
-      "37",
-      "43",
-      "47",
-      "51"
-    ],
-    "answerIndex": 2,
-    "id": 2462
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "次のうち、日本最北の大きな島は？",
-    "choices": [
-      "九州",
-      "四国",
-      "本州",
-      "北海道"
-    ],
-    "answerIndex": 3,
-    "id": 2463
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "北海道の道庁所在地はどこ？",
-    "choices": [
-      "旭川市",
-      "函館市",
-      "札幌市",
-      "小樽市"
-    ],
-    "answerIndex": 2,
-    "id": 2464
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "大阪府の府庁所在地はどこ？",
-    "choices": [
-      "堺市",
-      "枚方市",
-      "東大阪市",
-      "大阪市"
-    ],
-    "answerIndex": 3,
-    "id": 2465
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "日本の東側に広がる大きな海は？",
-    "choices": [
-      "日本海",
-      "太平洋",
-      "オホーツク海",
-      "東シナ海"
-    ],
-    "answerIndex": 1,
-    "id": 2466
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "次のうち、近畿地方（関西地方）に含まれる都道府県はどれ？",
-    "choices": [
-      "大阪府",
-      "北海道",
-      "福岡県",
-      "青森県"
-    ],
-    "answerIndex": 0,
-    "id": 2467
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "京都市が府庁所在地になっている都道府県は？",
-    "choices": [
-      "奈良県",
-      "京都府",
-      "滋賀県",
-      "三重県"
-    ],
-    "answerIndex": 1,
-    "id": 2468
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "沖縄県は、日本のおおまかな位置でいうとどのあたりにある？",
-    "choices": [
-      "北東",
-      "北西",
-      "南西",
-      "南東"
-    ],
-    "answerIndex": 2,
-    "id": 2469
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "次のうち、日本の政令指定都市でもあるのは？",
-    "choices": [
-      "仙台市",
-      "草津町",
-      "鎌倉市",
-      "出雲市"
-    ],
-    "answerIndex": 0,
-    "id": 2470
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "日本で一番高い山・富士山がある島は？",
-    "choices": [
-      "北海道",
-      "本州",
-      "四国",
-      "九州"
-    ],
-    "answerIndex": 1,
-    "id": 2471
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "次のうち、東北地方に属する県はどれ？",
-    "choices": [
-      "宮城県",
-      "岡山県",
-      "福岡県",
-      "香川県"
-    ],
-    "answerIndex": 0,
-    "id": 2472
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "北海道・本州・四国・九州の4島をまとめて、一般に何と呼ぶ？",
-    "choices": [
-      "日本四島",
-      "四大陸",
-      "主要4島／四つの主な島",
-      "東アジア四島"
-    ],
-    "answerIndex": 2,
-    "id": 2473
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "東京ディズニーランドがある県はどこ？",
-    "choices": [
-      "東京都",
-      "千葉県",
-      "神奈川県",
-      "埼玉県"
-    ],
-    "answerIndex": 1,
-    "id": 2474
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "日本海に面している県として正しいのは？",
-    "choices": [
-      "新潟県",
-      "埼玉県",
-      "栃木県",
-      "群馬県"
-    ],
-    "answerIndex": 0,
-    "id": 2475
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "沖縄県の県庁所在地は？",
-    "choices": [
-      "那覇市",
-      "名護市",
-      "石垣市",
-      "宮古島市"
-    ],
-    "answerIndex": 0,
-    "id": 2476
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "本州のほぼ中央部に位置し、「日本アルプス」を抱える地域はどれ？",
-    "choices": [
-      "北海道",
-      "東北地方",
-      "中部地方",
-      "九州地方"
-    ],
-    "answerIndex": 2,
-    "id": 2477
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "次のうち、関東地方に含まれる都県はどれ？",
-    "choices": [
-      "東京都",
-      "大阪府",
-      "愛知県",
-      "北海道"
-    ],
-    "answerIndex": 0,
-    "id": 2478
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "広島県にあり、世界遺産にも登録されている有名な「鳥居」がある島は？",
-    "choices": [
-      "宮島",
-      "小笠原",
-      "佐渡島",
-      "屋久島"
-    ],
-    "answerIndex": 0,
-    "id": 2479
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本の4つの主な島のうち、面積が最大の島はどれ？",
-    "choices": [
-      "北海道",
-      "本州",
-      "四国",
-      "九州"
-    ],
-    "answerIndex": 1,
-    "id": 2480
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本で一番長い川は？",
-    "choices": [
-      "利根川",
-      "石狩川",
-      "信濃川",
-      "北上川"
-    ],
-    "answerIndex": 2,
-    "id": 2481
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本で一番大きい湖は？",
-    "choices": [
-      "霞ヶ浦",
-      "十和田湖",
-      "洞爺湖",
-      "琵琶湖"
-    ],
-    "answerIndex": 3,
-    "id": 2482
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「日本アルプス」が走る本州の内陸部に位置し、長野市を県庁所在地とする県は？",
-    "choices": [
-      "長野県",
-      "山梨県",
-      "岐阜県",
-      "富山県"
-    ],
-    "answerIndex": 0,
-    "id": 2483
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "北海道の南に位置し、本州と北海道を結ぶ津軽海峡に面している県は？",
-    "choices": [
-      "青森県",
-      "岩手県",
-      "秋田県",
-      "山形県"
-    ],
-    "answerIndex": 0,
-    "id": 2484
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "九州地方に属する県として正しいのは？",
-    "choices": [
-      "鹿児島県",
-      "愛媛県",
-      "岡山県",
-      "静岡県"
-    ],
-    "answerIndex": 0,
-    "id": 2485
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "関西（近畿）地方に含まれない県はどれ？",
-    "choices": [
-      "京都府",
-      "兵庫県",
-      "奈良県",
-      "沖縄県"
-    ],
-    "answerIndex": 3,
-    "id": 2486
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本の西側に広がり、本州や北海道・九州の日本海側を形作る海は？",
-    "choices": [
-      "太平洋",
-      "日本海",
-      "オホーツク海",
-      "カスピ海"
-    ],
-    "answerIndex": 1,
-    "id": 2487
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "北海道のすぐ北にあるロシアの島・サハリンと、日本側の北海道の間に広がる海は？",
-    "choices": [
-      "日本海",
-      "オホーツク海",
-      "東シナ海",
-      "黄海"
-    ],
-    "answerIndex": 1,
-    "id": 2488
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "四国地方に含まれる県として正しいのは？",
-    "choices": [
-      "徳島県",
-      "山口県",
-      "福井県",
-      "茨城県"
-    ],
-    "answerIndex": 0,
-    "id": 2489
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「本州・四国・九州の3島に囲まれた、内海的な海域」として知られるのは？",
-    "choices": [
-      "瀬戸内海",
-      "カリブ海",
-      "地中海",
-      "死海"
-    ],
-    "answerIndex": 0,
-    "id": 2490
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "政令指定都市のうち、「札幌市」があるのはどの地方？",
-    "choices": [
-      "東北地方",
-      "北海道地方",
-      "中部地方",
-      "中国地方"
-    ],
-    "answerIndex": 1,
-    "id": 2491
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "仙台市はどの都道府県の県庁所在地？",
-    "choices": [
-      "福島県",
-      "山形県",
-      "宮城県",
-      "岩手県"
-    ],
-    "answerIndex": 2,
-    "id": 2492
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "次のうち、太平洋側に面している県は？",
-    "choices": [
-      "岐阜県",
-      "長野県",
-      "群馬県",
-      "宮崎県"
-    ],
-    "answerIndex": 3,
-    "id": 2493
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本の南西部に連なる「南西諸島」の一部として知られるのは？",
-    "choices": [
-      "小笠原諸島",
-      "琉球諸島",
-      "千島列島",
-      "伊豆諸島"
-    ],
-    "answerIndex": 1,
-    "id": 2494
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本の大まかな地域区分として一般的な「8地方」に含まれないものは？",
-    "choices": [
-      "関東",
-      "東海",
-      "東北",
-      "四国"
-    ],
-    "answerIndex": 1,
-    "id": 2495
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "沖縄本島を含む「沖縄県」の主な気候としてもっとも近いのは？",
-    "choices": [
-      "亜寒帯気候",
-      "高山気候",
-      "亜熱帯気候",
-      "砂漠気候"
-    ],
-    "answerIndex": 2,
-    "id": 2496
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「出雲大社」で知られる出雲市が属する県は？",
-    "choices": [
-      "鳥取県",
-      "島根県",
-      "山口県",
-      "愛媛県"
-    ],
-    "answerIndex": 1,
-    "id": 2497
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日本の本州中部に位置し、自動車産業で有名な県は？（県庁所在地は名古屋市）",
-    "choices": [
-      "愛知県",
-      "静岡県",
-      "三重県",
-      "岐阜県"
-    ],
-    "answerIndex": 0,
-    "id": 2498
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "大分県・佐賀県・熊本県・宮崎県・鹿児島県などが属する地方は？",
-    "choices": [
-      "四国地方",
-      "中国地方",
-      "九州地方",
-      "東北地方"
-    ],
-    "answerIndex": 2,
-    "id": 2499
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本で最も標高の高い山は富士山だが、その標高に最も近い値は？",
-    "choices": [
-      "約2,776m",
-      "約3,016m",
-      "約3,776m",
-      "約4,016m"
-    ],
-    "answerIndex": 2,
-    "id": 2500
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "次のうち、「日本の四つの主な島」の中で最も南に位置する島は？",
-    "choices": [
-      "北海道",
-      "本州",
-      "四国",
-      "九州"
-    ],
-    "answerIndex": 3,
-    "id": 2501
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「信濃川（新潟県側の名称）／千曲川（長野県側の名称）」として知られる川が流入している海は？",
-    "choices": [
-      "日本海",
-      "太平洋",
-      "東シナ海",
-      "オホーツク海"
-    ],
-    "answerIndex": 0,
-    "id": 2502
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本最大の湖・琵琶湖がある都道府県は？",
-    "choices": [
-      "福井県",
-      "滋賀県",
-      "三重県",
-      "岐阜県"
-    ],
-    "answerIndex": 1,
-    "id": 2503
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「日本アルプス」のうち、北アルプスとも呼ばれる山脈が主に広がる県として、最も関連が深いのは？",
-    "choices": [
-      "沖縄県",
-      "長野県",
-      "千葉県",
-      "佐賀県"
-    ],
-    "answerIndex": 1,
-    "id": 2504
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「日本の四つの主な島」のうち、最も面積が小さい島はどれ？",
-    "choices": [
-      "本州",
-      "北海道",
-      "四国",
-      "九州"
-    ],
-    "answerIndex": 2,
-    "id": 2505
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "次の組み合わせのうち、「県名と県庁所在地名」が一致するものはどれ？",
-    "choices": [
-      "愛知県 − 名古屋市",
-      "静岡県 − 静岡市",
-      "兵庫県 − 神戸市",
-      "北海道 − 函館市"
-    ],
-    "answerIndex": 1,
-    "id": 2506
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "四国地方に属する4県のうち、日本海に面している県は？",
-    "choices": [
-      "徳島県",
-      "香川県",
-      "愛媛県",
-      "どれも日本海には面していない"
-    ],
-    "answerIndex": 3,
-    "id": 2507
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「本州の中部に位置し、日本で最も内陸性の強い県の一つ」とされ、海に面していない県は？",
-    "choices": [
-      "長野県",
-      "宮城県",
-      "広島県",
-      "福岡県"
-    ],
-    "answerIndex": 0,
-    "id": 2508
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本の総面積（約37.8万km²）に最も近い説明として正しいのは？",
-    "choices": [
-      "北海道1つ分とほぼ同じ",
-      "本州の面積とほぼ同じ",
-      "ドイツとほぼ同じ規模の国土面積",
-      "世界で最も広い国土面積"
-    ],
-    "answerIndex": 2,
-    "id": 2509
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本列島を取り巻く海のうち、北海道の北に位置する海は？",
-    "choices": [
-      "東シナ海",
-      "カリブ海",
-      "オホーツク海",
-      "黒海"
-    ],
-    "answerIndex": 2,
-    "id": 2510
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "本州の太平洋側に位置し、「東北地方最大の都市・仙台市」を県庁所在地にもつ県は？",
-    "choices": [
-      "福島県",
-      "宮城県",
-      "岩手県",
-      "山形県"
-    ],
-    "answerIndex": 1,
-    "id": 2511
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "次のうち、「九州地方」と「沖縄県」を合わせた広い意味での地域名として使われることがあるのは？",
-    "choices": [
-      "関東地方",
-      "北海道地方",
-      "九州・沖縄地方",
-      "四国地方"
-    ],
-    "answerIndex": 2,
-    "id": 2512
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本の本州と四国を結ぶ橋梁群として知られるのは？",
-    "choices": [
-      "青函トンネル",
-      "レインボーブリッジ",
-      "瀬戸大橋",
-      "明石海峡大橋"
-    ],
-    "answerIndex": 2,
-    "id": 2513
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「政令指定都市」のうち、九州地方に位置する都市はどれ？",
-    "choices": [
-      "川崎市",
-      "札幌市",
-      "福岡市",
-      "仙台市"
-    ],
-    "answerIndex": 2,
-    "id": 2514
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本列島の東西方向をおおまかに分けたとき、「日本海側」と対比される気候区分として使われるのは？",
-    "choices": [
-      "亜寒帯側",
-      "太平洋側",
-      "砂漠側",
-      "極地側"
-    ],
-    "answerIndex": 1,
-    "id": 2515
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "東京から約1000km南に位置し、日本の最南端に近い有人島を含む「小笠原諸島」が属する都道府県は？",
-    "choices": [
-      "東京都",
-      "沖縄県",
-      "鹿児島県",
-      "神奈川県"
-    ],
-    "answerIndex": 0,
-    "id": 2516
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日本海側に「砂丘」で有名な鳥取砂丘がある県は？",
-    "choices": [
-      "鳥取県",
-      "島根県",
-      "山口県",
-      "石川県"
-    ],
-    "answerIndex": 0,
-    "id": 2517
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「政令指定都市・広島市」が県庁所在地であり、瀬戸内海に面し、平和記念公園で知られる県は？",
-    "choices": [
-      "岡山県",
-      "広島県",
-      "山口県",
-      "愛媛県"
-    ],
-    "answerIndex": 1,
-    "id": 2518
-  },
-  {
-    "category": "japanese_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "本州の東北部に位置し、「ねぶた祭」で有名な都市・青森市が県庁所在地なのは？",
-    "choices": [
-      "岩手県",
-      "宮城県",
-      "青森県",
-      "秋田県"
-    ],
-    "answerIndex": 2,
-    "id": 2519
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "フランスの首都はどこ？",
-    "choices": [
-      "ローマ",
-      "パリ",
-      "ベルリン",
-      "マドリード"
-    ],
-    "answerIndex": 1,
-    "id": 2520
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "イタリアの形は、地図でよく何に例えられる？",
-    "choices": [
-      "帽子",
-      "長靴",
-      "魚",
-      "星"
-    ],
-    "answerIndex": 1,
-    "id": 2521
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "エジプトにある有名な川は？",
-    "choices": [
-      "アマゾン川",
-      "ナイル川",
-      "ミシシッピ川",
-      "メコン川"
-    ],
-    "answerIndex": 1,
-    "id": 2522
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "世界で面積が最も大きい国は？",
-    "choices": [
-      "中国",
-      "アメリカ合衆国",
-      "ロシア",
-      "カナダ"
-    ],
-    "answerIndex": 2,
-    "id": 2523
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "アメリカ合衆国の首都はどこ？",
-    "choices": [
-      "ニューヨーク",
-      "ロサンゼルス",
-      "シカゴ",
-      "ワシントンD.C."
-    ],
-    "answerIndex": 3,
-    "id": 2524
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「ピラミッド」で有名な国は？",
-    "choices": [
-      "日本",
-      "エジプト",
-      "オーストラリア",
-      "ノルウェー"
-    ],
-    "answerIndex": 1,
-    "id": 2525
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "ブラジルがある大陸はどこ？",
-    "choices": [
-      "アジア",
-      "ヨーロッパ",
-      "南アメリカ",
-      "アフリカ"
-    ],
-    "answerIndex": 2,
-    "id": 2526
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "オーストラリアの国旗にも描かれている、南半球で見られる星座は？",
-    "choices": [
-      "北斗七星",
-      "オリオン座",
-      "さそり座",
-      "南十字星"
-    ],
-    "answerIndex": 3,
-    "id": 2527
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「万里の長城」がある国は？",
-    "choices": [
-      "韓国",
-      "中国",
-      "ベトナム",
-      "モンゴル"
-    ],
-    "answerIndex": 1,
-    "id": 2528
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "イギリス（United Kingdom）の首都はどこ？",
-    "choices": [
-      "ロンドン",
-      "ダブリン",
-      "エディンバラ",
-      "カーディフ"
-    ],
-    "answerIndex": 0,
-    "id": 2529
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「サハラ砂漠」はどの大陸にある？",
-    "choices": [
-      "アジア",
-      "アフリカ",
-      "ヨーロッパ",
-      "南極大陸"
-    ],
-    "answerIndex": 1,
-    "id": 2530
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「エッフェル塔」がある都市は？",
-    "choices": [
-      "ローマ",
-      "パリ",
-      "ベルリン",
-      "バルセロナ"
-    ],
-    "answerIndex": 1,
-    "id": 2531
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "カナダの国旗に描かれている葉は、一般に何の木の葉？",
-    "choices": [
-      "さくら",
-      "もみじ（カエデ）",
-      "まつ",
-      "オリーブ"
-    ],
-    "answerIndex": 1,
-    "id": 2532
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「コアラ」や「カンガルー」で有名な国は？",
-    "choices": [
-      "オーストラリア",
-      "インド",
-      "スウェーデン",
-      "メキシコ"
-    ],
-    "answerIndex": 0,
-    "id": 2533
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "世界で最も面積が大きい海洋は？",
-    "choices": [
-      "インド洋",
-      "大西洋",
-      "北極海",
-      "太平洋"
-    ],
-    "answerIndex": 3,
-    "id": 2534
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「ピザ」や「パスタ」の本場として有名な国は？",
-    "choices": [
-      "フランス",
-      "イタリア",
-      "スペイン",
-      "ドイツ"
-    ],
-    "answerIndex": 1,
-    "id": 2535
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「タージ・マハル」がある国は？",
-    "choices": [
-      "中国",
-      "タイ",
-      "インド",
-      "トルコ"
-    ],
-    "answerIndex": 2,
-    "id": 2536
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「オーロラ」がよく見られるのは、地球のどのあたり？",
-    "choices": [
-      "赤道付近",
-      "砂漠地帯",
-      "極地方付近",
-      "熱帯雨林"
-    ],
-    "answerIndex": 2,
-    "id": 2537
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "アフリカ大陸にある国はどれ？",
-    "choices": [
-      "ケニア",
-      "ペルー",
-      "韓国",
-      "ノルウェー"
-    ],
-    "answerIndex": 0,
-    "id": 2538
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "世界で一番南にある大陸は？",
-    "choices": [
-      "アジア",
-      "南極大陸",
-      "ヨーロッパ",
-      "オーストラリア大陸"
-    ],
-    "answerIndex": 1,
-    "id": 2539
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "アフリカ大陸で最も長い川はどれ？",
-    "choices": [
-      "コンゴ川",
-      "ナイル川",
-      "ニジェール川",
-      "ザンベジ川"
-    ],
-    "answerIndex": 1,
-    "id": 2540
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "世界で最も面積が大きい淡水湖は？",
-    "choices": [
-      "バイカル湖",
-      "カスピ海",
-      "五大湖のスペリオル湖",
-      "アラル海"
-    ],
-    "answerIndex": 2,
-    "id": 2541
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「アルプス山脈」が主に横断している大陸は？",
-    "choices": [
-      "アジア",
-      "ヨーロッパ",
-      "北アメリカ",
-      "南アメリカ"
-    ],
-    "answerIndex": 1,
-    "id": 2542
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "南アメリカ大陸の公用語として「スペイン語」が最も広く使われている国が多い中、主に「ポルトガル語」を公用語とする国は？",
-    "choices": [
-      "アルゼンチン",
-      "ブラジル",
-      "チリ",
-      "ペルー"
-    ],
-    "answerIndex": 1,
-    "id": 2543
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「砂漠化」が進んでいることで知られる、北アフリカの大きな砂漠は？",
-    "choices": [
-      "ゴビ砂漠",
-      "サハラ砂漠",
-      "カラハリ砂漠",
-      "シリア砂漠"
-    ],
-    "answerIndex": 1,
-    "id": 2544
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ヨーロッパとアジアの境界付近に位置する「モスクワ」は、どの国の首都？",
-    "choices": [
-      "ウクライナ",
-      "ポーランド",
-      "ロシア",
-      "ベラルーシ"
-    ],
-    "answerIndex": 2,
-    "id": 2545
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "アフリカ大陸の中で、人口が最も多い国は？",
-    "choices": [
-      "エチオピア",
-      "エジプト",
-      "南アフリカ共和国",
-      "ナイジェリア"
-    ],
-    "answerIndex": 3,
-    "id": 2546
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「北欧（スカンジナビア）」に含まれる国として正しいのは？",
-    "choices": [
-      "スウェーデン",
-      "オランダ",
-      "スイス",
-      "オーストリア"
-    ],
-    "answerIndex": 0,
-    "id": 2547
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "メキシコの首都はどれ？",
-    "choices": [
-      "カンクン",
-      "グアダラハラ",
-      "メキシコシティ",
-      "ティフアナ"
-    ],
-    "answerIndex": 2,
-    "id": 2548
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "アジアとヨーロッパにまたがるトルコの最大都市で、「ボスポラス海峡」に面する都市は？",
-    "choices": [
-      "アンカラ",
-      "イスタンブール",
-      "イズミル",
-      "ブルサ"
-    ],
-    "answerIndex": 1,
-    "id": 2549
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "世界で最も標高が高い山・エベレストが位置する山脈は？",
-    "choices": [
-      "アルプス山脈",
-      "ヒマラヤ山脈",
-      "アンデス山脈",
-      "ロッキー山脈"
-    ],
-    "answerIndex": 1,
-    "id": 2550
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ヨーロッパの国で、主要都市アテネを首都とする国は？",
-    "choices": [
-      "イタリア",
-      "ギリシャ",
-      "ポルトガル",
-      "オーストリア"
-    ],
-    "answerIndex": 1,
-    "id": 2551
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「アマゾン川流域」に広がる世界最大級の熱帯雨林は、主にどの大陸にある？",
-    "choices": [
-      "アジア",
-      "アフリカ",
-      "南アメリカ",
-      "オセアニア"
-    ],
-    "answerIndex": 2,
-    "id": 2552
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「死海」はどの2つの地域（国）の間に位置する塩湖として有名？（主な組み合わせ）",
-    "choices": [
-      "スペインとポルトガル",
-      "アメリカとカナダ",
-      "イスラエルとヨルダン",
-      "フランスとイタリア"
-    ],
-    "answerIndex": 2,
-    "id": 2553
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ヨーロッパとアフリカを隔てる狭い海峡として知られるのは？",
-    "choices": [
-      "ドーバー海峡",
-      "マラッカ海峡",
-      "ジブラルタル海峡",
-      "ボスポラス海峡"
-    ],
-    "answerIndex": 2,
-    "id": 2554
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ニュージーランドの主要な2つの大きな島は？",
-    "choices": [
-      "北島と南島",
-      "東島と西島",
-      "上島と下島",
-      "大島と小島"
-    ],
-    "answerIndex": 0,
-    "id": 2555
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "世界で最も人口が多い国は？（2025年現在、一般的な統計による）",
-    "choices": [
-      "アメリカ合衆国",
-      "インド",
-      "中国",
-      "インドネシア"
-    ],
-    "answerIndex": 1,
-    "id": 2556
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「五大湖」のうち、カナダとアメリカ合衆国の国境にある湖ではないものは？",
-    "choices": [
-      "スペリオル湖",
-      "ミシガン湖",
-      "ヒューロン湖",
-      "エリー湖"
-    ],
-    "answerIndex": 1,
-    "id": 2557
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「ピレネー山脈」は主にどの2つの国の国境付近に位置する？",
-    "choices": [
-      "フランスとスペイン",
-      "ドイツとポーランド",
-      "イタリアとスイス",
-      "ロシアと中国"
-    ],
-    "answerIndex": 0,
-    "id": 2558
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「アフリカの角（ホーン・オブ・アフリカ）」に位置する国として代表的なのは？",
-    "choices": [
-      "エジプト",
-      "エチオピア",
-      "ナイジェリア",
-      "モロッコ"
-    ],
-    "answerIndex": 1,
-    "id": 2559
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「赤道」が通っている国として正しいのは？",
-    "choices": [
-      "ケニア",
-      "南アフリカ共和国",
-      "アルゼンチン",
-      "スペイン"
-    ],
-    "answerIndex": 0,
-    "id": 2560
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「インド洋」と「太平洋」を結ぶ重要な海峡で、マレー半島とスマトラ島の間にあるのは？",
-    "choices": [
-      "ホルムズ海峡",
-      "マラッカ海峡",
-      "ジブラルタル海峡",
-      "ドーバー海峡"
-    ],
-    "answerIndex": 1,
-    "id": 2561
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「大西洋」と「太平洋」を結ぶ人工の運河として最も有名なのは？",
-    "choices": [
-      "スエズ運河",
-      "パナマ運河",
-      "キール運河",
-      "コリント運河"
-    ],
-    "answerIndex": 1,
-    "id": 2562
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "標高が非常に高いアンデス山脈を抱える国で、首都ラパス（行政首都）が高地にあることで知られる国は？",
-    "choices": [
-      "ペルー",
-      "ボリビア",
-      "チリ",
-      "コロンビア"
-    ],
-    "answerIndex": 1,
-    "id": 2563
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "世界で最も標高の高い「チベット高原」が主に広がる国は？",
-    "choices": [
-      "インド",
-      "中国",
-      "ネパール",
-      "パキスタン"
-    ],
-    "answerIndex": 1,
-    "id": 2564
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「北アメリカ大陸」と「ユーラシア大陸」が最も近づいている海峡は？",
-    "choices": [
-      "ベーリング海峡",
-      "ドーバー海峡",
-      "ジブラルタル海峡",
-      "ホルムズ海峡"
-    ],
-    "answerIndex": 0,
-    "id": 2565
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「黒海」に面している国として正しいのは？",
-    "choices": [
-      "イタリア",
-      "トルコ",
-      "ポルトガル",
-      "モロッコ"
-    ],
-    "answerIndex": 1,
-    "id": 2566
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "標高約4,810mのモンブラン山（ヨーロッパ西部の最高峰）は、主にどの国境付近に位置する？",
-    "choices": [
-      "フランスとイタリア",
-      "ドイツとオーストリア",
-      "スペインとポルトガル",
-      "スイスとチェコ"
-    ],
-    "answerIndex": 0,
-    "id": 2567
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「ライン川」が流れ下って最終的に注ぎ込む海は？",
-    "choices": [
-      "黒海",
-      "北海",
-      "地中海",
-      "カリブ海"
-    ],
-    "answerIndex": 1,
-    "id": 2568
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「カスピ海」は実際には何として扱われることが多い？",
-    "choices": [
-      "河川",
-      "内陸の塩湖",
-      "氷河",
-      "湿地帯"
-    ],
-    "answerIndex": 1,
-    "id": 2569
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「グリーンランド」が属している国はどこ？（自治領）",
-    "choices": [
-      "アメリカ合衆国",
-      "イギリス",
-      "カナダ",
-      "デンマーク"
-    ],
-    "answerIndex": 3,
-    "id": 2570
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "アフリカ大陸のほぼ中央を南北に流れ、コンゴ民主共和国を中心に流域を持つ大河は？",
-    "choices": [
-      "ナイル川",
-      "ニジェール川",
-      "コンゴ川",
-      "ザンベジ川"
-    ],
-    "answerIndex": 2,
-    "id": 2571
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「バルト三国」として知られる3つの国に含まれないのは？",
-    "choices": [
-      "エストニア",
-      "ラトビア",
-      "リトアニア",
-      "ベラルーシ"
-    ],
-    "answerIndex": 3,
-    "id": 2572
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "世界最大級の内陸国（海に面していない国）の一つで、首都ヌルスルタン（旧アスタナ）を持つ国は？",
-    "choices": [
-      "モンゴル",
-      "カザフスタン",
-      "パラグアイ",
-      "チェコ"
-    ],
-    "answerIndex": 1,
-    "id": 2573
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「アフリカの大地溝帯（グレート・リフト・バレー）」に沿って多く分布する湖群の一つとして知られるのは？",
-    "choices": [
-      "ビクトリア湖",
-      "ブルガス湖",
-      "ティティカカ湖",
-      "バイカル湖"
-    ],
-    "answerIndex": 0,
-    "id": 2574
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「オーストリア」と「オーストラリア」について正しい説明はどれ？",
-    "choices": [
-      "同じ国の別名",
-      "オーストリアはヨーロッパ、オーストラリアはオセアニアにある別の国",
-      "オーストリアはアジア、オーストラリアはヨーロッパ",
-      "両方とも南米にある"
-    ],
-    "answerIndex": 1,
-    "id": 2575
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「アラビア半島」の大部分を占める国は？",
-    "choices": [
-      "サウジアラビア",
-      "イラン",
-      "パキスタン",
-      "イラク"
-    ],
-    "answerIndex": 0,
-    "id": 2576
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "首都ハノイと大都市ホーチミン市をもつ国は？",
-    "choices": [
-      "タイ",
-      "ベトナム",
-      "カンボジア",
-      "ラオス"
-    ],
-    "answerIndex": 1,
-    "id": 2577
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「ロッキー山脈」が主に走っている大陸は？",
-    "choices": [
-      "アジア",
-      "北アメリカ",
-      "南アメリカ",
-      "ヨーロッパ"
-    ],
-    "answerIndex": 1,
-    "id": 2578
-  },
-  {
-    "category": "world_geography",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「ユーラシア大陸」と「アフリカ大陸」を陸続きに結んでいる地峡として正しいのは？",
-    "choices": [
-      "シナイ半島（スエズ地峡）",
-      "カムチャツカ半島",
-      "フロリダ半島",
-      "朝鮮半島"
-    ],
-    "answerIndex": 0,
-    "id": 2579
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "日本の「四大文明」ではなく、日本史の最初に学ぶ「縄文時代」の特色として正しいのはどれ？",
-    "choices": [
-      "稲作が本格的に行われた",
-      "磨製石器と縄目の文様の土器が使われた",
-      "鉄器が広く普及した",
-      "武士が政治の中心となった"
-    ],
-    "answerIndex": 1,
-    "id": 2580
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "弥生時代に本格的に広まったとされるのはどれ？",
-    "choices": [
-      "文字の使用",
-      "稲作（米作り）",
-      "鉄道の発達",
-      "火縄銃の使用"
-    ],
-    "answerIndex": 1,
-    "id": 2581
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「大化の改新」が始まったのはおよそ西暦何年？",
-    "choices": [
-      "594年",
-      "603年",
-      "645年",
-      "701年"
-    ],
-    "answerIndex": 2,
-    "id": 2582
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「聖徳太子」が推古天皇のもとで行ったとされる政治として有名なのは？",
-    "choices": [
-      "武家諸法度の制定",
-      "冠位十二階や十七条憲法",
-      "五箇条の御誓文",
-      "公武合体政策"
-    ],
-    "answerIndex": 1,
-    "id": 2583
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "奈良時代に建てられた、大仏で有名なお寺はどれ？",
-    "choices": [
-      "東大寺",
-      "金閣寺",
-      "清水寺",
-      "平等院鳳凰堂"
-    ],
-    "answerIndex": 0,
-    "id": 2584
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "794年、桓武天皇が都を移した場所は？",
-    "choices": [
-      "奈良（平城京）",
-      "長岡京",
-      "平安京（京都）",
-      "鎌倉"
-    ],
-    "answerIndex": 2,
-    "id": 2585
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「源平の戦い」で平氏を倒し、のちに鎌倉幕府を開いた人物は？",
-    "choices": [
-      "源義経",
-      "源頼朝",
-      "平清盛",
-      "足利尊氏"
-    ],
-    "answerIndex": 1,
-    "id": 2586
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "日本で最初の本格的な武家政権とされるのは？",
-    "choices": [
-      "鎌倉幕府",
-      "室町幕府",
-      "江戸幕府",
-      "幕末政府"
-    ],
-    "answerIndex": 0,
-    "id": 2587
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「応仁の乱」が起きたのは、どの時代の出来事？",
-    "choices": [
-      "奈良時代",
-      "平安時代",
-      "室町時代",
-      "江戸時代"
-    ],
-    "answerIndex": 2,
-    "id": 2588
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "織田信長が1575年に鉄砲を活用して勝利した戦いとして有名なのは？",
-    "choices": [
-      "長篠の戦い",
-      "関ヶ原の戦い",
-      "大坂の陣",
-      "川中島の戦い"
-    ],
-    "answerIndex": 0,
-    "id": 2589
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "1600年の関ヶ原の戦いで勝利し、のちに江戸幕府を開いた人物は？",
-    "choices": [
-      "豊臣秀吉",
-      "徳川家康",
-      "織田信長",
-      "足利義満"
-    ],
-    "answerIndex": 1,
-    "id": 2590
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "江戸時代のおよその始まりの年として正しいのは？",
-    "choices": [
-      "1185年ごろ",
-      "1338年ごろ",
-      "1603年ごろ",
-      "1868年ごろ"
-    ],
-    "answerIndex": 2,
-    "id": 2591
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "江戸時代に「鎖国」政策をとっていた日本が、1853年に黒船で開国を迫られた相手国は？",
-    "choices": [
-      "イギリス",
-      "ロシア",
-      "アメリカ合衆国",
-      "オランダ"
-    ],
-    "answerIndex": 2,
-    "id": 2592
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「大政奉還」によって江戸幕府が政権を朝廷に返したのは誰？",
-    "choices": [
-      "徳川家光",
-      "徳川吉宗",
-      "徳川慶喜",
-      "徳川家茂"
-    ],
-    "answerIndex": 2,
-    "id": 2593
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "1868年の明治維新後、日本の首都として事実上の政治の中心になった都市は？",
-    "choices": [
-      "京都",
-      "大阪",
-      "名古屋",
-      "東京"
-    ],
-    "answerIndex": 3,
-    "id": 2594
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "明治時代のスローガンとして有名な「富国強兵」に近い政策のねらいはどれ？",
-    "choices": [
-      "軍隊をなくす",
-      "国の力と軍事力を高める",
-      "農業だけを重視する",
-      "海外との交流を完全に断つ"
-    ],
-    "answerIndex": 1,
-    "id": 2595
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "第一次世界大戦終結後、日本が参加した国際連盟で、常任理事国の一つだったのはどれ？",
-    "choices": [
-      "日本",
-      "スペイン",
-      "ブラジル",
-      "カナダ"
-    ],
-    "answerIndex": 0,
-    "id": 2596
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "第二次世界大戦終結の年として正しいのは？（日本の降伏）",
-    "choices": [
-      "1939年",
-      "1941年",
-      "1943年",
-      "1945年"
-    ],
-    "answerIndex": 3,
-    "id": 2597
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "1947年5月3日に施行され、今も日本の基本法となっているのは？",
-    "choices": [
-      "大日本帝国憲法",
-      "日本国憲法",
-      "五箇条の御誓文",
-      "武家諸法度"
-    ],
-    "answerIndex": 1,
-    "id": 2598
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "昭和の次の元号は？",
-    "choices": [
-      "大正",
-      "明治",
-      "平成",
-      "令和"
-    ],
-    "answerIndex": 2,
-    "id": 2599
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「邪馬台国」の女王として、中国の歴史書『魏志倭人伝』に記されている人物は？",
-    "choices": [
-      "推古天皇",
-      "卑弥呼",
-      "光明皇后",
-      "神功皇后"
-    ],
-    "answerIndex": 1,
-    "id": 2600
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "大化の改新の中心人物として挙げられるのは、中大兄皇子ともう一人は誰？",
-    "choices": [
-      "中臣鎌足",
-      "蘇我馬子",
-      "藤原道長",
-      "平清盛"
-    ],
-    "answerIndex": 0,
-    "id": 2601
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "奈良時代に、日本最初の本格的な都城である「平城京」が置かれた現在の都道府県は？",
-    "choices": [
-      "京都府",
-      "奈良県",
-      "大阪府",
-      "滋賀県"
-    ],
-    "answerIndex": 1,
-    "id": 2602
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "平安時代に「摂関政治」を行い、藤原氏の全盛期を築いた人物として有名なのは？",
-    "choices": [
-      "藤原鎌足",
-      "藤原道長",
-      "藤原秀郷",
-      "藤原純友"
-    ],
-    "answerIndex": 1,
-    "id": 2603
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "源頼朝の弟で、「義経記」などで活躍が知られるが、のちに頼朝に追われて自害したとされる人物は？",
-    "choices": [
-      "源義仲",
-      "源義経",
-      "源実朝",
-      "源頼家"
-    ],
-    "answerIndex": 1,
-    "id": 2604
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "鎌倉幕府で、将軍に代わって実権を握った北条氏の役職名は？",
-    "choices": [
-      "執権",
-      "管領",
-      "老中",
-      "関白"
-    ],
-    "answerIndex": 0,
-    "id": 2605
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「元寇」（蒙古襲来）のとき、日本側の中心となって戦った幕府は？",
-    "choices": [
-      "平氏政権",
-      "鎌倉幕府",
-      "室町幕府",
-      "江戸幕府"
-    ],
-    "answerIndex": 1,
-    "id": 2606
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "室町幕府を開いた人物は？",
-    "choices": [
-      "足利尊氏",
-      "足利義満",
-      "足利義政",
-      "足利義昭"
-    ],
-    "answerIndex": 0,
-    "id": 2607
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "室町時代、京都の経済・文化の中心として栄え、「花の御所」などで知られた将軍は？",
-    "choices": [
-      "足利尊氏",
-      "足利義満",
-      "足利義政",
-      "足利義昭"
-    ],
-    "answerIndex": 1,
-    "id": 2608
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "安土城を築き、「楽市楽座」などの政策を行った戦国大名は？",
-    "choices": [
-      "織田信長",
-      "豊臣秀吉",
-      "徳川家康",
-      "武田信玄"
-    ],
-    "answerIndex": 0,
-    "id": 2609
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "豊臣秀吉が天下統一後に行った、「身分に応じて武器の所持を制限する政策」は？",
-    "choices": [
-      "改易",
-      "刀狩",
-      "参勤交代",
-      "檀家制度"
-    ],
-    "answerIndex": 1,
-    "id": 2610
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "江戸幕府の三代将軍で、「参勤交代」を制度として整えた人物は？",
-    "choices": [
-      "徳川家康",
-      "徳川秀忠",
-      "徳川家光",
-      "徳川吉宗"
-    ],
-    "answerIndex": 2,
-    "id": 2611
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "江戸時代の中ごろ、「享保の改革」を行った将軍は？",
-    "choices": [
-      "徳川吉宗",
-      "徳川家綱",
-      "徳川家斉",
-      "徳川慶喜"
-    ],
-    "answerIndex": 0,
-    "id": 2612
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ペリー来航後、日本がアメリカと結んだ最初の条約で、下田と函館の開港を定めた条約は？",
-    "choices": [
-      "日米修好通商条約",
-      "日米和親条約",
-      "日米安全保障条約",
-      "ポーツマス条約"
-    ],
-    "answerIndex": 1,
-    "id": 2613
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "明治維新のきっかけとなったとされる、「王政復古の大号令」が出された年として正しいのは？",
-    "choices": [
-      "1864年",
-      "1866年",
-      "1867年",
-      "1877年"
-    ],
-    "answerIndex": 2,
-    "id": 2614
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "1871年に行われた、藩を廃止して府県を置いた改革は？",
-    "choices": [
-      "地租改正",
-      "廃藩置県",
-      "士族反乱",
-      "金融恐慌"
-    ],
-    "answerIndex": 1,
-    "id": 2615
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "1877年、西南戦争で新政府に反乱を起こし、敗北した人物は？",
-    "choices": [
-      "木戸孝允",
-      "大久保利通",
-      "西郷隆盛",
-      "板垣退助"
-    ],
-    "answerIndex": 2,
-    "id": 2616
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "1889年に発布された、日本で最初の近代的な成文憲法は？",
-    "choices": [
-      "日本国憲法",
-      "大日本帝国憲法",
-      "明治基本法",
-      "政体書"
-    ],
-    "answerIndex": 1,
-    "id": 2617
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "日清戦争（1894〜95）の主な原因となった朝鮮半島をめぐる争いで、日本が戦った相手国は？",
-    "choices": [
-      "清（中国）",
-      "ロシア帝国",
-      "アメリカ合衆国",
-      "ドイツ帝国"
-    ],
-    "answerIndex": 0,
-    "id": 2618
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "1914年に始まった第一次世界大戦の際、日本の立場として最も適切なのは？",
-    "choices": [
-      "ドイツ側で参戦した",
-      "参戦せず完全中立を保った",
-      "連合国側で参戦した",
-      "戦争の終わりまで参戦国が不明だった"
-    ],
-    "answerIndex": 2,
-    "id": 2619
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「古代日本で最初の本格的な都城」とされる藤原京が造営された時代は？",
-    "choices": [
-      "飛鳥時代末期",
-      "奈良時代末期",
-      "平安時代初期",
-      "鎌倉時代初期"
-    ],
-    "answerIndex": 0,
-    "id": 2620
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "大宝律令が完成し、律令国家体制が整えられたとされるのはおよそ西暦何年？",
-    "choices": [
-      "645年",
-      "701年",
-      "710年",
-      "794年"
-    ],
-    "answerIndex": 1,
-    "id": 2621
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "平安時代の初期、空海が中国（唐）から持ち帰り、真言宗の根本道場として開いたのは？",
-    "choices": [
-      "比叡山延暦寺",
-      "高野山金剛峯寺",
-      "東大寺",
-      "興福寺"
-    ],
-    "answerIndex": 1,
-    "id": 2622
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "摂関政治から院政への転換のきっかけとなった、「上皇や法皇が政治を行う」形を何という？",
-    "choices": [
-      "公武合体",
-      "武家政権",
-      "院政",
-      "二重政府"
-    ],
-    "answerIndex": 2,
-    "id": 2623
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "鎌倉時代、源頼朝の死後に幕府の実権を握り、承久の乱で朝廷側を破った執権は？",
-    "choices": [
-      "北条義時",
-      "北条泰時",
-      "北条時宗",
-      "北条政子"
-    ],
-    "answerIndex": 0,
-    "id": 2624
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "元寇（文永・弘安の役）のうち、1281年に再度襲来した方の戦いは一般に何と呼ばれる？",
-    "choices": [
-      "文永の役",
-      "弘安の役",
-      "応永の乱",
-      "応仁の乱"
-    ],
-    "answerIndex": 1,
-    "id": 2625
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "南北朝時代のはじまりとなった「建武の新政」を行った天皇は？",
-    "choices": [
-      "後鳥羽天皇",
-      "後醍醐天皇",
-      "後宇多天皇",
-      "後小松天皇"
-    ],
-    "answerIndex": 1,
-    "id": 2626
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "室町幕府の将軍で、金閣（鹿苑寺）を建立した人物は？",
-    "choices": [
-      "足利尊氏",
-      "足利義満",
-      "足利義政",
-      "足利義昭"
-    ],
-    "answerIndex": 1,
-    "id": 2627
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "戦国時代の「石高制」の基礎となった、太閤検地を行った人物は？",
-    "choices": [
-      "織田信長",
-      "豊臣秀吉",
-      "徳川家康",
-      "前田利家"
-    ],
-    "answerIndex": 1,
-    "id": 2628
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "江戸幕府の対外政策において、オランダと中国のみとの貿易を長崎で許可した体制を何と呼ぶか？",
-    "choices": [
-      "鎖国",
-      "四港開港",
-      "閉国政策",
-      "限定開国"
-    ],
-    "answerIndex": 0,
-    "id": 2629
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "江戸時代、蘭学の発展のきっかけとなった『解体新書』を翻訳・刊行した中心人物は？",
-    "choices": [
-      "本居宣長",
-      "杉田玄白",
-      "伊能忠敬",
-      "林羅山"
-    ],
-    "answerIndex": 1,
-    "id": 2630
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1804年頃からの文化・文政期に栄えた町人文化は、一般に何と呼ばれる？",
-    "choices": [
-      "元禄文化",
-      "化政文化",
-      "鎌倉文化",
-      "北山文化"
-    ],
-    "answerIndex": 1,
-    "id": 2631
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "江戸幕府の「天保の改革」を主導した老中は？",
-    "choices": [
-      "松平定信",
-      "水野忠邦",
-      "井伊直弼",
-      "田沼意次"
-    ],
-    "answerIndex": 1,
-    "id": 2632
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1858年に締結された日米修好通商条約の全権として条約に署名した人物は？",
-    "choices": [
-      "勝海舟",
-      "井伊直弼",
-      "大久保利通",
-      "伊藤博文"
-    ],
-    "answerIndex": 1,
-    "id": 2633
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "明治政府が武士の特権を廃止し、四民平等を進める過程で出された「廃刀令」は何年？",
-    "choices": [
-      "1868年",
-      "1871年",
-      "1876年",
-      "1889年"
-    ],
-    "answerIndex": 2,
-    "id": 2634
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "日露戦争後、1905年に結ばれた講和条約は？",
-    "choices": [
-      "下関条約",
-      "ポーツマス条約",
-      "北京条約",
-      "サンフランシスコ講和条約"
-    ],
-    "answerIndex": 1,
-    "id": 2635
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1912年の明治天皇の崩御により、明治が終わり新たに始まった元号は？",
-    "choices": [
-      "大正",
-      "昭和",
-      "平成",
-      "令和"
-    ],
-    "answerIndex": 0,
-    "id": 2636
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1931年、関東軍が南満州鉄道の線路爆破事件をきっかけに起こした軍事行動は？",
-    "choices": [
-      "盧溝橋事件",
-      "柳条湖事件",
-      "二・二六事件",
-      "満州事変"
-    ],
-    "answerIndex": 3,
-    "id": 2637
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "敗戦後、日本の占領政策を主導した連合国軍総司令部（GHQ）の最高司令官は？",
-    "choices": [
-      "マッカーサー",
-      "アイゼンハワー",
-      "チャーチル",
-      "スターリン"
-    ],
-    "answerIndex": 0,
-    "id": 2638
-  },
-  {
-    "category": "japanese_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "戦後の復興期に「高度経済成長」が本格化したおおよその時期として最も適切なのは？",
-    "choices": [
-      "1920〜30年代",
-      "1950〜70年代",
-      "1880〜1900年代",
-      "1990〜2010年代"
-    ],
-    "answerIndex": 1,
-    "id": 2639
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "古代エジプト文明が栄えた大河はどれ？",
-    "choices": [
-      "黄河",
-      "ナイル川",
-      "ガンジス川",
-      "アマゾン川"
-    ],
-    "answerIndex": 1,
-    "id": 2640
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「メソポタミア文明」が成立した地域は、一般にどのように呼ばれる？",
-    "choices": [
-      "三日月地帯（肥沃な三日月地帯）",
-      "シルクロード",
-      "カリブ海沿岸",
-      "極地圏"
-    ],
-    "answerIndex": 0,
-    "id": 2641
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "ローマ帝国の中心都市はどこ？",
-    "choices": [
-      "アテネ",
-      "ローマ",
-      "カルタゴ",
-      "コンスタンティノープル"
-    ],
-    "answerIndex": 1,
-    "id": 2642
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "仏教を開いた人物として知られているのは誰？",
-    "choices": [
-      "イエス",
-      "ムハンマド",
-      "釈迦（ゴータマ・シッダールタ）",
-      "孔子"
-    ],
-    "answerIndex": 2,
-    "id": 2643
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "イエス・キリストを中心とする宗教はどれ？",
-    "choices": [
-      "イスラム教",
-      "ヒンドゥー教",
-      "キリスト教",
-      "仏教"
-    ],
-    "answerIndex": 2,
-    "id": 2644
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "中国で始まり、北方からの侵入を防ぐために築かれた長大な防御施設は？",
-    "choices": [
-      "アッピア街道",
-      "万里の長城",
-      "パナマ運河",
-      "スエズ運河"
-    ],
-    "answerIndex": 1,
-    "id": 2645
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "1492年、コロンブスがアメリカ大陸に到達したとき、船団を派遣した国は？",
-    "choices": [
-      "ポルトガル",
-      "イギリス",
-      "スペイン",
-      "フランス"
-    ],
-    "answerIndex": 2,
-    "id": 2646
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "レオナルド・ダ・ヴィンチやミケランジェロが活躍した「文芸復興」と呼ばれる文化運動は？",
-    "choices": [
-      "ルネサンス",
-      "バロック",
-      "ロマン主義",
-      "近代主義"
-    ],
-    "answerIndex": 0,
-    "id": 2647
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "『ロミオとジュリエット』を書いたイギリスの劇作家は？",
-    "choices": [
-      "シェイクスピア",
-      "ゲーテ",
-      "セルバンテス",
-      "モリエール"
-    ],
-    "answerIndex": 0,
-    "id": 2648
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "産業革命が最初に本格的に始まった国はどこ？",
-    "choices": [
-      "フランス",
-      "ドイツ",
-      "イギリス",
-      "アメリカ合衆国"
-    ],
-    "answerIndex": 2,
-    "id": 2649
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "第二次世界大戦が始まった年として一般的に示されるのは？",
-    "choices": [
-      "1914年",
-      "1939年",
-      "1941年",
-      "1945年"
-    ],
-    "answerIndex": 1,
-    "id": 2650
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "1945年8月に、世界で初めて核兵器が実戦で使用された都市は？",
-    "choices": [
-      "ベルリン",
-      "ロンドン",
-      "広島",
-      "パリ"
-    ],
-    "answerIndex": 2,
-    "id": 2651
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "第二次世界大戦後、国際平和の維持を目的として1945年に設立された国際機関は？",
-    "choices": [
-      "国際連盟",
-      "国際通貨基金（IMF）",
-      "世界貿易機関（WTO）",
-      "国際連合（UN）"
-    ],
-    "answerIndex": 3,
-    "id": 2652
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「冷戦」は主にどの2つの超大国の対立を指す？",
-    "choices": [
-      "イギリスとフランス",
-      "ドイツとイタリア",
-      "アメリカ合衆国とソ連",
-      "日本と中国"
-    ],
-    "answerIndex": 2,
-    "id": 2653
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "「フランス革命」が始まったのは西暦何年？",
-    "choices": [
-      "1688年",
-      "1776年",
-      "1789年",
-      "1917年"
-    ],
-    "answerIndex": 2,
-    "id": 2654
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "ルネサンス文化は、主にどの国から始まったとされる？",
-    "choices": [
-      "ドイツ",
-      "イタリア",
-      "イギリス",
-      "ロシア"
-    ],
-    "answerIndex": 1,
-    "id": 2655
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "非暴力・不服従運動でインドの独立運動を主導した人物は？",
-    "choices": [
-      "ネルー",
-      "ガンディー",
-      "ナセル",
-      "ホー・チ・ミン"
-    ],
-    "answerIndex": 1,
-    "id": 2656
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "人類が初めて月面に降り立ったアポロ11号の月着陸は西暦何年？",
-    "choices": [
-      "1959年",
-      "1965年",
-      "1969年",
-      "1972年"
-    ],
-    "answerIndex": 2,
-    "id": 2657
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "東西冷戦の象徴だった「ベルリンの壁」が崩壊したのは？",
-    "choices": [
-      "1961年",
-      "1973年",
-      "1989年",
-      "2001年"
-    ],
-    "answerIndex": 2,
-    "id": 2658
-  },
-  {
-    "category": "world_history",
-    "difficulty": "EASY",
-    "type": "choice",
-    "question": "ナチス・ドイツの独裁者として第二次世界大戦を引き起こした人物は？",
-    "choices": [
-      "ヒトラー",
-      "スターリン",
-      "チャーチル",
-      "ルーズベルト"
-    ],
-    "answerIndex": 0,
-    "id": 2659
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「ハンムラビ法典」を編纂した王が支配した古代文明は？",
-    "choices": [
-      "エジプト文明",
-      "インダス文明",
-      "バビロニア文明",
-      "中国文明"
-    ],
-    "answerIndex": 2,
-    "id": 2660
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "古代ギリシアで「民主政」が発達した都市国家は？",
-    "choices": [
-      "スパルタ",
-      "テーベ",
-      "アテネ",
-      "コリント"
-    ],
-    "answerIndex": 2,
-    "id": 2661
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ペロポネソス戦争でアテネと長期にわたり戦った相手は？",
-    "choices": [
-      "ペルシア",
-      "ローマ",
-      "スパルタ",
-      "マケドニア"
-    ],
-    "answerIndex": 2,
-    "id": 2662
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "「アレクサンドロス大王」はどの国（王国）の王として東方遠征を行ったか？",
-    "choices": [
-      "アテネ",
-      "マケドニア",
-      "スパルタ",
-      "エジプト"
-    ],
-    "answerIndex": 1,
-    "id": 2663
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "東ローマ帝国（ビザンツ帝国）の都コンスタンティノープルは、現在のどの都市にあたる？",
-    "choices": [
-      "ローマ",
-      "イスタンブル",
-      "アテネ",
-      "カイロ"
-    ],
-    "answerIndex": 1,
-    "id": 2664
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "800年、ローマ教皇から「ローマ皇帝」の冠を授けられ、西ヨーロッパの支配者となった人物は？",
-    "choices": [
-      "カール大帝（シャルルマーニュ）",
-      "カール5世",
-      "ルイ14世",
-      "ナポレオン"
-    ],
-    "answerIndex": 0,
-    "id": 2665
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "モンゴル帝国を築き、大ハーンとなった人物は？",
-    "choices": [
-      "ティムール",
-      "チンギス・ハン",
-      "フビライ・ハン",
-      "バトゥ"
-    ],
-    "answerIndex": 1,
-    "id": 2666
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "14世紀ヨーロッパで大流行し、多数の死者を出した疫病は？",
-    "choices": [
-      "コレラ",
-      "ペスト（黒死病）",
-      "マラリア",
-      "結核"
-    ],
-    "answerIndex": 1,
-    "id": 2667
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "1453年にコンスタンティノープルを陥落させた勢力は？",
-    "choices": [
-      "神聖ローマ帝国",
-      "フランス王国",
-      "オスマン帝国",
-      "ロシア帝国"
-    ],
-    "answerIndex": 2,
-    "id": 2668
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "1517年、宗教改革のきっかけとなる「95か条の論題」を発表した人物は？",
-    "choices": [
-      "カルヴァン",
-      "ルター",
-      "ジングリ",
-      "ヘンリ8世"
-    ],
-    "answerIndex": 1,
-    "id": 2669
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "アステカ帝国を征服したスペイン人征服者（コンキスタドール）は？",
-    "choices": [
-      "コルテス",
-      "ピサロ",
-      "マゼラン",
-      "バスコ・ダ・ガマ"
-    ],
-    "answerIndex": 0,
-    "id": 2670
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "アメリカ独立宣言が出された年は？",
-    "choices": [
-      "1688年",
-      "1776年",
-      "1789年",
-      "1815年"
-    ],
-    "answerIndex": 1,
-    "id": 2671
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "フランス革命後に台頭し、ヨーロッパ各地を征服したフランスの皇帝は？",
-    "choices": [
-      "ルイ16世",
-      "ナポレオン1世",
-      "シャルル10世",
-      "ルイ・フィリップ"
-    ],
-    "answerIndex": 1,
-    "id": 2672
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ナポレオンが最終的に敗れた「ワーテルローの戦い」が行われた年は？",
-    "choices": [
-      "1789年",
-      "1804年",
-      "1812年",
-      "1815年"
-    ],
-    "answerIndex": 3,
-    "id": 2673
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "第一次世界大戦後、1919年にドイツと連合国との間で締結された講和条約は？",
-    "choices": [
-      "ポーツマス条約",
-      "ヴェルサイユ条約",
-      "パリ条約",
-      "ロンドン条約"
-    ],
-    "answerIndex": 1,
-    "id": 2674
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "1917年のロシア革命後、ソ連の指導者となった人物は？",
-    "choices": [
-      "スターリン",
-      "レーニン",
-      "フルシチョフ",
-      "ブレジネフ"
-    ],
-    "answerIndex": 1,
-    "id": 2675
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "イタリアでファシスト政権を率いた指導者は？",
-    "choices": [
-      "ヒトラー",
-      "ムッソリーニ",
-      "フランコ",
-      "サラザール"
-    ],
-    "answerIndex": 1,
-    "id": 2676
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "ドイツのヒトラー政権が、ユダヤ人などを大量虐殺した出来事は一般に何と呼ばれる？",
-    "choices": [
-      "グレート・リセット",
-      "ホロコースト",
-      "キューバ危機",
-      "文化大革命"
-    ],
-    "answerIndex": 1,
-    "id": 2677
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "第二次世界大戦中、連合国側のアメリカ大統領として「ニューディール政策」でも知られる人物は？",
-    "choices": [
-      "ワシントン",
-      "リンカーン",
-      "ルーズベルト（F.",
-      "ルーズベルト） D. トルーマン"
-    ],
-    "answerIndex": 2,
-    "id": 2678
-  },
-  {
-    "category": "world_history",
-    "difficulty": "NORMAL",
-    "type": "choice",
-    "question": "1945年に創設され、世界平和と安全の維持を目的とする国際機関は？",
-    "choices": [
-      "国際連盟",
-      "国際連合（UN）",
-      "世界銀行",
-      "ASEAN"
-    ],
-    "answerIndex": 1,
-    "id": 2679
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "楔形文字を用い、最初期の都市文明の一つを築いたとされるメソポタミアの民族は？",
-    "choices": [
-      "エジプト人",
-      "スメール人",
-      "フェニキア人",
-      "フン族"
-    ],
-    "answerIndex": 1,
-    "id": 2680
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「マグナ・カルタ」がイングランド王ジョンによって承認されたのは西暦何年？",
-    "choices": [
-      "1066年",
-      "1095年",
-      "1187年",
-      "1215年"
-    ],
-    "answerIndex": 3,
-    "id": 2681
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "14世紀、西アフリカのマリ帝国で莫大な富を誇り、マッカ巡礼で知られる王は？",
-    "choices": [
-      "サンジャカン",
-      "マンサ・ムーサ",
-      "スンディアタ・ケイタ",
-      "メネリク2世"
-    ],
-    "answerIndex": 1,
-    "id": 2682
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "南米アンデス地方で栄え、マチュピチュなどの遺跡を残した文明は？",
-    "choices": [
-      "アステカ文明",
-      "マヤ文明",
-      "インカ文明",
-      "オルメカ文明"
-    ],
-    "answerIndex": 2,
-    "id": 2683
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1618〜1648年の「三十年戦争」を終結させた講和条約は？",
-    "choices": [
-      "ヴェルサイユ条約",
-      "ウェストファリア条約",
-      "パリ条約",
-      "トルデシリャス条約"
-    ],
-    "answerIndex": 1,
-    "id": 2684
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1688年、イングランドでジェームズ2世が追放され、ウィリアム3世とメアリ2世が即位した出来事は？",
-    "choices": [
-      "ピューリタン革命",
-      "名誉革命",
-      "アメリカ独立革命",
-      "フランス革命"
-    ],
-    "answerIndex": 1,
-    "id": 2685
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "世界初の大規模な黒人奴隷反乱が成功し、1804年に独立国家となったハイチで革命を指導した人物は？",
-    "choices": [
-      "トゥーサン・ルーヴェルチュール",
-      "シモン・ボリバル",
-      "サン・マルティン",
-      "ホセ・マルティ"
-    ],
-    "answerIndex": 0,
-    "id": 2686
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "19世紀にドイツ統一を推し進め、「鉄血宰相」と呼ばれたプロイセンの政治家は？",
-    "choices": [
-      "フリードリヒ2世",
-      "ビスマルク",
-      "メッテルニヒ",
-      "ナポレオン3世"
-    ],
-    "answerIndex": 1,
-    "id": 2687
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1840年代の第1次アヘン戦争で清と戦い、勝利して香港島の割譲などを得た国は？",
-    "choices": [
-      "フランス",
-      "ロシア",
-      "アメリカ合衆国",
-      "イギリス"
-    ],
-    "answerIndex": 3,
-    "id": 2688
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「マグナ・カルタ」「権利の請願」「権利章典」などを通じて、立憲主義が発展した国は？",
-    "choices": [
-      "フランス",
-      "ドイツ",
-      "イギリス",
-      "ロシア"
-    ],
-    "answerIndex": 2,
-    "id": 2689
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1914年の第一次世界大戦のきっかけとなった「サラエボ事件」で暗殺された人物は？",
-    "choices": [
-      "ビスマルク",
-      "フランツ・フェルディナント大公",
-      "ニコライ2世",
-      "クレマンソー"
-    ],
-    "answerIndex": 1,
-    "id": 2690
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "第一次世界大戦後、国際平和維持を目的として設立されたが、第二次世界大戦を防げなかった国際機関は？",
-    "choices": [
-      "国際連盟",
-      "国際連合",
-      "NATO",
-      "EU"
-    ],
-    "answerIndex": 0,
-    "id": 2691
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "ドイツで第一次世界大戦後に成立した共和政体は一般に何と呼ばれる？",
-    "choices": [
-      "神聖ローマ帝国",
-      "ナチス政権",
-      "ワイマール共和国",
-      "ドイツ連邦共和国"
-    ],
-    "answerIndex": 2,
-    "id": 2692
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "世界恐慌に対処するため、アメリカ合衆国のルーズベルト大統領が行った一連の経済政策は？",
-    "choices": [
-      "ニューディール政策",
-      "ペレストロイカ",
-      "グリーン・レボリューション",
-      "マーシャル・プラン"
-    ],
-    "answerIndex": 0,
-    "id": 2693
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1949年、中華人民共和国の成立を宣言した中国共産党の指導者は？",
-    "choices": [
-      "孫文",
-      "蒋介石",
-      "毛沢東",
-      "周恩来"
-    ],
-    "answerIndex": 2,
-    "id": 2694
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1949年に発足し、西側諸国の集団安全保障体制として冷戦期に重要だった軍事同盟は？",
-    "choices": [
-      "ワルシャワ条約機構",
-      "NATO（北大西洋条約機構）",
-      "ASEAN",
-      "OPEC"
-    ],
-    "answerIndex": 1,
-    "id": 2695
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "1962年、ソ連のミサイル基地建設をめぐってアメリカとソ連が核戦争寸前まで対立した危機は？",
-    "choices": [
-      "ベルリン危機",
-      "キューバ危機",
-      "スエズ危機",
-      "湾岸危機"
-    ],
-    "answerIndex": 1,
-    "id": 2696
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "アパルトヘイト（人種隔離政策）撤廃後、1994年に南アフリカ共和国初の黒人大統領となった人物は？",
-    "choices": [
-      "デクラーク",
-      "ネルソン・マンデラ",
-      "ルムンバ",
-      "ムガベ"
-    ],
-    "answerIndex": 1,
-    "id": 2697
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "ヨーロッパ連合（EU）の成立の基礎となった、1990年代初頭に調印された条約は？",
-    "choices": [
-      "ローマ条約",
-      "マーストリヒト条約",
-      "パリ条約",
-      "シュンゲン協定"
-    ],
-    "answerIndex": 1,
-    "id": 2698
-  },
-  {
-    "category": "world_history",
-    "difficulty": "HARD",
-    "type": "choice",
-    "question": "「冷戦終結」の象徴とされる出来事として最も一般的なのは？",
-    "choices": [
-      "朝鮮戦争の停戦",
-      "ベトナム戦争の終結",
-      "ベルリンの壁崩壊とソ連解体",
-      "湾岸戦争の終結"
-    ],
-    "answerIndex": 2,
-    "id": 2699
   }
 ]

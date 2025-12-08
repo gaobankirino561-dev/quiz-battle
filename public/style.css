@@ -190,12 +190,15 @@ button:disabled {
   gap: 10px;
   margin-bottom: 10px;
 }
+
 .hp-name {
   min-width: 90px;
 }
+
 .hp-value {
   font-weight: 700;
 }
+
 .hp-row.eliminated {
   opacity: 0.6;
 }
@@ -228,32 +231,39 @@ button:disabled {
   background: rgba(0, 0, 0, 0.4);
   z-index: 20;
 }
+
 .countdown.hidden {
   display: none;
 }
+
 .countdown-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 }
+
 #countdown-number {
   font-size: 4rem;
   font-weight: bold;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 }
+
 #countdown-label {
   font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
+
 .countdown.easy #countdown-number {
   color: #00ff66;
 }
+
 .countdown.normal #countdown-number {
   color: #00d4ff;
 }
+
 .countdown.hard #countdown-number {
   color: #ff9900;
 }
@@ -264,6 +274,7 @@ button:disabled {
   border: 2px solid #00ff66;
   background-color: rgba(0, 255, 102, 0.08);
 }
+
 .choice-btn.choice-my-answer,
 .choice-button.choice-my-answer {
   box-shadow: 0 0 0 2px #ffffff inset;
@@ -386,6 +397,7 @@ button:disabled {
     padding: 12px;
   }
 }
+
 #timerText {
   color: #bfdbfe;
 }
@@ -858,4 +870,94 @@ button:disabled {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+
+/* === Solo Result Question List Improvement === */
+.solo-question-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.solo-question-list.hidden {
+  display: none;
+}
+
+.solo-result-question-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+}
+
+.solo-result-question-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 6px;
+}
+
+.solo-result-question-number {
+  font-weight: 700;
+  color: var(--muted);
+  width: 30px;
+}
+
+.solo-result-question-difficulty {
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+}
+
+.solo-result-question-correctness {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.solo-result-question-correctness.correct {
+  color: #4ade80;
+}
+
+.solo-result-question-correctness.incorrect {
+  color: #fb7185;
+}
+
+.solo-result-question-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.solo-result-question-text {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.solo-result-question-answer {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.solo-result-question-score {
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--accent-warm);
+  font-weight: 600;
+}
+
+/* Category Highlight Style */
+/* Category Highlight Style */
+.genre-category-btn.category-has-selection {
+  border: 2px solid #ffd700;
+  background: rgba(255, 215, 0, 0.2);
+  background-image: none;
+  /* Remove the default gradient */
+  color: #ffd700;
 }

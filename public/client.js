@@ -95,6 +95,174 @@ const endlessState = {
 
 let lastEndlessConfig = null;
 
+// === Genre Management ===
+const GENRE_HIERARCHY = [
+  {
+    id: "general_cat",
+    label: "一般",
+    genres: [
+      { id: "common_knowledge", label: "常識" }, // Renamed from general
+      { id: "lifestyle", label: "生活" }
+    ]
+  },
+  {
+    id: "society_cat",
+    label: "社会",
+    genres: [
+      { id: "japanese_geography", label: "日本地理" },
+      { id: "world_geography", label: "世界地理" },
+      { id: "japanese_history", label: "日本史" },
+      { id: "world_history", label: "世界史" }
+    ]
+  },
+  {
+    id: "anime",
+    label: "アニメ・漫画",
+    genres: [
+      { id: "conan", label: "名探偵コナン" },
+      { id: "dragonball", label: "ドラゴンボール" }
+    ]
+  }
+];
+let GENRE_COUNTS = {};
+
+socket.on("genre_counts", (counts) => {
+  GENRE_COUNTS = counts;
+  console.log("Received genre counts:", GENRE_COUNTS);
+  refreshAllGenreSelectors();
+});
+
+function renderGenreSelector(containerId, inputName) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = "";
+  container.classList.add('genre-selector-root');
+
+  GENRE_HIERARCHY.forEach(cat => {
+    // Calculate category totals
+    let catTotal = 0;
+    cat.genres.forEach(g => {
+      catTotal += (GENRE_COUNTS[g.id] || 0);
+    });
+
+    // HTML Structure
+    const catDiv = document.createElement("div");
+    catDiv.className = "genre-category-group";
+
+    const header = document.createElement("div");
+    header.className = "genre-category-header";
+
+    // Category Checkbox (Select All for this category)
+    const catCheck = document.createElement("input");
+    catCheck.type = "checkbox";
+    catCheck.className = "category-checkbox";
+
+    // Category Toggle Button (Accordion)
+    const toggleBtn = document.createElement("button");
+    toggleBtn.type = "button";
+    toggleBtn.className = "category-toggle-btn genre-category-btn"; // Added genre-category-btn for style targeting
+    toggleBtn.innerText = `${cat.label} (${catTotal}問)`;
+
+    // Header Layout: [checkbox] [toggle_button]
+    header.appendChild(catCheck);
+    header.appendChild(toggleBtn);
+    catDiv.appendChild(header);
+
+    // Sub-container
+    const subContainer = document.createElement("div");
+    subContainer.className = "genre-sub-container hidden"; // Hidden by default
+
+    // Helper functions for sync logic
+    const getAllChildCheckboxes = () => subContainer.querySelectorAll('input[type="checkbox"]');
+
+    // Update visual state of the category button (Highlight) AND Category Checkbox state
+    const updateCategoryState = () => {
+      const inputs = getAllChildCheckboxes();
+      if (inputs.length === 0) return;
+
+      const total = inputs.length;
+      const checkedCount = Array.from(inputs).filter(i => i.checked).length;
+
+      // Highlight Logic: If at least one is selected
+      if (checkedCount > 0) {
+        toggleBtn.classList.add('category-has-selection');
+      } else {
+        toggleBtn.classList.remove('category-has-selection');
+      }
+
+      // Sync Logic: 
+      // User Logic: "全選択されているとチェックが入り、一つでもカテゴリの中のチェックが外れるとカテゴリ全体のチェックも外れる"
+      // User Logic: "チェックを手動で外すと全解除できるように設定" (If category checked is unchecked -> uncheck all)
+
+      if (checkedCount === total) {
+        catCheck.checked = true;
+        catCheck.indeterminate = false;
+      } else {
+        catCheck.checked = false;
+        // Optional: showing indeterminate state if some but not all are checked
+        if (checkedCount > 0) {
+          catCheck.indeterminate = true;
+        } else {
+          catCheck.indeterminate = false;
+        }
+      }
+    };
+
+    cat.genres.forEach(g => {
+      const gCount = GENRE_COUNTS[g.id] || 0;
+      const label = document.createElement("label");
+      label.className = "genre-label";
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.name = inputName;
+      input.value = g.id;
+      input.className = "genre-child-checkbox";
+
+      // Default selection logic (simplified for now)
+      if (g.id === 'common_knowledge') {
+        input.checked = true;
+      }
+
+      input.addEventListener('change', () => {
+        updateCategoryState();
+      });
+
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(` ${g.label} (${gCount}問)`));
+      subContainer.appendChild(label);
+    });
+
+    catDiv.appendChild(subContainer);
+    container.appendChild(catDiv);
+
+    // Initial state check
+    updateCategoryState();
+
+    // Events
+    toggleBtn.addEventListener('click', () => {
+      subContainer.classList.toggle('hidden');
+    });
+
+    catCheck.addEventListener('change', (e) => {
+      const isChecked = e.target.checked;
+      const inputs = getAllChildCheckboxes();
+      inputs.forEach(inp => {
+        inp.checked = isChecked;
+      });
+      // Removing indeterminate state on explicit check/uncheck
+      catCheck.indeterminate = false;
+      updateCategoryState();
+    });
+  });
+}
+
+function refreshAllGenreSelectors() {
+  renderGenreSelector("online-genre-selector", "genre");
+  renderGenreSelector("time-attack-genre-selector", "time-attack-genre");
+  renderGenreSelector("speedrun-genre-selector", "speedrun-genre");
+  renderGenreSelector("endless-genre-selector", "endless-genre");
+}
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -168,6 +336,7 @@ const timeAttackTotalCount = document.getElementById("time-attack-total-count");
 const timeAttackHistoryList = document.getElementById("time-attack-history-list");
 const btnTimeAttackResultBackConfig = document.getElementById("btn-time-attack-result-back-config");
 const btnTimeAttackResultRestart = document.getElementById("btn-time-attack-result-restart");
+const btnTimeAttackToggleList = document.getElementById("btn-time-attack-toggle-list");
 // === Solo: Time Attack genre ALL & controls ===
 const btnTimeAttackGenreAll = document.getElementById("btn-time-attack-genre-all");
 const btnTimeAttackPause = document.getElementById("btn-time-attack-pause");
@@ -360,6 +529,11 @@ function resetTimeAttackToMenu() {
   if (timeAttackCountdownEl) timeAttackCountdownEl.classList.add("hidden");
   if (timeAttackResult) timeAttackResult.classList.add("hidden");
   if (timeAttackAnswerButtonsContainer) timeAttackAnswerButtonsContainer.innerHTML = "";
+  if (timeAttackHistoryList) {
+    timeAttackHistoryList.innerHTML = "";
+    timeAttackHistoryList.classList.add("hidden");
+  }
+  if (btnTimeAttackToggleList) btnTimeAttackToggleList.textContent = "問題一覧を開く";
 }
 
 function resetSpeedrunToMenu() {
@@ -727,23 +901,12 @@ function finishTimeAttack() {
     timeAttackTotalCount.textContent = String(timeAttackState.totalAnswered);
   }
 
+  if (timeAttackTotalCount) {
+    timeAttackTotalCount.textContent = String(timeAttackState.totalAnswered);
+  }
+
   if (timeAttackHistoryList) {
-    timeAttackHistoryList.innerHTML = "";
-    timeAttackState.history.forEach((entry, index) => {
-      const li = document.createElement("li");
-
-      const qSpan = document.createElement("span");
-      qSpan.className = "history-question";
-      qSpan.textContent = `${index + 1}. [${(entry.difficulty || "-").toUpperCase()}] ${entry.questionText}`;
-
-      const sSpan = document.createElement("span");
-      sSpan.className = "history-status " + (entry.isCorrect ? "correct" : "wrong");
-      sSpan.textContent = entry.isCorrect ? "○ 正解" : "× 不正解";
-
-      li.appendChild(qSpan);
-      li.appendChild(sSpan);
-      timeAttackHistoryList.appendChild(li);
-    });
+    renderSoloResultQuestionList(timeAttackState.history, timeAttackHistoryList);
   }
 }
 
@@ -786,12 +949,12 @@ function startTimeAttackRound() {
     const diffText =
       typeof difficulty === "string"
         ? (() => {
-            const d = difficulty.toLowerCase();
-            if (d === "easy") return "EASY";
-            if (d === "normal") return "NORMAL";
-            if (d === "hard") return "HARD";
-            return difficulty;
-          })()
+          const d = difficulty.toLowerCase();
+          if (d === "easy") return "EASY";
+          if (d === "normal") return "NORMAL";
+          if (d === "hard") return "HARD";
+          return difficulty;
+        })()
         : "-";
     if (timeAttackCountdownEl) {
       timeAttackCountdownEl.textContent = `${diffText} ${count}`;
@@ -1184,6 +1347,7 @@ function fetchEndlessQuestion() {
     const payload = {
       genres: endlessState.selectedGenres,
       difficulties,
+      exhaustible: true,
     };
     try {
       socket.emit("timeAttackNextQuestion", payload, (res) => {
@@ -1211,10 +1375,10 @@ function renderEndlessOptions(questionData) {
     (shuffled && shuffled.length
       ? shuffled
       : (questionData?.choices || []).map((text, index) => ({
-          text,
-          originalIndex: index,
-          isCorrect: typeof questionData?.correctIndex === "number" ? questionData.correctIndex === index : false,
-        }))) || [];
+        text,
+        originalIndex: index,
+        isCorrect: typeof questionData?.correctIndex === "number" ? questionData.correctIndex === index : false,
+      }))) || [];
   choices.forEach((choice, index) => {
     const choiceText = typeof choice === "string" ? choice : choice.text;
     const btn = document.createElement("button");
@@ -1407,7 +1571,7 @@ function finishEndless() {
 }
 
 function renderEndlessResultQuestionList() {
-  renderSoloResultQuestionList(endlessState.history);
+  renderSoloResultQuestionList(endlessState.history, soloResultQuestionList);
 }
 
 function showSoloResult({ modeName, score, correct, total, timeSec, history }) {
@@ -1421,13 +1585,13 @@ function showSoloResult({ modeName, score, correct, total, timeSec, history }) {
   if (soloResultCorrect) soloResultCorrect.textContent = String(correct ?? 0);
   if (soloResultTotal) soloResultTotal.textContent = String(total ?? 0);
   if (soloResultTime) soloResultTime.textContent = (timeSec ?? 0).toFixed(1);
-  renderSoloResultQuestionList(history || []);
+  renderSoloResultQuestionList(history || [], soloResultQuestionList);
   soloShowOnly("soloResult");
 }
 
-function renderSoloResultQuestionList(history) {
-  if (!soloResultQuestionList) return;
-  soloResultQuestionList.innerHTML = "";
+function renderSoloResultQuestionList(history, targetElement) {
+  if (!targetElement) return;
+  targetElement.innerHTML = "";
   (history || []).forEach((h, index) => {
     const li = document.createElement("div");
     li.className = "solo-result-question-item";
@@ -1458,7 +1622,7 @@ function renderSoloResultQuestionList(history) {
         ${gainText ? `<div class="solo-result-question-score">${gainText}</div>` : ""}
       </div>
     `;
-    soloResultQuestionList.appendChild(li);
+    targetElement.appendChild(li);
   });
 }
 function finishSpeedrun() {
@@ -1476,7 +1640,7 @@ function finishSpeedrun() {
       : 0;
   const timeSec = elapsedMs / 1000;
   const finalTime = timeSec.toFixed(1);
-  const finalScore = (speedrunState.targetCorrect * 12 - timeSec).toFixed(1);
+  const finalScore = (100 + (speedrunState.targetCorrect * 2 - timeSec)).toFixed(1);
 
   showSoloResult({
     modeName: "スピードラン",
@@ -1582,10 +1746,10 @@ async function askSpeedrunQuestion(previousResult) {
       shuffled && shuffled.length
         ? shuffled
         : (questionData.choices || []).map((text, index) => ({
-            text,
-            originalIndex: index,
-            isCorrect: typeof questionData.correctIndex === "number" ? questionData.correctIndex === index : false,
-          }));
+          text,
+          originalIndex: index,
+          isCorrect: typeof questionData.correctIndex === "number" ? questionData.correctIndex === index : false,
+        }));
     if (speedrunAnswerButtonsContainer) {
       speedrunAnswerButtonsContainer.innerHTML = "";
       renderChoices.forEach((choice, index) => {
@@ -1711,15 +1875,7 @@ function formatGenresForDisplay(categories) {
   return categories.join(" / ");
 }
 
-if (genreAllToggle) {
-  genreAllToggle.addEventListener("click", () => {
-    const boxes = genreCheckboxes && genreCheckboxes.length ? genreCheckboxes : document.querySelectorAll('input[name="genre"]');
-    const allChecked = Array.from(boxes).every((cb) => cb.checked);
-    boxes.forEach((cb) => {
-      cb.checked = !allChecked;
-    });
-  });
-}
+// Legacy All toggle removed
 
 function renderRoundStats(stats) {
   if (!roundResultList) return;
@@ -1756,6 +1912,7 @@ function renderRoundStats(stats) {
 // Connection
 socket.on("connect", () => {
   connectionStatus.textContent = "サーバーに接続しました";
+  socket.emit("request_genre_counts");
 });
 
 socket.on("disconnect", () => {
@@ -2387,19 +2544,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ジャンル ALL トグル
-  if (btnTimeAttackGenreAll) {
-    btnTimeAttackGenreAll.addEventListener("click", (e) => {
-      e.preventDefault();
-      const genreInputs = document.querySelectorAll('input[name="time-attack-genre"]');
-      if (!genreInputs.length) return;
-      const allChecked = Array.from(genreInputs).every((el) => el.checked);
-      const newChecked = !allChecked;
-      Array.from(genreInputs).forEach((el) => {
-        el.checked = newChecked;
-      });
-      console.log("Time Attack genre ALL toggled, newChecked =", newChecked);
-    });
-  }
+  // Time Attack All toggle removed
 
   // タイムアタック中断 → 設定画面へ
   if (btnTimeAttackPause) {
@@ -2485,19 +2630,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // スピードラン ジャンルALL
-  if (btnSpeedrunGenreAll) {
-    btnSpeedrunGenreAll.addEventListener("click", (e) => {
-      e.preventDefault();
-      const genreInputs = document.querySelectorAll('input[name="speedrun-genre"]');
-      if (!genreInputs.length) return;
-      const allChecked = Array.from(genreInputs).every((el) => el.checked);
-      const newChecked = !allChecked;
-      Array.from(genreInputs).forEach((el) => {
-        el.checked = newChecked;
-      });
-      console.log("Speedrun genre ALL toggled, newChecked =", newChecked);
-    });
-  }
+  // Speedrun All toggle removed
 
   // スピードラン中断 → 設定
   if (btnSpeedrunPause) {
@@ -2574,16 +2707,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // エンドレス ジャンルALL
-  if (btnEndlessGenreAllToggle && endlessGenreCheckboxes) {
-    btnEndlessGenreAllToggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      const allChecked = Array.from(endlessGenreCheckboxes).every((cb) => cb.checked);
-      const newValue = !allChecked;
-      Array.from(endlessGenreCheckboxes).forEach((cb) => {
-        cb.checked = newValue;
-      });
-    });
-  }
+  // Endless All toggle removed
 
   // エンドレス設定へ戻る
   if (btnEndlessConfigBack) {
@@ -2636,7 +2760,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (endlessOptionsContainer) endlessOptionsContainer.classList.add("hidden");
       const genres = lastEndlessConfig.genres || [];
       const diffs = lastEndlessConfig.difficulties || [];
-      Array.from(endlessGenreCheckboxes || []).forEach((cb) => {
+      const currentEndlessInputs = document.querySelectorAll('input[name="endless-genre"]');
+      Array.from(currentEndlessInputs).forEach((cb) => {
         cb.checked = genres.includes(cb.value);
       });
       const diffBoxes = document.querySelectorAll('input[name="endless-difficulty"]');
@@ -2662,6 +2787,14 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       resetSpeedrunToMenu();
       resetEndlessToMenu();
+    });
+  }
+
+  // Time Attack リザルト：問題一覧トグル
+  if (btnTimeAttackToggleList && timeAttackHistoryList) {
+    btnTimeAttackToggleList.addEventListener("click", () => {
+      const isHidden = timeAttackHistoryList.classList.toggle("hidden");
+      btnTimeAttackToggleList.textContent = isHidden ? "問題一覧を開く" : "問題一覧を閉じる";
     });
   }
 });
