@@ -2795,9 +2795,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   // オンライン対戦ルール
-  const btnOnlineRules = document.getElementById("btn-online-rules");
-  const onlineRulesModal = document.getElementById("online-rules-modal");
   const btnCloseOnlineRules = document.getElementById("btn-close-online-rules");
+  const btnCloseOnlineRulesFooter = document.getElementById("btn-close-online-rules-footer");
 
   if (btnOnlineRules && onlineRulesModal) {
     btnOnlineRules.addEventListener("click", (e) => {
@@ -2806,11 +2805,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (btnCloseOnlineRules && onlineRulesModal) {
-    btnCloseOnlineRules.addEventListener("click", (e) => {
-      e.preventDefault();
-      onlineRulesModal.classList.add("hidden");
-    });
+  const closeRules = (e) => {
+    e.preventDefault();
+    if (onlineRulesModal) onlineRulesModal.classList.add("hidden");
+  };
+
+  if (btnCloseOnlineRules) {
+    btnCloseOnlineRules.addEventListener("click", closeRules);
+  }
+  if (btnCloseOnlineRulesFooter) {
+    btnCloseOnlineRulesFooter.addEventListener("click", closeRules);
   }
 
   if (onlineRulesModal) {

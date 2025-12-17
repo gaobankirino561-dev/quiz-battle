@@ -1029,6 +1029,15 @@ button:disabled {
   overflow-y: auto;
   font-size: 0.95rem;
   line-height: 1.6;
+  flex: 1;
+  /* Allow body to take remaining space */
+}
+
+.modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: flex-end;
 }
 
 .rules-section {
