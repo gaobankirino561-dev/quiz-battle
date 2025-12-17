@@ -2794,4 +2794,30 @@ document.addEventListener("DOMContentLoaded", () => {
       btnTimeAttackToggleList.textContent = isHidden ? "問題一覧を開く" : "問題一覧を閉じる";
     });
   }
+  // オンライン対戦ルール
+  const btnOnlineRules = document.getElementById("btn-online-rules");
+  const onlineRulesModal = document.getElementById("online-rules-modal");
+  const btnCloseOnlineRules = document.getElementById("btn-close-online-rules");
+
+  if (btnOnlineRules && onlineRulesModal) {
+    btnOnlineRules.addEventListener("click", (e) => {
+      e.preventDefault();
+      onlineRulesModal.classList.remove("hidden");
+    });
+  }
+
+  if (btnCloseOnlineRules && onlineRulesModal) {
+    btnCloseOnlineRules.addEventListener("click", (e) => {
+      e.preventDefault();
+      onlineRulesModal.classList.add("hidden");
+    });
+  }
+
+  if (onlineRulesModal) {
+    onlineRulesModal.addEventListener("click", (e) => {
+      if (e.target === onlineRulesModal) {
+        onlineRulesModal.classList.add("hidden");
+      }
+    });
+  }
 });
