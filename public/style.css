@@ -450,8 +450,9 @@ button:disabled {
   }
 
   .question-area {
-    flex: 0 0 40vh;
-    max-height: 45vh;
+    flex: 1 1 auto;
+    min-height: 150px;
+    max-height: 40vh;
     overflow-y: auto;
     font-size: 0.95rem;
     padding: 6px 8px;
@@ -468,7 +469,8 @@ button:disabled {
   .choices-area .choice-button,
   #choicesList .choice-btn {
     width: 100%;
-    padding: 8px 10px;
+    padding: 16px 12px;
+    min-height: 48px;
     font-size: 0.95rem;
     line-height: 1.2;
     white-space: normal;
@@ -776,7 +778,7 @@ button:disabled {
 }
 
 .solo-answer-button {
-  padding: 8px 12px;
+  padding: 16px 14px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
