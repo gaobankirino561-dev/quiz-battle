@@ -10974,5 +10974,2035 @@
       "邪神"
     ],
     "answerIndex": 0
+  },
+  {
+    "id": 2785,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守が通っている学校はどこ？",
+    "choices": [
+      "雷門中",
+      "帝国学園",
+      "世宇子中",
+      "秋葉名戸中"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2786,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守のポジションは？",
+    "choices": [
+      "ゴールキーパー",
+      "ディフェンダー",
+      "ミッドフィルダー",
+      "フォワード"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2787,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中サッカー部のキャプテンを務める人物は誰？",
+    "choices": [
+      "豪炎寺修也",
+      "鬼道有人",
+      "円堂守",
+      "染岡竜吾"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 2788,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守がゴールキーパーの時の背番号は？",
+    "choices": [
+      "1",
+      "5",
+      "10",
+      "15"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2789,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也が雷門中でつけていた背番号は？",
+    "choices": [
+      "10",
+      "11",
+      "18",
+      "9"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2790,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也のポジションは？",
+    "choices": [
+      "フォワード",
+      "ミッドフィルダー",
+      "ディフェンダー",
+      "ゴールキーパー"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2791,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也の必殺シュートと言えば何？",
+    "choices": [
+      "ファイアトルネード",
+      "ドラゴントルネード",
+      "エターナルブリザード",
+      "皇帝ペンギン2号"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2792,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "鬼道有人がもともと所属していたチームは？",
+    "choices": [
+      "帝国学園",
+      "雷門中",
+      "世宇子中",
+      "白恋中"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2793,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "鬼道有人が身につけている特徴的なアクセサリーは何？",
+    "choices": [
+      "ゴーグル",
+      "ヘッドフォン",
+      "腕時計",
+      "ネックレス"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2794,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守が初めて使った必殺技は？",
+    "choices": [
+      "ドラゴンクラッシュ",
+      "熱血パンチ",
+      "ゴッドハンド",
+      "マジン・ザ・ハンド"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 2795,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "風丸一郎太が最初に所属していた部活は何部？",
+    "choices": [
+      "バスケットボール部",
+      "野球部",
+      "陸上部",
+      "サッカー部"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 2796,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "壁山塀吾郎が使用する、壁を作るようにシュートを防ぐ必殺技は？",
+    "choices": [
+      "ザ・ウォール",
+      "ザ・タワー",
+      "ザ・マウンテン",
+      "ザ・ロック"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2797,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "フットボールフロンティア全国大会の決勝戦で雷門中が対戦した相手は？",
+    "choices": [
+      "帝国学園",
+      "世宇子中",
+      "秋葉名戸中",
+      "野生中"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 2798,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "帝国学園サッカー部の監督は誰？",
+    "choices": [
+      "久遠道也",
+      "影山零治",
+      "響木正剛",
+      "吉良瞳子"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 2799,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中のエースストライカーは誰？",
+    "choices": [
+      "豪炎寺修也",
+      "染岡竜吾",
+      "不動明王",
+      "吹雪士郎"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2800,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "鬼道有人の生き別れの妹は誰？",
+    "choices": [
+      "木野 秋",
+      "音無 春奈",
+      "雷門 夏未",
+      "久遠 冬花"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 2801,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "次のうち、雷門中サッカー部のマネージャーではない人物は誰？",
+    "choices": [
+      "木野 秋",
+      "雷門 夏未",
+      "音無 春奈",
+      "財前 塔子"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 2802,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "フットボールフロンティアとは何の大会？",
+    "choices": [
+      "中学生サッカーの全国大会",
+      "世界選手権大会",
+      "小学生サッカー大会",
+      "フットサルの大会"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2803,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "鬼道有人が雷門中学に入った後、マント（マフラー）の色は何色になった？",
+    "choices": [
+      "赤",
+      "青",
+      "黒",
+      "白"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 2804,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "40年前、雷門中サッカー部が全国大会で優勝した時の伝説のチーム名は？",
+    "choices": [
+      "イナズマイレブン",
+      "稲妻十一",
+      "雷門イレブン",
+      "日本代表"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2805,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守が不在の試合でゴールキーパーを務めた選手は誰？",
+    "choices": [
+      "源田 幸次郎",
+      "緑川 リュウジ",
+      "立向居 勇気",
+      "基山 ヒロト"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 2806,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「ゴールずらし」という必殺技を使用したのはどこの学校のキーパー？",
+    "choices": [
+      "秋葉名戸中",
+      "野生中",
+      "帝国学園",
+      "世宇子中"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2807,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中の理事長（学園長）の名前は？",
+    "choices": [
+      "雷門総一郎",
+      "雷門三郎",
+      "雷門純一郎",
+      "円堂大介"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2808,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "帝国学園との練習試合前に雷門中へ助っ人として加入した風丸の元の部活は？",
+    "choices": [
+      "陸上部",
+      "バスケ部",
+      "テニス部",
+      "帰宅部"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2809,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也が一度サッカーを辞めようとした理由は？",
+    "choices": [
+      "妹の事故",
+      "両親の病気",
+      "自分の怪我",
+      "チームとの不和"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2810,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "初代雷門イレブンのキャプテン・長身FWであった人物の名前は？",
+    "choices": [
+      "木暮夕弥",
+      "久遠道也",
+      "響木正剛",
+      "円堂大介"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 2811,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "イナズマキャラで「サッカーやろうぜ！」が口癖の人物は？",
+    "choices": [
+      "円堂守",
+      "豪炎寺修也",
+      "鬼道有人",
+      "染岡竜吾"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2812,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中サッカー部の創部当初の部員数は？",
+    "choices": [
+      "7人",
+      "11人",
+      "4人",
+      "0人"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2813,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "帝国学園サッカー部のキャプテンだった鬼道有人が雷門に加わったのはいつ？",
+    "choices": [
+      "全国大会優勝後",
+      "地区予選前",
+      "エイリア学園編の途中",
+      "世界大会決勝後"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2814,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中サッカー部の部室として使われていたのは何？",
+    "choices": [
+      "古びたバス",
+      "倉庫の一室",
+      "校舎裏のプレハブ小屋",
+      "空き教室"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2815,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中サッカー部で幽霊が苦手だと語っていた部員は誰？",
+    "choices": [
+      "松野空介（マックス）",
+      "壁山塀吾郎",
+      "影野仁",
+      "栗松鉄平"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2816,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也の父親の職業は？",
+    "choices": [
+      "サッカーコーチ",
+      "医者",
+      "プロサッカー選手",
+      "教授"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2817,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "アニメ『イナズマイレブン』の主人公は誰？",
+    "choices": [
+      "円堂守",
+      "松風天馬",
+      "稲森明日人",
+      "空野葵"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2818,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「サッカーの神様」と呼ばれ、雷門イレブンを陰ながら支えた人物は誰？",
+    "choices": [
+      "久遠道也",
+      "響木正剛",
+      "影山零治",
+      "雷門総一郎"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 2819,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "世宇子中学サッカー部の監督を影で操っていた人物は誰？",
+    "choices": [
+      "影山零治",
+      "吉良星二郎",
+      "雷門総一郎",
+      "財前宗助"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2820,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "帝国学園が全国大会準決勝で使用した必殺シュート「デスゾーン」は何人で放つ技？",
+    "choices": [
+      "3人",
+      "1人",
+      "2人",
+      "4人"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2821,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "秋葉名戸中学サッカー部の特徴は？",
+    "choices": [
+      "科学部を母体としたデータサッカー",
+      "全国屈指のフィジカルチーム",
+      "全員女子チーム",
+      "ユニフォームが白一色"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2822,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "エイリア学園の正体は？",
+    "choices": [
+      "実は人間の少年少女",
+      "本物の宇宙人",
+      "未来人",
+      "ロボット"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2823,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "エイリア学園編で雷門中に新たに加わったマネージャーは誰？",
+    "choices": [
+      "雷門夏未",
+      "久遠冬花",
+      "木野秋",
+      "音無春奈"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2824,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也が得意な科目は？（劇中の発言より）",
+    "choices": [
+      "理科",
+      "国語",
+      "社会",
+      "音楽"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2825,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "世宇子中学のエース・アフロディは試合中に何と称される？",
+    "choices": [
+      "フィールドの神",
+      "天使の翼",
+      "奇跡のストライカー",
+      "皇帝ペンギン"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2826,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "帝国学園のエースストライカー、佐久間次郎の背番号は？",
+    "choices": [
+      "7",
+      "9",
+      "11",
+      "10"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2827,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "アニメ『イナズマイレブン』第1期（無印シリーズ）は全何話？",
+    "choices": [
+      "全127話",
+      "全78話",
+      "全150話",
+      "全52話"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2828,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守の決め台詞「○○○○○！」に入る言葉は？",
+    "choices": [
+      "サッカーやろうぜ",
+      "絶対にあきらめない",
+      "どんとこい",
+      "大丈夫さ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2829,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也が考案したエースストライカー養成プログラムの名前は？（劇場版設定）",
+    "choices": [
+      "イナズマTCプログラム",
+      "豪炎寺メソッド",
+      "ストライカー道場",
+      "炎の特訓"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2830,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ゲーム版『イナズマイレブン3』において追加で登場したチームは？",
+    "choices": [
+      "オーガ",
+      "ティターン",
+      "オメガ",
+      "イプシロン改"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2831,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "漫画版『イナズマイレブン』の作者は？",
+    "choices": [
+      "やぶのてんや",
+      "青山剛昌",
+      "田村ゆかり",
+      "日野晃博"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2832,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ゲーム版『イナズマイレブン2 脅威の侵略者』のバージョン名は「ファイア」と何？",
+    "choices": [
+      "ブリザード",
+      "スパーク",
+      "ボンバー",
+      "オーガ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2833,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守の祖父・円堂大介が残したノートに書かれていたのは何？",
+    "choices": [
+      "必殺技の秘伝",
+      "世界へのメッセージ",
+      "試合記録",
+      "他校のデータ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2834,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "アニメ『イナズマイレブン』の劇場版第1作の副題は？",
+    "choices": [
+      "最強軍団オーガ襲来",
+      "世界への挑戦!!",
+      "脅威の侵略者",
+      "王牙との激闘"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2835,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "必殺技「皇帝ペンギン1号」を最初に使用したのはどのチーム？",
+    "choices": [
+      "帝国学園",
+      "世宇子中",
+      "雷門中",
+      "漆黒の翼"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2836,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "必殺技「魔神（まじん）ザ・ハンド」で現れる魔神は腕が何本？",
+    "choices": [
+      "4本",
+      "2本",
+      "6本",
+      "8本"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2837,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "豪炎寺修也の妹の名前は？",
+    "choices": [
+      "夕香",
+      "夕実",
+      "夕紀",
+      "夕菜"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2838,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "豪炎寺修也が一時サッカーをやめようとした理由は？",
+    "choices": [
+      "妹が事故に遭ったため",
+      "足を骨折したため",
+      "チームメイトと喧嘩したため",
+      "監督に反発したため"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2839,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "雷門中に転校してきた一之瀬一哉は、来日する前はどの国でサッカーをしていた？",
+    "choices": [
+      "アメリカ",
+      "イタリア",
+      "ブラジル",
+      "韓国"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2840,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "吹雪士郎がこなす2つのポジションは、フォワードと何？",
+    "choices": [
+      "ディフェンダー",
+      "ゴールキーパー",
+      "ミッドフィルダー",
+      "コーチ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2841,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンに選ばれた唯一の小学生メンバーは誰？",
+    "choices": [
+      "宇都宮虎丸",
+      "飛鷹征矢",
+      "基山ヒロト",
+      "立向居勇気"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2842,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "二重人格を持つストライカーは誰？",
+    "choices": [
+      "吹雪士郎",
+      "豪炎寺修也",
+      "鬼道有人",
+      "不動明王"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2843,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "帝国学園から雷門中にスパイとして送り込まれていた人物は？",
+    "choices": [
+      "土門飛鳥",
+      "半田真一",
+      "栗松鉄平",
+      "影野仁"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2844,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "「イナズマイレブン」とは作中では何を指す名称？",
+    "choices": [
+      "40年前の伝説の雷門中サッカーチームの呼び名",
+      "必殺技の名前",
+      "世界大会の名称",
+      "主人公たちのユニフォームの名前"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2845,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "禁断の必殺技と呼ばれる「皇帝ペンギン」は何号？",
+    "choices": [
+      "1号",
+      "2号",
+      "3号",
+      "X"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2846,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "立向居勇気の必殺技「ムゲン・ザ・ハンド」を考案した人物は誰？",
+    "choices": [
+      "円堂大介",
+      "円堂守",
+      "影山零治",
+      "久遠道也"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2847,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "円堂守の祖父の名前は？",
+    "choices": [
+      "円堂大介",
+      "円堂カノン",
+      "響木正剛",
+      "円堂守郎"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2848,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "エイリア学園編で雷門中の新監督となった女性は誰？",
+    "choices": [
+      "吉良瞳子",
+      "久遠冬花",
+      "雷門夏未",
+      "木野秋"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2849,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "世界大会「FFI」で日本代表チームの名前は？",
+    "choices": [
+      "イナズマジャパン",
+      "サムライジャパン",
+      "ライジングサン",
+      "サッカー日本代表"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2850,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "世界への挑戦編で、イナズマジャパンが唯一敗北した相手チームは？",
+    "choices": [
+      "ジ・エンパイア（イギリス代表）",
+      "リトルギガント（コトアール代表）",
+      "オルフェウス（イタリア代表）",
+      "ユニコーン（アメリカ代表）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2851,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンの監督の名前は？",
+    "choices": [
+      "久遠道也",
+      "響木正剛",
+      "吉良瞳子",
+      "影山零治"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2852,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "世宇子中学のエースストライカー、亜風炉照美の通称は？",
+    "choices": [
+      "アフロディ",
+      "アフロディーテ",
+      "ウルビダ",
+      "マルコ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2853,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "千羽山中との試合で円堂・鬼道・豪炎寺の3人が放ったシュート技は？",
+    "choices": [
+      "イナズマブレイク",
+      "トライペガサス",
+      "デスゾーン",
+      "ザ・フェニックス"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2854,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "吹雪士郎と染岡竜吾が協力して生み出した必殺シュートは？",
+    "choices": [
+      "ワイバーンブリザード",
+      "エターナルブリザード",
+      "ドラゴンスレイヤー",
+      "ダブルトルネード"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2855,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "豪炎寺が雷門中に来る前に通っていた学校は？",
+    "choices": [
+      "木戸川清修中",
+      "帝国学園",
+      "世宇子中",
+      "秋葉名戸中"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2856,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "脅威の侵略者編で、円堂が一時的に務めたポジションは？",
+    "choices": [
+      "リベロ（ディフェンダー）",
+      "フォワード",
+      "ミッドフィルダー",
+      "監督"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2857,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "アフロディが試合中に使う、時間を止める必殺ドリブルは？",
+    "choices": [
+      "ヘブンズタイム",
+      "ゴッドノウズ",
+      "エンジェルボール",
+      "ライトニングアクセル"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2858,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "エイリア学園のキャプテン、グランの正体である人物の名前は？",
+    "choices": [
+      "基山ヒロト",
+      "吉良ヒロト",
+      "立向居ヒロト",
+      "フィディオ・ヒロト"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2859,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "エイリア学園の最強チーム「ザ・ジェネシス」の一時的なキャプテンを務めたのは誰？",
+    "choices": [
+      "ウルビダ（八神玲名）",
+      "バーン（南雲晴矢）",
+      "ガゼル（涼野風介）",
+      "グラン（基山ヒロト）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2860,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "暗黒軍団ダークエンペラーズの一員となってしまった雷門中の元部員は？",
+    "choices": [
+      "風丸一郎太",
+      "染岡竜吾",
+      "豪炎寺修也",
+      "松野空介（マックス）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2861,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "エイリア学園の子どもたちが暮らしていた孤児院の名前は？",
+    "choices": [
+      "お日さま園",
+      "ひまわり園",
+      "にこにこ園",
+      "青空園"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2862,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "綱海条介（つなみ じょうすけ）が得意とするサッカー以外のスポーツは？",
+    "choices": [
+      "サーフィン",
+      "水泳",
+      "スケートボード",
+      "空手"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2863,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "日本代表・イナズマジャパンに選出された雷門中のマネージャーは？",
+    "choices": [
+      "久遠冬花",
+      "音無春奈",
+      "雷門夏未",
+      "木野秋"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2864,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "帝国学園が使用した必殺シュート「デスゾーン」は何人で放つ技？",
+    "choices": [
+      "3人",
+      "1人",
+      "2人",
+      "4人"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2865,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマキャラバンとは何？",
+    "choices": [
+      "雷門イレブンが遠征で使用するバス（移動車）",
+      "必殺技の一種",
+      "サッカー合宿の名称",
+      "チームの愛称"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2866,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンのキャプテンは誰？",
+    "choices": [
+      "円堂守",
+      "鬼道有人",
+      "豪炎寺修也",
+      "染岡竜吾"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2867,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "漫画版『イナズマイレブン』の作者は誰？",
+    "choices": [
+      "やぶのてんや",
+      "青山剛昌",
+      "満田拓也",
+      "雷門冬子"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2868,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "作中で「アイシテイルヨ！」というカタコトの日本語を話すブラジル代表の選手は誰？",
+    "choices": [
+      "マーク",
+      "デモーニオ",
+      "ロニージョ",
+      "ウルフ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2869,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "フィフスセクターとは『イナズマイレブンGO』に登場する組織ですが、『無印』シリーズにおける類似の敵組織は？",
+    "choices": [
+      "エイリア学園",
+      "少年サッカー協会",
+      "世界少年サッカー連盟",
+      "ゼウス教団"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2870,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "オーストラリア代表チームの名前は？",
+    "choices": [
+      "ビッグウェイブス",
+      "シャークス",
+      "リトルギガント",
+      "エンパイア"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2871,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "韓国代表チームの名前は？",
+    "choices": [
+      "ファイアドラゴン",
+      "ドラゴンズ",
+      "ドラゴンリンク",
+      "キングス"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2872,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "円堂守たち雷門イレブンが合宿を行った離島はどこ？",
+    "choices": [
+      "稲妻島（いなずまじま）",
+      "鬼岩島（おにがんじま）",
+      "稲羽島（いなばじま）",
+      "雷光島（らいこうじま）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2873,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンの追加メンバーとして途中参加した雷門中の元DFは誰？",
+    "choices": [
+      "染岡竜吾",
+      "風丸一郎太",
+      "壁山塀吾郎",
+      "影野仁"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2874,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イタリア代表チーム「オルフェウス」のキャプテンは誰？",
+    "choices": [
+      "フィディオ・アルデナ",
+      "エドガー・バルチナス",
+      "マーク・クルーガー",
+      "ロココ・ウルパ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2875,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "アメリカ代表チーム「ユニコーン」の司令塔（キャプテン）は誰？",
+    "choices": [
+      "ディラン・キース",
+      "基山ヒロト",
+      "アフロディ",
+      "李 子文（リ・ズーウェン）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2876,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "円堂守にゴールキーパーの手袋を託した人物は誰？",
+    "choices": [
+      "円堂広志（父）",
+      "響木正剛",
+      "雷門総一郎",
+      "影山零治"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2877,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "アニメ『イナズマイレブン』が初めて放送された年は？",
+    "choices": [
+      "2008年",
+      "2006年",
+      "2010年",
+      "2012年"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2878,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "円堂守の必殺キャッチ技「魔神（まじん）ザ・ハンド」で現れる魔神は何本の腕を持つ？",
+    "choices": [
+      "4本",
+      "6本",
+      "2本",
+      "0本（手は出ない）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2879,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "次のうち、実在しない必殺技はどれ？",
+    "choices": [
+      "ペンギン爆弾",
+      "皇帝ペンギン1号",
+      "ゴッドキャノン",
+      "ザ・フェニックス"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2880,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ゲーム版『イナズマイレブン3』の副題は「世界への挑戦!!」ですが、登場するバージョン名は「スパーク」と何？",
+    "choices": [
+      "ボンバー",
+      "ブリザード",
+      "ファイア",
+      "オーガ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2881,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "作中で「アイシテルヨ！」と日本語で叫ぶ外国人FWは誰？",
+    "choices": [
+      "マーク（アメリカ代表）",
+      "デモーニオ（ブラジル代表）",
+      "ヒロト（日本代表）",
+      "アフロディ（イタリア代表）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2882,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "円堂守がフィールドプレイヤーとして出場したときの背番号は？",
+    "choices": [
+      "15",
+      "1",
+      "5",
+      "21"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2883,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "劇場版『最強軍団オーガ襲来』に登場する未来から来たチームの名前は？",
+    "choices": [
+      "オーガ",
+      "オルフェウス",
+      "カイザー",
+      "エイリア"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2884,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "円堂守の曾孫（ひ孫）にあたる人物の名前は？",
+    "choices": [
+      "円堂カノン",
+      "円堂大介",
+      "円堂ハル",
+      "円堂守"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2885,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "お笑い芸人・桜塚やっくんが声優を務めたキャラクターは誰？",
+    "choices": [
+      "土方雷電",
+      "綱海条介",
+      "立向居勇気",
+      "基山ヒロト"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2886,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アニメ『イナズマイレブン』フットボールフロンティア編のエンディングテーマ「流星ボーイ」を歌っていたのは？",
+    "choices": [
+      "Berryz工房",
+      "モーニング娘。",
+      "AKB48",
+      "NEWS"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2887,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ニンテンドーDS用ゲーム『イナズマイレブン』で入部可能なキャラクター人数は何人以上？",
+    "choices": [
+      "1000人以上",
+      "100人以上",
+      "500人以上",
+      "200人以上"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2888,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "フットボールフロンティアから世界大会まで、一度もチームを離脱しなかったメンバーは円堂以外に誰？",
+    "choices": [
+      "壁山塀吾郎",
+      "染岡竜吾",
+      "豪炎寺修也",
+      "鬼道有人"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2889,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "世界大会編で「ミスターK」と名乗りイタリア代表を率いた正体は誰？",
+    "choices": [
+      "影山零治",
+      "吉良瞳子",
+      "財前総理",
+      "久遠道也"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2890,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "皇帝ペンギン3号に参加している帝国学園出身の選手は誰？",
+    "choices": [
+      "不動明王",
+      "鬼道有人",
+      "佐久間次郎",
+      "源田幸次郎"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2891,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "影山零治が密かに結成した、イナズマジャパンと戦うもう一つの日本代表チームの名前は？",
+    "choices": [
+      "ネオジャパン",
+      "新生イナズマジャパン",
+      "ダークジャパン",
+      "皇帝イレブン"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2892,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "リトルギガントの選手たちの多くは何年生？",
+    "choices": [
+      "小学生（小学6年生）",
+      "中学1年生",
+      "高校生",
+      "社会人"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2893,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "コトアール代表リトルギガントの天才ゴールキーパーの名前は？",
+    "choices": [
+      "ロココ・ウルパ",
+      "エドガー・バルチナス",
+      "ディラン・キース",
+      "亜風炉照美"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2894,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム『イナズマイレブン2』で帝国学園の源田が新たに編み出した必殺技は？",
+    "choices": [
+      "無限の壁",
+      "皇帝ペンギンX",
+      "魔帝グレネード",
+      "オメガ・ザ・ハンド"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2895,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "円堂守の父・円堂広志の職業は？",
+    "choices": [
+      "プロサッカー選手",
+      "サッカーコーチ",
+      "宇宙飛行士",
+      "教師"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2896,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "木暮夕弥（こぐれゆうや）の愛称は？",
+    "choices": [
+      "クロウ",
+      "グレてる君",
+      "ユーヤ",
+      "メガネくん"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2897,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アニメ第1話で雷門中サッカー部が練習していた場所はどこ？",
+    "choices": [
+      "校舎裏のテニスコート",
+      "正式なサッカーグラウンド",
+      "河原の土手",
+      "体育館"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2898,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "栗松鉄平の前歯は何本欠けている？",
+    "choices": [
+      "1本",
+      "2本",
+      "全部",
+      "欠けていない"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2899,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "選手権フットボールフロンティアの優勝トロフィーはどのような形？",
+    "choices": [
+      "サッカーボール型の金色トロフィー",
+      "翼の生えた女神像",
+      "炎のデザインのカップ",
+      "稲妻の形の盾"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2900,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "帝国学園のエースストライカーで、鬼道に協力する眉目秀麗な選手は誰？",
+    "choices": [
+      "佐久間次郎",
+      "源田幸次郎",
+      "不動明王",
+      "寺門大貴"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2901,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "FFI決勝戦で、豪炎寺修也が放った必殺シュートは？",
+    "choices": [
+      "流星ブレード",
+      "ファイアトルネード",
+      "ザ・フェニックス",
+      "メガトンヘッド"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2902,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "円堂守たちが劇場版で生み出した11人同時シュートの必殺技は？",
+    "choices": [
+      "ジ・アース",
+      "ダークフェニックス",
+      "ギガントウォール",
+      "トリプルブースト"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2903,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "『イナズマイレブン』シリーズの原作・総監督を務めるクリエイターは誰？",
+    "choices": [
+      "日野晃博",
+      "高橋陽一",
+      "稲船敬二",
+      "尾田栄一郎"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2904,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "エイリア学園計画の黒幕であり、吉良瞳子監督の父親でもある人物は誰？",
+    "choices": [
+      "吉良星二郎",
+      "影山零治",
+      "久遠道也",
+      "雷門総一郎"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2905,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "影山零治は世界大会決勝前、チームを救うためにどうなった？",
+    "choices": [
+      "落石から選手たちを庇い死亡した",
+      "賄賂が発覚し逮捕された",
+      "イタリアへ逃亡した",
+      "日本代表コーチに就任した"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2906,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマジャパンの正規メンバーに女子選手は何人いる？",
+    "choices": [
+      "2人",
+      "0人",
+      "1人",
+      "3人"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2907,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "豪炎寺修也が放った必殺シュート「爆熱ストーム」は誰との協力技？",
+    "choices": [
+      "虎丸（宇都宮虎丸）",
+      "不動明王",
+      "吹雪士郎",
+      "鬼道有人"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2908,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム版『イナズマイレブン』で、雷門中のモデルとなった学校はどこ？",
+    "choices": [
+      "稲森中学校",
+      "稲妻町立中学校",
+      "雷門実業高校",
+      "モデルはない（架空の学校）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2909,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "南米代表チーム「ザ・キングダム」の監督は誰？",
+    "choices": [
+      "久遠道也",
+      "影山零治",
+      "木暮夕弥",
+      "不明（作中では名前のみ）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2910,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イギリス代表チーム「ザ・エンパイア」のキャプテンは誰？",
+    "choices": [
+      "エドガー・バルチナス",
+      "ディラン・キース",
+      "ロココ・ウルパ",
+      "フィディオ・アルデナ"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2911,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アメリカ代表チーム「ユニコーン」の監督は誰？",
+    "choices": [
+      "ロバート",
+      "ヒロト",
+      "クラーク",
+      "影山"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2912,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマジャパン対エイリア学園のドリームマッチが行われたのは何編？",
+    "choices": [
+      "劇場版『究極の絆 グリフォン』",
+      "テレビ未放送",
+      "GOクロノ・ストーン特別編",
+      "アレスの天秤特典映像"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2913,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマイレブンの登場人物で、名字が「雷門」から始まる人物は誰？",
+    "choices": [
+      "雷門夏未",
+      "雷門総一郎",
+      "雷門太郎",
+      "雷門宏太"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2914,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "不動明王が最初に登場したチームは？",
+    "choices": [
+      "真・帝国学園",
+      "世宇子中",
+      "永世学園",
+      "ジェミニストーム"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2915,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "雷門中サッカー部に所属する外国人留学生は誰？",
+    "choices": [
+      "マックス（松野空介）",
+      "ジム（影野仁）",
+      "エリック（一之瀬一哉）",
+      "ボビー（ドメニコ）"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2916,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "風丸一郎太がヘアスタイルを変えたのはどの編から？",
+    "choices": [
+      "世界大会編",
+      "フットボールフロンティア編",
+      "エイリア学園編",
+      "GO編"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2917,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "染岡竜吾が海外留学したのはどの国？",
+    "choices": [
+      "アメリカ",
+      "イタリア",
+      "イングランド",
+      "ブラジル"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2918,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "半田真一（はんだしんいち）のあだ名は？",
+    "choices": [
+      "ダブルヒーロー",
+      "ジミー",
+      "ハンニャ",
+      "ミスターK"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2919,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "豪炎寺修也の小学時代の所属チームは？",
+    "choices": [
+      "稲妻KFC（キッズ）",
+      "大海寺学園",
+      "雷門Jr.SC",
+      "帝国Jr."
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2920,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム版でシリーズ未登場の隠しキャラとして登場した伝説のストライカーは？",
+    "choices": [
+      "轟雷市のストライカー",
+      "円堂大介（若き日）",
+      "豪炎寺修也（未来）",
+      "松風天馬"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2921,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "テレビアニメ版『イナズマイレブン』（無印シリーズ）の総話数は何話？",
+    "choices": [
+      "127話",
+      "101話",
+      "78話",
+      "141話"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2922,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ジャパンカップで優勝した雷門中は、賞品として何を獲得した？",
+    "choices": [
+      "新しいサッカーボール",
+      "サッカー合宿券",
+      "焼肉食べ放題券",
+      "賞金100万円"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2923,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "円堂守の必殺技「ゴッドハンド」の強化版といえば？",
+    "choices": [
+      "ゴッドハンドX",
+      "マックスハンド",
+      "Wゴッドハンド",
+      "真ゴッドハンド"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2924,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマジャパンの最年長選手は誰？",
+    "choices": [
+      "壁山塀吾郎",
+      "鬼道有人",
+      "飛鷹征矢",
+      "豪炎寺修也"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2925,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "不動明王がザ・ジェネシスで使用した必殺技は？",
+    "choices": [
+      "ダークトルネード",
+      "ゾディアック",
+      "デスブレイク",
+      "皇帝ペンギン3号"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2926,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "漫画版『イナズマイレブン』で円堂守が全国大会決勝戦で使った新必殺技は？",
+    "choices": [
+      "魔神グレネード",
+      "魔神の右手",
+      "爆裂パンチ",
+      "ジ・エンド"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2927,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "次のうち、イナズマジャパンに在籍した女子選手は誰？",
+    "choices": [
+      "財前塔子",
+      "木野 秋",
+      "音無 春奈",
+      "雷門 夏未"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2928,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "サッカー未経験ながらイナズマジャパンに選抜された選手は誰？",
+    "choices": [
+      "飛鷹征矢",
+      "半田真一",
+      "綱海条介",
+      "木暮夕弥"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2929,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イタリア代表のキャプテン、フィディオ・アルデナの必殺シュートは？",
+    "choices": [
+      "オーディンソード",
+      "ブリタニアクロス",
+      "イナズマ1号",
+      "皇帝ペンギンX"
+    ],
+    "answerIndex": 0
   }
 ]

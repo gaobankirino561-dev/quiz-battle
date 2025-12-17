@@ -120,7 +120,9 @@ const GENRE_HIERARCHY = [
     label: "アニメ・漫画",
     genres: [
       { id: "conan", label: "名探偵コナン" },
-      { id: "dragonball", label: "ドラゴンボール" }
+      { id: "dragonball", label: "ドラゴンボール" },
+      { id: "naruto", label: "ナルト" },
+      { id: "inazuma_eleven", label: "イナズマイレブン" }
     ]
   }
 ];
