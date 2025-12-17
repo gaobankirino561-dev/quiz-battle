@@ -98,24 +98,6 @@ let lastEndlessConfig = null;
 // === Genre Management ===
 const GENRE_HIERARCHY = [
   {
-    id: "general_cat",
-    label: "一般",
-    genres: [
-      { id: "common_knowledge", label: "常識" }, // Renamed from general
-      { id: "lifestyle", label: "生活" }
-    ]
-  },
-  {
-    id: "society_cat",
-    label: "社会",
-    genres: [
-      { id: "japanese_geography", label: "日本地理" },
-      { id: "world_geography", label: "世界地理" },
-      { id: "japanese_history", label: "日本史" },
-      { id: "world_history", label: "世界史" }
-    ]
-  },
-  {
     id: "anime",
     label: "アニメ・漫画",
     genres: [
