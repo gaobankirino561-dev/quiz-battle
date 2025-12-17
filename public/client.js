@@ -2795,6 +2795,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   // オンライン対戦ルール
+  const btnOnlineRules = document.getElementById("btn-online-rules");
+  const onlineRulesModal = document.getElementById("online-rules-modal");
   const btnCloseOnlineRules = document.getElementById("btn-close-online-rules");
   const btnCloseOnlineRulesFooter = document.getElementById("btn-close-online-rules-footer");
 
