@@ -1918,9 +1918,10 @@ createRoomBtn.addEventListener("click", () => {
     return;
   }
 
-  const maxRoundsValue = parseInt(maxRoundsInput.value, 10) || 10;
-  const infiniteMode = infiniteModeCheckbox.checked;
-  const timeLimitValue = parseInt(timeLimitInput.value, 10) || 30;
+  // Enforce Infinite Mode defaults
+  const maxRoundsValue = null;
+  const infiniteMode = true;
+  const timeLimitValue = parseInt(timeLimitInput.value, 10) || 10;
   let maxPlayers = parseInt(playerCountSelect?.value, 10);
   maxPlayers = maxPlayers === 3 ? 3 : 2;
 
@@ -2093,6 +2094,10 @@ socket.on("question", (data) => {
 
   let remaining = timeLimitSeconds;
   timerText.textContent = `制限時間: ${remaining} 秒`;
+  const countdownTimerEl = document.getElementById("countdown-timer");
+  if (countdownTimerEl) {
+    countdownTimerEl.textContent = remaining;
+  }
 
   timerIntervalId = setInterval(() => {
     if (!answering) {
@@ -2117,6 +2122,10 @@ socket.on("question", (data) => {
       }
     } else {
       timerText.textContent = `制限時間: ${remaining} 秒`;
+      const countdownTimerEl = document.getElementById("countdown-timer");
+      if (countdownTimerEl) {
+        countdownTimerEl.textContent = remaining;
+      }
     }
   }, 1000);
 

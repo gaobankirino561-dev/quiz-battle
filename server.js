@@ -29,7 +29,7 @@ console.log("Genre counts calculated:", genreCounts);
 // ゲーム設定
 const DEFAULT_INITIAL_HP = 20;
 const DEFAULT_MAX_ROUNDS = 10;
-const DEFAULT_TIME_LIMIT_SECONDS = 30;
+const DEFAULT_TIME_LIMIT_SECONDS = 10;
 
 const BASE_DAMAGE = {
   EASY: 2,

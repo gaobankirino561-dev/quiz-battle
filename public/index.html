@@ -51,24 +51,13 @@
             <span>出題難易度:</span>
             <label><input type="checkbox" class="difficultyCheckbox" value="EASY" checked> EASY</label>
             <label><input type="checkbox" class="difficultyCheckbox" value="NORMAL" checked> NORMAL</label>
-            <label><input type="checkbox" class="difficultyCheckbox" value="HARD"> HARD</label>
-          </div>
-
-          <div class="field-row">
-            <label>
-              出題数:
-              <input type="number" id="maxRoundsInput" min="1" max="50" value="10">
-            </label>
-            <label>
-              <input type="checkbox" id="infiniteModeCheckbox">
-              ∞モード（どちらかのHPが0になるまで）
-            </label>
+            <label><input type="checkbox" class="difficultyCheckbox" value="HARD" checked> HARD</label>
           </div>
 
           <div class="field-row">
             <label>
               1問あたりの制限時間（秒）:
-              <input type="number" id="timeLimitInput" min="5" max="120" value="30">
+              <input type="number" id="timeLimitInput" min="5" max="120" value="10">
             </label>
           </div>
 
@@ -111,6 +100,7 @@
             </div>
           </div>
           <div id="questionContainer" class="question-box question-area">
+            <div id="countdown-timer" class="game-timer">10</div>
             <h2 id="questionText"></h2>
             <div id="questionRules"></div>
           </div>

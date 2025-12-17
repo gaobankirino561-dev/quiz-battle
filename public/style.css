@@ -13,6 +13,22 @@
   box-sizing: border-box;
 }
 
+.game-timer {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fbbf24;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  /* border: 2px solid #fbbf24; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   font-family: "Outfit", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
   background: var(--bg);
