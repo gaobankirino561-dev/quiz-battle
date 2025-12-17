@@ -26,6 +26,11 @@
         </label>
       </section>
 
+      <section id="status-section" class="top-panel">
+        <p id="connectionStatus">サーバー接続中...</p>
+        <p id="gameStatus"></p>
+      </section>
+
       <section id="room-section" class="top-panel">
         <button id="createRoomBtn">ルーム作成</button>
         <input type="text" id="roomIdInput" placeholder="ルームID">
@@ -41,7 +46,36 @@
 
         <div id="room-settings">
           <h3>ルーム設定（ホストのみ有効）</h3>
-          <!-- ... existing code ... -->
+          <div class="field-row">
+            <!-- ジャンル選択 -->
+            <div class="rule-row">
+              <label>ジャンル</label>
+              <div id="online-genre-selector" class="genre-selector-container"></div>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <span>出題難易度:</span>
+            <label><input type="checkbox" class="difficultyCheckbox" value="EASY" checked> EASY</label>
+            <label><input type="checkbox" class="difficultyCheckbox" value="NORMAL" checked> NORMAL</label>
+            <label><input type="checkbox" class="difficultyCheckbox" value="HARD" checked> HARD</label>
+          </div>
+
+          <div class="field-row">
+            <label>
+              1問あたりの制限時間（秒）:
+              <input type="number" id="timeLimitInput" min="5" max="120" value="10">
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label for="player-count">参加人数</label>
+            <select id="player-count">
+              <option value="2" selected>2人</option>
+              <option value="3">3人</option>
+            </select>
+          </div>
+        </div>
       </section>
 
       <!-- Online Rules Modal -->
@@ -105,661 +139,623 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <section id="status-section" class="top-panel">
+    <section id="hp-section" class="hidden top-panel">
+      <h3>HP状況</h3>
+      <div id="hp-status"></div>
+    </section>
 
-        <div class="field-row">
+    <section id="hp-config-section" class="hidden">
+      <h2>初期HP設定（ホストのみ操作）</h2>
+      <p id="hpConfigInfo"></p>
+      <div id="hpInputsContainer"></div>
+      <button id="startGameWithHpBtn">この設定でゲーム開始</button>
+      <p id="hpConfigStatus"></p>
+    </section>
+
+    <section id="question-section" class="hidden">
+      <div class="game-header-info">
+        <p id="roundInfo"></p>
+        <p id="countdown-timer" class="simple-countdown hidden">残り時間: -</p>
+      </div>
+
+      <div class="game-main">
+        <div id="countdown-overlay" class="countdown hidden">
+          <div class="countdown-inner">
+            <div id="countdown-number">3</div>
+            <div id="countdown-label"></div>
+          </div>
+        </div>
+        <div id="questionContainer" class="question-box question-area">
+          <h2 id="questionText"></h2>
+          <div id="questionRules"></div>
+        </div>
+        <div class="choices-area">
+          <ul id="choicesList"></ul>
+          <button id="skipAnswerBtn" class="hidden">回答スキップ</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="result-section" class="hidden">
+      <h2>ラウンド結果</h2>
+      <p id="roundResultText"></p>
+      <p id="correctAnswerText"></p>
+      <div id="round-result-panel">
+        <h3>ラウンド結果（ダメージの低い順）</h3>
+        <ul id="round-result-list"></ul>
+      </div>
+      <button id="nextRoundBtn" class="hidden">次の問題へ</button>
+      <div class="ready-bar hidden">
+        <button id="nextReadyBtn" class="hidden">次の問題へ（準備完了）</button>
+        <p id="nextWaitText"></p>
+      </div>
+    </section>
+
+    <section id="final-section" class="hidden">
+      <h2 id="finalResultTitle"></h2>
+      <p id="finalResultDetail"></p>
+      <div class="replay-actions">
+        <button id="replay-ready-button" class="hidden">再戦準備完了</button>
+        <button id="replay-start-button" class="hidden">再ゲーム開始（ホスト専用）</button>
+      </div>
+      <button id="reloadBtn">最初から</button>
+    </section>
+    </section>
+
+    <!-- Solo mode root (hidden by default, controlled by client.js) -->
+    <section id="solo-root" class="hidden">
+      <header class="solo-header">
+        <h2>ソロモード：一人で遊ぶ練習用モードです</h2>
+      </header>
+
+      <main class="solo-main">
+        <!-- ソロモード共通の説明 -->
+        <p class="solo-intro">
+          ソロモードでは、一人で練習できるタイムアタックなどのモードを遊ぶことができます。
+        </p>
+
+        <section id="solo-home-menu">
+          <!-- ① タイムアタックのメインメニュー -->
+          <section id="solo-time-attack-menu" class="solo-mode-section">
+            <h3 class="solo-mode-title">タイムアタック</h3>
+            <p class="solo-mode-summary">
+              制限時間内にできるだけ多くの問題を解いてスコアを競うモードです。
+            </p>
+
+            <div class="solo-mode-actions">
+              <button id="btn-time-attack-rules" type="button" class="solo-secondary-button">
+                詳細なルール
+              </button>
+
+              <button id="btn-time-attack-start" type="button" class="solo-primary-button">
+                このモードで遊ぶ
+              </button>
+            </div>
+
+            <!-- 詳細ルールのパネル（最初は非表示） -->
+            <div id="solo-time-attack-rules-panel" class="solo-rules-panel hidden">
+              <h4>タイムアタックの詳しいルール</h4>
+              <ul>
+                <li>制限時間内に、出題される問題にできるだけ多く正解すると高スコアになります。</li>
+                <li>正解するとスコアが加算され、不正解やスキップはスコア加算なし（ペナルティは後で調整可能）。</li>
+                <li>時間切れになるとその時点でゲーム終了し、最終スコアが表示されます。</li>
+              </ul>
+              <p class="solo-rules-note">
+                ※ ルール内容は今後の実装で調整・拡張される可能性があります。
+              </p>
+            </div>
+          </section>
+
+          <!-- スピードラン メインメニュー -->
+          <section id="solo-speedrun-menu" class="solo-mode-section">
+            <h3 class="solo-mode-title">スピードラン</h3>
+            <p class="solo-mode-summary">
+              目標正解数に到達するまでのタイムを競うモードです。
+            </p>
+
+            <div class="solo-mode-actions">
+              <button id="btn-speedrun-rules" type="button" class="solo-secondary-button">
+                詳細なルール
+              </button>
+
+              <button id="btn-speedrun-start" type="button" class="solo-primary-button">
+                このモードで遊ぶ
+              </button>
+            </div>
+
+            <div id="solo-speedrun-rules-panel" class="solo-rules-panel hidden">
+              <h4>スピードランの詳しいルール</h4>
+              <ul>
+                <li>設定した目標正解数に達するまで問題を解き続け、経過時間を計測します。</li>
+                <li>タイムはストップウォッチ方式でカウント（問題回答中のみ加算）。</li>
+                <li>スコアは 100 + (目標正解数 × 2 - クリアタイム) で算出します。</li>
+              </ul>
+              <p class="solo-rules-note">
+                ※ ルール内容は今後の実装で調整・拡張される可能性があります。
+              </p>
+            </div>
+          </section>
+
+          <!-- エンドレス メインメニュー -->
+          <section id="solo-endless-menu" class="solo-mode-section">
+            <h3 class="solo-mode-title">エンドレス</h3>
+            <p class="solo-mode-summary">
+              ライフが尽きるまで問題を解き続けてスコアを稼ぐモードです。
+            </p>
+
+            <div class="solo-mode-actions">
+              <button id="btn-endless-rules" type="button" class="solo-secondary-button solo-rules-button">
+                詳細なルール
+              </button>
+              <button id="btn-solo-endless" type="button" class="solo-primary-button">
+                このモードで遊ぶ
+              </button>
+            </div>
+
+            <div id="solo-endless-rules-panel" class="solo-rules-panel hidden">
+              <h4>エンドレスの詳しいルール</h4>
+              <ul>
+                <li>ライフが0になる、または選択したジャンルの問題を出題しきったら終了です。</li>
+                <li>正解でスコア加算（難易度によって加算量が変化）。</li>
+                <li>5連続正解ごとにコンボボーナスが加算されます。</li>
+              </ul>
+              <p class="solo-rules-note">
+                ※ ルール内容は今後の実装で調整・拡張される可能性があります。
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <!-- ② タイムアタックのルール設定画面（仮） -->
+        <section id="solo-time-attack-config" class="solo-mode-section hidden">
+          <h3 class="solo-mode-title">タイムアタックのルール設定</h3>
+
+          <!-- ソロモード選択に戻る -->
+          <div class="solo-config-row solo-config-row--top">
+            <button id="btn-time-attack-config-back" type="button" class="solo-secondary-button">
+              ソロモード選択画面に戻る
+            </button>
+          </div>
+
+          <!-- 制限時間設定 -->
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">制限時間</h4>
+            <div class="solo-config-control">
+              <input id="time-attack-limit-seconds" type="number" min="10" max="300" step="10" value="30" />
+              <span>秒</span>
+              <p class="solo-config-hint">
+                タイムアタック全体で使える時間です。問題に回答している間だけ減少します。
+              </p>
+            </div>
+          </div>
+
           <!-- ジャンル選択 -->
-          <div class="rule-row">
-            <label>ジャンル</label>
-            <div id="online-genre-selector" class="genre-selector-container"></div>
-          </div>
-        </div>
-
-        <div class="field-row">
-          <span>出題難易度:</span>
-          <label><input type="checkbox" class="difficultyCheckbox" value="EASY" checked> EASY</label>
-          <label><input type="checkbox" class="difficultyCheckbox" value="NORMAL" checked> NORMAL</label>
-          <label><input type="checkbox" class="difficultyCheckbox" value="HARD" checked> HARD</label>
-        </div>
-
-        <div class="field-row">
-          <label>
-            1問あたりの制限時間（秒）:
-            <input type="number" id="timeLimitInput" min="5" max="120" value="10">
-          </label>
-        </div>
-
-        <div class="field-row">
-          <label for="player-count">参加人数</label>
-          <select id="player-count">
-            <option value="2" selected>2人</option>
-            <option value="3">3人</option>
-          </select>
-        </div>
-  </div>
-  </section>
-
-  <section id="status-section" class="top-panel">
-    <p id="connectionStatus">サーバー接続中...</p>
-    <p id="gameStatus"></p>
-  </section>
-
-  <section id="hp-section" class="hidden top-panel">
-    <h3>HP状況</h3>
-    <div id="hp-status"></div>
-  </section>
-
-  <section id="hp-config-section" class="hidden">
-    <h2>初期HP設定（ホストのみ操作）</h2>
-    <p id="hpConfigInfo"></p>
-    <div id="hpInputsContainer"></div>
-    <button id="startGameWithHpBtn">この設定でゲーム開始</button>
-    <p id="hpConfigStatus"></p>
-  </section>
-
-  <section id="question-section" class="hidden">
-    <div class="game-header-info">
-      <p id="roundInfo"></p>
-      <p id="countdown-timer" class="simple-countdown hidden">残り時間: -</p>
-    </div>
-
-    <div class="game-main">
-      <div id="countdown-overlay" class="countdown hidden">
-        <div class="countdown-inner">
-          <div id="countdown-number">3</div>
-          <div id="countdown-label"></div>
-        </div>
-      </div>
-      <div id="questionContainer" class="question-box question-area">
-        <h2 id="questionText"></h2>
-        <div id="questionRules"></div>
-      </div>
-      <div class="choices-area">
-        <ul id="choicesList"></ul>
-        <button id="skipAnswerBtn" class="hidden">回答スキップ</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="result-section" class="hidden">
-    <h2>ラウンド結果</h2>
-    <p id="roundResultText"></p>
-    <p id="correctAnswerText"></p>
-    <div id="round-result-panel">
-      <h3>ラウンド結果（ダメージの低い順）</h3>
-      <ul id="round-result-list"></ul>
-    </div>
-    <button id="nextRoundBtn" class="hidden">次の問題へ</button>
-    <div class="ready-bar hidden">
-      <button id="nextReadyBtn" class="hidden">次の問題へ（準備完了）</button>
-      <p id="nextWaitText"></p>
-    </div>
-  </section>
-
-  <section id="final-section" class="hidden">
-    <h2 id="finalResultTitle"></h2>
-    <p id="finalResultDetail"></p>
-    <div class="replay-actions">
-      <button id="replay-ready-button" class="hidden">再戦準備完了</button>
-      <button id="replay-start-button" class="hidden">再ゲーム開始（ホスト専用）</button>
-    </div>
-    <button id="reloadBtn">最初から</button>
-  </section>
-  </section>
-
-  <!-- Solo mode root (hidden by default, controlled by client.js) -->
-  <section id="solo-root" class="hidden">
-    <header class="solo-header">
-      <h2>ソロモード：一人で遊ぶ練習用モードです</h2>
-    </header>
-
-    <main class="solo-main">
-      <!-- ソロモード共通の説明 -->
-      <p class="solo-intro">
-        ソロモードでは、一人で練習できるタイムアタックなどのモードを遊ぶことができます。
-      </p>
-
-      <section id="solo-home-menu">
-        <!-- ① タイムアタックのメインメニュー -->
-        <section id="solo-time-attack-menu" class="solo-mode-section">
-          <h3 class="solo-mode-title">タイムアタック</h3>
-          <p class="solo-mode-summary">
-            制限時間内にできるだけ多くの問題を解いてスコアを競うモードです。
-          </p>
-
-          <div class="solo-mode-actions">
-            <button id="btn-time-attack-rules" type="button" class="solo-secondary-button">
-              詳細なルール
-            </button>
-
-            <button id="btn-time-attack-start" type="button" class="solo-primary-button">
-              このモードで遊ぶ
-            </button>
-          </div>
-
-          <!-- 詳細ルールのパネル（最初は非表示） -->
-          <div id="solo-time-attack-rules-panel" class="solo-rules-panel hidden">
-            <h4>タイムアタックの詳しいルール</h4>
-            <ul>
-              <li>制限時間内に、出題される問題にできるだけ多く正解すると高スコアになります。</li>
-              <li>正解するとスコアが加算され、不正解やスキップはスコア加算なし（ペナルティは後で調整可能）。</li>
-              <li>時間切れになるとその時点でゲーム終了し、最終スコアが表示されます。</li>
-            </ul>
-            <p class="solo-rules-note">
-              ※ ルール内容は今後の実装で調整・拡張される可能性があります。
-            </p>
-          </div>
-        </section>
-
-        <!-- スピードラン メインメニュー -->
-        <section id="solo-speedrun-menu" class="solo-mode-section">
-          <h3 class="solo-mode-title">スピードラン</h3>
-          <p class="solo-mode-summary">
-            目標正解数に到達するまでのタイムを競うモードです。
-          </p>
-
-          <div class="solo-mode-actions">
-            <button id="btn-speedrun-rules" type="button" class="solo-secondary-button">
-              詳細なルール
-            </button>
-
-            <button id="btn-speedrun-start" type="button" class="solo-primary-button">
-              このモードで遊ぶ
-            </button>
-          </div>
-
-          <div id="solo-speedrun-rules-panel" class="solo-rules-panel hidden">
-            <h4>スピードランの詳しいルール</h4>
-            <ul>
-              <li>設定した目標正解数に達するまで問題を解き続け、経過時間を計測します。</li>
-              <li>タイムはストップウォッチ方式でカウント（問題回答中のみ加算）。</li>
-              <li>スコアは 100 + (目標正解数 × 2 - クリアタイム) で算出します。</li>
-            </ul>
-            <p class="solo-rules-note">
-              ※ ルール内容は今後の実装で調整・拡張される可能性があります。
-            </p>
-          </div>
-        </section>
-
-        <!-- エンドレス メインメニュー -->
-        <section id="solo-endless-menu" class="solo-mode-section">
-          <h3 class="solo-mode-title">エンドレス</h3>
-          <p class="solo-mode-summary">
-            ライフが尽きるまで問題を解き続けてスコアを稼ぐモードです。
-          </p>
-
-          <div class="solo-mode-actions">
-            <button id="btn-endless-rules" type="button" class="solo-secondary-button solo-rules-button">
-              詳細なルール
-            </button>
-            <button id="btn-solo-endless" type="button" class="solo-primary-button">
-              このモードで遊ぶ
-            </button>
-          </div>
-
-          <div id="solo-endless-rules-panel" class="solo-rules-panel hidden">
-            <h4>エンドレスの詳しいルール</h4>
-            <ul>
-              <li>ライフが0になる、または選択したジャンルの問題を出題しきったら終了です。</li>
-              <li>正解でスコア加算（難易度によって加算量が変化）。</li>
-              <li>5連続正解ごとにコンボボーナスが加算されます。</li>
-            </ul>
-            <p class="solo-rules-note">
-              ※ ルール内容は今後の実装で調整・拡張される可能性があります。
-            </p>
-          </div>
-        </section>
-      </section>
-
-      <!-- ② タイムアタックのルール設定画面（仮） -->
-      <section id="solo-time-attack-config" class="solo-mode-section hidden">
-        <h3 class="solo-mode-title">タイムアタックのルール設定</h3>
-
-        <!-- ソロモード選択に戻る -->
-        <div class="solo-config-row solo-config-row--top">
-          <button id="btn-time-attack-config-back" type="button" class="solo-secondary-button">
-            ソロモード選択画面に戻る
-          </button>
-        </div>
-
-        <!-- 制限時間設定 -->
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">制限時間</h4>
-          <div class="solo-config-control">
-            <input id="time-attack-limit-seconds" type="number" min="10" max="300" step="10" value="30" />
-            <span>秒</span>
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">ジャンル</h4>
+            <div id="time-attack-genre-selector" class="genre-selector-container"></div>
             <p class="solo-config-hint">
-              タイムアタック全体で使える時間です。問題に回答している間だけ減少します。
+              オンライン対戦と同じジャンルコードを使用してください（必要に応じて value は既存実装に合わせて調整する）。
             </p>
           </div>
-        </div>
 
-        <!-- ジャンル選択 -->
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">ジャンル</h4>
-          <div id="time-attack-genre-selector" class="genre-selector-container"></div>
-          <p class="solo-config-hint">
-            オンライン対戦と同じジャンルコードを使用してください（必要に応じて value は既存実装に合わせて調整する）。
-          </p>
-        </div>
-
-        <!-- 難易度選択 -->
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">難易度</h4>
-          <div class="solo-config-control solo-config-control--choices">
-            <label>
-              <input type="checkbox" name="time-attack-difficulty" value="EASY" checked />
-              EASY
-            </label>
-            <label>
-              <input type="checkbox" name="time-attack-difficulty" value="NORMAL" checked />
-              NORMAL
-            </label>
-            <label>
-              <input type="checkbox" name="time-attack-difficulty" value="HARD" checked />
-              HARD
-            </label>
-          </div>
-          <p class="solo-config-hint">
-            オンライン対戦で使っている難易度コード（例: EASY / NORMAL / HARD）に揃える。
-          </p>
-        </div>
-
-        <!-- 開始ボタン -->
-        <div class="solo-config-row solo-config-row--bottom">
-          <button id="btn-time-attack-begin" type="button" class="solo-primary-button">
-            タイムアタック開始
-          </button>
-        </div>
-      </section>
-
-      <!-- スピードラン ルール設定 -->
-      <section id="solo-speedrun-config" class="solo-mode-section hidden">
-        <h3 class="solo-mode-title">スピードランのルール設定</h3>
-
-        <div class="solo-config-row solo-config-row--top">
-          <button id="btn-speedrun-config-back" type="button" class="solo-secondary-button">
-            ソロモード選択画面に戻る
-          </button>
-        </div>
-
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">目標正解数</h4>
-          <div class="solo-config-control">
-            <input id="speedrun-target-correct" type="number" min="1" max="200" step="1" value="10" />
+          <!-- 難易度選択 -->
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">難易度</h4>
+            <div class="solo-config-control solo-config-control--choices">
+              <label>
+                <input type="checkbox" name="time-attack-difficulty" value="EASY" checked />
+                EASY
+              </label>
+              <label>
+                <input type="checkbox" name="time-attack-difficulty" value="NORMAL" checked />
+                NORMAL
+              </label>
+              <label>
+                <input type="checkbox" name="time-attack-difficulty" value="HARD" checked />
+                HARD
+              </label>
+            </div>
             <p class="solo-config-hint">
-              この正解数に到達するまでの時間を計測します。
+              オンライン対戦で使っている難易度コード（例: EASY / NORMAL / HARD）に揃える。
             </p>
           </div>
-        </div>
 
-        <!-- ジャンル選択 -->
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">ジャンル</h4>
-          <div id="speedrun-genre-selector" class="genre-selector-container"></div>
-          <p class="solo-config-hint">
-            オンライン対戦と同じジャンルコードを使用してください（必要に応じて value は既存実装に合わせて調整する）。
-          </p>
-        </div>
-
-        <!-- 難易度選択 -->
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">難易度</h4>
-          <div class="solo-config-control solo-config-control--choices">
-            <label>
-              <input type="checkbox" name="speedrun-difficulty" value="EASY" checked />
-              EASY
-            </label>
-            <label>
-              <input type="checkbox" name="speedrun-difficulty" value="NORMAL" checked />
-              NORMAL
-            </label>
-            <label>
-              <input type="checkbox" name="speedrun-difficulty" value="HARD" checked />
-              HARD
-            </label>
-          </div>
-          <p class="solo-config-hint">
-            オンライン対戦で使っている難易度コード（例: EASY / NORMAL / HARD）に揃える。
-          </p>
-        </div>
-
-        <div class="solo-config-row solo-config-row--bottom">
-          <button id="btn-speedrun-begin" type="button" class="solo-primary-button">
-            スピードラン開始
-          </button>
-        </div>
-      </section>
-
-      <!-- エンドレス ルール設定 -->
-      <section id="solo-endless-config" class="solo-mode-section hidden">
-        <h3 class="solo-mode-title">エンドレスのルール設定</h3>
-
-        <div class="solo-config-row solo-config-row--top">
-          <button id="btn-endless-config-back" type="button" class="solo-secondary-button">
-            ソロモード選択画面に戻る
-          </button>
-        </div>
-
-        <!-- ライフ設定 -->
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">ライフ</h4>
-          <div class="solo-config-control">
-            <input id="endless-life-input" type="number" min="1" max="9" step="1" value="3" />
-          </div>
-          <p class="solo-config-hint">
-            誤答するたびにライフが1つ減り、0になるとゲーム終了です。
-          </p>
-        </div>
-
-        <!-- ジャンル選択 -->
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">ジャンル</h4>
-          <div id="endless-genre-selector" class="genre-selector-container"></div>
-          <p class="solo-config-hint">
-            オンライン対戦と同じジャンルコードを使用してください。
-          </p>
-        </div>
-
-        <!-- 難易度選択 -->
-        <div class="solo-config-row">
-          <h4 class="solo-config-label">難易度</h4>
-          <div class="solo-config-control solo-config-control--choices">
-            <label>
-              <input type="checkbox" id="endless-diff-easy" class="endless-diff" name="endless-difficulty" value="EASY"
-                checked />
-              EASY
-            </label>
-            <label>
-              <input type="checkbox" id="endless-diff-normal" class="endless-diff" name="endless-difficulty"
-                value="NORMAL" checked />
-              NORMAL
-            </label>
-            <label>
-              <input type="checkbox" id="endless-diff-hard" class="endless-diff" name="endless-difficulty" value="HARD"
-                checked />
-              HARD
-            </label>
-          </div>
-          <p class="solo-config-hint">
-            オンライン対戦で使っている難易度コード（例: EASY / NORMAL / HARD）に揃える。
-          </p>
-        </div>
-
-        <div class="solo-config-row solo-config-row--bottom">
-          <button id="btn-endless-start" type="button" class="solo-primary-button">
-            ゲーム開始
-          </button>
-        </div>
-      </section>
-
-      <!-- ③ タイムアタック プレイ画面 -->
-      <section id="solo-time-attack-play" class="solo-mode-section hidden">
-        <h3 class="solo-mode-title">タイムアタック中</h3>
-
-        <!-- 残り時間表示 -->
-        <div class="time-attack-timer">
-          残り時間：
-          <span id="time-attack-remaining-display">30.0</span> 秒
-        </div>
-
-        <!-- 難易度ラベル（色付き） -->
-        <div class="time-attack-meta">
-          <span id="time-attack-difficulty-label" class="difficulty-label">
-            難易度: -
-          </span>
-        </div>
-
-        <!-- カウントダウン表示 -->
-        <div id="time-attack-countdown" class="time-attack-countdown hidden">
-          3
-        </div>
-
-        <!-- 問題＆選択肢エリア -->
-        <div id="time-attack-question-area" class="time-attack-question-area">
-          <div id="time-attack-question-text" class="time-attack-question-text">
-            問題文がここに表示されます。
-          </div>
-          <div id="time-attack-answer-buttons" class="time-attack-answer-buttons">
-            <button type="button" class="solo-answer-button">選択肢1</button>
-            <button type="button" class="solo-answer-button">選択肢2</button>
-            <button type="button" class="solo-answer-button">選択肢3</button>
-            <button type="button" class="solo-answer-button">選択肢4</button>
-          </div>
-        </div>
-
-        <!-- 結果表示エリア -->
-        <div id="time-attack-result" class="time-attack-result hidden">
-          <p id="time-attack-result-message">正解！</p>
-        </div>
-
-        <!-- ゲーム中の操作ボタン -->
-        <div class="time-attack-controls">
-          <button id="btn-time-attack-pause" type="button" class="solo-secondary-button">
-            中断
-          </button>
-          <button id="btn-time-attack-restart" type="button" class="solo-secondary-button">
-            リスタート
-          </button>
-        </div>
-      </section>
-
-      <!-- ④ タイムアタック リザルト画面 -->
-      <section id="solo-time-attack-result" class="solo-mode-section hidden">
-        <h3 class="solo-mode-title">タイムアタック結果</h3>
-
-        <div class="time-attack-score-summary">
-          <p class="time-attack-score-main">
-            スコア：
-            <span id="time-attack-final-score">0</span>
-          </p>
-          <p class="time-attack-score-detail">
-            正解数 /
-            出題数：
-            <span id="time-attack-correct-count">0</span>
-            /
-            <span id="time-attack-total-count">0</span>
-          </p>
-        </div>
-
-        <div class="time-attack-history">
-          <button id="btn-time-attack-toggle-list" type="button" class="solo-secondary-button">
-            問題一覧を開く
-          </button>
-          <div id="time-attack-history-list" class="solo-question-list hidden">
-            <!-- JS で詳細リストを追加 -->
-          </div>
-        </div>
-
-        <div class="time-attack-result-actions">
-          <button id="btn-time-attack-result-back-config" type="button" class="solo-secondary-button">
-            ルール設定に戻る
-          </button>
-          <button id="btn-time-attack-result-restart" type="button" class="solo-primary-button">
-            同じルールでもう一度
-          </button>
-        </div>
-      </section>
-
-      <!-- スピードラン プレイ画面 -->
-      <section id="solo-speedrun-play" class="solo-mode-section hidden">
-        <h3 class="solo-mode-title">スピードラン中</h3>
-
-        <div id="speedrun-result" class="time-attack-result hidden">
-          <p id="speedrun-result-message">前回：-</p>
-        </div>
-
-        <div id="speedrun-last-result" class="speedrun-last-result hidden">
-          前回：-
-        </div>
-
-        <div id="speedrun-countdown" class="speedrun-countdown time-attack-countdown hidden">
-          <span id="speedrun-countdown-text">3</span>
-        </div>
-
-        <div class="time-attack-timer">
-          経過時間：
-          <span id="speedrun-elapsed-display">0.0</span> 秒
-        </div>
-        <div class="time-attack-meta">
-          <span id="speedrun-progress-display">正解数: 0 / 10</span>
-          <span id="speedrun-difficulty-label" class="difficulty-label">難易度: -</span>
-        </div>
-
-        <div id="speedrun-question-area" class="time-attack-question-area">
-          <div id="speedrun-question-text" class="time-attack-question-text">
-            問題文がここに表示されます。
-          </div>
-          <div id="speedrun-answer-buttons" class="time-attack-answer-buttons">
-            <button type="button" class="solo-answer-button">選択肢1</button>
-            <button type="button" class="solo-answer-button">選択肢2</button>
-            <button type="button" class="solo-answer-button">選択肢3</button>
-            <button type="button" class="solo-answer-button">選択肢4</button>
-          </div>
-        </div>
-
-        <div class="time-attack-controls">
-          <button id="btn-speedrun-pause" type="button" class="solo-secondary-button">
-            中断
-          </button>
-          <button id="btn-speedrun-restart" type="button" class="solo-secondary-button">
-            リスタート
-          </button>
-        </div>
-      </section>
-
-      <!-- エンドレス プレイ画面 -->
-      <section id="solo-endless-play" class="solo-mode-section hidden">
-        <h3 class="solo-mode-title">エンドレス中</h3>
-
-        <div class="time-attack-meta">
-          スコア：
-          <span id="endless-score-value">0</span>
-          ／ 経過時間：
-          <span id="endless-time-elapsed">0.0</span> 秒
-        </div>
-        <div class="time-attack-meta">
-          ライフ：<span id="endless-life-display">♥♥♥</span>
-        </div>
-        <div class="time-attack-meta">
-          <span id="endless-progress-display">正解数: 0 / 0</span>
-          <span id="endless-difficulty-label" class="difficulty-label">難易度: -</span>
-        </div>
-
-        <div id="endless-countdown" class="speedrun-countdown time-attack-countdown hidden">
-          <span id="endless-countdown-text">3</span>
-        </div>
-
-        <div id="endless-question-area" class="time-attack-question-area">
-          <div id="endless-question-text" class="time-attack-question-text"></div>
-        </div>
-
-        <div id="endless-options-container" class="time-attack-answer-buttons"></div>
-
-        <div id="endless-answer-feedback" class="solo-answer-feedback hidden"></div>
-        <div id="endless-score-gain" class="solo-score-gain hidden"></div>
-
-        <footer class="solo-play-footer solo-footer-row solo-footer-row--endless">
-          <div class="solo-footer-left">
-            <button id="btn-endless-next" type="button" class="solo-primary-button" disabled>
-              次の問題へ
+          <!-- 開始ボタン -->
+          <div class="solo-config-row solo-config-row--bottom">
+            <button id="btn-time-attack-begin" type="button" class="solo-primary-button">
+              タイムアタック開始
             </button>
           </div>
-          <div class="solo-footer-right">
-            <button id="btn-endless-pause" type="button" class="solo-secondary-button">
+        </section>
+
+        <!-- スピードラン ルール設定 -->
+        <section id="solo-speedrun-config" class="solo-mode-section hidden">
+          <h3 class="solo-mode-title">スピードランのルール設定</h3>
+
+          <div class="solo-config-row solo-config-row--top">
+            <button id="btn-speedrun-config-back" type="button" class="solo-secondary-button">
+              ソロモード選択画面に戻る
+            </button>
+          </div>
+
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">目標正解数</h4>
+            <div class="solo-config-control">
+              <input id="speedrun-target-correct" type="number" min="1" max="200" step="1" value="10" />
+              <p class="solo-config-hint">
+                この正解数に到達するまでの時間を計測します。
+              </p>
+            </div>
+          </div>
+
+          <!-- ジャンル選択 -->
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">ジャンル</h4>
+            <div id="speedrun-genre-selector" class="genre-selector-container"></div>
+            <p class="solo-config-hint">
+              オンライン対戦と同じジャンルコードを使用してください（必要に応じて value は既存実装に合わせて調整する）。
+            </p>
+          </div>
+
+          <!-- 難易度選択 -->
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">難易度</h4>
+            <div class="solo-config-control solo-config-control--choices">
+              <label>
+                <input type="checkbox" name="speedrun-difficulty" value="EASY" checked />
+                EASY
+              </label>
+              <label>
+                <input type="checkbox" name="speedrun-difficulty" value="NORMAL" checked />
+                NORMAL
+              </label>
+              <label>
+                <input type="checkbox" name="speedrun-difficulty" value="HARD" checked />
+                HARD
+              </label>
+            </div>
+            <p class="solo-config-hint">
+              オンライン対戦で使っている難易度コード（例: EASY / NORMAL / HARD）に揃える。
+            </p>
+          </div>
+
+          <div class="solo-config-row solo-config-row--bottom">
+            <button id="btn-speedrun-begin" type="button" class="solo-primary-button">
+              スピードラン開始
+            </button>
+          </div>
+        </section>
+
+        <!-- エンドレス ルール設定 -->
+        <section id="solo-endless-config" class="solo-mode-section hidden">
+          <h3 class="solo-mode-title">エンドレスのルール設定</h3>
+
+          <div class="solo-config-row solo-config-row--top">
+            <button id="btn-endless-config-back" type="button" class="solo-secondary-button">
+              ソロモード選択画面に戻る
+            </button>
+          </div>
+
+          <!-- ライフ設定 -->
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">ライフ</h4>
+            <div class="solo-config-control">
+              <input id="endless-life-input" type="number" min="1" max="9" step="1" value="3" />
+            </div>
+            <p class="solo-config-hint">
+              誤答するたびにライフが1つ減り、0になるとゲーム終了です。
+            </p>
+          </div>
+
+          <!-- ジャンル選択 -->
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">ジャンル</h4>
+            <div id="endless-genre-selector" class="genre-selector-container"></div>
+            <p class="solo-config-hint">
+              オンライン対戦と同じジャンルコードを使用してください。
+            </p>
+          </div>
+
+          <!-- 難易度選択 -->
+          <div class="solo-config-row">
+            <h4 class="solo-config-label">難易度</h4>
+            <div class="solo-config-control solo-config-control--choices">
+              <label>
+                <input type="checkbox" id="endless-diff-easy" class="endless-diff" name="endless-difficulty"
+                  value="EASY" checked />
+                EASY
+              </label>
+              <label>
+                <input type="checkbox" id="endless-diff-normal" class="endless-diff" name="endless-difficulty"
+                  value="NORMAL" checked />
+                NORMAL
+              </label>
+              <label>
+                <input type="checkbox" id="endless-diff-hard" class="endless-diff" name="endless-difficulty"
+                  value="HARD" checked />
+                HARD
+              </label>
+            </div>
+            <p class="solo-config-hint">
+              オンライン対戦で使っている難易度コード（例: EASY / NORMAL / HARD）に揃える。
+            </p>
+          </div>
+
+          <div class="solo-config-row solo-config-row--bottom">
+            <button id="btn-endless-start" type="button" class="solo-primary-button">
+              ゲーム開始
+            </button>
+          </div>
+        </section>
+
+        <!-- ③ タイムアタック プレイ画面 -->
+        <section id="solo-time-attack-play" class="solo-mode-section hidden">
+          <h3 class="solo-mode-title">タイムアタック中</h3>
+
+          <!-- 残り時間表示 -->
+          <div class="time-attack-timer">
+            残り時間：
+            <span id="time-attack-remaining-display">30.0</span> 秒
+          </div>
+
+          <!-- 難易度ラベル（色付き） -->
+          <div class="time-attack-meta">
+            <span id="time-attack-difficulty-label" class="difficulty-label">
+              難易度: -
+            </span>
+          </div>
+
+          <!-- カウントダウン表示 -->
+          <div id="time-attack-countdown" class="time-attack-countdown hidden">
+            3
+          </div>
+
+          <!-- 問題＆選択肢エリア -->
+          <div id="time-attack-question-area" class="time-attack-question-area">
+            <div id="time-attack-question-text" class="time-attack-question-text">
+              問題文がここに表示されます。
+            </div>
+            <div id="time-attack-answer-buttons" class="time-attack-answer-buttons">
+              <button type="button" class="solo-answer-button">選択肢1</button>
+              <button type="button" class="solo-answer-button">選択肢2</button>
+              <button type="button" class="solo-answer-button">選択肢3</button>
+              <button type="button" class="solo-answer-button">選択肢4</button>
+            </div>
+          </div>
+
+          <!-- 結果表示エリア -->
+          <div id="time-attack-result" class="time-attack-result hidden">
+            <p id="time-attack-result-message">正解！</p>
+          </div>
+
+          <!-- ゲーム中の操作ボタン -->
+          <div class="time-attack-controls">
+            <button id="btn-time-attack-pause" type="button" class="solo-secondary-button">
               中断
             </button>
-            <button id="btn-endless-restart" type="button" class="solo-secondary-button">
+            <button id="btn-time-attack-restart" type="button" class="solo-secondary-button">
               リスタート
             </button>
           </div>
-        </footer>
-      </section>
+        </section>
 
-      <!-- スピードラン リザルト画面 -->
-      <section id="solo-speedrun-result" class="solo-mode-section hidden">
-        <h3 class="solo-mode-title">スピードラン結果</h3>
+        <!-- ④ タイムアタック リザルト画面 -->
+        <section id="solo-time-attack-result" class="solo-mode-section hidden">
+          <h3 class="solo-mode-title">タイムアタック結果</h3>
 
-        <div class="time-attack-score-summary">
-          <p class="time-attack-score-main">
-            スコア：
-            <span id="speedrun-final-score">0</span>
-          </p>
-          <p class="time-attack-score-detail">
-            所要時間：
-            <span id="speedrun-final-time">0.0</span> 秒
-          </p>
-          <p class="time-attack-score-detail">
-            正解数 /
-            出題数：
-            <span id="speedrun-correct-count">0</span>
-            /
-            <span id="speedrun-total-count">0</span>
-          </p>
-        </div>
-
-        <div class="time-attack-history">
-          <h4>出題された問題一覧</h4>
-          <ul id="speedrun-history-list" class="time-attack-history-list">
-          </ul>
-        </div>
-
-        <div class="time-attack-result-actions">
-          <button id="btn-speedrun-result-back-config" type="button" class="solo-secondary-button">
-            ルール設定に戻る
-          </button>
-          <button id="btn-speedrun-result-restart" type="button" class="solo-primary-button">
-            同じルールでもう一度
-          </button>
-        </div>
-      </section>
-
-      <!-- ソロ共通リザルト -->
-      <section id="solo-result" class="solo-mode-section hidden">
-        <h2 id="solo-result-title">リザルト</h2>
-        <div id="solo-result-mode-name" class="solo-result-mode-name"></div>
-
-        <div id="solo-result-summary" class="time-attack-score-summary">
-          <p class="time-attack-score-main">
-            スコア: <span id="solo-result-score">0</span>
-          </p>
-          <p class="time-attack-score-detail">
-            正解数 / 出題数:
-            <span id="solo-result-correct">0</span>
-            /
-            <span id="solo-result-total">0</span>
-          </p>
-          <p class="time-attack-score-detail">
-            所要時間:
-            <span id="solo-result-time">0.0</span> 秒
-          </p>
-        </div>
-
-        <div class="solo-result-questions">
-          <button id="btn-toggle-question-list" type="button" class="solo-secondary-button">
-            問題一覧を開く
-          </button>
-
-          <div id="solo-result-question-list" class="solo-question-list hidden">
+          <div class="time-attack-score-summary">
+            <p class="time-attack-score-main">
+              スコア：
+              <span id="time-attack-final-score">0</span>
+            </p>
+            <p class="time-attack-score-detail">
+              正解数 /
+              出題数：
+              <span id="time-attack-correct-count">0</span>
+              /
+              <span id="time-attack-total-count">0</span>
+            </p>
           </div>
-        </div>
 
-        <div class="solo-result-actions">
-          <button id="btn-solo-return-menu" type="button" class="solo-primary-button">
-            ソロモード選択に戻る
+          <div class="time-attack-history">
+            <button id="btn-time-attack-toggle-list" type="button" class="solo-secondary-button">
+              問題一覧を開く
+            </button>
+            <div id="time-attack-history-list" class="solo-question-list hidden">
+              <!-- JS で詳細リストを追加 -->
+            </div>
+          </div>
+
+          <div class="time-attack-result-actions">
+            <button id="btn-time-attack-result-back-config" type="button" class="solo-secondary-button">
+              ルール設定に戻る
+            </button>
+            <button id="btn-time-attack-result-restart" type="button" class="solo-primary-button">
+              同じルールでもう一度
+            </button>
+          </div>
+        </section>
+
+        <!-- スピードラン プレイ画面 -->
+        <section id="solo-speedrun-play" class="solo-mode-section hidden">
+          <h3 class="solo-mode-title">スピードラン中</h3>
+
+          <div id="speedrun-result" class="time-attack-result hidden">
+            <p id="speedrun-result-message">前回：-</p>
+          </div>
+
+          <div id="speedrun-last-result" class="speedrun-last-result hidden">
+            前回：-
+          </div>
+
+          <div id="speedrun-countdown" class="speedrun-countdown time-attack-countdown hidden">
+            <span id="speedrun-countdown-text">3</span>
+          </div>
+
+          <div class="time-attack-timer">
+            経過時間：
+            <span id="speedrun-elapsed-display">0.0</span> 秒
+          </div>
+          <div class="time-attack-meta">
+            <span id="speedrun-progress-display">正解数: 0 / 10</span>
+            <span id="speedrun-difficulty-label" class="difficulty-label">難易度: -</span>
+          </div>
+
+          <div id="speedrun-question-area" class="time-attack-question-area">
+            <div id="speedrun-question-text" class="time-attack-question-text">
+              問題文がここに表示されます。
+            </div>
+            <div id="speedrun-answer-buttons" class="time-attack-answer-buttons">
+              <button type="button" class="solo-answer-button">選択肢1</button>
+              <button type="button" class="solo-answer-button">選択肢2</button>
+              <button type="button" class="solo-answer-button">選択肢3</button>
+              <button type="button" class="solo-answer-button">選択肢4</button>
+            </div>
+          </div>
+
+          <div class="time-attack-controls">
+            <button id="btn-speedrun-pause" type="button" class="solo-secondary-button">
+              中断
+            </button>
+            <button id="btn-speedrun-restart" type="button" class="solo-secondary-button">
+              リスタート
+            </button>
+          </div>
+        </section>
+
+        <!-- エンドレス プレイ画面 -->
+        <section id="solo-endless-play" class="solo-mode-section hidden">
+          <h3 class="solo-mode-title">エンドレス中</h3>
+
+          <div class="time-attack-meta">
+            スコア：
+            <span id="endless-score-value">0</span>
+            ／ 経過時間：
+            <span id="endless-time-elapsed">0.0</span> 秒
+          </div>
+          <div class="time-attack-meta">
+            ライフ：<span id="endless-life-display">♥♥♥</span>
+          </div>
+          <div class="time-attack-meta">
+            <span id="endless-progress-display">正解数: 0 / 0</span>
+            <span id="endless-difficulty-label" class="difficulty-label">難易度: -</span>
+          </div>
+
+          <div id="endless-countdown" class="speedrun-countdown time-attack-countdown hidden">
+            <span id="endless-countdown-text">3</span>
+          </div>
+
+          <div id="endless-question-area" class="time-attack-question-area">
+            <div id="endless-question-text" class="time-attack-question-text"></div>
+          </div>
+
+          <div id="endless-options-container" class="time-attack-answer-buttons"></div>
+
+          <div id="endless-answer-feedback" class="solo-answer-feedback hidden"></div>
+          <div id="endless-score-gain" class="solo-score-gain hidden"></div>
+
+          <footer class="solo-play-footer solo-footer-row solo-footer-row--endless">
+            <div class="solo-footer-left">
+              <button id="btn-endless-next" type="button" class="solo-primary-button" disabled>
+                次の問題へ
+              </button>
+            </div>
+            <div class="solo-footer-right">
+              <button id="btn-endless-pause" type="button" class="solo-secondary-button">
+                中断
+              </button>
+              <button id="btn-endless-restart" type="button" class="solo-secondary-button">
+                リスタート
+              </button>
+            </div>
+          </footer>
+        </section>
+
+        <!-- スピードラン リザルト画面 -->
+        <section id="solo-speedrun-result" class="solo-mode-section hidden">
+          <h3 class="solo-mode-title">スピードラン結果</h3>
+
+          <div class="time-attack-score-summary">
+            <p class="time-attack-score-main">
+              スコア：
+              <span id="speedrun-final-score">0</span>
+            </p>
+            <p class="time-attack-score-detail">
+              所要時間：
+              <span id="speedrun-final-time">0.0</span> 秒
+            </p>
+            <p class="time-attack-score-detail">
+              正解数 /
+              出題数：
+              <span id="speedrun-correct-count">0</span>
+              /
+              <span id="speedrun-total-count">0</span>
+            </p>
+          </div>
+
+          <div class="time-attack-history">
+            <h4>出題された問題一覧</h4>
+            <ul id="speedrun-history-list" class="time-attack-history-list">
+            </ul>
+          </div>
+
+          <div class="time-attack-result-actions">
+            <button id="btn-speedrun-result-back-config" type="button" class="solo-secondary-button">
+              ルール設定に戻る
+            </button>
+            <button id="btn-speedrun-result-restart" type="button" class="solo-primary-button">
+              同じルールでもう一度
+            </button>
+          </div>
+        </section>
+
+        <!-- ソロ共通リザルト -->
+        <section id="solo-result" class="solo-mode-section hidden">
+          <h2 id="solo-result-title">リザルト</h2>
+          <div id="solo-result-mode-name" class="solo-result-mode-name"></div>
+
+          <div id="solo-result-summary" class="time-attack-score-summary">
+            <p class="time-attack-score-main">
+              スコア: <span id="solo-result-score">0</span>
+            </p>
+            <p class="time-attack-score-detail">
+              正解数 / 出題数:
+              <span id="solo-result-correct">0</span>
+              /
+              <span id="solo-result-total">0</span>
+            </p>
+            <p class="time-attack-score-detail">
+              所要時間:
+              <span id="solo-result-time">0.0</span> 秒
+            </p>
+          </div>
+
+          <div class="solo-result-questions">
+            <button id="btn-toggle-question-list" type="button" class="solo-secondary-button">
+              問題一覧を開く
+            </button>
+
+            <div id="solo-result-question-list" class="solo-question-list hidden">
+            </div>
+          </div>
+
+          <div class="solo-result-actions">
+            <button id="btn-solo-return-menu" type="button" class="solo-primary-button">
+              ソロモード選択に戻る
+            </button>
+          </div>
+        </section>
+
+        <!-- オンライン対戦に戻るボタンはソロ画面の一番下に置いておく -->
+        <div class="solo-footer-actions">
+          <button id="btn-solo-back-to-online" type="button" class="solo-secondary-button">
+            オンライン対戦に戻る
           </button>
         </div>
-      </section>
-
-      <!-- オンライン対戦に戻るボタンはソロ画面の一番下に置いておく -->
-      <div class="solo-footer-actions">
-        <button id="btn-solo-back-to-online" type="button" class="solo-secondary-button">
-          オンライン対戦に戻る
-        </button>
-      </div>
-    </main>
-  </section>
+      </main>
+    </section>
   </div>
 
   <script src="/socket.io/socket.io.js"></script>
