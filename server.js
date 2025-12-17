@@ -38,8 +38,8 @@ const BASE_DAMAGE = {
 };
 
 function calcSpeedBonus(elapsedSeconds) {
-  if (elapsedSeconds <= 10) return 2;
-  if (elapsedSeconds <= 20) return 1;
+  if (elapsedSeconds <= 2) return 3;
+  if (elapsedSeconds <= 3) return 1;
   return 0;
 }
 
