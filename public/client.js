@@ -2093,10 +2093,11 @@ socket.on("question", (data) => {
   }
 
   let remaining = timeLimitSeconds;
-  timerText.textContent = `制限時間: ${remaining} 秒`;
+  // timerText.textContent = ... (Removed)
   const countdownTimerEl = document.getElementById("countdown-timer");
   if (countdownTimerEl) {
-    countdownTimerEl.textContent = remaining;
+    countdownTimerEl.textContent = `残り時間: ${remaining}`;
+    countdownTimerEl.classList.remove("hidden");
   }
 
   timerIntervalId = setInterval(() => {
@@ -2118,13 +2119,16 @@ socket.on("question", (data) => {
           choiceIndex: null,
           elapsedSeconds: elapsedSec,
         });
-        timerText.textContent = "時間切れ！未回答として処理されました。";
+        const countdownTimerEl = document.getElementById("countdown-timer");
+        if (countdownTimerEl) {
+          countdownTimerEl.textContent = "時間切れ！";
+        }
       }
     } else {
-      timerText.textContent = `制限時間: ${remaining} 秒`;
+      // timerText.textContent = `制限時間: ${remaining} 秒`;
       const countdownTimerEl = document.getElementById("countdown-timer");
       if (countdownTimerEl) {
-        countdownTimerEl.textContent = remaining;
+        countdownTimerEl.textContent = `残り時間: ${remaining}`;
       }
     }
   }, 1000);

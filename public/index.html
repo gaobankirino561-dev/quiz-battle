@@ -90,8 +90,11 @@
       </section>
 
       <section id="question-section" class="hidden">
-        <p id="roundInfo"></p>
-        <p id="timerText"></p>
+        <div class="game-header-info">
+          <p id="roundInfo"></p>
+          <p id="countdown-timer" class="simple-countdown hidden">残り時間: -</p>
+        </div>
+
         <div class="game-main">
           <div id="countdown-overlay" class="countdown hidden">
             <div class="countdown-inner">
@@ -100,7 +103,6 @@
             </div>
           </div>
           <div id="questionContainer" class="question-box question-area">
-            <div id="countdown-timer" class="game-timer">10</div>
             <h2 id="questionText"></h2>
             <div id="questionRules"></div>
           </div>
