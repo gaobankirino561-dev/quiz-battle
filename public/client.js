@@ -278,7 +278,7 @@ function prepareShuffledChoices(questionData) {
   const withFlags = questionData.choices.map((text, index) => ({
     text,
     originalIndex: index,
-    isCorrect: typeof questionData.correctIndex === "number" ? questionData.correctIndex === index : false,
+    isCorrect: (typeof questionData.correctIndex === "number" ? questionData.correctIndex : questionData.answerIndex) === index,
   }));
   const shuffled = shuffleArray([...withFlags]);
   const correctDisplayIndex = shuffled.findIndex((c) => c.isCorrect);

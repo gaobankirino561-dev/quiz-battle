@@ -244,7 +244,7 @@ io.on("connection", (socket) => {
         id: question.id,
         question: question.question,
         choices: question.choices || [],
-        correctIndex: typeof question.answer === "number" ? question.answer : 0,
+        correctIndex: typeof question.answerIndex === "number" ? question.answerIndex : 0,
         difficulty: question.difficulty || "EASY",
       });
     }

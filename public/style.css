@@ -458,6 +458,23 @@ button:disabled {
     padding: 6px 8px;
   }
 
+  /* Solo Mode Mobile Layout Support */
+  #solo-time-attack-play,
+  #solo-speedrun-play,
+  #solo-endless-play {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 160px);
+    gap: 10px;
+  }
+
+  .time-attack-question-area {
+    flex: 1 1 auto;
+    min-height: 100px;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+
   .choices-area {
     flex: 1 1 auto;
     display: flex;
