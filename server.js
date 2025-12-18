@@ -437,6 +437,32 @@ io.on("connection", (socket) => {
     delete timeAttackSessions[socket.id];
   });
 
+  socket.on("inviteFriend", ({ targetUserId, roomId, fromName, roomName }) => {
+    if (!targetUserId || !connectedUsers.has(targetUserId)) {
+      // オフラインまたは存在しない
+      socket.emit("invitationError", "ユーザーが見つからないか、オフラインです。");
+      return;
+    }
+
+    const targetSockets = connectedUsers.get(targetUserId);
+    if (!targetSockets || targetSockets.size === 0) {
+      socket.emit("invitationError", "ユーザーはオフラインです。");
+      return;
+    }
+
+    // すべての接続済みソケットに送信（複数タブ開いている場合など）
+    targetSockets.forEach(targetSocketId => {
+      io.to(targetSocketId).emit("invitationReceived", {
+        fromName,
+        roomId,
+        roomName
+      });
+    });
+
+    socket.emit("invitationSent", "招待を送りました！");
+  });
+
+
   socket.on("timeAttackNextQuestion", (payload, callback) => {
     const categories = Array.isArray(payload?.genres) ? payload.genres : null;
     const difficultiesRaw = Array.isArray(payload?.difficulties) ? payload.difficulties : null;

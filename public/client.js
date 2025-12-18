@@ -3131,3 +3131,175 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// === Friend Invitation Logic ===
+const btnOpenInvite = document.getElementById("btn-open-invite");
+const inviteFriendModal = document.getElementById("invite-friend-modal");
+const btnCloseInviteModal = document.getElementById("btn-close-invite-modal");
+const inviteFriendListEl = document.getElementById("invite-friend-list");
+
+const invitationReceivedModal = document.getElementById("invitation-received-modal");
+const invitationFromName = document.getElementById("invitation-from-name");
+const invitationRoomName = document.getElementById("invitation-room-name");
+const btnAcceptInvite = document.getElementById("btn-accept-invite");
+const btnDeclineInvite = document.getElementById("btn-decline-invite");
+
+let currentInvitation = null; // { roomId, roomName, fromName }
+
+if (btnOpenInvite) {
+  btnOpenInvite.addEventListener("click", async () => {
+    if (!myUserId) {
+      alert("ゲストモードでは招待できません。");
+      return;
+    }
+    inviteFriendModal.classList.remove("hidden");
+    // Load friends
+    inviteFriendListEl.innerHTML = '<p style="text-align:center;color:#888;">読み込み中...</p>';
+    const friends = await fetchFriends();
+
+    inviteFriendListEl.innerHTML = "";
+    if (friends.length === 0) {
+      inviteFriendListEl.innerHTML = '<p class="info-text">フレンドがいません。</p>';
+      return;
+    }
+
+    friends.forEach(f => {
+      // 自分が作ったルームにいるはずなので、roomIdはグローバル変数にあるはず
+      // しかし、waitingRoomContentなどを作るときにRoomIDを取得する必要がある。
+      // 現在のアーキテクチャでは、createRoom後にroomIdがセットされる。
+
+      const div = document.createElement("div");
+      div.className = `friend-invite-item ${f.isOnline ? "online" : ""}`;
+
+      const onlineDot = `<span class="invite-status-dot ${f.isOnline ? "online" : ""}"></span>`;
+
+      div.innerHTML = `
+        <div class="friend-invite-name">
+          ${onlineDot} ${f.username} <span style="font-size:0.8em; opacity:0.7;">(ID:${f.id})</span>
+        </div>
+        <button class="btn-invite-action" data-id="${f.id}" ${!f.isOnline ? "disabled" : ""}>
+          ${f.isOnline ? "招待" : "オフライン"}
+        </button>
+      `;
+
+      const btn = div.querySelector("button");
+      if (f.isOnline) {
+        btn.addEventListener("click", () => {
+          // Invite logic
+          // roomId is globally available?
+          // The roomId is in 'roomId' variable if 'roomCreated' or 'roomJoined' logic set it.
+          // In 'roomCreated', we set 'roomId = data.roomId'. But 'roomCreated' is inside socket listener.
+          // We need to ensure 'roomId' is updated in global scope.
+          // Let's check 'roomCreated' listener.
+
+          if (!roomId) {
+            alert("ルームが見つかりません。");
+            return;
+          }
+
+          socket.emit("inviteFriend", {
+            targetUserId: f.id,
+            roomId: roomId,
+            fromName: playerName || "名無し",
+            roomName: "クイズバトル" // 今はルーム名機能がないので固定
+          });
+
+          btn.textContent = "送信済";
+          btn.disabled = true;
+          btn.style.background = "#555";
+        });
+      }
+
+      inviteFriendListEl.appendChild(div);
+    });
+  });
+}
+
+if (btnCloseInviteModal) {
+  btnCloseInviteModal.addEventListener("click", () => {
+    inviteFriendModal.classList.add("hidden");
+  });
+}
+
+// Socket Listener for Invitation Received
+socket.on("invitationReceived", (data) => {
+  // data: { fromName, roomId, roomName }
+  // Show Modal
+  if (isInGame() && !isGameFinished()) {
+    // ゲーム中は邪魔しない、あるいはToastにする？
+    // 今回は簡易実装なので、ゲーム中だったら無視するか、あるいは表示する。
+    // 表示して「参加する」を押すと退出扱いになる。
+    // ひとまず表示する。
+  }
+
+  // 自分自身からの招待は来ないはずだが念のため
+  if (data.roomId === roomId) return;
+
+  currentInvitation = data;
+  invitationFromName.textContent = data.fromName;
+  invitationRoomName.textContent = data.roomName;
+  invitationReceivedModal.classList.remove("hidden");
+});
+
+socket.on("invitationError", (msg) => {
+  alert(msg);
+});
+
+socket.on("invitationSent", (msg) => {
+  // Toast or something?
+  // invite button turns to "Sent".
+});
+
+if (btnAcceptInvite) {
+  btnAcceptInvite.addEventListener("click", () => {
+    if (currentInvitation) {
+      // Leave current room handled by server usually, but client state reset might be needed
+      // Simulating Leave Room
+      if (roomId) {
+        // disconnect logic or refresh?
+        // Simply emit joinRoom. Server should handle moving player.
+        // Client state reset:
+        resetGameClientState();
+      }
+
+      socket.emit("joinRoom", {
+        roomId: currentInvitation.roomId,
+        name: playerNameInput.value || "Guest",
+        userId: myUserId
+      });
+
+      invitationReceivedModal.classList.add("hidden");
+      currentInvitation = null;
+    }
+  });
+}
+
+if (btnDeclineInvite) {
+  btnDeclineInvite.addEventListener("click", () => {
+    invitationReceivedModal.classList.add("hidden");
+    currentInvitation = null;
+  });
+}
+
+function resetGameClientState() {
+  // Reset essential game logic variables
+  gameState = { round: 0, maxRounds: 10 };
+  isEliminatedSelf = false;
+  // Hide all screens
+  waitRoomModal.classList.add("hidden");
+  roomSettingsPanel.classList.add("hidden");
+  hpSection.classList.add("hidden");
+  questionSection.classList.add("hidden");
+  resultSection.classList.add("hidden");
+  finalSection.classList.add("hidden");
+  // Show connecting/room section if needed
+  roomSection.classList.remove("hidden");
+  statusSection.classList.remove("hidden");
+}
+
+function isInGame() {
+  return roomId && !isGameFinished();
+}
+function isGameFinished() {
+  // check logic
+  return false; // placeholder
+}

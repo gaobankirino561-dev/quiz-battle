@@ -1597,3 +1597,81 @@ button:disabled {
     margin: 10px auto;
   }
 }
+
+/* === Friend Invitation Styles === */
+
+#wait-room-modal .modal-content {
+  text-align: center;
+}
+
+.friend-invite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.friend-invite-item.online {
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.friend-invite-name {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.invite-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #666;
+  display: inline-block;
+}
+
+.invite-status-dot.online {
+  background: #4ade80;
+  /* Green */
+  box-shadow: 0 0 5px rgba(74, 222, 128, 0.5);
+}
+
+.btn-invite-action {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-invite-action:hover {
+  background: #22d3eea0;
+  transform: translateY(-1px);
+}
+
+.btn-invite-action:disabled {
+  background: #555;
+  color: #888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#invitation-received-modal .modal-content {
+  text-align: center;
+}
+
+#invitation-received-modal .modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}

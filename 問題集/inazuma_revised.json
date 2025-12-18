@@ -1,0 +1,2252 @@
+[
+  {
+    "id": 1,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "主人公・円堂守がキャプテンを務める、物語の舞台となる中学校の名前は何か。",
+    "choices": [
+      "帝国学園",
+      "雷門中",
+      "木戸川清修中",
+      "星章学園"
+    ],
+    "answerIndex": 1,
+    "explanation": "円堂守は雷門中のキャプテンである。帝国学園は初期のライバル校、木戸川清修は豪炎寺の転校元、星章学園はパラレルワールド（アレスの天秤）の学校である2。"
+  },
+  {
+    "id": 2,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守の本来のポジションであり、彼の代名詞とも言えるポジションはどこか。",
+    "choices": [
+      "FW",
+      "MF",
+      "GK",
+      "DF"
+    ],
+    "answerIndex": 2,
+    "explanation": "円堂は「伝説のゴールキーパー」円堂大介の孫であり、基本ポジションはGKである。物語後半でリベロ（DF）を務めることもあるが、象徴的な役割はGKである3。"
+  },
+  {
+    "id": 3,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也が雷門中に転校してくる前に所属していた中学校はどこか。",
+    "choices": [
+      "帝国学園",
+      "木戸川清修中",
+      "秋葉名戸中",
+      "桜咲中"
+    ],
+    "answerIndex": 1,
+    "explanation": "豪炎寺は木戸川清修中のエースストライカーだったが、妹の事故をきっかけにサッカーを辞めるつもりで雷門に転校してきた4。"
+  },
+  {
+    "id": 4,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守が祖父のノートを見て最初に習得し、物語を通じて進化させ続けた代表的なキーパー技は何か。",
+    "choices": [
+      "正義の鉄拳",
+      "マジン・ザ・ハンド",
+      "ゴッドハンド",
+      "無限の壁"
+    ],
+    "answerIndex": 2,
+    "explanation": "右手（または左手）に黄金の巨大な気の掌を出現させる技。帝国学園との練習試合で初めて発動し、以降彼の代名詞となった5。"
+  },
+  {
+    "id": 5,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "帝国学園のキャプテンであり、後に雷門中に転校してくる天才ゲームメーカーは誰か。",
+    "choices": [
+      "不動明王",
+      "佐久間次郎",
+      "源田幸次郎",
+      "鬼道有人"
+    ],
+    "answerIndex": 3,
+    "explanation": "鬼道有人は帝国学園の天才司令塔であり、赤いマントとゴーグルが特徴。世宇子中への敗北後、雷門に合流する6。"
+  },
+  {
+    "id": 6,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "第1期「フットボールフロンティア編」の決勝戦で雷門中が対戦した、神のアクアを使用するチームはどこか。",
+    "choices": [
+      "帝国学園",
+      "世宇子中",
+      "千羽山中",
+      "木戸川清修中"
+    ],
+    "answerIndex": 1,
+    "explanation": "影山零治が率いる世宇子（ゼウス）中は、ドーピングアイテム「神のアクア」を使用し圧倒的な力を見せた7。"
+  },
+  {
+    "id": 7,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "世宇子中のキャプテンであり、「神」を自称する選手は誰か。",
+    "choices": [
+      "アフロディ",
+      "デザーム",
+      "グラン",
+      "バーン"
+    ],
+    "answerIndex": 0,
+    "explanation": "アフロディこと亜風炉照美は世宇子中のキャプテン。後に「エイリア学園編」で雷門の助っ人となったり、韓国代表として登場する7。"
+  },
+  {
+    "id": 8,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中のマネージャーで、後にイナズマジャパンの監督となる久遠道也の娘（義理）は誰か。",
+    "choices": [
+      "雷門夏未",
+      "木野秋",
+      "音無春奈",
+      "久遠冬花"
+    ],
+    "answerIndex": 3,
+    "explanation": "冬花は第3期「世界への挑戦編」から登場するマネージャーで、久遠監督の娘として円堂たちをサポートする8。"
+  },
+  {
+    "id": 9,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守の口癖であり、シリーズを象徴するフレーズはどれか。",
+    "choices": [
+      "なんとかなるさ！",
+      "サッカーやろうぜ！",
+      "絶対に勝つ！",
+      "特訓だ！"
+    ],
+    "answerIndex": 1,
+    "explanation": "円堂守の人格と求心力を象徴する言葉。「なんとかなるさ」も円堂大介の言葉として重要だが、代表的なフレーズはBである6。"
+  },
+  {
+    "id": 10,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "壁山塀吾郎が使用する、巨大な岩の壁を出現させてシュートを防ぐ必殺技は何か。",
+    "choices": [
+      "ザ・マウンテン",
+      "ザ・ウォール",
+      "ロックウォール",
+      "アイアンウォール"
+    ],
+    "answerIndex": 1,
+    "explanation": "壁山が初期に習得するDF技。後に「ザ・マウンテン」へと進化するが、最も基本的で有名なのは「ザ・ウォール」である5。"
+  },
+  {
+    "id": 11,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "風丸一郎太の本来の所属部活動は何だったか。",
+    "choices": [
+      "サッカー部",
+      "陸上部",
+      "野球部",
+      "テニス部"
+    ],
+    "answerIndex": 1,
+    "explanation": "風丸は陸上部の俊足選手だったが、円堂の熱意にほだされ、助っ人としてサッカー部に参加、後に正式入部した。"
+  },
+  {
+    "id": 12,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "第2期「脅威の侵略者編」で、円堂たちが旅をするために使用したバスの名前は何か。",
+    "choices": [
+      "イナズマ号",
+      "イナズマキャラバン",
+      "雷門バス",
+      "ビクトリー号"
+    ],
+    "answerIndex": 1,
+    "explanation": "雷門中が破壊された後、全国の強力な選手をスカウトするために使用した移動用バス兼作戦室4。"
+  },
+  {
+    "id": 13,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "吹雪士郎が初登場時に所属していた、北海道の中学校はどこか。",
+    "choices": [
+      "白恋中",
+      "漫遊寺中",
+      "陽花戸中",
+      "大海原中"
+    ],
+    "answerIndex": 0,
+    "explanation": "吹雪士郎は白恋中のエースストライカー兼DFとして登場し、「雪原のプリンス」と呼ばれていた9。"
+  },
+  {
+    "id": 14,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "吹雪士郎の中に存在した、攻撃的な性格を持つもう一つの人格（弟）の名前は何か。",
+    "choices": [
+      "タツヤ",
+      "アツヤ",
+      "カズヤ",
+      "マサヤ"
+    ],
+    "answerIndex": 1,
+    "explanation": "雪崩事故で亡くなった弟・吹雪アツヤの人格が士郎の中に存在し、FWとしてプレイする際に表出していた。"
+  },
+  {
+    "id": 15,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「エイリア学園」ジェミニストームのキャプテン、レーゼの本名は何か。",
+    "choices": [
+      "基山ヒロト",
+      "緑川リュウジ",
+      "南雲晴矢",
+      "涼野風介"
+    ],
+    "answerIndex": 1,
+    "explanation": "レーゼは宇宙人を名乗っていたが、その正体は「お日さま園」出身の緑川リュウジである10。"
+  },
+  {
+    "id": 16,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "綱海条介が得意とする、サッカーに応用しているスポーツは何か。",
+    "choices": [
+      "野球",
+      "サーフィン",
+      "スノーボード",
+      "バスケットボール"
+    ],
+    "answerIndex": 1,
+    "explanation": "綱海は沖縄の大海原中の生徒で、サーフィンで培ったバランス感覚を活かした「ツナミブースト」などの技を持つ5。"
+  },
+  {
+    "id": 17,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "大阪の「ナニワランド」にある地下修練場の名前は何か。",
+    "choices": [
+      "イナビカリ修練場",
+      "ナニワ修練場",
+      "地下対戦ルート",
+      "特訓センター"
+    ],
+    "answerIndex": 0,
+    "explanation": "元々は雷門中にあった施設だが、ナニワランドの地下にも同等の施設が存在し、浦部リカたちが案内した。"
+  },
+  {
+    "id": 18,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "イナズマジャパンの世界大会決勝戦の相手チーム「リトルギガント」の国はどこか。",
+    "choices": [
+      "イタリア",
+      "コトアール",
+      "ブラジル",
+      "アルゼンチン"
+    ],
+    "answerIndex": 1,
+    "explanation": "アフリカの架空の小国「コトアール」の代表チームであり、円堂大介が指揮を執っている11。"
+  },
+  {
+    "id": 19,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "染岡竜吾が最初に習得した必殺シュート技は何か。",
+    "choices": [
+      "ワイバーンクラッシュ",
+      "ドラゴンクラッシュ",
+      "ドラゴンスレイヤー",
+      "ドラゴンキャノン"
+    ],
+    "answerIndex": 1,
+    "explanation": "染岡の代名詞であるドラゴンのオーラを纏う最初のシュート技。後にワイバーン、スレイヤーへと進化する5。"
+  },
+  {
+    "id": 20,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "立向居勇気が円堂に憧れて最初に習得した技は何か。",
+    "choices": [
+      "マジン・ザ・ハンド",
+      "ゴッドハンド",
+      "無限の壁",
+      "ムゲン・ザ・ハンド"
+    ],
+    "answerIndex": 1,
+    "explanation": "立向居は円堂の映像を繰り返し見て、青いオーラの「ゴッドハンド」を独学で習得した努力家である5。"
+  },
+  {
+    "id": 21,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「炎のストライカー」と呼ばれる豪炎寺修也の代表的な必殺技は何か。",
+    "choices": [
+      "ヒートタックル",
+      "ファイアトルネード",
+      "爆熱ストーム",
+      "グランドファイア"
+    ],
+    "answerIndex": 1,
+    "explanation": "回転しながら炎を纏ったシュートを放つ、豪炎寺の初期からの代表技。CやDも彼の技だが、「代表的」かつ初期技としてはBが最も適切5。"
+  },
+  {
+    "id": 22,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "イナズマジャパンにおける、豪炎寺修也の背番号は何か。",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "18"
+    ],
+    "answerIndex": 1,
+    "explanation": "雷門中およびイナズマジャパンのエースストライカーとして、背番号10を背負う12。"
+  },
+  {
+    "id": 23,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "帝国学園が使用する、3人で放つ強力なシュート技は何か。",
+    "choices": [
+      "トライアングルZ",
+      "デスゾーン",
+      "トリプルブースト",
+      "カオスブレイク"
+    ],
+    "answerIndex": 1,
+    "explanation": "佐久間、寺門、洞面（または鬼道）などが3人で回転して放つ帝国学園の伝統技5。"
+  },
+  {
+    "id": 24,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "イナズマジャパンのキャプテンは誰か。",
+    "choices": [
+      "鬼道有人",
+      "円堂守",
+      "豪炎寺修也",
+      "風丸一郎太"
+    ],
+    "answerIndex": 1,
+    "explanation": "世界への挑戦編においても、円堂守がキャプテンを務める。一時的に風丸がキャプテン代理を務めたこともあるが、正規キャプテンは円堂3。"
+  },
+  {
+    "id": 25,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "鬼道有人の妹であり、雷門中のマネージャーを務めるのは誰か。",
+    "choices": [
+      "木野秋",
+      "音無春奈",
+      "雷門夏未",
+      "久遠冬花"
+    ],
+    "answerIndex": 1,
+    "explanation": "幼少期に両親を亡くし、別々の施設・養家に引き取られたが、鬼道有人と音無春奈は実の兄妹である12。"
+  },
+  {
+    "id": 26,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "木暮夕弥の特徴的な行動は何か。",
+    "choices": [
+      "常に何かを食べている",
+      "人にいたずらを仕掛ける",
+      "常に寝ている",
+      "常にヘッドホンをしている"
+    ],
+    "answerIndex": 1,
+    "explanation": "孤独な生い立ちから人の気を引くためにいたずらを繰り返していたが、春奈たちとの交流で心を開く12。"
+  },
+  {
+    "id": 27,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "アメリカ代表「ユニコーン」に所属する、円堂の旧友である日本人選手は誰か。",
+    "choices": [
+      "染岡竜吾と半田真一",
+      "一之瀬一哉と土門飛鳥",
+      "鬼道有人と佐久間次郎",
+      "豪炎寺修也と風丸一郎太"
+    ],
+    "answerIndex": 1,
+    "explanation": "一之瀬と土門はアメリカ留学経験があり、世界大会ではアメリカ代表として円堂たちの前に立ちはだかる13。"
+  },
+  {
+    "id": 28,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「エイリア学園」最強のチームとされる「ザ・ジェネシス」のキャプテン、グランの正体は誰か。",
+    "choices": [
+      "緑川リュウジ",
+      "基山ヒロト",
+      "南雲晴矢",
+      "涼野風介"
+    ],
+    "answerIndex": 1,
+    "explanation": "グランとして円堂に接触していたが、その正体は吉良星二郎に育てられた基山ヒロトである10。"
+  },
+  {
+    "id": 29,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "不動明王の頭髪の特徴的なデザインは何か。",
+    "choices": [
+      "アフロ",
+      "モヒカン",
+      "ドレッド",
+      "スキンヘッド"
+    ],
+    "answerIndex": 1,
+    "explanation": "真・帝国学園時代から一貫して、茶色（一部白）のモヒカンヘアが特徴である14。"
+  },
+  {
+    "id": 30,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "イナズマジャパンの監督・久遠道也の前に、雷門中の監督を務めていた「伝説のイナズマイレブン」のメンバーは誰か。",
+    "choices": [
+      "影山零治",
+      "響木正剛",
+      "火来伸蔵",
+      "浮島一人"
+    ],
+    "answerIndex": 1,
+    "explanation": "雷雷軒の店主であり、円堂たちを導いたかつての伝説のGK2。"
+  },
+  {
+    "id": 31,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守がリベロとして試合に出場する際の背番号は何か。",
+    "choices": [
+      "1",
+      "15",
+      "20",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "GKの座を立向居に譲り、フィールドプレイヤーとして出る際は15番を着用する12。"
+  },
+  {
+    "id": 32,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "豪炎寺修也と風丸一郎太の連携技で、炎を纏って回転しながら突進する技は何か。",
+    "choices": [
+      "炎の風見鶏",
+      "クロスファイア",
+      "ザ・ハリケーン",
+      "イナズマ落とし"
+    ],
+    "answerIndex": 0,
+    "explanation": ""
+  },
+  {
+    "id": 33,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "アルゼンチン代表「ジ・エンパイア」のキャプテン、テレス・トルーエのポジションはどこか。",
+    "choices": [
+      "FW",
+      "MF",
+      "DF",
+      "GK"
+    ],
+    "answerIndex": 2,
+    "explanation": "鉄壁の守備を誇るジ・エンパイアの要であり、強力なDFである15。"
+  },
+  {
+    "id": 34,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中の初期メンバーで、顔に絆創膏（鼻頭）を貼っているアフロヘアの選手は誰か。",
+    "choices": [
+      "影野仁",
+      "宍戸佐吉",
+      "少林寺歩",
+      "松野空介"
+    ],
+    "answerIndex": 1,
+    "explanation": "赤いアフロヘアーと鼻の絆創膏がトレードマークのMF/DF。初期メンバーの一人である。"
+  },
+  {
+    "id": 35,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "イタリア代表「オルフェウス」のキャプテン（実質的リーダー）であり、「白い流星」と呼ばれる選手は誰か。",
+    "choices": [
+      "パオロ・ビアンキ",
+      "フィディオ・アルデナ",
+      "ジャンルカ・ザナルディ",
+      "ラファエレ・ジェネラーニ"
+    ],
+    "answerIndex": 1,
+    "explanation": "円堂と親交を深めるイタリアのエース。中田英寿モデルのヒデナカタが本来のキャプテンだが、実質的なチームリーダーはフィディオである16。"
+  },
+  {
+    "id": 36,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ブラジル代表「ザ・キングダム」のキャプテンは誰か。",
+    "choices": [
+      "ロビ・キーン",
+      "マック・ロニージョ",
+      "ファルカオ",
+      "ラガルート"
+    ],
+    "answerIndex": 1,
+    "explanation": "「キング・オブ・ファンタジスタ」と称されるブラジルのエースストライカー17。"
+  },
+  {
+    "id": 37,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "エイリア学園編で、風丸や染岡たちが離脱した後に、エイリア石の力で洗脳されて敵として立ちはだかったチーム名は何か。",
+    "choices": [
+      "カオス",
+      "ダークエンペラーズ",
+      "プロミネンス",
+      "ネオ・ジャパン"
+    ],
+    "answerIndex": 1,
+    "explanation": ""
+  },
+  {
+    "id": 38,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "宇都宮虎丸がイナズマジャパンに選出された時の学年は何か。",
+    "choices": [
+      "小学6年生",
+      "中学1年生",
+      "中学2年生",
+      "中学3年生"
+    ],
+    "answerIndex": 0,
+    "explanation": "飛び級的な才能を持つ小学生プレイヤーとして選出された12。"
+  },
+  {
+    "id": 39,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "財前塔子の父親の職業は何か。",
+    "choices": [
+      "警察官",
+      "総理大臣",
+      "医師",
+      "パイロット"
+    ],
+    "answerIndex": 1,
+    "explanation": "塔子の父・財前宗助は日本の内閣総理大臣であり、SPフィクサーズは彼の警護団である。"
+  },
+  {
+    "id": 40,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "円堂守が「究極奥義」として世界大会決勝で完成させた、自身の最強のキーパー技は何か。",
+    "choices": [
+      "オメガ・ザ・ハンド",
+      "ゴッドキャッチ",
+      "マジン・ザ・ハンド",
+      "ゴッドハンドV"
+    ],
+    "answerIndex": 1,
+    "explanation": "祖父のノートの最後のページにあったヒントを元に完成させた、マジンを超える技5。"
+  },
+  {
+    "id": 41,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「イナズマ落とし」を使用する際、豪炎寺修也の踏み台となる選手は誰か。",
+    "choices": [
+      "円堂守",
+      "壁山塀吾郎",
+      "風丸一郎太",
+      "染岡竜吾"
+    ],
+    "answerIndex": 1,
+    "explanation": "壁山の巨大な腹部を踏み台にして高くジャンプする連携技である5。"
+  },
+  {
+    "id": 42,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "吹雪士郎の必殺技「エターナルブリザード」の属性は何か。",
+    "choices": [
+      "火",
+      "風",
+      "林",
+      "山"
+    ],
+    "answerIndex": 1,
+    "explanation": "吹雪の技は氷をモチーフにしているが、ゲームシステム上の属性は「風」である5。"
+  },
+  {
+    "id": 43,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "アニメ第1期のオープニングテーマ曲のタイトルは何か。",
+    "choices": [
+      "マジで感謝！",
+      "立ち上がリーヨ",
+      "つながリーヨ",
+      "勝って泣こうゼッ！"
+    ],
+    "answerIndex": 1,
+    "explanation": "T-Pistonz（後に+KMC）による、シリーズを象徴する最初のオープニング曲。"
+  },
+  {
+    "id": 44,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中の理事長であり、夏未の父親の名前は何か。",
+    "choices": [
+      "雷門総一郎",
+      "雷門金太郎",
+      "雷門圭一",
+      "雷門竜馬"
+    ],
+    "answerIndex": 0,
+    "explanation": "雷門中理事長であり、かつてのイナズマイレブンのサポーターでもあった。"
+  },
+  {
+    "id": 45,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "イナズマジャパンの合宿所がある、FFI開催地の島の名前は何か。",
+    "choices": [
+      "サッカーアイランド",
+      "ライオコット島",
+      "フロンティア島",
+      "エンジェルアイランド"
+    ],
+    "answerIndex": 1,
+    "explanation": "伝説が眠るとされる島で、FFIの世界大会が開催された4。"
+  },
+  {
+    "id": 46,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「メガネ」こと目金欠流が名付けた必殺技でないものはどれか。",
+    "choices": [
+      "ドラゴンクラッシュ",
+      "ゴッドハンド",
+      "ファイアトルネード",
+      "メガネクラッシュ"
+    ],
+    "answerIndex": 2,
+    "explanation": "ファイアトルネードは豪炎寺が元々持っていた技。ドラゴンクラッシュ等は目金が命名した6。"
+  },
+  {
+    "id": 47,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "イナズマジャパンにおいて、不動明王の背番号は何番か。",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "不動明王はイナズマジャパンで背番号8を背負い、ジョーカー的な役割を果たした12。"
+  },
+  {
+    "id": 48,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "雷門中がフットボールフロンティア準決勝で対戦した、豪炎寺の古巣はどこか。",
+    "choices": [
+      "帝国学園",
+      "木戸川清修中",
+      "千羽山中",
+      "秋葉名戸中"
+    ],
+    "answerIndex": 1,
+    "explanation": "かつての仲間である武方三兄弟が所属する木戸川清修と対戦した4。"
+  },
+  {
+    "id": 49,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「流星ブレード」を使用する、エイリア学園「ザ・ジェネシス」のエースは誰か。",
+    "choices": [
+      "グラン",
+      "ウルビダ",
+      "ウィーゼル",
+      "ネロ"
+    ],
+    "answerIndex": 0,
+    "explanation": "流星のごとくボールが落下するシュート「流星ブレード」はヒロトの代表技5。"
+  },
+  {
+    "id": 50,
+    "category": "inazuma_eleven",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "次のうち、イナズマジャパンの選考試合（Aチーム対Bチーム）でAチームのキャプテンを務めたのは誰か。",
+    "choices": [
+      "鬼道有人",
+      "円堂守",
+      "豪炎寺修也",
+      "風丸一郎太"
+    ],
+    "answerIndex": 1,
+    "explanation": "日本代表候補による紅白戦では、円堂守がAチームのキャプテン、鬼道有人がBチームのキャプテンを務めた。"
+  },
+  {
+    "id": 51,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンの背番号13番をつけた、「レーゼ」としての過去を持つ選手は誰か。",
+    "choices": [
+      "緑川リュウジ",
+      "基山ヒロト",
+      "砂木沼治",
+      "南雲晴矢"
+    ],
+    "answerIndex": 0,
+    "explanation": "緑川は代表選考合宿で努力を重ね、13番を獲得した。しかし、世界の壁とプレッシャーに苦しみ、物語中盤で離脱する12。"
+  },
+  {
+    "id": 52,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "エイリア学園「ダイヤモンドダスト」のキャプテン、ガゼルの本名は何か。",
+    "choices": [
+      "南雲晴矢",
+      "涼野風介",
+      "八神玲名",
+      "根室君之"
+    ],
+    "answerIndex": 1,
+    "explanation": "氷を操るガゼルの正体は涼野風介。後に韓国代表ファイアードラゴンの一員として再登場する10。"
+  },
+  {
+    "id": 53,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "帝国学園のGK源田幸次郎が使用する、身体への負担が大きい禁断のキーパー技は何か。",
+    "choices": [
+      "ドリルスマッシャー",
+      "ビーストファング",
+      "パワーシールド",
+      "フルパワーシールド"
+    ],
+    "answerIndex": 1,
+    "explanation": "真・帝国学園戦で使用。野獣の牙のようなオーラでボールを止めるが、使用者に激痛を伴う禁断の技10。"
+  },
+  {
+    "id": 54,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "吹雪士郎の必殺技「ウルフレジェンド」のゲーム内属性は何か。",
+    "choices": [
+      "火",
+      "林",
+      "風",
+      "山"
+    ],
+    "answerIndex": 2,
+    "explanation": "狼のオーラを纏うシュート技。吹雪は氷結系の技が多いが、属性分類上は「風」に属する5。"
+  },
+  {
+    "id": 55,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンがアジア予選決勝で対戦した、アフロディが所属する韓国代表チーム名は何か。",
+    "choices": [
+      "レッドバイソン",
+      "ファイアードラゴン",
+      "ビッグウェイブス",
+      "デザートライオン"
+    ],
+    "answerIndex": 1,
+    "explanation": "アフロディ、バーン、ガゼルという強力な攻撃陣を擁する韓国代表チーム10。"
+  },
+  {
+    "id": 56,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イギリス代表「ナイツオブクィーン」が使用する、エドガーを中心とした攻撃的必殺タクティクスは何か。",
+    "choices": [
+      "無敵の槍",
+      "カテナチオカウンター",
+      "アマゾンリバーウェーブ",
+      "ローリングサンダー"
+    ],
+    "answerIndex": 0,
+    "explanation": "騎士が槍を構えるような陣形で突進し、エドガーのエクスカリバーへ繋ぐ戦術18。"
+  },
+  {
+    "id": 57,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "チーム「ザ・カオス」は、エイリア学園のどのチームの混合軍か。",
+    "choices": [
+      "ジェネシスとジェミニストーム",
+      "プロミネンスとダイヤモンドダスト",
+      "イプシロンとジェミニストーム",
+      "プロミネンスとジェネシス"
+    ],
+    "answerIndex": 1,
+    "explanation": "バーン（プロミネンス）とガゼル（ダイヤモンドダスト）が手を組み、ジェネシスを超えるために結成した非公式チーム10。"
+  },
+  {
+    "id": 58,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イタリア代表「オルフェウス」の正ゴールキーパーの名前は何か。",
+    "choices": [
+      "ダニエレ・サンクティス",
+      "ジジ・ブラージ",
+      "ジャンルカ・ザナルディ",
+      "マルコ・マセラッティ"
+    ],
+    "answerIndex": 1,
+    "explanation": "巨漢のGKで、背番号1を着用。「コロッセオガード」などの技を持つ16。"
+  },
+  {
+    "id": 59,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンの栗松鉄平がチームを離脱することになった直接の原因は何か。",
+    "choices": [
+      "アルゼンチン戦での足の負傷",
+      "実力不足による自主退団",
+      "家庭の事情",
+      "監督との対立"
+    ],
+    "answerIndex": 0,
+    "explanation": "栗松はアルゼンチン戦で無理をしてプレイを続け、試合後に負傷離脱が決まった。入れ替わりに吹雪が復帰する。"
+  },
+  {
+    "id": 60,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "アフロディが使用する、時間を止めたかのような演出で相手を抜き去るドリブル技は何か。",
+    "choices": [
+      "ヘブンズタイム",
+      "ゴッドノウズ",
+      "カオスブレイク",
+      "ジャッジスルー2"
+    ],
+    "answerIndex": 0,
+    "explanation": "指を鳴らすと時間が止まり、相手を抜き去った後に突風が吹き荒れる技5。"
+  },
+  {
+    "id": 61,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "「真・帝国学園」のキャプテンとして、鬼道有人の前に立ちはだかったのは誰か。",
+    "choices": [
+      "佐久間次郎",
+      "源田幸次郎",
+      "不動明王",
+      "影山零治"
+    ],
+    "answerIndex": 2,
+    "explanation": "不動は影山と結託し、真・帝国のキャプテンとして鬼道たちを挑発した10。"
+  },
+  {
+    "id": 62,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "アメリカ代表「ユニコーン」のキャプテン、マーク・クルーガーのポジションはどこか。",
+    "choices": [
+      "FW",
+      "MF",
+      "DF",
+      "GK"
+    ],
+    "answerIndex": 1,
+    "explanation": "マークはユニコーンの司令塔（MF）であり、一之瀬と共に中盤を支配する19。"
+  },
+  {
+    "id": 63,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンがカタール代表「デザートライオン」戦で編み出した、灼熱のピッチ対策のタクティクスは何か。",
+    "choices": [
+      "ローリングサンダー",
+      "ルート・オブ・スカイ",
+      "デュアルタイフーン",
+      "バナナシュート"
+    ],
+    "answerIndex": 1,
+    "explanation": "地熱による体力消耗を防ぐため、ボールを空中に浮かせたままパスを繋ぐ戦術。"
+  },
+  {
+    "id": 64,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "吹雪士郎と豪炎寺修也が炎と氷を融合させて放つ連携シュート技は何か。",
+    "choices": [
+      "ザ・バース",
+      "サンダービースト",
+      "クロスファイア",
+      "ザ・ハリケーン"
+    ],
+    "answerIndex": 2,
+    "explanation": "相反する属性を融合させる強力な技。ザ・バースはヒロト、サンダービーストはライデン、ザ・ハリケーンは風丸との技5。"
+  },
+  {
+    "id": 65,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンにおいて、基山ヒロト（グラン）が着用している背番号は何か。",
+    "choices": [
+      "11",
+      "13",
+      "18",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "エイリア学園時代は11番などが多かったが、イナズマジャパンでは背番号18をつけている12。"
+  },
+  {
+    "id": 66,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "アルゼンチン代表「ジ・エンパイア」がイナズマジャパンを封じ込めた守備タクティクスは何か。",
+    "choices": [
+      "カテナチオカウンター",
+      "アンデスの蟻地獄",
+      "無敵の槍",
+      "パーフェクトゾーンプレス"
+    ],
+    "answerIndex": 1,
+    "explanation": "相手を自陣深くに誘い込み、包囲してボールを奪う鉄壁の守備戦術15。"
+  },
+  {
+    "id": 67,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "次のうち、エイリア学園のチーム区分に含まれないものはどれか。",
+    "choices": [
+      "ジェミニストーム",
+      "イプシロン",
+      "チーム・オーガ",
+      "プロミネンス"
+    ],
+    "answerIndex": 2,
+    "explanation": "オーガは未来から来た軍団であり、エイリア学園の組織図には含まれない20。"
+  },
+  {
+    "id": 68,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "円堂守がリベロとして出場した際、代わりにゴールキーパーを務めた選手は誰か。",
+    "choices": [
+      "源田幸次郎",
+      "立向居勇気",
+      "杉森威",
+      "土方雷電"
+    ],
+    "answerIndex": 1,
+    "explanation": "立向居は円堂の後継者としてゴールを守り、ムゲン・ザ・ハンドや魔王・ザ・ハンドで貢献した12。"
+  },
+  {
+    "id": 69,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ブラジル代表「ザ・キングダム」が使用する、波のような動きで相手を翻弄する必殺タクティクスは何か。",
+    "choices": [
+      "アマゾンリバーウェーブ",
+      "サークルプレードライブ",
+      "ボックスロック",
+      "ローリングサンダー"
+    ],
+    "answerIndex": 0,
+    "explanation": "チーム全体が大河のうねりのように連動し、相手守備陣を飲み込む攻撃戦術17。"
+  },
+  {
+    "id": 70,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "日本代表の座を奪うために、砂木沼治（デザーム）らが結成したチームは何か。",
+    "choices": [
+      "ダークエンペラーズ",
+      "ネオ・ジャパン",
+      "ウラ・ライモン",
+      "チームK"
+    ],
+    "answerIndex": 1,
+    "explanation": "吉良瞳子を監督に迎え、代表落選メンバーやかつてのライバルたちで構成されたチーム8。"
+  },
+  {
+    "id": 71,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "帝国学園の佐久間次郎が使用し、足に激痛が走るリスクを負った禁断のシュート技は何か。",
+    "choices": [
+      "皇帝ペンギン2号",
+      "皇帝ペンギン1号",
+      "皇帝ペンギン3号",
+      "皇帝ペンギンX"
+    ],
+    "answerIndex": 1,
+    "explanation": "2号と異なり単独で発動できるが、筋肉断裂の危険がある禁断の技。真・帝国学園戦で使用した5。"
+  },
+  {
+    "id": 72,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンの背番号11番をつける、攻撃的な小学生FWは誰か。",
+    "choices": [
+      "栗松鉄平",
+      "宇都宮虎丸",
+      "吹雪士郎",
+      "緑川リュウジ"
+    ],
+    "answerIndex": 1,
+    "explanation": "虎丸は11番を着用。小学生ながら豪炎寺に憧れ、強力なFWとして活躍する12。"
+  },
+  {
+    "id": 73,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "劇場版およびゲーム『ジ・オーガ』に登場する、円堂守のひ孫にあたる未来人は誰か。",
+    "choices": [
+      "円堂カノン",
+      "円堂ダイスケ",
+      "円堂マモル",
+      "バダップ・スリード"
+    ],
+    "answerIndex": 0,
+    "explanation": "未来から円堂を助けに来たひ孫。特徴的なヘッドギアをつけている。"
+  },
+  {
+    "id": 74,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ライオコット島の伝説に登場する「天空の使徒」のキャプテンは誰か。",
+    "choices": [
+      "デスタ",
+      "セイン",
+      "エスカバ",
+      "ミストレ"
+    ],
+    "answerIndex": 1,
+    "explanation": "天空の使徒を率いる少年。魔界軍団Zのデスタと対をなす存在5。"
+  },
+  {
+    "id": 75,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "不動明王のトレードマークともいえる髪型は何か。",
+    "choices": [
+      "アフロ",
+      "モヒカン",
+      "ドレッド",
+      "ポニーテール"
+    ],
+    "answerIndex": 1,
+    "explanation": "中央に残した髪（モヒカン）に白いラインが入っているのが特徴。"
+  },
+  {
+    "id": 76,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "「ジ・アース」はイナズマイレブン2の最強技だが、誰と誰と誰の連携か。",
+    "choices": [
+      "円堂、豪炎寺、鬼道",
+      "円堂、豪炎寺、吹雪",
+      "円堂、ヒロト、吹雪",
+      "豪炎寺、虎丸、ヒロト"
+    ],
+    "answerIndex": 1,
+    "explanation": "チーム全員の気持ちを繋いで放つ、対ジェネシス戦のフィニッシュ技5。"
+  },
+  {
+    "id": 77,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イギリス代表「ナイツオブクィーン」のGK、フレディ・マックイーンの背番号は何か。",
+    "choices": [
+      "1",
+      "12",
+      "5",
+      "20"
+    ],
+    "answerIndex": 0,
+    "explanation": "フレディは背番号1。MI6のスパイに憧れているという設定がある18。"
+  },
+  {
+    "id": 78,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "影山零治が「ミスターK」として結成した「チームK」のキャプテンであり、鬼道有人のコピーのような選手は誰か。",
+    "choices": [
+      "フィディオ・アルデナ",
+      "デモーニオ・ストラーダ",
+      "ジュリオ・アコスタ",
+      "ラファエレ・ジェネラーニ"
+    ],
+    "answerIndex": 1,
+    "explanation": "鬼道に酷似したゴーグルとマントを着用し、皇帝ペンギンXなどを使用する5。"
+  },
+  {
+    "id": 79,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンの土方雷電の背番号は何か。",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "12"
+    ],
+    "answerIndex": 3,
+    "explanation": "沖縄出身の巨漢DF。背番号12を着用し、スーパーしこふみなどで守備を支える12。"
+  },
+  {
+    "id": 80,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "「リトルギガント」の監督、アラヤ・ダイスケの正体は誰か。",
+    "choices": [
+      "響木正剛",
+      "影山零治",
+      "円堂大介",
+      "吉良星二郎"
+    ],
+    "answerIndex": 2,
+    "explanation": "円堂守の祖父。事故死したと思われていたが、海外で生存し、コトアール代表を育てていた11。"
+  },
+  {
+    "id": 81,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "次のうち、ゲーム上の属性が「風」である必殺技はどれか。",
+    "choices": [
+      "ファイアトルネード",
+      "ゴッドノウズ",
+      "メガトンヘッド",
+      "流星ブレード"
+    ],
+    "answerIndex": 1,
+    "explanation": "アフロディの翼が生えるシュート技は風属性。ファイアトルネードは火、メガトンヘッドは山、流星ブレードは火5。"
+  },
+  {
+    "id": 82,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "第1期の最強技「イナズマブレイク」の発動メンバーは誰か。",
+    "choices": [
+      "円堂、豪炎寺、鬼道",
+      "円堂、豪炎寺、風丸",
+      "円堂、壁山、栗松",
+      "豪炎寺、鬼道、染岡"
+    ],
+    "answerIndex": 0,
+    "explanation": "雷門の主軸3人による合体技。無限の壁を破るために編み出された5。"
+  },
+  {
+    "id": 83,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "韓国代表ファイアードラゴンの最強技「カオスブレイク」を使用する3人は誰か。",
+    "choices": [
+      "アフロディ、バーン、ガゼル",
+      "グラン、ウルビダ、ウィーゼル",
+      "円堂、豪炎寺、鬼道",
+      "マーク、ディラン、一之瀬"
+    ],
+    "answerIndex": 0,
+    "explanation": "神（アフロディ）とエイリアのトップ2（バーン、ガゼル）による強力な合体技5。"
+  },
+  {
+    "id": 84,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "久遠冬花がイナズマジャパンのマネージャーとして大きく貢献できた特殊な理由は何か。",
+    "choices": [
+      "過去にプロ選手だった",
+      "予知能力がある",
+      "円堂大介の難解なノートを解読できた",
+      "相手チームのデータをハッキングできた"
+    ],
+    "answerIndex": 2,
+    "explanation": "大介独特の抽象的な記述を直感的に理解し、円堂たちに伝えることができた2。"
+  },
+  {
+    "id": 85,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "次の選手のうち、ポジションが「FW（フォワード）」ではないのは誰か。",
+    "choices": [
+      "染岡竜吾",
+      "豪炎寺修也",
+      "宇都宮虎丸",
+      "壁山塀吾郎"
+    ],
+    "answerIndex": 3,
+    "explanation": "壁山はDF。染岡、豪炎寺、虎丸はFWである（虎丸はMF登録の場合もあるが、役割は攻撃的FW/MF。壁山は純粋なDF）。"
+  },
+  {
+    "id": 86,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "基山ヒロト（グラン）の代表的な必殺シュート技は何か。",
+    "choices": [
+      "流星ブレード",
+      "アストロブレイク",
+      "ガニメデプロトン",
+      "ユニバースブラスト"
+    ],
+    "answerIndex": 0,
+    "explanation": "天空から光弾を落とすシュート技。アストロブレイクはレーゼの技5。"
+  },
+  {
+    "id": 87,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "帝国学園の佐久間次郎が眼帯をしているのは左右どちらか。",
+    "choices": [
+      "右目",
+      "左目",
+      "両目",
+      "していない"
+    ],
+    "answerIndex": 0,
+    "explanation": "佐久間は右目に眼帯をしている。"
+  },
+  {
+    "id": 88,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "「イナズマイレブン3」で登場する、携帯電話を介して選手を紹介してもらうシステムの名称は何か。",
+    "choices": [
+      "キズナックス",
+      "人脈システム",
+      "スーパーリンク",
+      "すれちがい通信"
+    ],
+    "answerIndex": 1,
+    "explanation": "ゲーム内で人づてに選手を紹介してもらうシステム。キズナックスはGO以降21。"
+  },
+  {
+    "id": 89,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "豪炎寺修也がイナズマジャパン復帰戦で披露した、爆熱ストームより強力な新必殺技は何か。",
+    "choices": [
+      "グランドファイア",
+      "マキシマムファイア",
+      "爆熱スクリュー",
+      "ファイアトルネードDD"
+    ],
+    "answerIndex": 2,
+    "explanation": "炎の渦を纏って回転しながら放つシュート技。復帰した対イプシロン改（または代表戦）で使用5。"
+  },
+  {
+    "id": 90,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "次のチームのうち、フットボールフロンティア全国大会のトーナメント表に含まれていない（公式戦で戦っていない）のはどこか。",
+    "choices": [
+      "千羽山中",
+      "秋葉名戸中",
+      "傘美野中",
+      "戦国伊賀島中"
+    ],
+    "answerIndex": 2,
+    "explanation": "傘美野中はジェミニストームに破壊された学校として登場するが、FF全国大会での対戦相手ではない（FF地区予選決勝の相手とされる設定もあるが、全国大会編の描写ではA,B,Dが対戦校）。"
+  },
+  {
+    "id": 91,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "「ザ・ジェネシス」のウルビダの本名は何か。",
+    "choices": [
+      "八神玲名",
+      "吉良瞳子",
+      "財前塔子",
+      "久遠冬花"
+    ],
+    "answerIndex": 0,
+    "explanation": "お日さま園出身で、吉良星二郎に忠誠を誓っていた女性選手10。"
+  },
+  {
+    "id": 92,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンのユニフォーム（ファースト）の基調となる色は何か。",
+    "choices": [
+      "赤",
+      "白",
+      "イナズマブルー",
+      "黄"
+    ],
+    "answerIndex": 2,
+    "explanation": "日本代表のユニフォームは鮮やかな青色である。セカンドは白と赤の日の丸カラー。"
+  },
+  {
+    "id": 93,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ロココ・ウルパが使用する、魔神のような赤いオーラを纏う最強のキーパー技は何か。",
+    "choices": [
+      "タマシイ・ザ・ハンド",
+      "ゴッドハンドX",
+      "マジン・ザ・ハンド",
+      "ゴッドキャッチ"
+    ],
+    "answerIndex": 0,
+    "explanation": "魂を込めてボールを受け止めるロココの最強技。ゴッドハンドXも使用するが、最強技はタマシイである5。"
+  },
+  {
+    "id": 94,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "綱海条介のイナズマジャパンでの背番号は何か。",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "綱海はDFとして背番号4を着用している12。"
+  },
+  {
+    "id": 95,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ネオ・ジャパンのメンバーで、元・戦国伊賀島中のキャプテンだった選手は誰か。",
+    "choices": [
+      "幽谷博之",
+      "霧隠才次",
+      "下鶴改",
+      "無方勉"
+    ],
+    "answerIndex": 1,
+    "explanation": "霧隠はスピードを生かしたプレイが特徴のFWで、ネオ・ジャパンに選出された8。"
+  },
+  {
+    "id": 96,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "アニメ第2期「脅威の侵略者編」のエンディングテーマ「流星ボーイ」を歌っているユニットは何か。",
+    "choices": [
+      "T-Pistonz+KMC",
+      "Berryz工房",
+      "twe'lv",
+      "モーニング娘。"
+    ],
+    "answerIndex": 1,
+    "explanation": "イナズマイレブンのEDテーマはBerryz工房が担当することが多く、「流星ボーイ」もその一つ。"
+  },
+  {
+    "id": 97,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "必殺技「グランドファイア」の発動メンバーの組み合わせとして正しいものはどれか。",
+    "choices": [
+      "豪炎寺、虎丸、ヒロト",
+      "豪炎寺、吹雪、ヒロト",
+      "豪炎寺、鬼道、不動",
+      "豪炎寺、円堂、虎丸"
+    ],
+    "answerIndex": 0,
+    "explanation": "3人が並走し、巨大な火柱と共にシュートを放つ最強クラスの連携技5。"
+  },
+  {
+    "id": 98,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イナズマジャパンに「自称・戦術アドバイザー兼データ分析係」として帯同した人物は誰か。",
+    "choices": [
+      "音無春奈",
+      "目金欠流",
+      "久遠冬花",
+      "角馬圭太"
+    ],
+    "answerIndex": 1,
+    "explanation": "選手としては実力不足だが、その知識と分析力でチームをサポートした。"
+  },
+  {
+    "id": 99,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ゲーム『イナズマイレブン3』のバージョン名に含まれないものはどれか。",
+    "choices": [
+      "スパーク",
+      "ボンバー",
+      "ジ・オーガ",
+      "シャイン"
+    ],
+    "answerIndex": 3,
+    "explanation": "『3』はスパーク/ボンバー/ジ・オーガの3バージョン。シャイン（とダーク）は次作『GO』のバージョンである1。"
+  },
+  {
+    "id": 100,
+    "category": "inazuma_eleven",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "鬼道有人がイタリア代表フィディオと即興で完成させた、ボールを蹴り合い回転させて突破する技は何か。",
+    "choices": [
+      "キラーフィールズ",
+      "皇帝ペンギン3号",
+      "ビッグバン",
+      "プライムレジェンド"
+    ],
+    "answerIndex": 0,
+    "explanation": "チームK戦で、互いの実力を認め合った二人が即興で編み出した強力なドリブル技5。"
+  },
+  {
+    "id": 101,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマジャパンにおいて、佐久間次郎が着用している背番号は何か。",
+    "choices": [
+      "11",
+      "16",
+      "17",
+      "18"
+    ],
+    "answerIndex": 1,
+    "explanation": "佐久間は追加招集メンバー（あるいは不動、吹雪らとの兼ね合い）で背番号16となった。17は染岡、18はヒロトである。"
+  },
+  {
+    "id": 102,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アルゼンチン代表「ジ・エンパイア」のエースストライカー、レオネ・バティゴの背番号は何か。",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "7"
+    ],
+    "answerIndex": 1,
+    "explanation": "レオネは背番号10を背負うFW。アルゼンチンの攻撃の要である15。"
+  },
+  {
+    "id": 103,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「天空の使徒」のセインと「魔界軍団Z」のデスタが使用する、強力な合体シュート技は何か。",
+    "choices": [
+      "ダークマター",
+      "シャドウ・レイ",
+      "ヘブンズドライブ",
+      "ブラックサンダー"
+    ],
+    "answerIndex": 1,
+    "explanation": "光と闇が融合する合体技。ゲーム『ジ・オーガ』のクリア後やアニメの番外編で登場する5。"
+  },
+  {
+    "id": 104,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "帝国学園の初期メンバー（円堂たちと初対戦時）で、背番号11番をつけていた選手は誰か。",
+    "choices": [
+      "辺見渡",
+      "寺門大貴",
+      "佐久間次郎",
+      "洞面秀一郎"
+    ],
+    "answerIndex": 2,
+    "explanation": "帝国学園の初期FWである佐久間は背番号11。10番は鬼道有人である。"
+  },
+  {
+    "id": 105,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アメリカ代表「ユニコーン」のMFで、背番号6番をつけている選手は誰か。",
+    "choices": [
+      "ショーン・ピアース",
+      "スティーブ・ウッドマック",
+      "トニー・ストライダス",
+      "アレックス・ホーク"
+    ],
+    "answerIndex": 1,
+    "explanation": "スティーブは背番号6。オリオン編ではDFになるが、無印3ではMF登録である13。"
+  },
+  {
+    "id": 106,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "必殺タクティクス「デュアルタイフーン」において、フィールドの両サイドから指示を出し、二つの渦の起点となるのは誰と誰か。",
+    "choices": [
+      "鬼道有人と豪炎寺修也",
+      "鬼道有人と不動明王",
+      "音無春奈と鬼道有人",
+      "円堂守と風丸一郎太"
+    ],
+    "answerIndex": 1,
+    "explanation": "かつて反目しあっていた二人の天才司令塔が共鳴し、二つのルートから攻め上がる戦術。"
+  },
+  {
+    "id": 107,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ブラジル代表「ザ・キングダム」の正GK、ファルカオ・ダ・シルバの背番号は何か。",
+    "choices": [
+      "1",
+      "12",
+      "21",
+      "20"
+    ],
+    "answerIndex": 0,
+    "explanation": "カポエイラのような動きでゴールを守るファルカオは背番号1である17。"
+  },
+  {
+    "id": 108,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ネオ・ジャパンのMFで、元プロミネンスの「ヒート」こと厚石茂人の背番号は何か。",
+    "choices": [
+      "6",
+      "9",
+      "11",
+      "12"
+    ],
+    "answerIndex": 3,
+    "explanation": "ネオ・ジャパンでは元エイリアのメンバーも多く参加しており、ヒートは背番号12で登録されている8。"
+  },
+  {
+    "id": 109,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム『イナズマイレブン3』で、クリア後に虎丸の母親に関連するイベントが発生し、「RCシュート」の秘伝書が入手できる場所はどこか。",
+    "choices": [
+      "ヤマネコスタジアム",
+      "ウミヘビスタジアム",
+      "ライオコット空港",
+      "日本街"
+    ],
+    "answerIndex": 0,
+    "explanation": "特定条件を満たしてヤマネコスタジアムに行くと、虎丸関連のサブイベントが発生する21。"
+  },
+  {
+    "id": 110,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イギリス代表「ナイツオブクィーン」のFW、フィリップ・オーウェンの背番号は何か。",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "マイケル・オーウェンをモデルにしたと思われるフィリップは背番号11を着用している18。"
+  },
+  {
+    "id": 111,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "豪炎寺修也の必殺技「マキシマムファイア」のゲーム内属性は何か。",
+    "choices": [
+      "風",
+      "林",
+      "山",
+      "火"
+    ],
+    "answerIndex": 3,
+    "explanation": "豪炎寺の最強クラスの単体シュート技であり、属性はもちろん「火」である5。"
+  },
+  {
+    "id": 112,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「ザ・ジェネシス」の小柄なGK、ネロの本名は何か。",
+    "choices": [
+      "根室君之",
+      "鯨井隆則",
+      "阿久津聖",
+      "伊豆野由宇"
+    ],
+    "answerIndex": 0,
+    "explanation": "「時空の壁」などの技を持つGKネロの本名は根室君之（ねむろ きみゆき）である10。"
+  },
+  {
+    "id": 113,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "帝国学園のDFで、前髪で目が隠れている「五条さん」こと五条勝の背番号は何か。",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 3,
+    "explanation": "人気投票等で話題になることが多い五条勝は、背番号5のDFである22。"
+  },
+  {
+    "id": 114,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "リトルギガントのFWで、雷門の染岡竜吾に対応するキャラクター（背番号11）の名前は何か。",
+    "choices": [
+      "ゴーシュ・フレア",
+      "ドラゴ・ヒル",
+      "ウィンディ・ファスタ",
+      "マキシ・クゥ"
+    ],
+    "answerIndex": 1,
+    "explanation": "リトルギガントは雷門メンバーに対応しており、染岡ポジのドラゴ・ヒルが11番FWを務める23。"
+  },
+  {
+    "id": 115,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アメリカ代表「ユニコーン」のFWディラン・キースの異名として正しいものはどれか。",
+    "choices": [
+      "ギンギンストライカー",
+      "ミスター・ゴール",
+      "ハットトリックボーイ",
+      "上記すべて"
+    ],
+    "answerIndex": 3,
+    "explanation": "ディランは得点能力の高さから「ミスター・ゴール」「ハットトリックボーイ」など複数の異名を持つ13。"
+  },
+  {
+    "id": 116,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ネオ・ジャパンのFWで、元・戦国伊賀島中のキャプテンだった選手は誰か。",
+    "choices": [
+      "幽谷博之",
+      "霧隠才次",
+      "下鶴改",
+      "出右手豊"
+    ],
+    "answerIndex": 1,
+    "explanation": "霧隠はネオ・ジャパンの背番号7（またはFW枠）として登場する。"
+  },
+  {
+    "id": 117,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマジャパンとリトルギガントの決勝戦で、最後に決まった必殺シュート「ジェットストリーム」を放った3人は誰か。",
+    "choices": [
+      "円堂、豪炎寺、虎丸",
+      "円堂、豪炎寺、ヒロト",
+      "豪炎寺、虎丸、ヒロト",
+      "円堂、鬼道、不動"
+    ],
+    "answerIndex": 0,
+    "explanation": "円堂がゴールを飛び出し、豪炎寺、虎丸と共に放った最強の連携シュート5。"
+  },
+  {
+    "id": 118,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム『イナズマイレブン3』で、レベル99時のGPが最も高い「真・帝国学園」のメンバーは誰か。",
+    "choices": [
+      "たかなし",
+      "ふどう",
+      "げんおう",
+      "さくま"
+    ],
+    "answerIndex": 0,
+    "explanation": "攻略Wikiのデータによると、たかなしのGPは138でチーム内トップクラスである24。"
+  },
+  {
+    "id": 119,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イタリア代表「オルフェウス」のMF、ジャンルカ・ザナルディの背番号は何か。",
+    "choices": [
+      "8",
+      "9",
+      "11",
+      "16"
+    ],
+    "answerIndex": 3,
+    "explanation": "ジャンルカは背番号16を着用している16。"
+  },
+  {
+    "id": 120,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム『イナズマイレブン2』で、隠しキャラ「ヒデナカタ」をスカウトするための条件に含まれないものはどれか。",
+    "choices": [
+      "チームレベルがマスターランク",
+      "バトル回数が一定以上",
+      "仲間キャラの数が一定以上",
+      "全ての宝箱を開けている"
+    ],
+    "answerIndex": 3,
+    "explanation": "ヒデナカタの条件は非常に厳しいが（Lv、仲間数、バトル数、特定ルート会話）、宝箱コンプリートは条件ではない。"
+  },
+  {
+    "id": 121,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「イナズマ1号」と「イナズマ落とし」を組み合わせた3人技の名前は何か。",
+    "choices": [
+      "イナズマ1号落とし",
+      "スーパーイナズマ落とし",
+      "イナズマブレイクV2",
+      "サンダーボルト1号"
+    ],
+    "answerIndex": 0,
+    "explanation": "円堂、豪炎寺、壁山の3人で放つ技。映画や対カオス戦などで使用された5。"
+  },
+  {
+    "id": 122,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマジャパンの土方雷電が使用する、地面を踏み鳴らして衝撃波を起こすブロック技は何か。",
+    "choices": [
+      "ザ・ウォール",
+      "スーパーしこふみ",
+      "ロックウォールダム",
+      "アイアンウォール"
+    ],
+    "answerIndex": 1,
+    "explanation": "土方のパワーを生かした代表的なディフェンス技5。"
+  },
+  {
+    "id": 123,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマジャパンのマネージャー、目金欠流の双子の弟の名前は何か。",
+    "choices": [
+      "目金一斗",
+      "目金光",
+      "目金力",
+      "目金勇"
+    ],
+    "answerIndex": 0,
+    "explanation": "ゲーム版のスカウトキャラとして登場する弟。兄よりもサッカーの才能があるとされる。"
+  },
+  {
+    "id": 124,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「ザ・キングダム」のロニージョが使用する必殺シュート「ストライクサンバ」のゲーム内属性は何か。",
+    "choices": [
+      "火",
+      "林",
+      "風",
+      "山"
+    ],
+    "answerIndex": 3,
+    "explanation": "ロニージョは火属性だが、技「ストライクサンバ」は山属性に設定されている5。"
+  },
+  {
+    "id": 125,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アニメで円堂守たちがフットボールフロンティア決勝戦の前に特訓に使用した、雷門中にある秘密の施設の名前は何か。",
+    "choices": [
+      "イナビカリ修練場",
+      "雷門地下道",
+      "伝説の特訓場",
+      "秘密の地下室"
+    ],
+    "answerIndex": 0,
+    "explanation": "理事長が作った最新鋭の特訓施設で、後のシリーズでも改修され使用される。"
+  },
+  {
+    "id": 126,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ネオ・ジャパンのメンバーで、元・御影専農中の「下鶴改」の背番号は何か。",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 0,
+    "explanation": "下鶴改はネオ・ジャパンでは背番号6を着用している8。"
+  },
+  {
+    "id": 127,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「ジ・エンパイア」の正GK、ホルヘ・オルテガの背番号は何か。",
+    "choices": [
+      "1",
+      "12",
+      "20",
+      "21"
+    ],
+    "answerIndex": 0,
+    "explanation": "ホルヘは背番号1。ミリオンハンズなどの技を使う15。"
+  },
+  {
+    "id": 128,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イタリア代表「オルフェウス」の最強技「オーディンソード」を使用する選手は誰か。",
+    "choices": [
+      "フィディオ・アルデナ",
+      "パオロ・ビアンキ",
+      "ラファエレ・ジェネラーニ",
+      "マーク・クルーガー"
+    ],
+    "answerIndex": 0,
+    "explanation": "魔法陣を描いてシュートを放つ、フィディオの最強技5。"
+  },
+  {
+    "id": 129,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ジェミニストームのGK、ゴルレオの本名は何か。",
+    "choices": [
+      "五流玲於",
+      "根室君之",
+      "砂木沼治",
+      "ゼル"
+    ],
+    "answerIndex": 0,
+    "explanation": "ゴルレオは巨漢のGKで、本名は五流玲於（ごりゅう れお）10。"
+  },
+  {
+    "id": 130,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イナズマジャパンの控えGK、立向居勇気の背番号は何か。",
+    "choices": [
+      "1",
+      "12",
+      "20",
+      "21"
+    ],
+    "answerIndex": 2,
+    "explanation": "立向居は背番号20。円堂が1番（または15番）であるため、控え番号となっている12。"
+  },
+  {
+    "id": 131,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「ダイヤモンドダスト」のメンバー名の由来となっているテーマは何か。",
+    "choices": [
+      "宝石",
+      "花の名前",
+      "氷や冷気、寒冷地の事象",
+      "宇宙の星々"
+    ],
+    "answerIndex": 2,
+    "explanation": "アイシー、アイキュー、バレン（Barren）、クララなど、寒さに関連する言葉が多い10。"
+  },
+  {
+    "id": 132,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "帝国学園の佐久間次郎が、真・帝国学園時代に使用した眼帯の中に隠していたもの（アニメ設定）は何か。",
+    "choices": [
+      "通信機",
+      "エイリア石",
+      "特に何もない",
+      "コンタクトレンズ"
+    ],
+    "answerIndex": 2,
+    "explanation": "眼帯はキャラクターの特徴であり、真・帝国時代も特別なギミックは描写されていない。"
+  },
+  {
+    "id": 133,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イギリス代表「ナイツオブクィーン」のエース、エドガー・バルチナスの最強シュート「エクスカリバー」の特徴は何か。",
+    "choices": [
+      "ゴールに近いほど威力が上がる",
+      "ゴールから遠いほど威力が上がる",
+      "味方の人数が多いほど威力が上がる",
+      "相手の技を反射する"
+    ],
+    "answerIndex": 1,
+    "explanation": "長距離から放つことで加速し、威力が増大するロングシュート技5。"
+  },
+  {
+    "id": 134,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム『イナズマイレブン3』で、チームレベルが上がると出現する「真・帝国学園」のメンバーで、唯一の女子選手は誰か。",
+    "choices": [
+      "たかなし",
+      "リカ",
+      "塔子",
+      "ウルビダ"
+    ],
+    "answerIndex": 0,
+    "explanation": "小鳥遊忍は真・帝国学園の紅一点として登場するMFである10。"
+  },
+  {
+    "id": 135,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "イギリス代表「ナイツオブクィーン」のMF、ゲイリー・リンクスの背番号は何か。",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 1,
+    "explanation": "ゲイリーは背番号7。モヒカンヘアが特徴18。"
+  },
+  {
+    "id": 136,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アメリカ代表「ユニコーン」の背番号8番の選手は誰か。",
+    "choices": [
+      "ショーン・ピアース",
+      "ディラン・キース",
+      "トニー・ストライダス",
+      "ドモン・アスカ"
+    ],
+    "answerIndex": 0,
+    "explanation": "ショーンは背番号8のMF13。"
+  },
+  {
+    "id": 137,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「リトルギガント」のMF、マキシ・クゥの背番号は何か。",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 3,
+    "explanation": "マキシは雷門の松野（マックス）に対応する選手で、背番号9（アニメ版マックスの番号）をつけていることが多い。"
+  },
+  {
+    "id": 138,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "必殺技「タイガーストーム」は、誰と誰の連携技か。",
+    "choices": [
+      "豪炎寺と虎丸",
+      "豪炎寺とヒロト",
+      "虎丸と円堂",
+      "豪炎寺と吹雪"
+    ],
+    "answerIndex": 0,
+    "explanation": "虎丸のタイガードライブに豪炎寺が爆熱ストームを合わせる連携技5。"
+  },
+  {
+    "id": 139,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "劇場版「最強軍団オーガ襲来」の主題歌「スーパー立ち上がリーヨ！」を歌っているのは誰か。",
+    "choices": [
+      "T-Pistonz+KMC",
+      "Berryz工房",
+      "イナズマオールスターズ",
+      "twe'lv"
+    ],
+    "answerIndex": 0,
+    "explanation": "初代OPのアレンジバージョンであり、T-Pistonz+KMCが担当している。"
+  },
+  {
+    "id": 140,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム『イナズマイレブン2』で、クリア後に戦える「ウラ・ライモン」には登場しない選手は誰か。",
+    "choices": [
+      "杉森威",
+      "西垣守",
+      "アフロディ",
+      "影山零治"
+    ],
+    "answerIndex": 3,
+    "explanation": "ウラ・ライモン（または闇の対戦ルート等のチーム）は、ダークエンペラーズ等の一部の選手が出るが、影山は選手としては登場しない。"
+  },
+  {
+    "id": 141,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アニメ第68話、日本代表選考試合でBチームのキャプテンを務めたのは誰か。",
+    "choices": [
+      "鬼道有人",
+      "円堂守",
+      "豪炎寺修也",
+      "栗松鉄平"
+    ],
+    "answerIndex": 0,
+    "explanation": "円堂率いるAチームに対し、鬼道はBチームを率いて戦術を駆使した。"
+  },
+  {
+    "id": 142,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「天空の使徒」のキャプテン、セインのゲーム内属性は何か。",
+    "choices": [
+      "山",
+      "風",
+      "林",
+      "火"
+    ],
+    "answerIndex": 1,
+    "explanation": "セインは天使をモチーフにしており、エンゼルボールなどの技が風属性カテゴリにあるため、基本属性は風とされる（※Wikiデータ5参照）。"
+  },
+  {
+    "id": 143,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アメリカ代表「ユニコーン」の監督の名前は何か。",
+    "choices": [
+      "アーロン・アダムス",
+      "マック・スクライドル",
+      "ダニエル・スタービン",
+      "レオン・サムス"
+    ],
+    "answerIndex": 1,
+    "explanation": "カウボーイハットを被ったアメリカ代表監督25。"
+  },
+  {
+    "id": 144,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "真・帝国学園の不動明王が使用する、相手を強引に突破するドリブル技は何か。",
+    "choices": [
+      "ジャッジスルー2",
+      "キラーフィールズ",
+      "イリュージョンボール",
+      "ブレイクスルー"
+    ],
+    "answerIndex": 0,
+    "explanation": "ボールを相手にぶつけて突破するラフプレイに近い技5。"
+  },
+  {
+    "id": 145,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「イナズマジャパン」のGK、円堂守の背番号は1だが、控えGK立向居勇気の背番号は20。では、第3のGKとして登録される可能性がある（ゲームシステム上）源田幸次郎がネオ・ジャパンでつけていた背番号は何か。",
+    "choices": [
+      "1",
+      "12",
+      "20",
+      "21"
+    ],
+    "answerIndex": 0,
+    "explanation": "源田はネオ・ジャパンの正GKとして背番号1を着用していた8。"
+  },
+  {
+    "id": 146,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "円堂守の祖父、円堂大介が生存していた国はどこか。",
+    "choices": [
+      "コトアール",
+      "ブラジル",
+      "イタリア",
+      "アメリカ"
+    ],
+    "answerIndex": 0,
+    "explanation": "大介はコトアールでリトルギガントを育成していた。"
+  },
+  {
+    "id": 147,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "アルゼンチン代表「ジ・エンパイア」のMF、パブロ・カスティージョの背番号は何か。",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answerIndex": 1,
+    "explanation": "パブロは背番号9のMFである15。"
+  },
+  {
+    "id": 148,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "必殺技「ザ・バース」を使用する2人は誰か。",
+    "choices": [
+      "ヒロトと吹雪",
+      "豪炎寺と吹雪",
+      "豪炎寺とヒロト",
+      "ヒロトと緑川"
+    ],
+    "answerIndex": 0,
+    "explanation": "DNAの螺旋のような軌道を描く、ヒロトと吹雪の連携シュート5。"
+  },
+  {
+    "id": 149,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "「ジ・オーガ」に登場するバダップ・スリードが使用する最強シュート技は何か。",
+    "choices": [
+      "デスブレイク",
+      "デススピアー",
+      "デスレイン",
+      "オーディンソード"
+    ],
+    "answerIndex": 0,
+    "explanation": "バダップ、エスカバ、ミストレの3人で放つオーガ最強の技5。単体技はデススピアー。"
+  },
+  {
+    "id": 150,
+    "category": "inazuma_eleven",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ゲーム『イナズマイレブン』第1作の発売日はいつか。",
+    "choices": [
+      "2008年8月22日",
+      "2009年10月1日",
+      "2010年7月1日",
+      "2008年12月25日"
+    ],
+    "answerIndex": 0,
+    "explanation": "伝説の始まりとなったニンテンドーDS用ソフトの発売日1。\n結論：『イナズマイレブン』円堂守編の総括"
+  }
+]
