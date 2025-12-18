@@ -7941,7 +7941,7 @@
   },
   {
     "id": 3380,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "本作の主人公であり、帝丹高校2年生の高校生探偵、工藤新一が、謎の組織によって幼児化した姿の名前は何か。",
@@ -7956,7 +7956,7 @@
   },
   {
     "id": 3381,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンの正体である工藤新一の幼馴染であり、空手部の主将を務めるヒロインの名前は何か。",
@@ -7971,7 +7971,7 @@
   },
   {
     "id": 3382,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "毛利蘭の父親であり、かつては警視庁捜査一課の刑事だった私立探偵の名前は何か。",
@@ -7986,7 +7986,7 @@
   },
   {
     "id": 3383,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンの正体を知る数少ない協力者であり、数々の探偵グッズを発明した隣人の名前は何か。",
@@ -8001,7 +8001,7 @@
   },
   {
     "id": 3384,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "元「黒ずくめの組織」の研究員であり、現在はコナンと同じく幼児化して少年探偵団に所属している少女の名前は何か。",
@@ -8016,7 +8016,7 @@
   },
   {
     "id": 3385,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "大阪から来た高校生探偵で、コナン（新一）のライバル兼親友である人物は誰か。",
@@ -8031,7 +8031,7 @@
   },
   {
     "id": 3386,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "鈴木財閥の令嬢であり、蘭の親友であるキャラクターは誰か。",
@@ -8046,7 +8046,7 @@
   },
   {
     "id": 3387,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンが所属する「少年探偵団」のメンバーで、うな重が大好物な少年は誰か。",
@@ -8061,7 +8061,7 @@
   },
   {
     "id": 3388,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "少年探偵団のメンバーで、科学や論理的思考に長け、敬語で話す少年は誰か。",
@@ -8076,7 +8076,7 @@
   },
   {
     "id": 3389,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "少年探偵団の紅一点（初期メンバー）で、コナンに好意を寄せている少女は誰か。",
@@ -8091,7 +8091,7 @@
   },
   {
     "id": 3390,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンが犯人を追跡したり移動したりする際に使用する、ソーラーパワーで動く乗り物は何か。",
@@ -8106,7 +8106,7 @@
   },
   {
     "id": 3391,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンが小五郎などの声を借りて推理を披露する際に使用する、蝶ネクタイ型の道具は何か。",
@@ -8121,7 +8121,7 @@
   },
   {
     "id": 3392,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンが犯人を制圧する際に使用する、足のツボを刺激して筋力を高める靴は何か。",
@@ -8136,7 +8136,7 @@
   },
   {
     "id": 3393,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "少年探偵団が互いに連絡を取り合うために持っている、トランシーバー機能付きのバッジは何か。",
@@ -8151,7 +8151,7 @@
   },
   {
     "id": 3394,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンが普段身につけているメガネで、左側のツルにあるアンテナを伸ばすと犯人の位置を特定できる機能を持つものは何か。",
@@ -8166,7 +8166,7 @@
   },
   {
     "id": 3395,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンが相手を眠らせるために使用する、腕時計型の道具は何か。",
@@ -8181,7 +8181,7 @@
   },
   {
     "id": 3396,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "重い扉を開けたり、物体を持ち上げたりする際に使用される、特殊形状記憶素材で作られたベルト状の道具は何か。",
@@ -8196,7 +8196,7 @@
   },
   {
     "id": 3397,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "黒ずくめの組織の幹部で、工藤新一にAPTX4869を飲ませた張本人は誰か。",
@@ -8211,7 +8211,7 @@
   },
   {
     "id": 3398,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "ジンの弟分であり、常にサングラスをかけて行動を共にしている組織のメンバーは誰か。",
@@ -8226,7 +8226,7 @@
   },
   {
     "id": 3399,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "警視庁捜査一課の警部で、いつも帽子を被っている、小五郎の刑事時代の上司は誰か。",
@@ -8241,7 +8241,7 @@
   },
   {
     "id": 3400,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "警視庁捜査一課の刑事で、佐藤刑事と恋人関係にある人物は誰か。",
@@ -8256,7 +8256,7 @@
   },
   {
     "id": 3401,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "警視庁捜査一課の女性刑事で、かつて松田陣平に想いを寄せられていた人物は誰か。",
@@ -8271,7 +8271,7 @@
   },
   {
     "id": 3402,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "工藤新一の父親で、世界的な推理小説家である人物は誰か。",
@@ -8286,7 +8286,7 @@
   },
   {
     "id": 3403,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "工藤新一の母親で、かつて伝説的な人気を誇った元女優は誰か。",
@@ -8301,7 +8301,7 @@
   },
   {
     "id": 3404,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "毛利蘭の母親で、小五郎とは別居中の敏腕弁護士は誰か。",
@@ -8316,7 +8316,7 @@
   },
   {
     "id": 3405,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "「月下の奇術師」と呼ばれる神出鬼没の大怪盗で、コナンのライバルである人物は誰か。",
@@ -8331,7 +8331,7 @@
   },
   {
     "id": 3406,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "服部平次の幼馴染で、合気道の有段者である少女は誰か。",
@@ -8346,7 +8346,7 @@
   },
   {
     "id": 3407,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "鈴木園子の彼氏で、「蹴撃の貴公子」と呼ばれる空手の達人は誰か。",
@@ -8361,7 +8361,7 @@
   },
   {
     "id": 3408,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "安室透が働いている、毛利探偵事務所の階下にある喫茶店の名前は何か。",
@@ -8376,7 +8376,7 @@
   },
   {
     "id": 3409,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "少年探偵団の担任の先生で、江戸川乱歩マニアの女性教師は誰か。",
@@ -8391,7 +8391,7 @@
   },
   {
     "id": 3410,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンたちが住んでいる架空の町の名前は何か。",
@@ -8406,7 +8406,7 @@
   },
   {
     "id": 3411,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンが通っている小学校の名前は何か。",
@@ -8421,7 +8421,7 @@
   },
   {
     "id": 3412,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "毛利小五郎が探偵として有名になった際に世間で呼ばれている通称は何か。",
@@ -8436,7 +8436,7 @@
   },
   {
     "id": 3413,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンの決め台詞「真実はいつも○○！」の空欄に入る言葉は何か。",
@@ -8451,7 +8451,7 @@
   },
   {
     "id": 3414,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "灰原哀が好きな、フサエ・ブランドのロゴマークのモチーフとなっている植物は何か。",
@@ -8466,7 +8466,7 @@
   },
   {
     "id": 3415,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "少年探偵団がよく見ている、作中の特撮ヒーロー番組の名前は何か。",
@@ -8481,7 +8481,7 @@
   },
   {
     "id": 3416,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "作中に登場する怪獣映画のキャラクターで、大阪の映画会社が制作しているのは何か。",
@@ -8496,7 +8496,7 @@
   },
   {
     "id": 3417,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "蘭が所属している部活動は何か。",
@@ -8511,7 +8511,7 @@
   },
   {
     "id": 3418,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "工藤新一が得意とするスポーツは何か。",
@@ -8526,7 +8526,7 @@
   },
   {
     "id": 3419,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "妃英理が飼っているロシアンブルーの猫の名前は何か。",
@@ -8541,7 +8541,7 @@
   },
   {
     "id": 3420,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "鈴木園子の姉の名前は何か。",
@@ -8556,7 +8556,7 @@
   },
   {
     "id": 3421,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "警視庁捜査一課のトメさんは、どのような職務を担当しているか。",
@@ -8571,7 +8571,7 @@
   },
   {
     "id": 3422,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "千葉刑事の下の名前は何か。",
@@ -8586,7 +8586,7 @@
   },
   {
     "id": 3423,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "安室透の愛車である白いスポーツカーの車種は何か。",
@@ -8601,7 +8601,7 @@
   },
   {
     "id": 3424,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "沖矢昴が住んでいるのはどこか。",
@@ -8616,7 +8616,7 @@
   },
   {
     "id": 3425,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "怪盗キッドが主に狙う獲物の種類は何か。",
@@ -8631,7 +8631,7 @@
   },
   {
     "id": 3426,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "コナンが正体を隠すためにかけているメガネは、当初（阿笠博士の改造前）どのようなものだったか。",
@@ -8646,7 +8646,7 @@
   },
   {
     "id": 3427,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "少年探偵団の元太が父親の仕事を手伝うことがあるが、実家の家業は何か。",
@@ -8661,7 +8661,7 @@
   },
   {
     "id": 3428,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "高木刑事が所属する警視庁の部署はどこか。",
@@ -8676,7 +8676,7 @@
   },
   {
     "id": 3429,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "次のうち、黒ずくめの組織のメンバーではない（コードネームを持たない）人物は誰か。",
@@ -8691,7 +8691,7 @@
   },
   {
     "id": 3430,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "記念すべき劇場版第1作目のタイトルは何か。",
@@ -8706,7 +8706,7 @@
   },
   {
     "id": 3431,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『ゼロの執行人』でメインキャラクターとして活躍した公安警察官は誰か。",
@@ -8721,7 +8721,7 @@
   },
   {
     "id": 3432,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『から紅の恋歌』の主題歌「渡月橋 〜君 想ふ〜」を歌ったアーティストは誰か。",
@@ -8736,7 +8736,7 @@
   },
   {
     "id": 3433,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『黒鉄の魚影』の舞台となった、八丈島近海に建設されたインターポールの海洋施設名は何か。",
@@ -8751,7 +8751,7 @@
   },
   {
     "id": 3434,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『純黒の悪夢』に登場した、記憶喪失となり少年探偵団と交流した組織のメンバーのコードネームは何か。",
@@ -8766,7 +8766,7 @@
   },
   {
     "id": 3435,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『迷宮の十字路』の舞台となった都市はどこか。",
@@ -8781,7 +8781,7 @@
   },
   {
     "id": 3436,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『100万ドルの五稜星』で、怪盗キッドが盗もうとした獲物は何か。",
@@ -8796,7 +8796,7 @@
   },
   {
     "id": 3437,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『異次元の狙撃手』のラストで、その生存が明らかになった重要人物は誰か。",
@@ -8811,7 +8811,7 @@
   },
   {
     "id": 3438,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『11人目のストライカー』で、本人役として声優出演したプロサッカー選手は誰か。",
@@ -8826,7 +8826,7 @@
   },
   {
     "id": 3439,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "EASY",
     "type": "choice",
     "question": "劇場版『天国へのカウントダウン』で、少年探偵団がビルから脱出するために利用した物理現象は何か。",
@@ -8841,7 +8841,7 @@
   },
   {
     "id": 3440,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "警視庁公安部に所属し、降谷零（安室透）の直属の部下として活動する刑事は誰か。",
@@ -8856,7 +8856,7 @@
   },
   {
     "id": 3441,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "長野県警の警部で、隻眼（片目）と杖をついている姿が特徴的な人物は誰か。",
@@ -8871,7 +8871,7 @@
   },
   {
     "id": 3442,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "諸伏高明警部の弟であり、かつて黒ずくめの組織に潜入していた公安警察官のコードネームは何か。",
@@ -8886,7 +8886,7 @@
   },
   {
     "id": 3443,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "佐藤刑事の初恋の人であり、松田陣平の親友でもあった、7年前に殉職した爆発物処理班の刑事は誰か。",
@@ -8901,7 +8901,7 @@
   },
   {
     "id": 3444,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "警視庁交通部の宮本由美の元彼（現在は復縁）で、「太閤名人」と呼ばれる将棋棋士は誰か。",
@@ -8916,7 +8916,7 @@
   },
   {
     "id": 3445,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "鈴木園子の伯父で、自身の新聞記事の一面を飾るために怪盗キッドに挑戦状を送り続ける財閥相談役は誰か。",
@@ -8931,7 +8931,7 @@
   },
   {
     "id": 3446,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "警視庁捜査一課の管理官（目暮警部の上司）で、顔に火傷の痕があり、右目が義眼であると疑われている人物は誰か。",
@@ -8946,7 +8946,7 @@
   },
   {
     "id": 3447,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "千葉刑事の幼馴染であり、警視庁交通部に配属された初恋の相手は誰か。",
@@ -8961,7 +8961,7 @@
   },
   {
     "id": 3448,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "警視庁捜査二課の警部で、怪盗キッドを執拗に追い続けている人物は誰か。",
@@ -8976,7 +8976,7 @@
   },
   {
     "id": 3449,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "長野県警の大和敢助と幼馴染であり、一度結婚して退職したが、後に復職した女性刑事は誰か。",
@@ -8991,7 +8991,7 @@
   },
   {
     "id": 3450,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "黒ずくめの組織のNo.2である「ラム」の正体として判明した人物は誰か。",
@@ -9006,7 +9006,7 @@
   },
   {
     "id": 3451,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "世良真純が母親である「領域外の妹（メアリー）」を指して呼ぶ愛称は何か。",
@@ -9021,7 +9021,7 @@
   },
   {
     "id": 3452,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "帝丹小学校1年B組の副担任として赴任してきた、右目が見えていないことが示唆されている女性教師は誰か。",
@@ -9036,7 +9036,7 @@
   },
   {
     "id": 3453,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "赤井秀一が組織に潜入していた時のコードネームは何か。",
@@ -9051,7 +9051,7 @@
   },
   {
     "id": 3454,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "安室透（バーボン）が赤井秀一を恨んでいる主な理由は何か。",
@@ -9066,7 +9066,7 @@
   },
   {
     "id": 3455,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "灰原哀が組織にいた頃、両親の研究を引き継いで開発していた薬の名前は何か。",
@@ -9081,7 +9081,7 @@
   },
   {
     "id": 3456,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "沖矢昴の正体は赤井秀一だが、彼が首元を隠すために常に着ている服の特徴は何か。",
@@ -9096,7 +9096,7 @@
   },
   {
     "id": 3457,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "黒ずくめの組織のメンバー「キャンティ」と「コルン」が得意とする役割は何か。",
@@ -9111,7 +9111,7 @@
   },
   {
     "id": 3458,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "黒ずくめの組織に潜入していたCIA諜報員、イーサン・本堂の娘であり、現在「キール」として潜入しているのは誰か。",
@@ -9126,7 +9126,7 @@
   },
   {
     "id": 3459,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "組織のボス「あの方」のメールアドレスのプッシュ音が、ある童謡のメロディに聞こえることが判明したが、その曲名は何か。",
@@ -9141,7 +9141,7 @@
   },
   {
     "id": 3460,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "服部平次の決め台詞としてネット上で有名だが、原作漫画では一度も正確には言っていないセリフはどれか。",
@@ -9156,7 +9156,7 @@
   },
   {
     "id": 3461,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "灰原哀が好きなJリーグのチームはどこか。",
@@ -9171,7 +9171,7 @@
   },
   {
     "id": 3462,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "コナン（新一）がロンドンで蘭に告白した際、「お前は○○○な厄介な事件なんだよ！」と言ったが、○○○に入る言葉は何か。",
@@ -9186,7 +9186,7 @@
   },
   {
     "id": 3463,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "少年探偵団の円谷光彦が、歩美以外に好意を寄せている相手は誰か。",
@@ -9201,7 +9201,7 @@
   },
   {
     "id": 3464,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "妃英理が小五郎と別居するきっかけとなった、小五郎のデリカシーのない発言は、英理の何に対するものだったか。",
@@ -9216,7 +9216,7 @@
   },
   {
     "id": 3465,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "安室透が得意料理としてコナンたちに振る舞い、ポアロの人気メニューとなったものは何か。",
@@ -9231,7 +9231,7 @@
   },
   {
     "id": 3466,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "鈴木園子が前髪を下ろした際、組織のメンバー（ジン）に誰と間違われて狙撃されそうになったか。",
@@ -9246,7 +9246,7 @@
   },
   {
     "id": 3467,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "世良真純が得意とする、兄・赤井秀一から教わった武術は何か。",
@@ -9261,7 +9261,7 @@
   },
   {
     "id": 3468,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "怪盗キッド（黒羽快斗）が極度に苦手としているもの（恐怖症）は何か。",
@@ -9276,7 +9276,7 @@
   },
   {
     "id": 3469,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "コナンが修学旅行に参加するために、灰原哀から貰った解毒剤の服用条件として、連続服用するとどうなると言われたか。",
@@ -9291,7 +9291,7 @@
   },
   {
     "id": 3470,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "コナンが服部平次に渡した「お守り」の中に入っており、平次の命を銃弾から守ったものは何か。",
@@ -9306,7 +9306,7 @@
   },
   {
     "id": 3471,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "犯人追跡メガネの充電が切れた際、予備電源として機能するような描写はないが、発信機の電池はどれくらい持つとされているか（初期設定）。",
@@ -9321,7 +9321,7 @@
   },
   {
     "id": 3472,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "コナンが新一に戻ったロンドン編で、帰国するために変装や解毒薬の手配を手伝ってくれた人物は誰か。",
@@ -9336,7 +9336,7 @@
   },
   {
     "id": 3473,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "阿笠博士のクイズは主に何に基づいているか。",
@@ -9351,7 +9351,7 @@
   },
   {
     "id": 3474,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "コナンが麻酔銃を使う際、小五郎がいない場合に「代役」として利用されたことがある人物は誰か。",
@@ -9366,7 +9366,7 @@
   },
   {
     "id": 3475,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "安室透（バーボン）が得意とし、コナンにもコツ（蒸気を利用するなど）を教えた料理は何か。",
@@ -9381,7 +9381,7 @@
   },
   {
     "id": 3476,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "灰原哀がフサエ・ブランドの限定ストラップを無くした際、探して見つけてくれた人物は誰か。",
@@ -9396,7 +9396,7 @@
   },
   {
     "id": 3477,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "組織のメンバーが使用する拳銃で、ジンが愛用しているモデルは何か。",
@@ -9411,7 +9411,7 @@
   },
   {
     "id": 3478,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "コナンが蝶ネクタイ型変声機で小五郎の声を出す際、変声機のダイヤル番号はいくつか（初期設定）。",
@@ -9426,7 +9426,7 @@
   },
   {
     "id": 3479,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "阿笠博士が灰原哀に内緒でこっそり食べていることを理由に、灰原から監視・制限されているものは何か。",
@@ -9441,7 +9441,7 @@
   },
   {
     "id": 3480,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『紺青の拳』の舞台となった国はどこか。",
@@ -9456,7 +9456,7 @@
   },
   {
     "id": 3481,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『ハロウィンの花嫁』で、コナンたちが対峙した爆弾魔「プラーミャ」と過去に因縁があったグループは誰か。",
@@ -9471,7 +9471,7 @@
   },
   {
     "id": 3482,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『ベイカー街の亡霊』で、コナンたちが挑んだVRゲームの世界観は何か。",
@@ -9486,7 +9486,7 @@
   },
   {
     "id": 3483,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『探偵たちの鎮魂歌』で、コナンたちのIDに仕掛けられたギミックは何か。",
@@ -9501,7 +9501,7 @@
   },
   {
     "id": 3484,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『世紀末の魔術師』で、怪盗キッドが変装していた人物は誰か。",
@@ -9516,7 +9516,7 @@
   },
   {
     "id": 3485,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『沈黙の15分』で、コナンがダム決壊による鉄砲水を止めるために起こした行動は何か。",
@@ -9531,7 +9531,7 @@
   },
   {
     "id": 3486,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『ゼロの執行人』で、安室透が「僕の恋人は…」と言った後に続けた言葉は何か。",
@@ -9546,7 +9546,7 @@
   },
   {
     "id": 3487,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『緋色の弾丸』で、物語の鍵となった真空超電導リニアの最高時速はどれくらいか。",
@@ -9561,7 +9561,7 @@
   },
   {
     "id": 3488,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『紺碧の棺』の主題歌を担当したアーティストは誰か。",
@@ -9576,7 +9576,7 @@
   },
   {
     "id": 3489,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "NORMAL",
     "type": "choice",
     "question": "劇場版『業火の向日葵』で、怪盗キッドがゴッホの「ひまわり」を守るために変装していた人物（警備担当）は誰か。",
@@ -9591,7 +9591,7 @@
   },
   {
     "id": 3490,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "ジンの愛車ポルシェ356Aのナンバープレートの番号は何か。",
@@ -9606,7 +9606,7 @@
   },
   {
     "id": 3491,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "松田陣平が殉職する直前、佐藤刑事に送ったメールの最後に書かれていた追伸の内容は何か。",
@@ -9621,7 +9621,7 @@
   },
   {
     "id": 3492,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "工藤新一（コナン）の誕生日はいつか。",
@@ -9636,7 +9636,7 @@
   },
   {
     "id": 3493,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "黒羽快斗（怪盗キッド）の誕生日はいつか。",
@@ -9651,7 +9651,7 @@
   },
   {
     "id": 3494,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "灰原哀（宮野志保）が組織の研究所を脱出する際、身を隠した場所（侵入経路）はどこか。",
@@ -9666,7 +9666,7 @@
   },
   {
     "id": 3495,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "世良真純の愛車（バイク）の車種は何か。",
@@ -9681,7 +9681,7 @@
   },
   {
     "id": 3496,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "妃英理の秘書として働いている女性の名前は何か。",
@@ -9696,7 +9696,7 @@
   },
   {
     "id": 3497,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "警視庁捜査一課で、白鳥警部の妹の結婚式の際に高木刑事が遭遇した、佐藤刑事のお見合い相手は誰だったか。",
@@ -9711,7 +9711,7 @@
   },
   {
     "id": 3498,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "アニメ『名探偵コナン』において、高木渉刑事と小嶋元太の声優は同一人物だが、それは誰か。",
@@ -9726,7 +9726,7 @@
   },
   {
     "id": 3499,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "「領域外の妹」という言葉が示す正体の意味（暗号）は何か。",
@@ -9741,7 +9741,7 @@
   },
   {
     "id": 3500,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "黒ずくめの組織の「ピスコ」が、正体である自動車メーカー会長として活動していた際の名前は何か。",
@@ -9756,7 +9756,7 @@
   },
   {
     "id": 3501,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "羽田浩司が残したダイイングメッセージ「PUT ON MASCARA」の鏡文字から、コナンたちが「ASACA」と「RUM」を導き出す過程で、実際に現場から消えていた（メッセージとなった）文字の組み合わせはどれか。",
@@ -9771,7 +9771,7 @@
   },
   {
     "id": 3502,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "コナンが安室透のスマホのロックを解除しようとした際に推測したパスワード「4869」の根拠は何か。",
@@ -9786,7 +9786,7 @@
   },
   {
     "id": 3503,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "松田陣平が警視庁捜査一課強行犯三係に転属してきたのは、殉職の何日前か。",
@@ -9801,7 +9801,7 @@
   },
   {
     "id": 3504,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "羽田秀吉が七冠を達成した際に、宮本由美に渡した（が、由美が捨ててしまったと思われた）封筒の中身は何か。",
@@ -9816,7 +9816,7 @@
   },
   {
     "id": 3505,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "コナン（新一）がロンドンでホームズの弟子を名乗った相手である、ウィンブルドンのテニス選手は誰か。",
@@ -9831,7 +9831,7 @@
   },
   {
     "id": 3506,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "黒ずくめの組織のメンバー「コルン」が、かつてカルバドスが死んだ原因を作ったとして嫌っている相手は誰か。",
@@ -9846,7 +9846,7 @@
   },
   {
     "id": 3507,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "灰原哀の母、宮野エレーナが組織内で呼ばれていた異名は何か。",
@@ -9861,7 +9861,7 @@
   },
   {
     "id": 3508,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "スコッチ（諸伏景光）が自決した際、その引き金を引く原因となった（足音を聞かせてしまった）人物は誰か。",
@@ -9876,7 +9876,7 @@
   },
   {
     "id": 3509,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "服部平次の通う「改方（かいほう）学園」の名前の由来となった、時代劇の役職は何か。",
@@ -9891,7 +9891,7 @@
   },
   {
     "id": 3510,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "小嶋元太の家の家業は何か。",
@@ -9906,7 +9906,7 @@
   },
   {
     "id": 3511,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "灰原哀がフサエブランドの限定ストラップを無くした際、必死に探して見つけてくれた人物は誰か。",
@@ -9921,7 +9921,7 @@
   },
   {
     "id": 3512,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "長野県警の大和敢助の名前の由来となった日本の戦国武将は誰か。",
@@ -9936,7 +9936,7 @@
   },
   {
     "id": 3513,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "赤井秀一の父、赤井務武が残した言葉で、秀一がモットーとしている「○○：○○」の精神とは何か。",
@@ -9951,7 +9951,7 @@
   },
   {
     "id": 3514,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "少年探偵団の円谷光彦の姉の名前は何か。",
@@ -9966,7 +9966,7 @@
   },
   {
     "id": 3515,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "鈴木園子には姉の綾子がいるが、綾子の婚約者の名前は何か。",
@@ -9981,7 +9981,7 @@
   },
   {
     "id": 3516,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "妃英理が小五郎と別居するきっかけとなった、小五郎のデリカシーのない発言「こんな不味いもの…」の後、英理はどうしたか。",
@@ -9996,7 +9996,7 @@
   },
   {
     "id": 3517,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "警視庁捜査二課で、中森警部の部下としてキッド捜査に当たる、若手の刑事の名前は何か。",
@@ -10011,7 +10011,7 @@
   },
   {
     "id": 3518,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "帝丹高校の校医であり、バスケ部コーチも務めていたが、実はベルモットが変装していた人物は誰か。",
@@ -10026,7 +10026,7 @@
   },
   {
     "id": 3519,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "羽田浩司殺害事件（17年前）において、アマンダ・ヒューズが残したダイイングメッセージに関わるとされる、将棋の駒は何か。",
@@ -10041,7 +10041,7 @@
   },
   {
     "id": 3520,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "長野県警の「県警の黒い闇」事件で、大和敢助が疑われた際に使用された、武田信玄の軍略になぞらえた暗号は何か。",
@@ -10056,7 +10056,7 @@
   },
   {
     "id": 3521,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "灰原哀の父親、宮野厚司がかつて所属していた製薬会社の名前は何か（組織に入る前）。",
@@ -10071,7 +10071,7 @@
   },
   {
     "id": 3522,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『から紅の恋歌』で登場した「大岡紅葉」が、服部平次を運命の人と思い込むきっかけとなった、幼少期のカルタ大会での平次の言葉「しのぶれど…」の聞き間違いの内容は何か。",
@@ -10086,7 +10086,7 @@
   },
   {
     "id": 3523,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "黒ずくめの組織のNOC（スパイ）リストに含まれており、劇場版『純黒の悪夢』で殺害された「スタウト」はどこの国の諜報員か。",
@@ -10101,7 +10101,7 @@
   },
   {
     "id": 3524,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "安室透と風見裕也が所属する「警察庁警備局警備企画課」の通称は何か。",
@@ -10116,7 +10116,7 @@
   },
   {
     "id": 3525,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "犯人追跡メガネの左側のツルにあるスイッチを入れると、アンテナが伸びてレーダーが表示されるが、同時にできるもう一つの機能は何か。",
@@ -10131,7 +10131,7 @@
   },
   {
     "id": 3526,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "『紅の修学旅行』で、蘭が新一の頬にキスをしたことに対し、新一がメールで送った交際を確定させる言葉は何か。",
@@ -10146,7 +10146,7 @@
   },
   {
     "id": 3527,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "「少年探偵団」の顧問を自称する小林先生が、かつて白鳥警部と出会った際、彼の怪我の手当てに使ったものは何か。",
@@ -10161,7 +10161,7 @@
   },
   {
     "id": 3528,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "安室透（バーボン）が毛利小五郎に接近した、組織から与えられた本来の任務は何か。",
@@ -10176,7 +10176,7 @@
   },
   {
     "id": 3529,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "帝丹小学校の卒業生であり、現在は帝丹高校に通っている、空手部元主将で蘭の先輩にあたる人物は誰か。",
@@ -10191,7 +10191,7 @@
   },
   {
     "id": 3530,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "安室透が爆弾解体の技術を教わったと語っている、警察学校時代の友人は誰か。",
@@ -10206,7 +10206,7 @@
   },
   {
     "id": 3531,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "目暮警部が帽子を脱がない理由は「古傷を隠すため」だが、その傷はどのようにしてついたものか。",
@@ -10221,7 +10221,7 @@
   },
   {
     "id": 3532,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "灰原哀の好きなサンドイッチの具は何か（博士に作らせたり、安室のサンドイッチの評価基準になったりしたもの）。",
@@ -10236,7 +10236,7 @@
   },
   {
     "id": 3533,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "コナンが所有するスマートフォン（または携帯電話）の機種は、新一と蘭でどのようになっているか。",
@@ -10251,7 +10251,7 @@
   },
   {
     "id": 3534,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "黒ずくめの組織のボス「烏丸蓮耶」の正体を示唆するシルエットが登場した際、彼が肩に乗せていた動物は何か。",
@@ -10266,7 +10266,7 @@
   },
   {
     "id": 3535,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "諸伏景光（スコッチ）の兄、諸伏高明警部が弟の死を悟った際、遺品として届いたものは何か。",
@@ -10281,7 +10281,7 @@
   },
   {
     "id": 3536,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "脇田兼則（ラム）が左目を眼帯で隠している理由として周囲に説明しているものは何か。",
@@ -10296,7 +10296,7 @@
   },
   {
     "id": 3537,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "キャメル捜査官が組織のメンバー「コルン」に顔を見られた際、コルンは何と言ってキャメルを覚えていたか。",
@@ -10311,7 +10311,7 @@
   },
   {
     "id": 3538,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "工藤優作が書いた小説『闇の男爵（ナイトバロン）』シリーズの主人公はどのような職業か。",
@@ -10326,7 +10326,7 @@
   },
   {
     "id": 3539,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "コナンが愛用している「キック力増強シューズ」のスイッチ（ダイヤル）は、靴のどの部分にあるか。",
@@ -10341,7 +10341,7 @@
   },
   {
     "id": 3540,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『瞳の中の暗殺者』で、蘭が記憶を取り戻すきっかけとなった、新一（コナン）の行動は何か。",
@@ -10356,7 +10356,7 @@
   },
   {
     "id": 3541,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『戦慄の楽譜』で、コナンと秋庭怜子が遠く離れた場所から意思疎通するために使った方法は何か。",
@@ -10371,7 +10371,7 @@
   },
   {
     "id": 3542,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『異次元の狙撃手』で、犯人が使用していた狙撃銃の弾丸の種類は何か（特殊な弾丸）。",
@@ -10386,7 +10386,7 @@
   },
   {
     "id": 3543,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『紺碧の棺』の主題歌「ゆるぎないものひとつ」を歌ったB'zは、本作で劇場版コナンの主題歌を担当するのは何回目だったか。",
@@ -10401,7 +10401,7 @@
   },
   {
     "id": 3544,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『100万ドルの五稜星』で、服部平次と怪盗キッドの顔が瓜二つである理由について、どのような新事実が明かされたか。",
@@ -10416,7 +10416,7 @@
   },
   {
     "id": 3545,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『水平線上の陰謀』で、毛利小五郎が犯人を特定した決め手となった、犯人のある癖とは何か。",
@@ -10431,7 +10431,7 @@
   },
   {
     "id": 3546,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『銀翼の奇術師』で、飛行機を着陸させるために蘭たちが向かった場所はどこか。",
@@ -10446,7 +10446,7 @@
   },
   {
     "id": 3547,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『探偵たちの鎮魂歌』に登場する横浜海洋大学犯罪研究会の部長であり、事件の黒幕「伊東末彦」の声優は誰か。",
@@ -10461,7 +10461,7 @@
   },
   {
     "id": 3548,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版『ハロウィンの花嫁』で、安室透が首に装着された首輪型爆弾の中身（液体）は何色だったか。",
@@ -10476,7 +10476,7 @@
   },
   {
     "id": 3549,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "劇場版の監督として、『紺青の拳』から『ハロウィンの花嫁』、『100万ドルの五稜星』などのヒット作を手掛けた女性監督は誰か。",
@@ -10491,7 +10491,7 @@
   },
   {
     "id": 3550,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "警視庁捜査一課で、高木刑事の教育係を務めた先輩刑事（故人）は誰か。",
@@ -10506,7 +10506,7 @@
   },
   {
     "id": 3551,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "灰原哀が好きなブランド「フサエ・ブランド」のデザイナー、フサエ・キャンベルの運転手をしている人物は誰か。",
@@ -10521,7 +10521,7 @@
   },
   {
     "id": 3552,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "鈴木園子が憧れている「怪盗キッド」に対して、彼氏である京極真がとった行動は何か。",
@@ -10536,7 +10536,7 @@
   },
   {
     "id": 3553,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "コナンが「江戸川コナン」と名乗る際、本棚にあった本を見てとっさに組み合わせた名前だが、江戸川乱歩以外に目に入った作家は誰か。",
@@ -10551,7 +10551,7 @@
   },
   {
     "id": 3554,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "灰原哀がAPTX4869の解毒剤を作るために必要としている、あるお酒の名前は何か。",
@@ -10566,7 +10566,7 @@
   },
   {
     "id": 3555,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "少年探偵団の光彦が、消えた歩美と元太を探すためにとった行動（推理）において、彼が参考にした探偵団バッジの機能は何か。",
@@ -10581,7 +10581,7 @@
   },
   {
     "id": 3556,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "警視庁捜査一課強行犯三係に所属し、高木刑事とよくコンビを組む太めの刑事の名前は何か。",
@@ -10596,7 +10596,7 @@
   },
   {
     "id": 3557,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "鈴木次郎吉の愛犬の名前は何か。",
@@ -10611,7 +10611,7 @@
   },
   {
     "id": 3558,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "妃英理の得意料理（と本人は思っているが、実は破壊的な味）は何か。",
@@ -10626,7 +10626,7 @@
   },
   {
     "id": 3559,
-    "category": "detective_conan",
+    "category": "conan",
     "difficulty": "HARD",
     "type": "choice",
     "question": "黒ずくめの組織のメンバー「ベルモット」が、工藤新一と毛利蘭を特別視して呼ぶ愛称はそれぞれ何か。",
