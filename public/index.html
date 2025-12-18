@@ -15,7 +15,53 @@
 </head>
 
 <body>
-  <div id="app">
+  <!-- ログイン画面セクション -->
+  <section id="auth-section">
+    <h1>オンラインクイズバトル</h1>
+
+    <div class="auth-container">
+      <!-- ログインフォーム -->
+      <div id="login-form-container">
+        <h2>ログイン</h2>
+        <div class="field-row">
+          <input type="text" id="loginUsername" placeholder="ユーザー名" />
+        </div>
+        <div class="field-row">
+          <input type="password" id="loginPassword" placeholder="パスワード" />
+        </div>
+        <div class="auth-actions">
+          <button id="btnLogin" class="primary-button">ログイン</button>
+        </div>
+        <p class="auth-switch">
+          アカウントをお持ちでないですか？ <a href="#" id="linkToRegister">新規登録</a>
+        </p>
+        <div class="guest-action">
+          <button id="btnGuest" class="secondary-button">ゲストとして遊ぶ</button>
+        </div>
+      </div>
+
+      <!-- 新規登録フォーム -->
+      <div id="register-form-container" class="hidden">
+        <h2>アカウント作成</h2>
+        <div class="field-row">
+          <input type="text" id="registerUsername" placeholder="ユーザー名" />
+        </div>
+        <div class="field-row">
+          <input type="password" id="registerPassword" placeholder="パスワード" />
+        </div>
+        <div class="auth-actions">
+          <button id="btnRegister" class="primary-button">登録して開始</button>
+        </div>
+        <p class="auth-switch">
+          すでにアカウントをお持ちですか？ <a href="#" id="linkToLogin">ログイン</a>
+        </p>
+      </div>
+
+      <p id="authMessage" class="error-message"></p>
+    </div>
+  </section>
+
+  <div id="app" class="hidden">
     <h1>オンラインクイズバトル</h1>
 
     <section id="room-root">
@@ -83,7 +129,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h3>オンライン対戦ルール</h3>
-            <button id="btn-close-online-rules" type="button" class="close-button">×</button>
+
           </div>
           <div class="modal-body">
             <section class="rules-section">

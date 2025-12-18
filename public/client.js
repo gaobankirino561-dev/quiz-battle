@@ -271,6 +271,126 @@ function prepareShuffledChoices(questionData) {
   return { shuffled, correctDisplayIndex: questionData.shuffledCorrectIndex };
 }
 
+// User State (Global)
+let myUserId = null;
+
+document.addEventListener("DOMContentLoaded", () => {
+  // === Auth Elements ===
+  const authSection = document.getElementById("auth-section");
+  const appSection = document.getElementById("app");
+  const loginFormContainer = document.getElementById("login-form-container");
+  const registerFormContainer = document.getElementById("register-form-container");
+  const linkToRegister = document.getElementById("linkToRegister");
+  const linkToLogin = document.getElementById("linkToLogin");
+  const authMessage = document.getElementById("authMessage");
+
+  const loginUsernameInput = document.getElementById("loginUsername");
+  const loginPasswordInput = document.getElementById("loginPassword");
+  const btnLogin = document.getElementById("btnLogin");
+
+  const registerUsernameInput = document.getElementById("registerUsername");
+  const registerPasswordInput = document.getElementById("registerPassword");
+  const btnRegister = document.getElementById("btnRegister");
+
+  const btnGuest = document.getElementById("btnGuest");
+
+  // Initialize UI
+  if (linkToRegister) {
+    linkToRegister.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginFormContainer.classList.add("hidden");
+      registerFormContainer.classList.remove("hidden");
+      authMessage.textContent = "";
+    });
+  }
+  if (linkToLogin) {
+    linkToLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      registerFormContainer.classList.add("hidden");
+      loginFormContainer.classList.remove("hidden");
+      authMessage.textContent = "";
+    });
+  }
+
+  // Login
+  if (btnLogin) {
+    btnLogin.addEventListener("click", async () => {
+      const username = loginUsernameInput.value.trim();
+      const password = loginPasswordInput.value.trim();
+      if (!username || !password) {
+        authMessage.textContent = "ユーザー名とパスワードを入力してください";
+        return;
+      }
+      try {
+        const res = await fetch("/api/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, password }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          myUserId = data.userId;
+          startGameApp(data.username);
+        } else {
+          authMessage.textContent = data.message || "ログイン失敗";
+        }
+      } catch (e) {
+        authMessage.textContent = "通信エラーが発生しました";
+      }
+    });
+  }
+
+  // Register
+  if (btnRegister) {
+    btnRegister.addEventListener("click", async () => {
+      const username = registerUsernameInput.value.trim();
+      const password = registerPasswordInput.value.trim();
+      if (!username || !password) {
+        authMessage.textContent = "ユーザー名とパスワードを入力してください";
+        return;
+      }
+      try {
+        const res = await fetch("/api/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, password }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          myUserId = data.userId;
+          startGameApp(data.username);
+        } else {
+          authMessage.textContent = data.message || "登録失敗";
+        }
+      } catch (e) {
+        authMessage.textContent = "通信エラーが発生しました";
+      }
+    });
+  }
+
+  // Guest
+  if (btnGuest) {
+    btnGuest.addEventListener("click", () => {
+      myUserId = null;
+      startGameApp("");
+    });
+  }
+
+  function startGameApp(username) {
+    authSection.classList.add("hidden");
+    appSection.classList.remove("hidden");
+    // DOM elements are not defined yet inside this callback if we are strictly sequential,
+    // but they will be available when functions run.
+    // However, we need to access 'playerNameInput' which is defined below.
+    // Ideally, we should move DOM definitions to top or inside this block.
+    // For now, let's just use document.getElementById inside here to be safe.
+    const pInput = document.getElementById("playerNameInput");
+    if (username && pInput) {
+      pInput.value = username;
+    }
+  }
+});
+
 // DOM elements
 const playerNameInput = document.getElementById("playerNameInput");
 const createRoomBtn = document.getElementById("createRoomBtn");
@@ -1937,6 +2057,7 @@ createRoomBtn.addEventListener("click", () => {
   socket.emit("createRoom", {
     name: playerName,
     settings: roomSettings,
+    userId: myUserId,
   });
 });
 
@@ -1948,7 +2069,7 @@ joinRoomBtn.addEventListener("click", () => {
     return;
   }
   isRoomOwner = false;
-  socket.emit("joinRoom", { roomId: inputRoomId, name: playerName });
+  socket.emit("joinRoom", { roomId: inputRoomId, name: playerName, userId: myUserId });
 });
 
 socket.on("roomCreated", (data) => {

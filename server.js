@@ -12,6 +12,96 @@ const PORT = process.env.PORT || 3000;
 
 // 静的ファイル配信
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json());
+
+// ユーザーデータのファイルパス
+const USERS_FILE = path.join(__dirname, "users.json");
+
+// ユーザーデータの読み込み
+function loadUsers() {
+  if (!fs.existsSync(USERS_FILE)) {
+    return [];
+  }
+  try {
+    return JSON.parse(fs.readFileSync(USERS_FILE, "utf-8"));
+  } catch (e) {
+    console.error("Failed to load users.json", e);
+    return [];
+  }
+}
+
+// ユーザーデータの保存
+function saveUsers(users) {
+  fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
+}
+
+// パスワードハッシュ化 (簡易版: SHA-256)
+const crypto = require("crypto");
+function hashPassword(password) {
+  return crypto.createHash("sha256").update(password).digest("hex");
+}
+
+// API: ユーザー登録
+app.post("/api/register", (req, res) => {
+  const { username, password } = req.body;
+  if (!username || !password) {
+    return res.json({ success: false, message: "ユーザー名とパスワードを入力してください。" });
+  }
+
+  const users = loadUsers();
+  if (users.find((u) => u.username === username)) {
+    return res.json({ success: false, message: "そのユーザー名は既に使用されています。" });
+  }
+
+  const newUser = {
+    id: crypto.randomUUID(),
+    username,
+    passwordHash: hashPassword(password),
+    stats: { wins: 0, lose: 0 }, // friends などは必要に応じて追加
+    friends: []
+  };
+
+  users.push(newUser);
+  saveUsers(users);
+
+  res.json({ success: true, userId: newUser.id, username: newUser.username });
+});
+
+// API: ログイン
+app.post("/api/login", (req, res) => {
+  const { username, password } = req.body;
+  const users = loadUsers();
+  const user = users.find((u) => u.username === username && u.passwordHash === hashPassword(password));
+
+  if (user) {
+    res.json({
+      success: true,
+      userId: user.id,
+      username: user.username,
+      stats: user.stats,
+      friends: user.friends || []
+    });
+  } else {
+    res.json({ success: false, message: "ユーザー名またはパスワードが間違っています。" });
+  }
+});
+
+// 戦績更新ヘルパー
+function updateUserStats(userId, isWin) {
+  if (!userId) return;
+  const users = loadUsers();
+  const user = users.find((u) => u.id === userId);
+  if (user) {
+    if (!user.stats) user.stats = { wins: 0, lose: 0 };
+    if (isWin) {
+      user.stats.wins = (user.stats.wins || 0) + 1;
+    } else {
+      user.stats.lose = (user.stats.lose || 0) + 1;
+    }
+    saveUsers(users);
+  }
+}
+
 
 // 問題データの読み込み
 const questionsData = JSON.parse(
@@ -312,7 +402,7 @@ io.on("connection", (socket) => {
     });
   });
 
-  socket.on("joinRoom", ({ roomId, name }) => {
+  socket.on("joinRoom", ({ roomId, name, userId }) => {
     const room = rooms[roomId];
     if (!room) {
       socket.emit("roomError", "そのルームIDは存在しません。");
@@ -326,6 +416,7 @@ io.on("connection", (socket) => {
 
     room.players[socket.id] = {
       id: socket.id,
+      userId: userId || null, // アカウントIDを保持
       name: name || "Player",
       hp: DEFAULT_INITIAL_HP,
       initialHp: DEFAULT_INITIAL_HP,
@@ -764,6 +855,21 @@ function resolveRoundThree(room, players, question, correctIndex, baseDamage) {
   });
 
   if (finished) {
+    // 戦績更新
+    if (winnerCode && winnerCode !== "draw") {
+      const winner = players.find(p => p.id === winnerCode);
+      if (winner && winner.userId) {
+        updateUserStats(winner.userId, true);
+      }
+      players.forEach(p => {
+        if (p.id !== winnerCode && p.userId) {
+          updateUserStats(p.userId, false);
+        }
+      });
+    } else if (winnerCode === "draw") {
+      // 引き分け時の扱いは未定義だが、とりあえず負けにはしない
+    }
+
     players.forEach((p) => {
       const opponent = players.find((x) => x.id !== p.id) || p;
       const payload = {
