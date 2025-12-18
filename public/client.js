@@ -273,6 +273,41 @@ function prepareShuffledChoices(questionData) {
 
 // User State (Global)
 let myUserId = null;
+let myStats = { wins: 0, lose: 0 };
+
+socket.on("connect", () => {
+  if (myUserId) {
+    socket.emit("registerUser", { userId: myUserId });
+  }
+});
+
+async function fetchFriends() {
+  if (!myUserId) return [];
+  try {
+    const res = await fetch(`/api/friends?userId=${myUserId}`);
+    const data = await res.json();
+    if (data.success) {
+      return data.friends;
+    }
+  } catch (e) {
+    console.error("Fetch friends error:", e);
+  }
+  return [];
+}
+
+async function addFriend(targetId) {
+  if (!myUserId) return { success: false, message: "ログインしていません" };
+  try {
+    const res = await fetch("/api/friends/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId: myUserId, targetId }),
+    });
+    return await res.json();
+  } catch (e) {
+    return { success: false, message: "通信エラー" };
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   // === Auth Elements ===
@@ -293,6 +328,149 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnRegister = document.getElementById("btnRegister");
 
   const btnGuest = document.getElementById("btnGuest");
+
+  // Account Elements
+  const btnAccountMenu = document.getElementById("btn-account-menu");
+  const accountModal = document.getElementById("account-modal");
+  const btnCloseAccount = document.getElementById("btn-close-account");
+  const accountNameEl = document.getElementById("account-name");
+  const accountIdEl = document.getElementById("account-id");
+  const accountWinsEl = document.getElementById("account-wins");
+  const accountLoseEl = document.getElementById("account-lose");
+  const btnCopyId = document.getElementById("btn-copy-id");
+  const btnLogout = document.getElementById("btnLogout");
+
+  // Tabs
+  const tabBtns = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  // Friends
+  const friendIdInput = document.getElementById("friend-id-input");
+  const btnAddFriend = document.getElementById("btn-add-friend");
+  const friendListEl = document.getElementById("friend-list");
+  const friendMsg = document.getElementById("friend-msg");
+
+  // Account Modal Logic
+  if (btnAccountMenu) {
+    btnAccountMenu.addEventListener("click", async () => {
+      if (!myUserId) {
+        alert("ログインしていません"); // Should not happen given UI flow
+        return;
+      }
+      // Update Profile Info
+      accountNameEl.textContent = playerNameInput.value || "名無し";
+      accountIdEl.textContent = myUserId;
+      accountWinsEl.textContent = myStats.wins;
+      accountLoseEl.textContent = myStats.lose;
+
+      // Update Friends
+      await updateFriendListUI();
+
+      accountModal.classList.remove("hidden");
+    });
+  }
+
+  if (btnCloseAccount) {
+    btnCloseAccount.addEventListener("click", () => {
+      accountModal.classList.add("hidden");
+    });
+  }
+
+  if (accountModal) {
+    accountModal.addEventListener("click", (e) => {
+      if (e.target === accountModal) accountModal.classList.add("hidden");
+    });
+  }
+
+  // Tabs
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.tab;
+      // UI Update
+      tabBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      tabContents.forEach(c => {
+        if (c.id === `tab-${target}`) {
+          c.classList.remove("hidden");
+          c.classList.add("active");
+        } else {
+          c.classList.add("hidden");
+          c.classList.remove("active");
+        }
+      });
+    });
+  });
+
+  // Copy ID
+  if (btnCopyId) {
+    btnCopyId.addEventListener("click", () => {
+      if (myUserId) {
+        navigator.clipboard.writeText(myUserId).then(() => {
+          const original = btnCopyId.innerText;
+          btnCopyId.innerText = "✅";
+          setTimeout(() => btnCopyId.innerText = original, 1000);
+        });
+      }
+    });
+  }
+
+  // Logout
+  if (btnLogout) {
+    btnLogout.addEventListener("click", () => {
+      location.reload();
+    });
+  }
+
+  // Add Friend
+  if (btnAddFriend) {
+    btnAddFriend.addEventListener("click", async () => {
+      const targetId = friendIdInput.value.trim();
+      if (!targetId) return;
+
+      friendMsg.textContent = "送信中...";
+      friendMsg.style.color = "#ccc";
+
+      const res = await addFriend(targetId);
+      friendMsg.textContent = res.message;
+      if (res.success) {
+        friendMsg.style.color = "#4ade80"; // green
+        friendIdInput.value = "";
+        await updateFriendListUI();
+      } else {
+        friendMsg.style.color = "#ef4444"; // red
+      }
+    });
+  }
+
+  async function updateFriendListUI() {
+    if (!friendListEl) return;
+    const friends = await fetchFriends();
+    friendListEl.innerHTML = "";
+    if (friends.length === 0) {
+      friendListEl.innerHTML = '<li class="info-text">フレンドはいません</li>';
+      return;
+    }
+
+    friends.forEach(f => {
+      const li = document.createElement("li");
+      li.className = "friend-item";
+
+      const onlineBadge = f.isOnline
+        ? '<span style="color:#4ade80; font-size:0.8em; margin-left:6px;">● Online</span>'
+        : '<span style="color:#666; font-size:0.8em; margin-left:6px;">● Offline</span>';
+
+      li.innerHTML = `
+        <div class="friend-info">
+          <span class="friend-name">${f.username} ${onlineBadge}</span>
+          <span class="friend-id">ID: ${f.id}</span>
+        </div>
+        <div class="friend-stats" style="font-size:0.85em; color:#ccc;">
+           WIN: ${f.wins} / LOSE: ${f.lose}
+        </div>
+      `;
+      friendListEl.appendChild(li);
+    });
+  }
 
   // Initialize UI
   if (linkToRegister) {
@@ -330,6 +508,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await res.json();
         if (data.success) {
           myUserId = data.userId;
+          myStats = data.stats || { wins: 0, lose: 0 }; // Save stats
+          socket.emit("registerUser", { userId: myUserId }); // Register socket
           startGameApp(data.username);
         } else {
           authMessage.textContent = data.message || "ログイン失敗";
@@ -358,6 +538,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await res.json();
         if (data.success) {
           myUserId = data.userId;
+          myStats = data.stats || { wins: 0, lose: 0 }; // Save stats
+          socket.emit("registerUser", { userId: myUserId }); // Register socket
           startGameApp(data.username);
         } else {
           authMessage.textContent = data.message || "登録失敗";

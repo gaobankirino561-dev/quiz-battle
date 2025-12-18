@@ -205,6 +205,92 @@ function sortRoundStats(stats) {
  */
 const rooms = {};
 const timeAttackSessions = {};
+// userId -> Set<socketId>
+const connectedUsers = new Map();
+
+// Helper: Check online status
+function isUserOnline(userId) {
+  const sockets = connectedUsers.get(userId);
+  return sockets && sockets.size > 0;
+}
+
+// API: フレンド追加 (相互登録)
+app.post("/api/friends/add", async (req, res) => {
+  const { userId, targetId } = req.body;
+  if (!userId || !targetId) {
+    return res.json({ success: false, message: "IDが不足しています。" });
+  }
+  if (userId === targetId) {
+    return res.json({ success: false, message: "自分自身をフレンドに追加することはできません。" });
+  }
+
+  try {
+    // 1. 相手が存在するか確認
+    const targetRes = await pool.query("SELECT * FROM users WHERE id = $1", [targetId]);
+    if (targetRes.rows.length === 0) {
+      return res.json({ success: false, message: "指定されたIDのユーザーは見つかりません。" });
+    }
+
+    // 2. 自分のフレンドリストを取得
+    const myRes = await pool.query("SELECT friends FROM users WHERE id = $1", [userId]);
+    let myFriends = myRes.rows[0]?.friends || [];
+    // 既に登録済みかチェック
+    if (myFriends.includes(targetId)) {
+      return res.json({ success: false, message: "既にフレンド登録されています。" });
+    }
+
+    // 3. 相手のフレンドリストを取得
+    let targetFriends = targetRes.rows[0].friends || [];
+
+    // 4. 配列更新 (相互に追加)
+    if (!myFriends.includes(targetId)) myFriends.push(targetId);
+    if (!targetFriends.includes(userId)) targetFriends.push(userId);
+
+    // 5. DB更新 (トランザクションが好ましいが簡易実装)
+    await pool.query("UPDATE users SET friends = $1 WHERE id = $2", [JSON.stringify(myFriends), userId]);
+    await pool.query("UPDATE users SET friends = $1 WHERE id = $2", [JSON.stringify(targetFriends), targetId]);
+
+    res.json({ success: true, message: "フレンドに追加しました！" });
+  } catch (err) {
+    console.error("Friend Add Error:", err);
+    res.json({ success: false, message: "エラーが発生しました。" });
+  }
+});
+
+// API: フレンドリスト取得
+app.get("/api/friends", async (req, res) => {
+  const { userId } = req.query;
+  if (!userId) return res.json({ success: false, friends: [] });
+
+  try {
+    const userRes = await pool.query("SELECT friends FROM users WHERE id = $1", [userId]);
+    const friendIds = userRes.rows[0]?.friends || [];
+
+    if (friendIds.length === 0) {
+      return res.json({ success: true, friends: [] });
+    }
+
+    // フレンドの詳細情報を取得
+    // 配列を $1, $2... に展開するのは面倒なので ANY($1) を使う
+    const friendsRes = await pool.query(
+      `SELECT id, username, wins, lose FROM users WHERE id = ANY($1::text[])`,
+      [friendIds]
+    );
+
+    const friendList = friendsRes.rows.map(f => ({
+      id: f.id,
+      username: f.username,
+      wins: f.wins,
+      lose: f.lose,
+      isOnline: isUserOnline(f.id)
+    }));
+
+    res.json({ success: true, friends: friendList });
+  } catch (err) {
+    console.error("Get Friends Error:", err);
+    res.json({ success: false, message: "取得エラー" });
+  }
+});
 
 function broadcastRoomState(room) {
   io.to(room.id).emit("roomState", serializeRoom(room));
@@ -315,8 +401,28 @@ io.on("connection", (socket) => {
     socket.emit("genre_counts", genreCounts);
   });
 
+  socket.on("registerUser", ({ userId }) => {
+    if (!userId) return;
+    if (!connectedUsers.has(userId)) {
+      connectedUsers.set(userId, new Set());
+    }
+    connectedUsers.get(userId).add(socket.id);
+  });
+
   socket.on("disconnect", () => {
     console.log("user disconnected:", socket.id);
+
+    // connectedUsers から削除
+    for (const [uid, sockets] of connectedUsers.entries()) {
+      if (sockets.has(socket.id)) {
+        sockets.delete(socket.id);
+        if (sockets.size === 0) {
+          connectedUsers.delete(uid);
+        }
+        break;
+      }
+    }
+
     // ルームからの退出処理
     for (const roomId of Object.keys(rooms)) {
       const room = rooms[roomId];
