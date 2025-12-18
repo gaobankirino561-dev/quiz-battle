@@ -1109,3 +1109,99 @@ button:disabled {
 #btn-online-rules {
   margin-left: 8px;
 }
+
+/* === Auth Section Styles === */
+#auth-section {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 32px;
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.95), rgba(12, 18, 30, 0.98));
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  /* Higher than app */
+}
+
+#auth-section h1 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+#auth-section h2 {
+  margin-bottom: 24px;
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-actions {
+  margin-top: 10px;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.auth-switch a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.guest-action {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#authMessage {
+  min-height: 1.5em;
+  color: #ef4444;
+  font-size: 0.95rem;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* Ensure inputs are visible and clickable */
+#auth-section input[type="text"],
+#auth-section input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+#auth-section input[type="text"]:focus,
+#auth-section input[type="password"]:focus {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.2);
+}
+
+#auth-section button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}

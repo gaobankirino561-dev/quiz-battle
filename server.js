@@ -14,26 +14,35 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
-// ユーザーデータのファイルパス
-const USERS_FILE = path.join(__dirname, "users.json");
+// Database Connection
+const { Pool } = require("pg");
+const isProduction = process.env.NODE_ENV === "production";
+const connectionString = process.env.DATABASE_URL;
 
-// ユーザーデータの読み込み
-function loadUsers() {
-  if (!fs.existsSync(USERS_FILE)) {
-    return [];
-  }
-  try {
-    return JSON.parse(fs.readFileSync(USERS_FILE, "utf-8"));
-  } catch (e) {
-    console.error("Failed to load users.json", e);
-    return [];
-  }
-}
+// ローカル開発用など、DATABASE_URLがない場合のフォールバック（必要に応じて）
+const pool = new Pool({
+  connectionString: connectionString,
+  ssl: isProduction || (connectionString && connectionString.includes("render"))
+    ? { rejectUnauthorized: false }
+    : false,
+});
 
-// ユーザーデータの保存
-function saveUsers(users) {
-  fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
-}
+// テーブル作成 (起動時)
+pool.query(`
+  CREATE TABLE IF NOT EXISTS users (
+    id VARCHAR(255) PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    wins INTEGER DEFAULT 0,
+    lose INTEGER DEFAULT 0,
+    friends JSONB DEFAULT '[]',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+`).then(() => {
+  console.log("Users table verified/created.");
+}).catch(err => {
+  console.error("Error creating users table:", err);
+});
 
 // パスワードハッシュ化 (簡易版: SHA-256)
 const crypto = require("crypto");
@@ -42,63 +51,70 @@ function hashPassword(password) {
 }
 
 // API: ユーザー登録
-app.post("/api/register", (req, res) => {
+app.post("/api/register", async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
     return res.json({ success: false, message: "ユーザー名とパスワードを入力してください。" });
   }
 
-  const users = loadUsers();
-  if (users.find((u) => u.username === username)) {
-    return res.json({ success: false, message: "そのユーザー名は既に使用されています。" });
+  try {
+    const userId = crypto.randomUUID();
+    const passwordHash = hashPassword(password);
+
+    await pool.query(
+      "INSERT INTO users (id, username, password_hash, wins, lose, friends) VALUES ($1, $2, $3, 0, 0, '[]')",
+      [userId, username, passwordHash]
+    );
+
+    res.json({ success: true, userId, username });
+  } catch (err) {
+    console.error("Register error:", err);
+    if (err.code === '23505') { // Unique violation
+      return res.json({ success: false, message: "そのユーザー名は既に使用されています。" });
+    }
+    res.json({ success: false, message: "登録中にエラーが発生しました。" });
   }
-
-  const newUser = {
-    id: crypto.randomUUID(),
-    username,
-    passwordHash: hashPassword(password),
-    stats: { wins: 0, lose: 0 }, // friends などは必要に応じて追加
-    friends: []
-  };
-
-  users.push(newUser);
-  saveUsers(users);
-
-  res.json({ success: true, userId: newUser.id, username: newUser.username });
 });
 
 // API: ログイン
-app.post("/api/login", (req, res) => {
+app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
-  const users = loadUsers();
-  const user = users.find((u) => u.username === username && u.passwordHash === hashPassword(password));
 
-  if (user) {
-    res.json({
-      success: true,
-      userId: user.id,
-      username: user.username,
-      stats: user.stats,
-      friends: user.friends || []
-    });
-  } else {
-    res.json({ success: false, message: "ユーザー名またはパスワードが間違っています。" });
+  try {
+    const result = await pool.query(
+      "SELECT * FROM users WHERE username = $1 AND password_hash = $2",
+      [username, hashPassword(password)]
+    );
+
+    if (result.rows.length > 0) {
+      const user = result.rows[0];
+      res.json({
+        success: true,
+        userId: user.id,
+        username: user.username,
+        stats: { wins: user.wins, lose: user.lose },
+        friends: user.friends || []
+      });
+    } else {
+      res.json({ success: false, message: "ユーザー名またはパスワードが間違っています。" });
+    }
+  } catch (err) {
+    console.error("Login error:", err);
+    res.json({ success: false, message: "ログイン処理中にエラーが発生しました。" });
   }
 });
 
 // 戦績更新ヘルパー
-function updateUserStats(userId, isWin) {
+async function updateUserStats(userId, isWin) {
   if (!userId) return;
-  const users = loadUsers();
-  const user = users.find((u) => u.id === userId);
-  if (user) {
-    if (!user.stats) user.stats = { wins: 0, lose: 0 };
+  try {
     if (isWin) {
-      user.stats.wins = (user.stats.wins || 0) + 1;
+      await pool.query("UPDATE users SET wins = wins + 1 WHERE id = $1", [userId]);
     } else {
-      user.stats.lose = (user.stats.lose || 0) + 1;
+      await pool.query("UPDATE users SET lose = lose + 1 WHERE id = $1", [userId]);
     }
-    saveUsers(users);
+  } catch (err) {
+    console.error("Error updating stats:", err);
   }
 }
 
