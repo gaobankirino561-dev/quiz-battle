@@ -19,6 +19,13 @@ const { Pool } = require("pg");
 const isProduction = process.env.NODE_ENV === "production";
 const connectionString = process.env.DATABASE_URL;
 
+if (!connectionString) {
+  console.error("CRITICAL ERROR: DATABASE_URL environment variable is not set!");
+  console.error("Please create a PostgreSQL database in Render and link it to this service.");
+  // アプリをクラッシュさせずに、DB機能が無効であることを示すフラグを立てる等の対応も可能だが、
+  // 今回はログを出してそのまま進む（pgが接続エラーを出す）
+}
+
 // ローカル開発用など、DATABASE_URLがない場合のフォールバック（必要に応じて）
 const pool = new Pool({
   connectionString: connectionString,
