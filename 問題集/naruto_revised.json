@@ -1,0 +1,2252 @@
+[
+  {
+    "id": 1,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "うずまきナルトの父親は誰？",
+    "choices": [
+      "はたけカカシ",
+      "波風ミナト",
+      "ジライヤ",
+      "千手柱間"
+    ],
+    "answerIndex": 1,
+    "explanation": "四代目火影・波風ミナトが父である。1"
+  },
+  {
+    "id": 2,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトの母親は誰？",
+    "choices": [
+      "日向ヒナタ",
+      "綱手",
+      "うずまきクシナ",
+      "うちはミコト"
+    ],
+    "answerIndex": 2,
+    "explanation": "渦の国出身のうずまきクシナが母。1"
+  },
+  {
+    "id": 3,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトはどの隠れ里の忍び？",
+    "choices": [
+      "砂隠れの里",
+      "霧隠れの里",
+      "木ノ葉隠れの里",
+      "雲隠れの里"
+    ],
+    "answerIndex": 2,
+    "explanation": "火の国の木ノ葉隠れの里に所属。1"
+  },
+  {
+    "id": 4,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトの体に封印されている尾獣はどれ？",
+    "choices": [
+      "一尾（守鶴）",
+      "九尾（クラマ）",
+      "八尾（牛鬼）",
+      "十尾"
+    ],
+    "answerIndex": 1,
+    "explanation": "ナルトは九尾の人柱力である。1"
+  },
+  {
+    "id": 5,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "アカデミー時代、誤ってナルトの初めてのキスの相手になってしまったのは誰？",
+    "choices": [
+      "春野サクラ",
+      "日向ヒナタ",
+      "うちはサスケ",
+      "我愛羅"
+    ],
+    "answerIndex": 2,
+    "explanation": "クラスメートの前で偶発的にサスケとキスをしてしまった。1"
+  },
+  {
+    "id": 6,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトの髪の色は何色？",
+    "choices": [
+      "黒",
+      "金髪",
+      "茶色",
+      "赤"
+    ],
+    "answerIndex": 1,
+    "explanation": "父・ミナト譲りの金髪。母は赤髪。1"
+  },
+  {
+    "id": 7,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "卒業時にナルトを信じ、彼に額当てを渡したアカデミーの教官は誰？",
+    "choices": [
+      "はたけカカシ",
+      "うみのイルカ",
+      "猿飛アスマ",
+      "ミズキ"
+    ],
+    "answerIndex": 1,
+    "explanation": "イルカ先生がナルトの孤独を理解し、忍として認めた。1"
+  },
+  {
+    "id": 8,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "写輪眼の使い手で「コピー忍者」として他里にも有名な忍びは誰？",
+    "choices": [
+      "うちはイタチ",
+      "マイト・ガイ",
+      "はたけカカシ",
+      "うちはサスケ"
+    ],
+    "answerIndex": 2,
+    "explanation": "千の術をコピーしたカカシの異名。1"
+  },
+  {
+    "id": 9,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "写輪眼はどの一族の血継限界？",
+    "choices": [
+      "うずまき一族",
+      "うちは一族",
+      "日向一族",
+      "千手一族"
+    ],
+    "answerIndex": 1,
+    "explanation": "木ノ葉の名門・うちは一族特有の瞳術。1"
+  },
+  {
+    "id": 10,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "白眼は主にどの一族の者が持つ瞳術？",
+    "choices": [
+      "日向一族",
+      "うちは一族",
+      "奈良一族",
+      "秋道一族"
+    ],
+    "answerIndex": 0,
+    "explanation": "日向一族の血継限界。1"
+  },
+  {
+    "id": 11,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "最終的にナルトは誰と結婚する？",
+    "choices": [
+      "春野サクラ",
+      "日向ヒナタ",
+      "テンテン",
+      "香燐"
+    ],
+    "answerIndex": 1,
+    "explanation": "日向ヒナタと結婚し、二児をもうける。1"
+  },
+  {
+    "id": 12,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "第七班（ナルト、サスケ、サクラ）の担当上忍は誰？",
+    "choices": [
+      "はたけカカシ",
+      "うみのイルカ",
+      "猿飛アスマ",
+      "波風ミナト"
+    ],
+    "answerIndex": 0,
+    "explanation": "カカシが第七班の隊長を務めた。1"
+  },
+  {
+    "id": 13,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトの同期で、第七班のメンバーでもある親友かつライバルは誰？",
+    "choices": [
+      "奈良シカマル",
+      "うちはサスケ",
+      "日向ネジ",
+      "犬塚キバ"
+    ],
+    "answerIndex": 1,
+    "explanation": "サスケはナルトの最大のライバル。1"
+  },
+  {
+    "id": 14,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "綱手の下で修行した後、サクラが特に得意になった術は何？",
+    "choices": [
+      "医療忍術",
+      "幻術",
+      "剣術",
+      "傀儡の術"
+    ],
+    "answerIndex": 0,
+    "explanation": "綱手譲りの医療忍術と怪力を習得した。1"
+  },
+  {
+    "id": 15,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "自分の分身を多数作り出すナルトの十八番（おはこ）の術名は？",
+    "choices": [
+      "螺旋丸",
+      "多重影分身の術",
+      "千鳥",
+      "口寄せの術"
+    ],
+    "answerIndex": 1,
+    "explanation": "「影分身の術」が正解。選択肢B。1"
+  },
+  {
+    "id": 16,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "木ノ葉隠れの里で五代目火影になったのは誰？",
+    "choices": [
+      "はたけカカシ",
+      "志村ダンゾウ",
+      "綱手",
+      "自来也"
+    ],
+    "answerIndex": 2,
+    "explanation": "三代目の後、伝説の三忍・綱手が就任。1"
+  },
+  {
+    "id": 17,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトが自来也によく使うあだ名は何？",
+    "choices": [
+      "「エロ仙人」",
+      "「老ヒキガエル」",
+      "「スーパーじいちゃん」",
+      "「先生様」"
+    ],
+    "answerIndex": 0,
+    "explanation": "自来也の好色な面からこう呼ぶ。1"
+  },
+  {
+    "id": 18,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトが契約し、守鶴戦などで共闘した巨大なガマの親分は？",
+    "choices": [
+      "ガマ吉",
+      "ガマブン太",
+      "ガマケン",
+      "ガマヒロ"
+    ],
+    "answerIndex": 1,
+    "explanation": "巨大なドスを持つガマブン太。1"
+  },
+  {
+    "id": 19,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトの大好物は何？",
+    "choices": [
+      "寿司",
+      "ラーメン",
+      "焼肉",
+      "団子"
+    ],
+    "answerIndex": 1,
+    "explanation": "一楽のラーメンをこよなく愛する。1"
+  },
+  {
+    "id": 20,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "第七班は最初、ナルト、サスケとどのくノ一で構成されている？",
+    "choices": [
+      "日向ヒナタ",
+      "テンテン",
+      "山中いの",
+      "春野サクラ"
+    ],
+    "answerIndex": 3,
+    "explanation": "サクラが紅一点のメンバー。1"
+  },
+  {
+    "id": 21,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "木ノ葉隠れの里の初代火影は誰？",
+    "choices": [
+      "千手柱間",
+      "千手扉間",
+      "猿飛ヒルゼン",
+      "波風ミナト"
+    ],
+    "answerIndex": 0,
+    "explanation": "忍の神と呼ばれる千手柱間。1"
+  },
+  {
+    "id": 22,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "疾風伝の序盤で、砂隠れの里の長（風影）になっているのは誰？",
+    "choices": [
+      "バキ",
+      "テマリ",
+      "カンクロウ",
+      "我愛羅"
+    ],
+    "answerIndex": 3,
+    "explanation": "我愛羅は若くして五代目風影となった。1"
+  },
+  {
+    "id": 23,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "一尾「守鶴」が封印されていたのは誰？",
+    "choices": [
+      "キラービー",
+      "我愛羅",
+      "ウタカタ",
+      "ナルト"
+    ],
+    "answerIndex": 1,
+    "explanation": "我愛羅は守鶴の人柱力。1"
+  },
+  {
+    "id": 24,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "うちはサスケに千鳥（雷切）を教えたのは誰？",
+    "choices": [
+      "大蛇丸",
+      "はたけカカシ",
+      "うちはイタチ",
+      "自来也"
+    ],
+    "answerIndex": 1,
+    "explanation": "中忍試験本戦前にカカシが伝授した。1"
+  },
+  {
+    "id": 25,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "我愛羅の姉で、巨大な扇を操る砂隠れのくノ一の名前は何？",
+    "choices": [
+      "テマリ",
+      "テンテン",
+      "パクラ",
+      "カルイ"
+    ],
+    "answerIndex": 0,
+    "explanation": "テマリは風遁使い。1"
+  },
+  {
+    "id": 26,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトが子供の頃、三代目火影を務めていたのは誰？",
+    "choices": [
+      "猿飛ヒルゼン",
+      "波風ミナト",
+      "綱手",
+      "志村ダンゾウ"
+    ],
+    "answerIndex": 0,
+    "explanation": "四代目死後、ヒルゼンが復帰していた。1"
+  },
+  {
+    "id": 27,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "サスケ以外の木ノ葉のうちは一族を皆殺しにした、サスケの兄は誰？",
+    "choices": [
+      "うちはイタチ",
+      "うちはオビト",
+      "うちはマダラ",
+      "大蛇丸"
+    ],
+    "answerIndex": 0,
+    "explanation": "一族殺しの犯人は兄イタチ。1"
+  },
+  {
+    "id": 28,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "最初に我愛羅と真に友情を築き、彼の心を変えたのは誰？",
+    "choices": [
+      "ナルト",
+      "カンクロウ",
+      "シカマル",
+      "ロック・リー"
+    ],
+    "answerIndex": 0,
+    "explanation": "ナルトとの戦いが我愛羅を変えた。1"
+  },
+  {
+    "id": 29,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "伝説の三忍の中で、蛇と関わりが深く巨大な蛇を口寄せするのは誰？",
+    "choices": [
+      "自来也",
+      "大蛇丸",
+      "綱手",
+      "はたけカカシ"
+    ],
+    "answerIndex": 1,
+    "explanation": "大蛇丸は蛇と契約している。1"
+  },
+  {
+    "id": 30,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "いの・シカマル・チョウジのトリオからなる第十班の上忍隊長は誰？",
+    "choices": [
+      "はたけカカシ",
+      "猿飛アスマ",
+      "夕日紅",
+      "マイト・ガイ"
+    ],
+    "answerIndex": 1,
+    "explanation": "猪鹿蝶を率いたのはアスマ。1"
+  },
+  {
+    "id": 31,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「霧隠れの鬼人」と呼ばれ、大刀・首斬り包丁を使う抜け忍は？",
+    "choices": [
+      "桃地再不斬",
+      "干柿鬼鮫",
+      "長十郎",
+      "鬼灯水月"
+    ],
+    "answerIndex": 0,
+    "explanation": "波の国で戦った最初の強敵。9"
+  },
+  {
+    "id": 32,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "アカデミーの卒業試験でナルトを騙し、封印の書を盗ませたのは？",
+    "choices": [
+      "ミズキ",
+      "イルカ",
+      "エビス",
+      "飛段"
+    ],
+    "answerIndex": 0,
+    "explanation": "第1話の敵役はミズキ。"
+  },
+  {
+    "id": 33,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "赤い雲模様の黒マントを着たメンバーで構成される傭兵組織の名前は？",
+    "choices": [
+      "暁（アカツキ）",
+      "蛇（ヘビ）",
+      "殻（カラ）",
+      "根（ネ）"
+    ],
+    "answerIndex": 0,
+    "explanation": "物語後半の主要な敵組織。1"
+  },
+  {
+    "id": 34,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「神羅天征」などの術を使い、木ノ葉隠れの里を壊滅させたリーダーは？",
+    "choices": [
+      "ペイン（長門）",
+      "大蛇丸",
+      "うちはマダラ",
+      "飛段"
+    ],
+    "answerIndex": 0,
+    "explanation": "ペイン天道が里を破壊した。1"
+  },
+  {
+    "id": 35,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "最終的に木ノ葉隠れの里の七代目火影になるのは誰？",
+    "choices": [
+      "はたけカカシ",
+      "猿飛木ノ葉丸",
+      "うちはサスケ",
+      "うずまきナルト"
+    ],
+    "answerIndex": 3,
+    "explanation": "ナルトは夢を叶え七代目となる。1"
+  },
+  {
+    "id": 36,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "我愛羅がいつも背負っている大きな物は何？",
+    "choices": [
+      "砂の入った瓢箪",
+      "巨大な巻物",
+      "折りたたみ式の扇",
+      "盾"
+    ],
+    "answerIndex": 0,
+    "explanation": "砂瓢箪を背負っている。1"
+  },
+  {
+    "id": 37,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "暁が集めている、強大なチャクラを持つ9体の魔獣の総称は？",
+    "choices": [
+      "尾獣",
+      "召喚獣",
+      "忍獣",
+      "妖魔"
+    ],
+    "answerIndex": 0,
+    "explanation": "一尾から九尾までの総称は尾獣。3"
+  },
+  {
+    "id": 38,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "うちはサスケやイタチが所属していた一族の名前は？",
+    "choices": [
+      "日向一族",
+      "うちは一族",
+      "うずまき一族",
+      "奈良一族"
+    ],
+    "answerIndex": 1,
+    "explanation": "写輪眼を持つうちは一族。1"
+  },
+  {
+    "id": 39,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "三代目火影の孫で、ナルトを「兄ちゃん」と慕う少年は？",
+    "choices": [
+      "日向ネジ",
+      "猿飛木ノ葉丸",
+      "うちはオビト",
+      "うみのイルカ"
+    ],
+    "answerIndex": 1,
+    "explanation": "木ノ葉丸はナルトの弟子分。1"
+  },
+  {
+    "id": 40,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "「めんどくせえ」が口癖で、IQ200以上の天才軍師は誰？",
+    "choices": [
+      "うずまきナルト",
+      "奈良シカマル",
+      "犬塚キバ",
+      "サイ"
+    ],
+    "answerIndex": 1,
+    "explanation": "シカマルは優れた頭脳を持つ。1"
+  },
+  {
+    "id": 41,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "犬塚キバの相棒である忍犬の名前は？",
+    "choices": [
+      "パックン",
+      "赤丸",
+      "シロ",
+      "クロマ"
+    ],
+    "answerIndex": 1,
+    "explanation": "常にキバと共にいる白い犬は赤丸。"
+  },
+  {
+    "id": 42,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "第八班（紅班）のメンバーで、白眼を持つくノ一は？",
+    "choices": [
+      "山中いの",
+      "日向ヒナタ",
+      "テンテン",
+      "香燐"
+    ],
+    "answerIndex": 1,
+    "explanation": "ヒナタは第八班のメンバー。"
+  },
+  {
+    "id": 43,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "サスケが火遁の術の他に、生来持っているチャクラ性質は？",
+    "choices": [
+      "水遁",
+      "土遁",
+      "雷遁",
+      "風遁"
+    ],
+    "answerIndex": 2,
+    "explanation": "サスケは雷遁の素質も持つ。"
+  },
+  {
+    "id": 44,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "秋道チョウジが得意とする、体の一部や全体を巨大化させる術は？",
+    "choices": [
+      "影縛りの術",
+      "倍化の術",
+      "心転身の術",
+      "寄壊蟲の術"
+    ],
+    "answerIndex": 1,
+    "explanation": "秋道一族の秘伝・倍化の術。"
+  },
+  {
+    "id": 45,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "山中いのが得意とする、相手の精神を乗っ取る術は？",
+    "choices": [
+      "心転身の術",
+      "影首縛りの術",
+      "部分倍化の術",
+      "幻術・金縛り"
+    ],
+    "answerIndex": 0,
+    "explanation": "山中一族の心転身の術。"
+  },
+  {
+    "id": 46,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトが子供の頃にいたずら書きをした、歴代火影の顔が彫られた岩の名は？",
+    "choices": [
+      "火影岩",
+      "英雄の碑",
+      "慰霊碑",
+      "忍の壁"
+    ],
+    "answerIndex": 0,
+    "explanation": "里の象徴である火影岩。"
+  },
+  {
+    "id": 47,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ロック・リーの師匠で、緑の全身タイツを着た熱血上忍は？",
+    "choices": [
+      "はたけカカシ",
+      "猿飛アスマ",
+      "マイト・ガイ",
+      "ヤマト"
+    ],
+    "answerIndex": 2,
+    "explanation": "激眉先生ことマイト・ガイ。"
+  },
+  {
+    "id": 48,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "カカシが常に顔の半分を覆っているものは？",
+    "choices": [
+      "包帯",
+      "マスク（覆面）",
+      "仮面",
+      "サングラス"
+    ],
+    "answerIndex": 1,
+    "explanation": "カカシは常にマスクをしている。"
+  },
+  {
+    "id": 49,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "中忍試験の死の森で、サスケの首に呪印を刻んだのは誰？",
+    "choices": [
+      "薬師カブト",
+      "大蛇丸",
+      "ダンゾウ",
+      "うちはイタチ"
+    ],
+    "answerIndex": 1,
+    "explanation": "大蛇丸がサスケを器候補にした。"
+  },
+  {
+    "id": 50,
+    "category": "naruto",
+    "difficulty": "EASY",
+    "type": "choice",
+    "question": "ナルトの同期で、虫を体内に飼い、それを使って戦う忍は？",
+    "choices": [
+      "油女シノ",
+      "犬塚キバ",
+      "秋道チョウジ",
+      "奈良シカマル"
+    ],
+    "answerIndex": 0,
+    "explanation": "油女一族のシノ。\n3.1 忍界のパワーバランスと「暁」の脅威\n中忍級（Normal）では、里の枠を超えた国際情勢と、物語の中核をなす犯罪組織「暁」への理解が求められる。この段階で、読者は「チャクラの性質変化」や「血継限界」といった術の理論的背景（ロジック）を理解している必要がある。\n3.1.1 暁のメンバー構成とツーマンセル体制\n「暁」は、基本的に二人一組（ツーマンセル）で行動する。この組み合わせには、能力の補完関係（例：不死身コンビの飛段と角都）や、過去の因縁（例：イタチと鬼鮫）が含まれる。設問設計においては、これらのパートナー関係や、各メンバーの死因、能力の弱点を問うことで、戦闘描写への理解度を確認する。特に、飛段がジャシン教徒であること 11 や、サソリが自らを傀儡化していたことなどは、中忍級の重要事項である。\n3.1.2 五影と忍連合軍\n第四次忍界大戦においては、長年敵対していた五大国（火・風・水・土・雷）が初めて手を組み、「忍連合軍」を結成した。ここでは、歴代の影の名前や能力、そして誰が開戦を宣言したか 1 が問われる。特に、五影会談を襲撃したサスケが雷影と戦った事実や、ダンゾウが一時的に火影候補となった政治的経緯 1 は、物語の転換点として重要である。\n3.2 既存設問の検証と修正（Normal）\n提供された設問 1 のうち、以下の点について詳細な検証を行った。\nQ10のミナトの封印術: 元の設問「四代目火影が九尾をナルトに封印するために用いた封印術は何？」に対し、選択肢A「屍鬼封尽」とB「八卦封印」があった。\n事実検証: ソース 2 によれば、ミナトはまず「屍鬼封尽」で自身の魂を代償に九尾の陰のチャクラ（半分）を封印し、その後「八卦封印」を用いて陽のチャクラ（残り半分）をナルトに封印した。\n修正方針: 設問が「ナルトに封印するために」と限定しているため、正解は「八卦封印」である。解説文には、この二段階のプロセスを明記し、ミナトとクシナのチャクラも同時に組み込まれたこと 2 を補足する。\nQ1の暁メンバーの加入順序: 設問ではないが、暁に関する知識として「飛段はデイダラに次いで新しい」といった加入順序 11 は、Hardレベルに近い知識だが、Normalでは「誰と組んでいるか」を重視する。\n3.3 中忍級（Normal）認定試験：完全版（50問）\n以下に、分析に基づき再構築された50問を示す。"
+  },
+  {
+    "id": 1,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "猿飛アスマが戦いで命を落とした相手の“暁”メンバーは誰？",
+    "choices": [
+      "うちはイタチ",
+      "飛段",
+      "干柿鬼鮫",
+      "角都"
+    ],
+    "answerIndex": 1,
+    "explanation": "呪術・死司憑血を使う飛段に殺害された。1"
+  },
+  {
+    "id": 2,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "次のうち「伝説の三忍」に含まれないのは誰？",
+    "choices": [
+      "自来也",
+      "大蛇丸",
+      "綱手",
+      "はたけカカシ"
+    ],
+    "answerIndex": 3,
+    "explanation": "カカシは三忍の次世代。1"
+  },
+  {
+    "id": 3,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ナルトの同期の中で、中忍試験直後にただ一人中忍に昇格したのは？",
+    "choices": [
+      "奈良シカマル",
+      "うずまきナルト",
+      "日向ネジ",
+      "うちはサスケ"
+    ],
+    "answerIndex": 0,
+    "explanation": "頭脳と判断力を評価されシカマルのみ昇格。1"
+  },
+  {
+    "id": 4,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "中忍試験予選で、我愛羅の砂縛柩により重傷を負わされたのは？",
+    "choices": [
+      "うちはサスケ",
+      "ロック・リー",
+      "日向ネジ",
+      "犬塚キバ"
+    ],
+    "answerIndex": 1,
+    "explanation": "リーは裏蓮華まで出したが敗北した。1"
+  },
+  {
+    "id": 5,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "油女一族（シノの一族）は主に何を武器として戦う？",
+    "choices": [
+      "傀儡",
+      "寄壊蟲（きかいちゅう）",
+      "犬",
+      "封印札"
+    ],
+    "answerIndex": 1,
+    "explanation": "チャクラを餌にする蟲を使役する。1"
+  },
+  {
+    "id": 6,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "夕日紅が上忍として担当した下忍チームは何班？",
+    "choices": [
+      "第七班",
+      "第八班",
+      "第十班",
+      "ガイ班"
+    ],
+    "answerIndex": 1,
+    "explanation": "紅班（キバ・シノ・ヒナタ）は第八班。1"
+  },
+  {
+    "id": 7,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ナルトが綱手との賭けで、短期間で習得した術は何？",
+    "choices": [
+      "口寄せの術",
+      "螺旋丸",
+      "千鳥",
+      "影分身の術"
+    ],
+    "answerIndex": 1,
+    "explanation": "一週間で螺旋丸を習得する賭けをした。1"
+  },
+  {
+    "id": 8,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "長門と小南と共に、元々の「暁」を創設したリーダーは誰？",
+    "choices": [
+      "弥彦（ヤヒコ）",
+      "長門",
+      "トビ（オビト）",
+      "うちはマダラ"
+    ],
+    "answerIndex": 0,
+    "explanation": "雨隠れの平和のために弥彦が創設した。1"
+  },
+  {
+    "id": 9,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "第四次忍界大戦で八門遁甲の死門を開き、マダラを追い詰めたのは？",
+    "choices": [
+      "マイト・ダイ",
+      "マイト・ガイ",
+      "ロック・リー",
+      "うずまきナルト"
+    ],
+    "answerIndex": 1,
+    "explanation": "ガイは命を懸けて夜ガイを放った。1"
+  },
+  {
+    "id": 10,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "四代目火影が九尾をナルトに封印するために用いた封印術は？",
+    "choices": [
+      "封印術・屍鬼封尽",
+      "八卦封印",
+      "口寄せ封印術",
+      "影縛りの術"
+    ],
+    "answerIndex": 1,
+    "explanation": "自身には屍鬼封尽、ナルトには八卦封印を使った。1"
+  },
+  {
+    "id": 11,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ナルトがよく口寄せする巨大ガマの親分の名前は？",
+    "choices": [
+      "ガマ吉",
+      "ガマブン太",
+      "ガマケン",
+      "ガマヒロ"
+    ],
+    "answerIndex": 1,
+    "explanation": "ガマブン太が親分。ガマ吉はその子。1"
+  },
+  {
+    "id": 12,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "第四次忍界大戦で我愛羅が穢土転生で戦い、和解した“元・影”は？",
+    "choices": [
+      "四代目風影（父）",
+      "二代目水影",
+      "三代目雷影",
+      "二代目土影"
+    ],
+    "answerIndex": 0,
+    "explanation": "父である四代目風影と戦い、母の愛を知った。1"
+  },
+  {
+    "id": 13,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "五影会談で第四次忍界大戦の開戦を宣言したのは誰？",
+    "choices": [
+      "うちはマダラ",
+      "トビ（自称マダラ）",
+      "うちはサスケ",
+      "志村ダンゾウ"
+    ],
+    "answerIndex": 1,
+    "explanation": "トビ（オビト）が宣戦布告を行った。1"
+  },
+  {
+    "id": 14,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "五影会談でサスケが最初に激突した影は誰？",
+    "choices": [
+      "四代目雷影",
+      "五代目水影",
+      "五代目風影",
+      "三代目土影"
+    ],
+    "answerIndex": 0,
+    "explanation": "雷影エーと激しい肉弾戦を繰り広げた。1"
+  },
+  {
+    "id": 15,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "カカシに拷問の幻覚を与えた、イタチの万華鏡写輪眼の幻術は？",
+    "choices": [
+      "月読",
+      "天照",
+      "スサノオ",
+      "コトアマツカミ"
+    ],
+    "answerIndex": 0,
+    "explanation": "精神世界で時間を支配する月読。1"
+  },
+  {
+    "id": 16,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ナルトは螺旋丸にどの性質変化を加えて螺旋手裏剣を完成させた？",
+    "choices": [
+      "風遁",
+      "雷遁",
+      "火遁",
+      "水遁"
+    ],
+    "answerIndex": 0,
+    "explanation": "風遁・螺旋手裏剣。1"
+  },
+  {
+    "id": 17,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "三すくみの戦いで綱手が当初苦戦したのは、何に対する恐怖症のせい？",
+    "choices": [
+      "血液（血液恐怖症）",
+      "高所（高所恐怖症）",
+      "蛇（ヘビ恐怖症）",
+      "雷（雷恐怖症）"
+    ],
+    "answerIndex": 0,
+    "explanation": "恋人の死による血液恐怖症。1"
+  },
+  {
+    "id": 18,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ナルト誕生の夜、九尾襲撃時に現役で火影を務めていたのは？",
+    "choices": [
+      "猿飛ヒルゼン",
+      "波風ミナト",
+      "千手扉間",
+      "志村ダンゾウ"
+    ],
+    "answerIndex": 1,
+    "explanation": "四代目火影・ミナトの時代だった。1"
+  },
+  {
+    "id": 19,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "三代目火影が大蛇丸との戦いで、彼の術を封じた方法は？",
+    "choices": [
+      "両腕の魂を封印した",
+      "毒を盛った",
+      "強力な幻術にかけた",
+      "チャクラを吸い取った"
+    ],
+    "answerIndex": 0,
+    "explanation": "屍鬼封尽で両腕を使用不能にした。1"
+  },
+  {
+    "id": 20,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "劇場版『NARUTO -ナルト- 疾風伝』で、ナルトが守った巫女の名は？",
+    "choices": [
+      "紫苑",
+      "桔梗",
+      "サクラ",
+      "綱手"
+    ],
+    "answerIndex": 0,
+    "explanation": "死を予言する巫女・紫苑。1"
+  },
+  {
+    "id": 21,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ナルトとサスケが共闘する劇場版『NARUTO -ナルト- 疾風伝』は？",
+    "choices": [
+      "『絆』",
+      "『火の意志を継ぐ者』",
+      "第1作",
+      "『失われた塔』"
+    ],
+    "answerIndex": 0,
+    "explanation": "『絆』で空の国の敵に対し共闘した。1"
+  },
+  {
+    "id": 22,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "『火の意志を継ぐ者』で、血継限界を狙った敵の抜け忍は？",
+    "choices": [
+      "ヒルコ",
+      "大蛇丸",
+      "角都",
+      "桃地再不斬"
+    ],
+    "answerIndex": 0,
+    "explanation": "卑留呼（ヒルコ）が敵役。1"
+  },
+  {
+    "id": 23,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "『ROAD TO NINJA』で、ナルト達を限定月読の世界に送った仮面の男は？",
+    "choices": [
+      "トビ",
+      "うちはマダラ",
+      "大蛇丸",
+      "カブト"
+    ],
+    "answerIndex": 0,
+    "explanation": "トビ（オビト）が試験的に限定月読を使った。1"
+  },
+  {
+    "id": 24,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "『THE LAST』で、転生眼を開眼しヒナタを攫った敵は？",
+    "choices": [
+      "大筒木トネリ",
+      "大筒木ハムラ",
+      "うちはサスケ",
+      "大蛇丸"
+    ],
+    "answerIndex": 0,
+    "explanation": "月の忍・大筒木トネリ。1"
+  },
+  {
+    "id": 25,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "『THE LAST』で、ヒナタがナルトのために編んでいたものは？",
+    "choices": [
+      "赤いマフラー",
+      "セーター",
+      "手袋",
+      "帽子"
+    ],
+    "answerIndex": 0,
+    "explanation": "重要なキーアイテムとなるマフラー。1"
+  },
+  {
+    "id": 26,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "サスケがイタチ戦で使用した、雷雲を利用する麒麟の形の術は？",
+    "choices": [
+      "千鳥流し",
+      "雷切",
+      "麒麟",
+      "雷遁・偽暗"
+    ],
+    "answerIndex": 2,
+    "explanation": "自然エネルギーを利用する「麒麟」。"
+  },
+  {
+    "id": 27,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "綱手の首飾りは「死を呼ぶ首飾り」と呼ばれたが、元の持ち主は？",
+    "choices": [
+      "初代火影・柱間",
+      "自来也",
+      "猿飛ヒルゼン",
+      "カカシ"
+    ],
+    "answerIndex": 0,
+    "explanation": "初代火影の結晶石でできた首飾り。"
+  },
+  {
+    "id": 28,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ダンゾウが率いる暗部養成機関の名称は？",
+    "choices": [
+      "根（ネ）",
+      "殻（カラ）",
+      "枝（エダ）",
+      "幹（ミキ）"
+    ],
+    "answerIndex": 0,
+    "explanation": "暗部「根」。"
+  },
+  {
+    "id": 29,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "暁の飛段が信仰し、殺戮を教義とする宗教は？",
+    "choices": [
+      "ジャシン教",
+      "ニンシュウ",
+      "六道教",
+      "アシュラ教"
+    ],
+    "answerIndex": 0,
+    "explanation": "殺戮を捧げるジャシン教。"
+  },
+  {
+    "id": 30,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "暁の角都は、自分を含めて最大いくつの心臓を持っていた？",
+    "choices": [
+      "3個",
+      "4個",
+      "5個",
+      "6個"
+    ],
+    "answerIndex": 2,
+    "explanation": "5つの心臓（5属性）を持つ。"
+  },
+  {
+    "id": 31,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "デイダラの自爆から生き延びるため、サスケが盾にした口寄せ動物は？",
+    "choices": [
+      "マンダ",
+      "ガマブン太",
+      "カツユ",
+      "猿魔"
+    ],
+    "answerIndex": 0,
+    "explanation": "大蛇丸のマンダを操り盾にした。"
+  },
+  {
+    "id": 32,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "人傀儡となったサソリの体で、唯一の生身の部分は？",
+    "choices": [
+      "頭部",
+      "右手",
+      "左胸の核（心臓）",
+      "両目"
+    ],
+    "answerIndex": 2,
+    "explanation": "「核」だけが生身でチャクラを練る。"
+  },
+  {
+    "id": 33,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "チヨバア様とサソリの血縁関係は？",
+    "choices": [
+      "母と子",
+      "祖母と孫",
+      "師匠と弟子",
+      "姉と弟"
+    ],
+    "answerIndex": 1,
+    "explanation": "チヨバア様はサソリの祖母。"
+  },
+  {
+    "id": 34,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "キラービーが得意とする、独特の体術・剣術スタイルは？",
+    "choices": [
+      "二刀流",
+      "三刀流",
+      "七刀流",
+      "無刀流"
+    ],
+    "answerIndex": 2,
+    "explanation": "7本の刀を体の各所に挟んで戦う。"
+  },
+  {
+    "id": 35,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "五代目水影・照美メイが持つ二つの血継限界は溶遁と何？",
+    "choices": [
+      "沸遁",
+      "嵐遁",
+      "爆遁",
+      "木遁"
+    ],
+    "answerIndex": 0,
+    "explanation": "溶遁と沸遁（酸の霧）を使う。"
+  },
+  {
+    "id": 36,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "志村ダンゾウが右目に隠していた万華鏡写輪眼は誰の目？",
+    "choices": [
+      "うちはイタチ",
+      "うちはシスイ",
+      "うちはマダラ",
+      "うちはオビト"
+    ],
+    "answerIndex": 1,
+    "explanation": "別天神を使うためシスイの眼を移植。"
+  },
+  {
+    "id": 37,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "イタチが万華鏡写輪眼で放つ、焼き尽くすまで消えない黒炎は？",
+    "choices": [
+      "月読",
+      "天照",
+      "加具土命",
+      "麒麟"
+    ],
+    "answerIndex": 1,
+    "explanation": "物理攻撃最強の天照。"
+  },
+  {
+    "id": 38,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "うちは一族が万華鏡を開眼した者が宿す、攻防一体の巨人は？",
+    "choices": [
+      "外道魔像",
+      "須佐能乎（スサノオ）",
+      "千手観音",
+      "仁王像"
+    ],
+    "answerIndex": 1,
+    "explanation": "神の力・スサノオ。"
+  },
+  {
+    "id": 39,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ナルトに仙術を教えた妙木山のフカサク様は、何と呼ばれていた？",
+    "choices": [
+      "じいちゃんガマ",
+      "師匠",
+      "小じじい",
+      "ケロちゃん"
+    ],
+    "answerIndex": 0,
+    "explanation": "「じいちゃんガマ」と呼ばれた。"
+  },
+  {
+    "id": 40,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ペイン六道の本体である長門の出身の里は？",
+    "choices": [
+      "木ノ葉隠れ",
+      "岩隠れ",
+      "雨隠れ",
+      "霧隠れ"
+    ],
+    "answerIndex": 2,
+    "explanation": "戦場となった雨隠れの孤児。"
+  },
+  {
+    "id": 41,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "小南の紙忍術の弱点となり、自来也が利用した物質は？",
+    "choices": [
+      "火",
+      "雷",
+      "油（ガマ油）",
+      "風"
+    ],
+    "answerIndex": 2,
+    "explanation": "油で濡れると紙が折れなくなる。"
+  },
+  {
+    "id": 42,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "うずまき一族が住んでいたが、封印術を恐れられ滅ぼされた国は？",
+    "choices": [
+      "渦の国",
+      "波の国",
+      "茶の国",
+      "匠の国"
+    ],
+    "answerIndex": 0,
+    "explanation": "渦潮隠れの里があった渦の国。"
+  },
+  {
+    "id": 43,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "サスケの「鷹」のメンバー・香燐が持つ特殊能力は？",
+    "choices": [
+      "噛まれると回復する",
+      "骨を武器にする",
+      "水化する",
+      "動物と話す"
+    ],
+    "answerIndex": 0,
+    "explanation": "チャクラを分け与えて回復させる。"
+  },
+  {
+    "id": 44,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "「鷹」の水月が収集を目的としているものは？",
+    "choices": [
+      "尾獣",
+      "写輪眼",
+      "忍刀七人衆の刀",
+      "禁術の巻物"
+    ],
+    "answerIndex": 2,
+    "explanation": "7本の忍刀全てを集めようとしている。"
+  },
+  {
+    "id": 45,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "大蛇丸が口から出し、三種の神器の一つとされる剣は？",
+    "choices": [
+      "十拳剣",
+      "草薙の剣",
+      "七星剣",
+      "ぬのぼこの剣"
+    ],
+    "answerIndex": 1,
+    "explanation": "草薙の剣（空の太刀）。"
+  },
+  {
+    "id": 46,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "三代目火影が口寄せする猿猴王・猿魔が変化する武器は？",
+    "choices": [
+      "芭蕉扇",
+      "金剛如意棒",
+      "鎖鎌",
+      "大手裏剣"
+    ],
+    "answerIndex": 1,
+    "explanation": "硬度自在の金剛如意棒になる。"
+  },
+  {
+    "id": 47,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "綱手が口寄せする巨大なナメクジの名前は？",
+    "choices": [
+      "カツユ",
+      "蛞蝓",
+      "ぬめり",
+      "さいけん"
+    ],
+    "answerIndex": 0,
+    "explanation": "湿骨林のカツユ様。"
+  },
+  {
+    "id": 48,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "ヤマト隊長が使える、初代火影由来の血継限界は？",
+    "choices": [
+      "氷遁",
+      "晶遁",
+      "木遁",
+      "灼遁"
+    ],
+    "answerIndex": 2,
+    "explanation": "柱間細胞による木遁忍術。"
+  },
+  {
+    "id": 49,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "サイが使う、描いた絵を実体化させる術の名前は？",
+    "choices": [
+      "忍法・超獣戯画",
+      "芸術は爆発だ",
+      "影絵縛り",
+      "心転身"
+    ],
+    "answerIndex": 0,
+    "explanation": "墨で描いた獣を操る超獣戯画。"
+  },
+  {
+    "id": 50,
+    "category": "naruto",
+    "difficulty": "NORMAL",
+    "type": "choice",
+    "question": "三代目火影・猿飛ヒルゼンの担当上忍（師匠）は誰だった？",
+    "choices": [
+      "初代火影",
+      "二代目火影",
+      "うちはマダラ",
+      "ダンゾウ"
+    ],
+    "answerIndex": 1,
+    "explanation": "二代目・千手扉間の小隊だった。\n4.1 忍界の歴史と血塗られた系譜\n上忍級（Hard）は、物語の表面には現れにくい設定や、歴史的因果関係、さらには劇場版やアニメオリジナル展開を含む「全方位的知識」を問う領域である。ここでは、大筒木一族の起源、忍刀七人衆の刀の名称、そしてマニアックな術の条件などが焦点となる。\n4.1.1 忍刀七人衆と霧隠れの歴史\n霧隠れの里の「忍刀七人衆」は、それぞれが特殊な能力を持つ刀を継承している。Hardレベルでは、再不斬の「首斬り包丁」や鬼鮫の「鮫肌」だけでなく、無梨甚八の「飛沫（シブキ）」や栗霰串丸の「縫い針（ヌイバリ）」といったマイナーな刀と持ち主の対応関係 13 を正確に記憶しているかが問われる。また、霧隠れが「血霧の里」と呼ばれた原因である「アカデミー卒業試験での殺し合い」 9 という暗い歴史も重要な出題ポイントである。\n4.1.2 瞳術の進化と大筒木の系譜\n写輪眼、白眼、輪廻眼の三大瞳術に加え、それらの進化系や派生（万華鏡写輪眼の固有能力、転生眼など）についての詳細な理解が必要となる。特に、ダンゾウが右腕に埋め込んでいた写輪眼の数（10個） 15 や、イザナギの発動条件 15 といった、倫理を逸脱した術の代償についての知識は、Hardレベルに相応しい。\n4.1.3 劇場版・派生作品のヴィラン\n原作漫画だけでなく、劇場版アニメの知識も問われる。例えば、『大激突!幻の地底遺跡だってばよ』の敵「ハイド」 4 や、『大興奮!みかづき島』の悪大臣「シャバダバ」 17 といった、一度きりの登場キャラクター名は、真のファンを見分ける試金石となる。\n4.2 既存設問の検証と修正（Hard）\n提供されたHard設問 1 については、特に数値や名称の正確性を重視して検証した。\nQ2のダンゾウの写輪眼の数: 設問は「右腕に移植していた数」。ソース 15 によれば、右腕には10個、右目（眼窩）に1個（シスイの眼）である。したがって、正解は10個（選択肢A）で確定。解説にて右目の分を含めないことを明記する。\nQ16の穢土転生の支配を破った忍: イタチがシスイの眼（別天神）を使ってカブトの支配を上書きし、自力で脱出したエピソードは極めて重要であるため、この設問はそのまま採用する。\n4.3 上忍・影級（Hard）認定試験：完全版（50問）\n以下に、再構築された高難易度50問を示す。"
+  },
+  {
+    "id": 1,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "マイト・ガイが干柿鬼鮫を倒した後、情報を得るために鬼鮫の頭に触れようとした忍は？",
+    "choices": [
+      "山城アオバ",
+      "山中いのいち",
+      "奈良シカク",
+      "サイ"
+    ],
+    "answerIndex": 0,
+    "explanation": "読心能力を持つアオバが担当した。1"
+  },
+  {
+    "id": 2,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ダンゾウが右腕に移植していた写輪眼の数はいくつ？",
+    "choices": [
+      "10個",
+      "6個",
+      "8個",
+      "12個"
+    ],
+    "answerIndex": 0,
+    "explanation": "右腕には10個。右目と合わせると11個。1"
+  },
+  {
+    "id": 3,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "うちはオビトの右目が持つ、自身をすり抜けさせたり異空間へ飛ばす時空間忍術は？",
+    "choices": [
+      "神威（カムイ）",
+      "天手力",
+      "黄泉比良坂",
+      "飛雷神の術"
+    ],
+    "answerIndex": 0,
+    "explanation": "カカシと同じ神威だが近距離・自身対象に特化。1"
+  },
+  {
+    "id": 4,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "二尾の尾獣（化け猫）の名前は何？",
+    "choices": [
+      "又旅（マタタビ）",
+      "守鶴",
+      "磯撫",
+      "牛鬼"
+    ],
+    "answerIndex": 0,
+    "explanation": "二尾・又旅。人柱力は二位ユギト。1"
+  },
+  {
+    "id": 5,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "金角・銀角兄弟はどのようにして九尾のチャクラを手に入れた？",
+    "choices": [
+      "九尾の腹の中で肉を食らった",
+      "輸血してもらった",
+      "封印壺から吸収した",
+      "人柱力を食った"
+    ],
+    "answerIndex": 0,
+    "explanation": "九尾に飲み込まれた際、内側から肉を食べて生き延びた。1"
+  },
+  {
+    "id": 6,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "自来也が遺した暗号「タ、こ、そ、ワ、れ、な、い」の意味は？",
+    "choices": [
+      "本物はいない",
+      "長門が正体だ",
+      "仲間が裏切った",
+      "雨隠れに秘密あり"
+    ],
+    "answerIndex": 0,
+    "explanation": "ペイン6人は全員死体で「本物は（その中に）いない」。1"
+  },
+  {
+    "id": 7,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "再不斬の時代、霧隠れが「血霧の里」と呼ばれた原因となった慣習は？",
+    "choices": [
+      "生徒同士の殺し合い",
+      "血継限界狩り",
+      "生贄の儀式",
+      "拷問の義務化"
+    ],
+    "answerIndex": 0,
+    "explanation": "アカデミー卒業試験での友殺し。1"
+  },
+  {
+    "id": 8,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "八門遁甲を開き、忍刀七人衆と戦って死んだガイの父の名は？",
+    "choices": [
+      "マイト・ダイ",
+      "マイト・ガイ Sr.",
+      "猿飛マイト",
+      "エビス"
+    ],
+    "answerIndex": 0,
+    "explanation": "万年下忍のマイト・ダイ。1"
+  },
+  {
+    "id": 9,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "サスケが小隊名を「蛇」から「鷹」に改めた際、英語表記（意味）はどう変わった？",
+    "choices": [
+      "Hawk",
+      "Snake",
+      "Eagle",
+      "Shark"
+    ],
+    "answerIndex": 0,
+    "explanation": "鷹＝Hawk。Eagle（鷲）ではない点に注意。1"
+  },
+  {
+    "id": 10,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ペイン襲来後、綱手の意識不明時に六代目火影候補（代理）となったのは？",
+    "choices": [
+      "志村ダンゾウ",
+      "はたけカカシ",
+      "奈良シカク",
+      "うみのイルカ"
+    ],
+    "answerIndex": 0,
+    "explanation": "ダンゾウが指名されたが、就任前に死亡。1"
+  },
+  {
+    "id": 11,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "野良になる前、三尾（磯撫）の人柱力だった四代目水影は？",
+    "choices": [
+      "やぐら",
+      "ウタカタ",
+      "老紫",
+      "フウ"
+    ],
+    "answerIndex": 0,
+    "explanation": "やぐらはトビに操られていた。1"
+  },
+  {
+    "id": 12,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "かつて三忍を圧倒した山椒魚の半蔵はどこの里の長だった？",
+    "choices": [
+      "雨隠れの里",
+      "草隠れの里",
+      "岩隠れの里",
+      "滝隠れの里"
+    ],
+    "answerIndex": 0,
+    "explanation": "雨隠れの里の伝説的忍。1"
+  },
+  {
+    "id": 13,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "暁が尾獣を封印するために用いた巨大な像の名前は？",
+    "choices": [
+      "外道魔像",
+      "十尾の器",
+      "穢土転生の棺",
+      "封印壺"
+    ],
+    "answerIndex": 0,
+    "explanation": "十尾の抜け殻である外道魔像。1"
+  },
+  {
+    "id": 14,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "『THE LAST』の転生眼は、どの瞳術が進化したもの？",
+    "choices": [
+      "白眼",
+      "写輪眼",
+      "輪廻眼",
+      "万華鏡写輪眼"
+    ],
+    "answerIndex": 0,
+    "explanation": "純度の高い白眼から開眼する。1"
+  },
+  {
+    "id": 15,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "マダラが解明した、輪廻眼を開眼する条件は？",
+    "choices": [
+      "インドラとアシュラの力の融合",
+      "万華鏡の酷使",
+      "尾獣の全吸収",
+      "雷遁の極致"
+    ],
+    "answerIndex": 0,
+    "explanation": "六道仙人のチャクラを再現することで開眼。1"
+  },
+  {
+    "id": 16,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "穢土転生されながら、シスイの眼を使ってカブトの支配を破った忍は？",
+    "choices": [
+      "うちはイタチ",
+      "うちはマダラ",
+      "長門",
+      "デイダラ"
+    ],
+    "answerIndex": 0,
+    "explanation": "「木ノ葉を守れ」という別天神で命令を上書きした。1"
+  },
+  {
+    "id": 17,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "禁術「イザナギ」の効果は？",
+    "choices": [
+      "不利な現実を夢に変える",
+      "絶対に解けない幻術",
+      "不死身になる",
+      "時間を戻す"
+    ],
+    "answerIndex": 0,
+    "explanation": "現実を書き換える術。代償に失明する。1"
+  },
+  {
+    "id": 18,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "劇場版『大激突!幻の地底遺跡だってばよ』で、ゲレル石を狙った敵は？",
+    "choices": [
+      "ハイド",
+      "ドトウ",
+      "ゼツ",
+      "カブト"
+    ],
+    "answerIndex": 0,
+    "explanation": "理想郷を騙るハイド。1"
+  },
+  {
+    "id": 19,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "劇場版『みかづき島』で、クーデターを起こした大臣の名は？",
+    "choices": [
+      "シャバダバ",
+      "バハバ",
+      "風花ドトウ",
+      "シババ"
+    ],
+    "answerIndex": 0,
+    "explanation": "シャバダバ大臣。1"
+  },
+  {
+    "id": 20,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "劇場版『NARUTO -ナルト- 疾風伝』で、紫苑が封印した魔物は？",
+    "choices": [
+      "魍魎（もうりょう）",
+      "守鶴",
+      "零尾",
+      "邪神"
+    ],
+    "answerIndex": 0,
+    "explanation": "兵馬俑を操る魍魎。1"
+  },
+  {
+    "id": 21,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "二代目火影・扉間が囮になる直前、次の火影に指名したのは？",
+    "choices": [
+      "猿飛ヒルゼン",
+      "志村ダンゾウ",
+      "うたたねコハル",
+      "秋道取風"
+    ],
+    "answerIndex": 0,
+    "explanation": "迷わず名乗り出たヒルゼンを指名した。8"
+  },
+  {
+    "id": 22,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "忍刀七人衆の栗霰串丸が持つ、すべてを縫い合わせる刀は？",
+    "choices": [
+      "長刀・縫針",
+      "鈍刀・兜割",
+      "爆刀・飛沫",
+      "雷刀・牙"
+    ],
+    "answerIndex": 0,
+    "explanation": "縫針（ヌイバリ）。13"
+  },
+  {
+    "id": 23,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "忍刀七人衆の無梨甚八が持つ、起爆札を仕込んだ爆発する刀は？",
+    "choices": [
+      "爆刀・飛沫",
+      "長刀・縫針",
+      "鈍刀・兜割",
+      "双刀・ヒラメカレイ"
+    ],
+    "answerIndex": 0,
+    "explanation": "飛沫（シブキ）。14"
+  },
+  {
+    "id": 24,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "長十郎が持つ、チャクラで形状変化させるヒラメ型の刀は？",
+    "choices": [
+      "双刀・ヒラメカレイ",
+      "大刀・鮫肌",
+      "断刀・首斬り包丁",
+      "雷刀・牙"
+    ],
+    "answerIndex": 0,
+    "explanation": "ヒラメカレイ。13"
+  },
+  {
+    "id": 25,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "暁の指輪、うちはイタチの装着位置と文字は？",
+    "choices": [
+      "右手薬指・朱",
+      "右手親指・零",
+      "左手小指・空",
+      "左手薬指・三"
+    ],
+    "answerIndex": 0,
+    "explanation": "「朱雀」の朱を右手薬指に。20"
+  },
+  {
+    "id": 26,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ペイン（天道）の指輪の装着位置と文字は？",
+    "choices": [
+      "右手親指・零",
+      "右手人差し指・青",
+      "左手親指・玉",
+      "左手中指・北"
+    ],
+    "answerIndex": 0,
+    "explanation": "リーダーの位置である右手親指に「零」。20"
+  },
+  {
+    "id": 27,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "五尾の尾獣（イルカと馬を合わせた姿）の名前は？",
+    "choices": [
+      "穆王（コクオー）",
+      "犀犬（サイケン）",
+      "重明（チョウメイ）",
+      "磯撫（イソブ）"
+    ],
+    "answerIndex": 0,
+    "explanation": "蒸気を操る五尾・穆王。3"
+  },
+  {
+    "id": 28,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "六道仙人の宝具「琥珀の浄瓶」の封印条件は？",
+    "choices": [
+      "名前を呼ばれて返事をする",
+      "生まれて初めての言葉を言う",
+      "特定の言霊を言う",
+      "黙り込む"
+    ],
+    "answerIndex": 0,
+    "explanation": "返事をすると封印される。19"
+  },
+  {
+    "id": 29,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "二代目土影・無が開発した「血継淘汰（塵遁）」の属性組み合わせは？",
+    "choices": [
+      "火＋風＋土",
+      "水＋土＋雷",
+      "火＋水＋風",
+      "風＋雷＋土"
+    ],
+    "answerIndex": 0,
+    "explanation": "3属性を合わせる塵遁・原界剥離の術。12"
+  },
+  {
+    "id": 30,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "二代目水影・鬼灯幻月の切り札である無限爆破忍術は？",
+    "choices": [
+      "蒸危暴威（ジョウキボーイ）",
+      "水鉄砲の術",
+      "水鏡の術",
+      "霧隠れの術"
+    ],
+    "answerIndex": 0,
+    "explanation": "自身の分身を爆発させ続ける。12"
+  },
+  {
+    "id": 31,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "劇場版『絆』の敵・神農が利用した、負の感情を糧にする魔物は？",
+    "choices": [
+      "零尾（レイビ）",
+      "魍魎",
+      "悟（サトリ）",
+      "極箱の闇"
+    ],
+    "answerIndex": 0,
+    "explanation": "尾獣ではない「零尾」。1"
+  },
+  {
+    "id": 32,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "角都がかつて戦い（暗殺に失敗し）たと語った木ノ葉の忍は？",
+    "choices": [
+      "初代火影・柱間",
+      "二代目火影",
+      "うちはマダラ",
+      "猿飛サスケ"
+    ],
+    "answerIndex": 0,
+    "explanation": "初代火影と戦った経験を持つ。11"
+  },
+  {
+    "id": 33,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "大蛇丸の「不屍転生」において、転生のサイクル（間隔）は何年？",
+    "choices": [
+      "3年",
+      "5年",
+      "10年",
+      "1年"
+    ],
+    "answerIndex": 0,
+    "explanation": "拒絶反応が出るため3年が限界。"
+  },
+  {
+    "id": 34,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ダンゾウの「根」のメンバーが舌に施されている印の効果は？",
+    "choices": [
+      "ダンゾウの事を話せない",
+      "嘘がつけなくなる",
+      "毒に耐性がつく",
+      "味覚がなくなる"
+    ],
+    "answerIndex": 0,
+    "explanation": "情報漏洩を防ぐ「絶舌禍の印」。"
+  },
+  {
+    "id": 35,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "自来也がペイン戦で見せた、二大仙ガマと融合するモードは？",
+    "choices": [
+      "仙人モード",
+      "九尾モード",
+      "呪印モード",
+      "蛙組手"
+    ],
+    "answerIndex": 0,
+    "explanation": "不完全ながら仙人モードになった。7"
+  },
+  {
+    "id": 36,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "ミナトが螺旋丸の開発に要した期間は？",
+    "choices": [
+      "3年",
+      "1ヶ月",
+      "1年",
+      "10年"
+    ],
+    "answerIndex": 0,
+    "explanation": "形態変化の極致に至るまで3年かかった。2"
+  },
+  {
+    "id": 37,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "うちはの石碑を書き換え、忍の歴史を裏で操作していた黒幕は？",
+    "choices": [
+      "黒ゼツ",
+      "うちはマダラ",
+      "大筒木カグヤ",
+      "六道仙人"
+    ],
+    "answerIndex": 0,
+    "explanation": "マダラの意志ではなくカグヤの意志（黒ゼツ）。"
+  },
+  {
+    "id": 38,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "終末の谷の最終決戦で、ナルトとサスケが失った腕は？",
+    "choices": [
+      "ナルト：右、サスケ：左",
+      "ナルト：左、サスケ：右",
+      "両方：右",
+      "両方：左"
+    ],
+    "answerIndex": 0,
+    "explanation": "互いの利き腕を失った。"
+  },
+  {
+    "id": 39,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "四代目雷影とキラービーの兄弟による合体技は？",
+    "choices": [
+      "絶牛雷犁熱刀",
+      "雷虐水平",
+      "雷犂熱刀",
+      "超ビブラート雷遁刀"
+    ],
+    "answerIndex": 0,
+    "explanation": "ダブルラリアット。21"
+  },
+  {
+    "id": 40,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "穢土転生の「開発者」と「完成者」の正しい組み合わせは？",
+    "choices": [
+      "扉間と大蛇丸/カブト",
+      "大蛇丸とカブト",
+      "マダラとオビト",
+      "六道仙人と扉間"
+    ],
+    "answerIndex": 0,
+    "explanation": "扉間が作り、大蛇丸とカブトが完成させた。"
+  },
+  {
+    "id": 41,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "カカシが口寄せする忍犬たち（八忍犬）のリーダー格は？",
+    "choices": [
+      "パックン",
+      "ブル",
+      "シバ",
+      "ウルシ"
+    ],
+    "answerIndex": 0,
+    "explanation": "言葉を話すパグのパックン。7"
+  },
+  {
+    "id": 42,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "サソリが殺害し人傀儡とした、歴代最強とされる風影は？",
+    "choices": [
+      "三代目風影",
+      "四代目風影",
+      "二代目風影",
+      "初代風影"
+    ],
+    "answerIndex": 0,
+    "explanation": "三代目風影の砂鉄を使用した。"
+  },
+  {
+    "id": 43,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "鬼灯水月の兄で、忍刀七人衆の刀すべてを扱えた天才は？",
+    "choices": [
+      "鬼灯満月",
+      "鬼灯幻月",
+      "鬼灯残月",
+      "鬼灯新月"
+    ],
+    "answerIndex": 0,
+    "explanation": "鬼灯満月。13"
+  },
+  {
+    "id": 44,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "一楽ラーメンの店主の名前は？",
+    "choices": [
+      "テウチ",
+      "アヤメ",
+      "マツ",
+      "タケ"
+    ],
+    "answerIndex": 0,
+    "explanation": "テウチのおやっさん。"
+  },
+  {
+    "id": 45,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "シズネが得意とする毒の霧を吐く術は？",
+    "choices": [
+      "毒霧",
+      "毒煙幕",
+      "忍法・毒霧",
+      "隠れ霧の術"
+    ],
+    "answerIndex": 0,
+    "explanation": "シンプルな名前の「毒霧」。"
+  },
+  {
+    "id": 46,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "暗部時代、カカシはイタチより約何歳年上の先輩だった？",
+    "choices": [
+      "約8-9歳",
+      "2歳",
+      "15歳",
+      "同い年"
+    ],
+    "answerIndex": 0,
+    "explanation": "意外と年齢差がある。"
+  },
+  {
+    "id": 47,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "木ノ葉崩しで大蛇丸が出した初代・二代目が不完全だった理由は？",
+    "choices": [
+      "術の精度が低かった",
+      "屍鬼封尽されていた",
+      "三代目が邪魔した",
+      "チャクラ不足"
+    ],
+    "answerIndex": 0,
+    "explanation": "人格を消しきれず出力も低かった。"
+  },
+  {
+    "id": 48,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "シカマルが飛段を生き埋めにした、奈良一族管理の森は？",
+    "choices": [
+      "奈良一族の森",
+      "迷いの森",
+      "死の森",
+      "骨喰いの林"
+    ],
+    "answerIndex": 0,
+    "explanation": "特別な鹿が住む奈良一族の森。"
+  },
+  {
+    "id": 49,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "マダラが九尾にスサノオを着せた状態の名称は？",
+    "choices": [
+      "威装・須佐能乎",
+      "完成体須佐能乎",
+      "鎧袖一触",
+      "九尾須佐能乎"
+    ],
+    "answerIndex": 0,
+    "explanation": "威装・須佐能乎（いそう・スサノオ）。"
+  },
+  {
+    "id": 50,
+    "category": "naruto",
+    "difficulty": "HARD",
+    "type": "choice",
+    "question": "十尾の正体は何と何が融合したもの？",
+    "choices": [
+      "神樹とカグヤ",
+      "九尾と八尾",
+      "外道魔像とマダラ",
+      "自然とチャクラ"
+    ],
+    "answerIndex": 0,
+    "explanation": "神樹と一体化したカグヤ自身。"
+  }
+]
