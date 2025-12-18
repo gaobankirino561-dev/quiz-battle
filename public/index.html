@@ -85,6 +85,9 @@
         <button id="btn-solo-mode" type="button">
           ソロモード
         </button>
+        <button id="btn-account-menu" type="button" class="secondary">
+          アカウント
+        </button>
         <button id="btn-online-rules" type="button" class="secondary">
           ルール説明
         </button>
@@ -182,6 +185,73 @@
           </div>
           <div class="modal-footer">
             <button id="btn-close-online-rules-footer" type="button" class="secondary">閉じる</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Modal -->
+      <div id="account-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>アカウント</h3>
+            <button id="btn-close-account" class="close-button">×</button>
+          </div>
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="profile">プロフィール</button>
+            <button class="tab-btn" data-tab="friends">フレンド</button>
+          </div>
+
+          <div class="modal-body">
+            <!-- Profile Tab -->
+            <div id="tab-profile" class="tab-content active">
+              <div class="profile-info">
+                <div class="stat-label">ユーザー名</div>
+                <div id="account-name" class="stat-value" style="font-size:1.2rem; margin-bottom:10px;">-</div>
+
+                <div class="stat-label">ID</div>
+                <div class="id-row">
+                  <span id="account-id"
+                    style="font-family:monospace; background:rgba(0,0,0,0.3); padding:4px 8px; border-radius:4px;">-</span>
+                  <button id="btn-copy-id" class="action-icon-btn">Copy</button>
+                </div>
+              </div>
+
+              <div class="stats-box">
+                <div class="stat-item">
+                  <span class="stat-label">勝利</span>
+                  <span id="account-wins" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">敗北</span>
+                  <span id="account-lose" class="stat-value">0</span>
+                </div>
+              </div>
+
+              <div style="margin-top:20px; text-align:center;">
+                <button id="btnLogout" class="secondary-button" style="width:100%;">ログアウト</button>
+              </div>
+            </div>
+
+            <!-- Friends Tab -->
+            <div id="tab-friends" class="tab-content hidden">
+              <div class="friend-add-section">
+                <h4>フレンド追加</h4>
+                <div class="friend-input-row">
+                  <input type="text" id="friend-id-input" placeholder="相手のIDを入力">
+                  <button id="btn-add-friend" class="primary-button" style="width:auto; padding:8px 16px;">追加</button>
+                </div>
+                <div id="friend-msg" class="message-text"></div>
+              </div>
+
+              <div class="friend-list-section">
+                <h4>フレンドリスト</h4>
+                <div id="friend-list-container">
+                  <ul id="friend-list">
+                    <!-- JS populated -->
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
